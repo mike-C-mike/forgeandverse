@@ -1,0 +1,2 @@
+{{- $slug := . -}}
+{{- range where site.Data.disciplines "slug" $slug -}}{{ .name }}{{- end -}}

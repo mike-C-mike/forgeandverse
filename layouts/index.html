@@ -1,0 +1,167 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Independent design studio</p>
+      <h1>Forged in fire.<br>Fluent in consequence.</h1>
+      <p class="lede">Art, writing, and useful objects for the people who examine, protect, preserve, and defend.</p>
+      <div class="actions">
+        <a class="button button-light" href="/works/">Explore the work</a>
+        <a class="button button-line" href="/downloads/">Free works</a>
+      </div>
+    </div>
+    <div class="hero-mark" aria-hidden="true">
+      <span class="hero-orbit"></span>
+      <img src="/images/forge-verse-mark-light.png" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="studio-intro">
+  <div class="wrap studio-intro-grid">
+    <p class="eyebrow">From the studio</p>
+    <p class="studio-intro-lede">The details are the point.</p>
+    <div class="studio-intro-copy">
+      <p>Digital examiners recover what others overlook. Evidence personnel preserve what courts depend on. Analysts, technicians, dispatchers, and defenders keep complicated systems moving.</p>
+      <p>Forge &amp; Verse makes work around their skill, pressure, pride, and peculiar humor.</p>
+    </div>
+  </div>
+</section>
+
+{{ $featured := first 1 (where (where site.RegularPages "Section" "works") ".Params.featured" true) }}
+{{ range $featured }}
+<section class="section feature-stage">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Featured work</p>
+        <h2>{{ .Title }}</h2>
+      </div>
+      <div>
+        <p>{{ .Params.summary }}</p>
+        <a class="text-link" href="{{ .RelPermalink }}">View the work <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <a class="feature-frame" href="{{ .RelPermalink }}" aria-label="View {{ .Title }}">
+      {{ with .Params.image }}<img src="{{ . }}" alt="" loading="eager">{{ end }}
+      <span class="feature-frame-shade"></span>
+      <span class="feature-frame-caption">
+        <strong>{{ partial "discipline-label.html" .Params.discipline }}</strong>
+        <small>{{ .Params.format_label | default .Params.format }} · {{ partial "status-label.html" .Params.status }}</small>
+      </span>
+    </a>
+  </div>
+</section>
+{{ end }}
+
+<section class="section work-preview">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Studio archive</p>
+        <h2>Recent work</h2>
+      </div>
+      <div>
+        <p>Art, written pieces, useful releases, and physical studies shaped by the language and culture of the work.</p>
+        <a class="text-link" href="/works/">Browse all works <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="work-grid">
+      {{ $recentWorks := where site.RegularPages "Section" "works" }}
+      {{ range first 4 $recentWorks.ByWeight }}
+        {{ partial "work-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section disciplines-band">
+  <div class="wrap">
+    <div class="section-heading split-heading split-heading-light">
+      <div>
+        <p class="eyebrow">Disciplines</p>
+        <h2>Four rooms in the same house.</h2>
+      </div>
+      <p>The work moves between investigations, evidence, service, and defensive technology without losing the details that make each field its own.</p>
+    </div>
+    <div class="discipline-cards">
+      {{ range site.Data.disciplines }}
+      <a class="discipline-card{{ if eq .priority 1 }} discipline-card-primary{{ end }}" href="/disciplines/#{{ .slug }}">
+        <span class="discipline-card-number">0{{ .priority }}</span>
+        <span class="discipline-card-plain">{{ .plain_name }}</span>
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <span class="discipline-card-action">Enter <b aria-hidden="true">→</b></span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ range first 1 (where site.RegularPages "Section" "downloads") }}
+{{ $release := . }}
+<section class="section release-spotlight">
+  <div class="wrap release-spotlight-grid">
+    <div class="release-visual">
+      {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $release.Title }}" loading="lazy">{{ end }}
+    </div>
+    <div class="release-copy">
+      <p class="eyebrow">Free work</p>
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Params.summary }}</p>
+      <div class="release-details">
+        <span>{{ .Params.format_label | default .Params.format }}</span>
+        <span>{{ partial "discipline-label.html" .Params.discipline }}</span>
+      </div>
+      <a class="button button-dark" href="{{ .RelPermalink }}">View the release</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section journal-preview">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">Journal</p>
+        <h2>Notes from the work</h2>
+      </div>
+      <div>
+        <p>Essays, observations, and design notes from the overlap between technical work, professional culture, and language.</p>
+        <a class="text-link" href="/journal/">Read the journal <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="journal-list">
+      {{ $journalPages := where site.RegularPages "Section" "journal" }}
+      {{ range first 3 $journalPages.ByDate.Reverse }}
+        {{ partial "journal-row.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section anvil-preview">
+  <div class="wrap">
+    <div class="section-heading split-heading split-heading-light">
+      <div>
+        <p class="eyebrow">On the anvil</p>
+        <h2>Work taking shape</h2>
+      </div>
+      <div>
+        <p>A living view of pieces moving through writing, layout, format testing, and final release.</p>
+        <a class="text-link text-link-light" href="/roadmap/">Visit the workbench <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="anvil-strip">
+      {{ range first 3 site.Data.roadmap }}
+      <article>
+        <span>{{ .state }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .note }}</p>
+        <small>{{ .discipline }} · {{ .format }}</small>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

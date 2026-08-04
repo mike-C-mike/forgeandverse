@@ -1,0 +1,9 @@
+{{- $status := . | default "studio" -}}
+{{- if eq $status "forging" -}}In the studio
+{{- else if eq $status "preview" -}}Preview
+{{- else if eq $status "released" -}}Released
+{{- else if eq $status "archived" -}}Archived
+{{- else if eq $status "concept" -}}Study
+{{- else if eq $status "preparing" -}}Preparing
+{{- else -}}{{ $status | humanize }}
+{{- end -}}

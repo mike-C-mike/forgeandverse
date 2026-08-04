@@ -1,0 +1,40 @@
+- slug: examiner-bench
+  name: The Examiner's Bench
+  plain_name: Digital Forensics
+  priority: 1
+  description: Art, tools, field notes, and professional culture for the people who recover what others overlook.
+  themes:
+    - Examination rooms and laboratory culture
+    - Acquisition, preservation, and verification
+    - Case notes, reports, and quiet precision
+    - Humor understood by people who check the hash twice
+- slug: evidence-room
+  name: The Evidence Room
+  plain_name: Property & Evidence
+  priority: 2
+  description: Work for the custodians of chain of custody, controlled chaos, and shelves that remember everything.
+  themes:
+    - Intake, packaging, storage, and release
+    - Inventory days and the objects nobody claims
+    - Chain of custody and courtroom reliability
+    - Affectionate humor from behind the counter
+- slug: watch
+  name: The Watch
+  plain_name: Law Enforcement & Support
+  priority: 3
+  description: Thoughtful work for officers and the civilian professionals who keep operations moving.
+  themes:
+    - Service, resolve, compassion, and presence
+    - Dispatch, analysts, technicians, and support staff
+    - Leadership without theatrics
+    - The humor that gets a hard shift through the door
+- slug: signal
+  name: The Signal
+  plain_name: Cybersecurity
+  priority: 4
+  description: Defensive technology, incident response, systems work, and the people who stand between order and outage.
+  themes:
+    - Blue-team and incident-response culture
+    - Networks, systems, and operational resilience
+    - Privacy, evidence, and technical judgment
+    - Jokes with a very small attack surface

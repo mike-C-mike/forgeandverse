@@ -1,0 +1,19 @@
+{{ define "main" }}
+<header class="page-hero page-hero-compact">
+  <div class="wrap page-hero-grid">
+    <div><p class="eyebrow">Essays &amp; field notes</p><h1>{{ .Title }}</h1></div>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+<section class="section journal-archive">
+  <div class="wrap">
+    <div class="journal-list journal-list-large">
+      {{ range .Pages.ByDate.Reverse }}
+        {{ partial "journal-row.html" . }}
+      {{ else }}
+        <p>The journal is quiet for now. Quiet is not the same as empty.</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

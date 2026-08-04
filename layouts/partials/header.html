@@ -1,0 +1,20 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav-shell">
+    <a class="brand" href="/" aria-label="Forge and Verse home">
+      <img src="/images/forge-verse-mark-dark.png" alt="">
+      <span>Forge &amp; Verse</span>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-label">Menu</span>
+      <span class="nav-toggle-mark" aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-nav" data-nav aria-label="Primary navigation">
+      {{ $currentPath := .RelPermalink }}
+      {{ range site.Menus.main }}
+      {{ $active := or (eq $currentPath .URL) (and (ne .URL "/") (hasPrefix $currentPath .URL)) }}
+      <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>

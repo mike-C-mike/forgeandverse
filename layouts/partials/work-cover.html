@@ -1,0 +1,10 @@
+{{ $style := .Params.cover_style | default .Params.discipline | default "studio" }}
+<div class="work-cover work-cover--{{ $style }}">
+  {{ with .Params.image }}
+    <img src="{{ . }}" alt="" loading="lazy">
+  {{ else }}
+    <span class="work-cover-kicker">{{ partial "discipline-label.html" $.Params.discipline }}</span>
+    <strong>{{ .Title }}</strong>
+    <span class="work-cover-mark" aria-hidden="true">F&amp;V</span>
+  {{ end }}
+</div>

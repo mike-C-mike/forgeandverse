@@ -1,0 +1,14 @@
+<article class="work-card" data-work-card data-discipline="{{ .Params.discipline }}" data-format="{{ .Params.format_slug | default .Params.format | urlize }}">
+  <a class="work-card-link" href="{{ .RelPermalink }}">
+    {{ partial "work-cover.html" . }}
+    <div class="work-card-body">
+      <div class="work-card-meta">
+        <span>{{ partial "discipline-label.html" .Params.discipline }}</span>
+        <span>{{ partial "status-label.html" .Params.status }}</span>
+      </div>
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Params.summary | default .Summary }}</p>
+      <span class="work-card-action">View work <b aria-hidden="true">→</b></span>
+    </div>
+  </a>
+</article>

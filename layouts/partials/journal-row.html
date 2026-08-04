@@ -1,0 +1,6 @@
+<a class="journal-row" href="{{ .RelPermalink }}">
+  <span class="journal-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+  <span class="journal-title">{{ .Title }}</span>
+  <span class="journal-summary">{{ .Params.summary | default .Summary }}</span>
+  <span class="journal-arrow" aria-hidden="true">→</span>
+</a>

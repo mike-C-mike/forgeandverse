@@ -1,0 +1,32 @@
+{{ define "main" }}
+<header class="page-hero page-hero-compact">
+  <div class="wrap page-hero-grid">
+    <div>
+      <p class="eyebrow">Studio archive</p>
+      <h1>{{ .Title }}</h1>
+    </div>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+<section class="section archive-section">
+  <div class="wrap">
+    <div class="archive-toolbar" data-filter-toolbar>
+      <div class="filter-group" role="group" aria-label="Filter works by discipline">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+        {{ range site.Data.disciplines }}
+        <button class="filter-button" type="button" data-filter="{{ .slug }}" aria-pressed="false">{{ .plain_name }}</button>
+        {{ end }}
+      </div>
+      <p class="archive-count"><span data-visible-count>{{ len .Pages }}</span> works shown</p>
+    </div>
+    <div class="work-grid work-grid-archive" data-work-grid>
+      {{ range .Pages.ByWeight }}
+        {{ partial "work-card.html" . }}
+      {{ else }}
+        <p>The archive is quiet for now.</p>
+      {{ end }}
+    </div>
+    <p class="filter-empty" data-filter-empty hidden>No work in that room yet. The anvil is not offended.</p>
+  </div>
+</section>
+{{ end }}

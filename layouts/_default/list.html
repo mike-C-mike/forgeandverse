@@ -1,0 +1,11 @@
+{{ define "main" }}
+<header class="page-hero page-hero-compact">
+  <div class="wrap page-hero-grid">
+    <div><p class="eyebrow">Forge &amp; Verse</p><h1>{{ .Title }}</h1></div>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</header>
+<section class="section"><div class="wrap"><div class="work-grid">
+{{ range .Pages }}{{ partial "work-card.html" . }}{{ else }}<p>No entries have been published here yet.</p>{{ end }}
+</div></div></section>
+{{ end }}

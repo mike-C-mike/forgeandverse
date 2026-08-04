@@ -1,0 +1,46 @@
+baseURL = "https://forgeandverse.com/"
+languageCode = "en-us"
+title = "Forge & Verse"
+enableRobotsTXT = true
+summaryLength = 28
+disableKinds = ["taxonomy", "term"]
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  description = "Art, writing, and useful objects for the people who examine, protect, preserve, and defend."
+  studioLine = "An independent literary-industrial design studio for people whose work carries weight."
+  founder = "Matthew McBride"
+  defaultImage = "/images/social/forge-and-verse-card.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Work"
+    url = "/works/"
+    weight = 10
+  [[menu.main]]
+    name = "Free Works"
+    url = "/downloads/"
+    weight = 20
+  [[menu.main]]
+    name = "Journal"
+    url = "/journal/"
+    weight = 30
+  [[menu.main]]
+    name = "Disciplines"
+    url = "/disciplines/"
+    weight = 40
+  [[menu.main]]
+    name = "On the Anvil"
+    url = "/roadmap/"
+    weight = 50
+  [[menu.main]]
+    name = "Studio"
+    url = "/about/"
+    weight = 60

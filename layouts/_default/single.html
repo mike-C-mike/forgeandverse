@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header class="article-hero">
+  <div class="wrap article-hero-inner">
+    <p class="eyebrow">Forge &amp; Verse</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</header>
+<article class="prose prose-article">{{ .Content }}</article>
+{{ end }}

@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-lead">
+      <img src="/images/forge-verse-mark-light.png" alt="">
+      <div>
+        <p class="eyebrow">Forge &amp; Verse</p>
+        <h2>Made for people whose work carries weight.</h2>
+        <p>Art, writing, free releases, and physical editions from an independent design studio.</p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <strong>Browse</strong>
+        <a href="/works/">Works</a>
+        <a href="/downloads/">Free Works</a>
+        <a href="/journal/">Journal</a>
+      </div>
+      <div>
+        <strong>Studio</strong>
+        <a href="/disciplines/">Disciplines</a>
+        <a href="/roadmap/">On the Anvil</a>
+        <a href="/about/">About</a>
+      </div>
+      <div>
+        <strong>Fine print</strong>
+        <a href="/use-and-rights/">Use &amp; Rights</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/affiliate-disclosure/">Disclosure</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ now.Year }} Forge &amp; Verse.</span>
+      <span>Original work unless otherwise stated.</span>
+    </div>
+  </div>
+</footer>
+{{ $js := resources.Get "js/site.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

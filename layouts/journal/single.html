@@ -1,0 +1,15 @@
+{{ define "main" }}
+<header class="article-hero">
+  <div class="wrap article-hero-inner">
+    <p class="eyebrow">Journal · {{ .Date.Format "January 2, 2006" }}</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.summary }}</p>
+    <div class="article-meta"><span>{{ .ReadingTime }} minute read</span>{{ with .Params.discipline }}<span>{{ partial "discipline-label.html" . }}</span>{{ end }}</div>
+  </div>
+</header>
+<article class="prose prose-article">{{ .Content }}</article>
+<nav class="article-nav wrap" aria-label="Journal navigation">
+  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Previous</span><strong>{{ .Title }}</strong></a>{{ end }}
+  {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span>Next</span><strong>{{ .Title }}</strong></a>{{ end }}
+</nav>
+{{ end }}

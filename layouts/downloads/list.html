@@ -1,0 +1,28 @@
+{{ define "main" }}
+<header class="page-hero page-hero-compact">
+  <div class="wrap page-hero-grid">
+    <div><p class="eyebrow">Open releases</p><h1>{{ .Title }}</h1></div>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+<section class="section downloads-archive">
+  <div class="wrap download-grid">
+    {{ range .Pages.ByWeight }}
+    {{ $release := . }}
+    <article class="download-card">
+      <a class="download-card-visual" href="{{ .RelPermalink }}">
+        {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $release.Title }}" loading="lazy">{{ end }}
+      </a>
+      <div class="download-card-body">
+        <div class="work-card-meta"><span>{{ partial "discipline-label.html" .Params.discipline }}</span><span>{{ partial "status-label.html" .Params.status }}</span></div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Params.summary }}</p>
+        <a class="text-link" href="{{ .RelPermalink }}">View release <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+    {{ else }}
+    <p>The first open release is being prepared.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

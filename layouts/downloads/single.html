@@ -1,0 +1,32 @@
+{{ define "main" }}
+<header class="download-detail-hero">
+  <div class="wrap download-detail-grid">
+    <div class="download-detail-copy">
+      <p class="eyebrow">Free work · {{ partial "discipline-label.html" .Params.discipline }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.summary }}</p>
+      {{ with .Params.files }}
+      <div class="download-actions">
+        {{ range . }}<a class="button button-light" href="{{ .url }}" download>{{ .label }}</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="download-detail-visual">
+      {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $.Title }}">{{ end }}
+    </div>
+  </div>
+</header>
+<section class="work-detail-body">
+  <div class="wrap work-detail-body-grid">
+    <aside>
+      <p class="eyebrow">Release details</p>
+      <dl class="release-facts">
+        <div><dt>Format</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
+        <div><dt>Use</dt><dd>{{ .Params.usage | default "Personal and workplace use" }}</dd></div>
+        <div><dt>Credit</dt><dd>{{ .Params.credit | default "Keep the Forge & Verse mark intact" }}</dd></div>
+      </dl>
+    </aside>
+    <article class="prose prose-work">{{ .Content }}</article>
+  </div>
+</section>
+{{ end }}

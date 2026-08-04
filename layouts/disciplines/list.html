@@ -1,0 +1,30 @@
+{{ define "main" }}
+<header class="page-hero page-hero-compact">
+  <div class="wrap page-hero-grid">
+    <div><p class="eyebrow">The rooms</p><h1>{{ .Title }}</h1></div>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+<section class="discipline-index">
+  {{ range site.Data.disciplines }}
+  {{ $works := where (where site.RegularPages "Section" "works") ".Params.discipline" .slug }}
+  <article class="discipline-panel{{ if eq .priority 1 }} discipline-panel-primary{{ end }}" id="{{ .slug }}">
+    <div class="wrap discipline-panel-grid">
+      <div class="discipline-panel-title">
+        <span class="discipline-number">0{{ .priority }}</span>
+        <p class="eyebrow">{{ .plain_name }}</p>
+        <h2>{{ .name }}</h2>
+      </div>
+      <div class="discipline-panel-body">
+        <p class="discipline-lede">{{ .description }}</p>
+        <ul class="discipline-themes">{{ range .themes }}<li>{{ . }}</li>{{ end }}</ul>
+        <div class="discipline-links">
+          <a class="text-link" href="/works/?discipline={{ .slug }}">Browse related work <span aria-hidden="true">→</span></a>
+          {{ with $works }}<span>{{ len . }} {{ if eq (len .) 1 }}work{{ else }}works{{ end }} in the archive</span>{{ end }}
+        </div>
+      </div>
+    </div>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

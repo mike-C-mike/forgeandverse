@@ -1,0 +1,43 @@
+{{ define "main" }}
+<header class="studio-hero">
+  <div class="wrap studio-hero-grid">
+    <div>
+      <p class="eyebrow">The studio</p>
+      <h1>Work with weight.<br>Words with an edge.</h1>
+    </div>
+    <div class="studio-hero-copy">
+      <p>{{ .Description }}</p>
+      <img src="/images/forge-verse-mark-light.png" alt="Forge and Verse anvil and quill emblem">
+    </div>
+  </div>
+</header>
+<section class="section studio-story">
+  <div class="wrap studio-story-grid">
+    <div><p class="eyebrow">Forge &amp; Verse</p><h2>The work comes first.</h2></div>
+    <article class="prose-inline">{{ .Content }}</article>
+  </div>
+</section>
+<section class="section studio-forms">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Forms</p><h2>What leaves the studio</h2></div>
+      <p>The form follows the idea. Some pieces belong on a wall. Others belong beside a keyboard, inside a field bag, or open on a desk.</p>
+    </div>
+    <div class="form-grid">
+      <article><span>01</span><h3>Art &amp; editions</h3><p>Office art, poster studies, and physical pieces built around language that deserves more than a passing glance.</p></article>
+      <article><span>02</span><h3>Free works</h3><p>Printable pieces, wallpapers, reference cards, and small tools released directly under the studio banner.</p></article>
+      <article><span>03</span><h3>Writing</h3><p>Essays, field notes, and observations from the overlap between technical work, professional culture, and language.</p></article>
+      <article><span>04</span><h3>Useful objects</h3><p>Notebooks, journals, desk pieces, and practical formats shaped around how the work is actually done.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section founder-band">
+  <div class="wrap founder-grid">
+    <div><p class="eyebrow">Founded from the work</p><h2>Practitioner made</h2></div>
+    <div>
+      <p>Forge &amp; Verse was founded by <strong>Matthew McBride</strong>, a law-enforcement technology and digital-forensics practitioner whose work includes digital evidence, property and evidence operations, technical systems, and direct support for investigations.</p>
+      <p>The studio does not need a founder portrait to prove the point. The details in the work should do that.</p>
+    </div>
+  </div>
+</section>
+{{ end }}
