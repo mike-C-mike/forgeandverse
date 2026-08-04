@@ -1,21 +1,26 @@
 # Validation Record
 
-Iteration 5 received the following local checks:
+Iteration 6 received the following local checks:
 
 - `hugo.toml` parsed successfully
 - YAML data files parsed successfully
-- All Markdown front matter parsed successfully
-- Required Work fields are present
-- Referenced public images and download files exist
-- Template delimiter counts are balanced
-- Stylesheet braces are balanced
-- Public image files passed integrity checks
-- Retired or borrowed concept language is absent from public content
+- all public Markdown front matter parsed successfully
+- required Work and Free Work fields are present
+- referenced public images and download files exist
+- template delimiter counts are balanced
+- stylesheet braces are balanced
+- public PNG and WebP files passed image-integrity checks
+- retired decorative download assets and filler Work concepts are absent
+- the Digital Forensics Intake Request DOCX opened successfully and passed package checks
+- the corresponding PDF opened successfully and contains exactly two pages
+- both DOCX pages were rendered to PNG and visually reviewed for clipping, overflow, and layout defects
 
-Current body of work:
+Current public body of work:
 
-- 5 Work entries
-- 3 Journal entries
-- 1 functioning Free Work release with 2 downloadable files
+- 1 selective Work entry
+- 1 Journal entry
+- 1 functioning Free Work release
+- 2 downloadable intake-form files
+- 3 credible On the Anvil items
 
-The repository should still be rendered with the user’s local Hugo installation before any deployment or public release, because structural validation is not a substitute for browser review of Hugo’s final output.
+Hugo is not installed in this environment, so the repository has not received a final Hugo-generated browser render. The next local review should use `hugo server` without deployment and inspect the homepage, Work archive, release page, Studio page, disciplines, and responsive breakpoints.

@@ -1,4 +1,4 @@
 ---
 title: "Free Works"
-description: "Printable pieces, wallpapers, reference cards, and small releases offered directly from the studio. No checkout. No email gate."
+description: "Forms, worksheets, templates, and occasional digital releases made to be useful beyond the studio. No checkout. No email gate."
 ---

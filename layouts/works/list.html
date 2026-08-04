@@ -10,6 +10,7 @@
 </header>
 <section class="section archive-section">
   <div class="wrap">
+    {{ if gt (len .Pages) 3 }}
     <div class="archive-toolbar" data-filter-toolbar>
       <div class="filter-group" role="group" aria-label="Filter works by discipline">
         <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
@@ -19,7 +20,8 @@
       </div>
       <p class="archive-count"><span data-visible-count>{{ len .Pages }}</span> works shown</p>
     </div>
-    <div class="work-grid work-grid-archive" data-work-grid>
+    {{ end }}
+    <div class="work-grid work-grid-archive{{ if eq (len .Pages) 1 }} work-grid-single{{ end }}" data-work-grid>
       {{ range .Pages.ByWeight }}
         {{ partial "work-card.html" . }}
       {{ else }}

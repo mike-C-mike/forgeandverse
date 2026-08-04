@@ -4,15 +4,16 @@ weight: 100
 summary: ""
 description: ""
 discipline: "examiner-bench"
-format: "digital-release"
-format_label: "Digital release"
+format: "operational-template"
+format_label: "PDF + editable DOCX"
 status: "preparing"
 preview_image: ""
-usage: "Personal and workplace display"
-credit: "Keep the Forge & Verse mark intact"
+usage: ""
+credit: ""
+license_note: ""
 files: []
 rights: "original-free-release"
 draft: true
 ---
 
-Describe the release and its intended use here.
+Describe the problem this release solves, what is included, and what a department or practitioner should review before use.

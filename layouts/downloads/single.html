@@ -24,6 +24,7 @@
         <div><dt>Format</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
         <div><dt>Use</dt><dd>{{ .Params.usage | default "Personal and workplace use" }}</dd></div>
         <div><dt>Credit</dt><dd>{{ .Params.credit | default "Keep the Forge & Verse mark intact" }}</dd></div>
+        {{ with .Params.license_note }}<div><dt>Permission</dt><dd>{{ . }}</dd></div>{{ end }}
       </dl>
     </aside>
     <article class="prose prose-work">{{ .Content }}</article>

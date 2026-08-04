@@ -8,4 +8,4 @@ The anvil represents pressure, discipline, and craft. The quill represents langu
 
 The studio sits where those ideas meet.
 
-A piece may begin as an essay, a line overheard after a long shift, a workflow that deserves a better page, or a joke that makes sense only to the people in the room. It becomes a Forge & Verse work when the detail feels true and the form earns its place.
+A piece may begin as an essay, a line overheard after a long shift, a workflow that deserves a better page, or a joke that makes sense only to the people in the room. It leaves the studio when the detail feels true and the form is worth keeping.

@@ -1,4 +1,4 @@
 ---
 title: "Works"
-description: "Original art, writing, free releases, and physical studies from the studio. The archive holds finished pieces and a deliberate view of work still taking shape."
+description: "Finished art and editions from the studio. The archive grows when a piece earns its place."
 ---

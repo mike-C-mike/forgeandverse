@@ -4,15 +4,16 @@ weight: 10
 summary: "A reflective tribute to service, compassion, and the resolve to keep showing up."
 description: "A law-enforcement art and writing piece built around the human weight of showing up."
 discipline: "watch"
-format: "art-print"
-format_label: "Written work + office art"
+format: "wall-edition"
+format_label: "Ornate wall edition study"
 status: "forging"
 featured: true
 cover_style: "watch"
 image: "/images/believe-in-the-badge-backdrop.webp"
 image_alt: "Police officers beneath an American flag at sunset"
 rights: "original"
-note: "The writing leads. The image supports it without competing for the same breath."
+material_intent: "Large-format metal or archival wall edition"
+note: "The writing leads. The final composition is being built as a substantial wall piece, with material, depth, and mounting considered as part of the work rather than an afterthought."
 ---
 To wear the badge is to answer a call bigger than yourself.
 

@@ -6,19 +6,24 @@ Forge & Verse work remains protected by copyright unless a release explicitly sa
 
 ## Free works
 
-A free work may be downloaded and used for personal or workplace display according to the use note on its release page. Free does not automatically mean public domain.
+Each free release carries its own use note. Some are display pieces. Others are operational templates intended to be adapted inside an organization.
 
-Unless a release says otherwise, please do not:
+Unless a release grants broader permission, please do not:
 
 - resell the file or a physical copy made from it
-- upload the file as your own download
-- remove the Forge & Verse mark
+- upload the unaltered file as your own download
 - use the work as a business logo or brand identity
 - alter the work and present the result as an official Forge & Verse edition
 
+## Adaptable templates
+
+When a release is identified as agency-adaptable or organization-adaptable, it may be modified, branded, reproduced, and used internally according to the permission stated on that release page. Attribution may be removed when the template becomes part of an organization’s own workflow.
+
+Standalone resale of a free template is not permitted.
+
 ## Sharing
 
-Linking to the original release page is always welcome. For broader distribution, classroom packets, organizational use, or adaptations, contact permission should be obtained before public use.
+Linking to the original release page is always welcome. Broader public redistribution should follow the permission stated on the release page.
 
 ## Outside sources
 

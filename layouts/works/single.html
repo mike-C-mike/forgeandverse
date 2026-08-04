@@ -20,6 +20,7 @@
         <div><dt>Form</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
         <div><dt>Discipline</dt><dd>{{ partial "discipline-label.html" .Params.discipline }}</dd></div>
         {{ with .Params.series }}<div><dt>Series</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.material_intent }}<div><dt>Intended form</dt><dd>{{ . }}</dd></div>{{ end }}
       </dl>
     </div>
   </div>
@@ -51,21 +52,20 @@
 </section>
 
 {{ $current := . }}
-{{ $related := where (where site.RegularPages "Section" "works") ".Params.discipline" .Params.discipline }}
+{{ $disciplineMatches := where (where site.RegularPages "Section" "works") ".Params.discipline" .Params.discipline }}
+{{ $related := where $disciplineMatches "RelPermalink" "ne" .RelPermalink }}
+{{ if gt (len $related) 0 }}
 <section class="section related-section">
   <div class="wrap">
     <div class="section-heading compact-heading">
       <div><p class="eyebrow">Nearby in the archive</p><h2>Related work</h2></div>
     </div>
     <div class="work-grid work-grid-related">
-      {{ $shown := 0 }}
-      {{ range $related }}
-        {{ if and (ne .RelPermalink $current.RelPermalink) (lt $shown 3) }}
-          {{ partial "work-card.html" . }}
-          {{ $shown = add $shown 1 }}
-        {{ end }}
+      {{ range first 3 $related }}
+        {{ partial "work-card.html" . }}
       {{ end }}
     </div>
   </div>
 </section>
+{{ end }}
 {{ end }}

@@ -8,6 +8,7 @@
 <section class="discipline-index">
   {{ range site.Data.disciplines }}
   {{ $works := where (where site.RegularPages "Section" "works") ".Params.discipline" .slug }}
+  {{ $downloads := where (where site.RegularPages "Section" "downloads") ".Params.discipline" .slug }}
   <article class="discipline-panel{{ if eq .priority 1 }} discipline-panel-primary{{ end }}" id="{{ .slug }}">
     <div class="wrap discipline-panel-grid">
       <div class="discipline-panel-title">
@@ -18,10 +19,15 @@
       <div class="discipline-panel-body">
         <p class="discipline-lede">{{ .description }}</p>
         <ul class="discipline-themes">{{ range .themes }}<li>{{ . }}</li>{{ end }}</ul>
+        {{ if or (gt (len $works) 0) (gt (len $downloads) 0) }}
         <div class="discipline-links">
-          <a class="text-link" href="/works/?discipline={{ .slug }}">Browse related work <span aria-hidden="true">→</span></a>
-          {{ with $works }}<span>{{ len . }} {{ if eq (len .) 1 }}work{{ else }}works{{ end }} in the archive</span>{{ end }}
+          <div class="discipline-link-set">
+            {{ if gt (len $works) 0 }}<a class="text-link" href="/works/?discipline={{ .slug }}">Browse related work <span aria-hidden="true">→</span></a>{{ end }}
+            {{ if gt (len $downloads) 0 }}<a class="text-link" href="{{ (index $downloads 0).RelPermalink }}">View open release <span aria-hidden="true">→</span></a>{{ end }}
+          </div>
+          <span>{{ add (len $works) (len $downloads) }} {{ if eq (add (len $works) (len $downloads)) 1 }}release{{ else }}releases{{ end }} in this room</span>
         </div>
+        {{ end }}
       </div>
     </div>
   </article>
