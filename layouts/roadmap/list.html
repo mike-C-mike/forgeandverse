@@ -1,27 +1,15 @@
 {{ define "main" }}
 <header class="page-hero page-hero-compact page-hero-dark">
   <div class="wrap page-hero-grid">
-    <div><p class="eyebrow">Works in progress</p><h1>{{ .Title }}</h1></div>
+    <div><p class="eyebrow">Inside the studio</p><h1>{{ .Title }}</h1></div>
     <p>{{ .Description }}</p>
   </div>
 </header>
-<section class="section workbench-section">
+<section class="section study-index-section">
   <div class="wrap">
-    <div class="workbench-grid">
-      {{ range site.Data.roadmap }}
-      <article class="workbench-card">
-        <div class="workbench-card-top">
-          <span class="workbench-state">{{ .state }}</span>
-          <span class="workbench-number">{{ .number }}</span>
-        </div>
-        <h2>{{ .title }}</h2>
-        <p>{{ .note }}</p>
-        <dl>
-          <div><dt>Room</dt><dd>{{ .discipline }}</dd></div>
-          <div><dt>Form</dt><dd>{{ .format }}</dd></div>
-        </dl>
-      </article>
-      {{ end }}
+    <div class="study-index-intro study-index-intro-progress"><p>Each study stays open long enough to resolve the person, the working moment, the form, and the release test.</p><div class="study-index-key"><span>Question</span><i></i><span>Structure</span><i></i><span>Material</span><i></i><span>Sample</span><i></i><span>Ready</span></div></div>
+    <div class="study-grid">
+      {{ range .Pages.ByWeight }}{{ partial "study-card.html" . }}{{ end }}
     </div>
   </div>
 </section>

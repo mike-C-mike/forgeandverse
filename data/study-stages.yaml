@@ -1,0 +1,15 @@
+- step: 1
+  label: Question
+  description: The person and the need are clear enough to begin.
+- step: 2
+  label: Structure
+  description: The words, layout, and working form are being resolved.
+- step: 3
+  label: Material
+  description: Surface, scale, construction, and finish are being matched to the piece.
+- step: 4
+  label: Sample
+  description: A physical or production-ready sample is being tested.
+- step: 5
+  label: Ready
+  description: The work has passed its release test.

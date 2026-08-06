@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ $heroImage := .Params.hero_image | default .Params.card_image }}
+<header class="study-detail-hero">
+  <div class="wrap study-detail-hero-grid">
+    <div class="study-detail-copy"><p class="eyebrow"><a href="/roadmap/">On the Anvil</a> · {{ partial "discipline-link.html" .Params.discipline_slug }}</p><p class="study-detail-stage">{{ .Params.stage }}</p><h1>{{ .Title }}</h1><p class="study-detail-summary">{{ .Params.summary }}</p></div>
+    <div class="study-detail-visual{{ with $heroImage }} study-detail-visual-proof{{ end }}">
+      {{ with $heroImage }}<img src="{{ . }}" alt="{{ $.Params.hero_image_alt | default $.Params.card_image_alt | default $.Title }}">{{ else }}{{ partial "concept-visual.html" $.Params }}{{ end }}
+    </div>
+  </div>
+</header>
+{{ partial "person-need-strip.html" . }}
+<section class="study-progress-section"><div class="wrap"><div class="study-progress-head"><p class="eyebrow">Taking shape</p><p>The study moves only when the current question is resolved well enough to earn the next one.</p></div>{{ partial "study-stage.html" . }}</div></section>
+{{ partial "study-proof.html" . }}
+<section class="study-detail-body"><div class="wrap study-detail-body-grid"><article class="prose prose-study">{{ .Content }}</article><aside class="study-detail-aside"><div class="study-aside-block"><p class="eyebrow">The release test</p><blockquote>{{ .Params.design_test }}</blockquote></div>{{ with .Params.material_direction }}<div class="study-aside-block"><p class="eyebrow">Material direction</p><p>{{ . }}</p></div>{{ end }}{{ with .Params.details }}<div class="study-aside-block"><p class="eyebrow">In the study</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></div>{{ end }}{{ with .Params.open_questions }}<div class="study-aside-block study-open-questions"><p class="eyebrow">Still unresolved</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></div>{{ end }}{{ with .Params.related_work }}<a class="button button-dark study-related-button" href="{{ . }}">View the current work</a>{{ end }}</aside></div></section>
+{{ $siblings := where .Parent.Pages "RelPermalink" "ne" .RelPermalink }}{{ if gt (len $siblings) 0 }}<section class="section related-study-section"><div class="wrap"><div class="section-heading split-heading"><div><p class="eyebrow">Elsewhere on the anvil</p><h2>Other current studies</h2></div></div><div class="study-grid study-grid-related">{{ range first 3 $siblings.ByWeight }}{{ partial "study-card.html" . }}{{ end }}</div></div></section>{{ end }}
+{{ end }}

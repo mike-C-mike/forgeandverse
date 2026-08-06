@@ -3,6 +3,8 @@ title: "Why Forge & Verse Exists"
 date: 2026-08-02
 summary: "A studio for the overlooked professionals behind consequential work."
 status: "published"
+journal_kind: "studio-note"
+journal_kind_label: "Studio note"
 ---
 Some professions are visible only when something goes wrong. The examiner, evidence custodian, dispatcher, analyst, technician, and defender often disappear behind the outcome their work made possible.
 

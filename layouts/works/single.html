@@ -2,39 +2,61 @@
 <header class="work-detail-hero">
   <div class="wrap work-detail-grid">
     <div class="work-detail-copy">
-      <p class="eyebrow">{{ partial "discipline-label.html" .Params.discipline }}</p>
+      <p class="eyebrow discipline-backlink">{{ partial "discipline-link.html" .Params.discipline }}</p>
       <h1>{{ .Title }}</h1>
       <p class="work-detail-summary">{{ .Params.summary }}</p>
       <div class="work-detail-actions">
         {{ with .Params.external_url }}
-        <a class="button button-light" href="{{ . }}" rel="external noopener">{{ $.Params.cta_label | default "View available edition" }}</a>
+        <a class="button button-light" href="{{ . }}" rel="external noopener{{ if $.Params.affiliate }} sponsored{{ end }}">{{ $.Params.cta_label | default "View available edition" }}</a>
         {{ end }}
-        {{ with .Params.file_url }}
-        <a class="button button-light" href="{{ . }}" download>Download free work</a>
-        {{ end }}
+        {{ with .Params.file_url }}<a class="button button-light" href="{{ . }}" download>Download free work</a>{{ end }}
       </div>
+      {{ if .Params.external_url }}
+      <p class="external-edition-note">
+        {{ with .Params.partner_name }}Available through {{ . }}. {{ end }}
+        {{ .Params.fulfillment_note | default "The external production partner handles ordering, production, shipping, and returns." }}
+      </p>
+      {{ end }}
     </div>
     <div class="work-detail-facts" aria-label="Work details">
       <dl>
-        <div><dt>State</dt><dd>{{ partial "status-label.html" .Params.status }}</dd></div>
+                <div><dt>State</dt><dd>{{ partial "status-label.html" .Params.status }}</dd></div>
         <div><dt>Form</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
-        <div><dt>Discipline</dt><dd>{{ partial "discipline-label.html" .Params.discipline }}</dd></div>
-        {{ with .Params.series }}<div><dt>Series</dt><dd>{{ . }}</dd></div>{{ end }}
-        {{ with .Params.material_intent }}<div><dt>Intended form</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.material_intent }}<div><dt>Material direction</dt><dd>{{ . }} <a href="/materials/">About physical editions</a></dd></div>{{ end }}
+        {{ with .Params.partner_name }}<div><dt>Produced by</dt><dd>{{ . }}</dd></div>{{ end }}
       </dl>
     </div>
   </div>
 </header>
 
+{{ partial "person-need-strip.html" . }}
+
 <section class="work-detail-visual">
   <div class="wrap">
     {{ if .Params.image }}
-      <figure class="work-detail-image"><img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}" loading="eager"></figure>
+      <figure class="work-detail-image"><a href="{{ .Params.image }}" data-lightbox data-lightbox-caption="{{ .Params.image_caption | default .Title }}"><img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}" loading="eager"><span class="image-expand-label">Open composition</span></a></figure>
     {{ else }}
       <div class="work-detail-cover">{{ partial "work-cover.html" . }}</div>
     {{ end }}
   </div>
 </section>
+
+
+{{ with .Params.gallery }}
+<section class="section work-gallery-section">
+  <div class="wrap">
+    <div class="section-heading split-heading"><div><p class="eyebrow">In the room</p><h2>Scale, surface, and presence.</h2></div><p>A wall piece is judged as an object in a real space, not only as an image file.</p></div>
+    <div class="work-gallery-grid">
+      {{ range . }}
+      <figure>
+        <a href="{{ .image }}" data-lightbox data-lightbox-caption="{{ .caption }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async"><span class="image-expand-label">Open study</span></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 
 <section class="work-detail-body">
   <div class="wrap work-detail-body-grid">
@@ -51,20 +73,13 @@
   </div>
 </section>
 
-{{ $current := . }}
 {{ $disciplineMatches := where (where site.RegularPages "Section" "works") ".Params.discipline" .Params.discipline }}
 {{ $related := where $disciplineMatches "RelPermalink" "ne" .RelPermalink }}
 {{ if gt (len $related) 0 }}
 <section class="section related-section">
   <div class="wrap">
-    <div class="section-heading compact-heading">
-      <div><p class="eyebrow">Nearby in the archive</p><h2>Related work</h2></div>
-    </div>
-    <div class="work-grid work-grid-related">
-      {{ range first 3 $related }}
-        {{ partial "work-card.html" . }}
-      {{ end }}
-    </div>
+    <div class="section-heading compact-heading"><div><p class="eyebrow">Nearby in the archive</p><h2>Related work</h2></div></div>
+    <div class="work-grid work-grid-related">{{ range first 3 $related }}{{ partial "work-card.html" . }}{{ end }}</div>
   </div>
 </section>
 {{ end }}

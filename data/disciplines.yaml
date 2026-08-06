@@ -1,40 +1,104 @@
 - slug: examiner-bench
+  page: /disciplines/examiner-bench/
   name: The Examiner's Bench
   plain_name: Digital Forensics
   priority: 1
-  description: Art, tools, field notes, and professional culture for the people who recover what others overlook.
+  line: For the people who recover what others overlook.
+  description: Art, tools, field notes, and professional culture shaped around digital evidence work.
+  context: Digital examinations may happen inside machines, but the work still depends on human judgment, disciplined habits, and the questions an examiner carries into the evidence.
   themes:
-    - Examination rooms and laboratory culture
-    - Acquisition, preservation, and verification
-    - Case notes, reports, and quiet precision
-    - Humor understood by people who check the hash twice
+  - Examination rooms and laboratory culture
+  - Acquisition, preservation, and verification
+  - Case notes, reports, and quiet precision
+  - Humor understood by people who check the hash twice
+  paths:
+  - slug: workbench
+    label: Useful tools
+    title: Tools for the examination
+    description: Intake forms, continuity pads, reference aids, and structured paper tools built around real examination habits.
+  - slug: workspace
+    label: For the room
+    title: For the examiner who thinks with ink
+    description: Tactile notebooks, desk objects, and small rituals for people who do not want every thought trapped behind glass.
+  - slug: editions
+    label: Wall editions
+    title: Work worth mounting
+    description: Substantial wall pieces about precision, consequence, persistence, and the quiet weight of digital evidence.
 - slug: evidence-room
+  page: /disciplines/evidence-room/
   name: The Evidence Room
   plain_name: Property & Evidence
   priority: 2
+  line: For the people who give evidence a long memory.
   description: Work for the custodians of chain of custody, controlled chaos, and shelves that remember everything.
+  context: The value of an item is not always visible when it arrives. Careful intake, storage, documentation, and release preserve answers for questions that may not be asked for years.
   themes:
-    - Intake, packaging, storage, and release
-    - Inventory days and the objects nobody claims
-    - Chain of custody and courtroom reliability
-    - Affectionate humor from behind the counter
+  - Intake, packaging, storage, and release
+  - Inventory days and the objects nobody claims
+  - Chain of custody and courtroom reliability
+  - Affectionate humor from behind the counter
+  paths:
+  - slug: workbench
+    label: Useful tools
+    title: Tools for custody and continuity
+    description: Forms, checklists, inventory aids, and practical templates shaped around the movement and preservation of evidence.
+  - slug: workspace
+    label: For the room
+    title: Objects from behind the counter
+    description: Mugs, desk pieces, and insider humor that recognize the daily reality without reducing the profession to a joke.
+  - slug: editions
+    label: Wall editions
+    title: The long memory of evidence
+    description: Art about patience, preservation, and the ordinary item that may become important years after it reaches the shelf.
 - slug: watch
+  page: /disciplines/watch/
   name: The Watch
   plain_name: Law Enforcement & Support
   priority: 3
+  line: For the people who keep showing up.
   description: Thoughtful work for officers and the civilian professionals who keep operations moving.
+  context: Service is carried by more people than the public sees. Officers, dispatchers, analysts, technicians, supervisors, and support staff each hold a different part of the same difficult day.
   themes:
-    - Service, resolve, compassion, and presence
-    - Dispatch, analysts, technicians, and support staff
-    - Leadership without theatrics
-    - The humor that gets a hard shift through the door
+  - Service, resolve, compassion, and presence
+  - Dispatch, analysts, technicians, and support staff
+  - Leadership without theatrics
+  - The humor that gets a hard shift through the door
+  paths:
+  - slug: workbench
+    label: Useful tools
+    title: Practical pieces for the shift
+    description: Select field notes, handoff aids, and useful formats where a paper tool genuinely serves the work.
+  - slug: workspace
+    label: For the room
+    title: Recognition with an inside voice
+    description: Objects that carry pride, levity, and the details understood by the people who have actually worked the room.
+  - slug: editions
+    label: Wall editions
+    title: Service rendered with weight
+    description: Wall pieces about compassion, presence, resolve, and the human consequence behind the badge and the headset.
 - slug: signal
+  page: /disciplines/signal/
   name: The Signal
   plain_name: Cybersecurity
   priority: 4
-  description: Defensive technology, incident response, systems work, and the people who stand between order and outage.
+  line: For the people standing between order and outage.
+  description: Defensive technology, incident response, systems work, and the people who keep fragile systems intact.
+  context: The quiet day is often the result of someone else's preparation. Defensive work lives in the space between what could fail and what must keep working.
   themes:
-    - Blue-team and incident-response culture
-    - Networks, systems, and operational resilience
-    - Privacy, evidence, and technical judgment
-    - Jokes with a very small attack surface
+  - Blue-team and incident-response culture
+  - Networks, systems, and operational resilience
+  - Privacy, evidence, and technical judgment
+  - Jokes with a very small attack surface
+  paths:
+  - slug: workbench
+    label: Useful tools
+    title: Notes for incident and recovery
+    description: Paper aids, field references, and continuity tools for moments when the screen is already full enough.
+  - slug: workspace
+    label: For the room
+    title: Objects for the defensive mind
+    description: Desk pieces and restrained technical humor for analysts, administrators, and defenders who know the cost of quiet competence.
+  - slug: editions
+    label: Wall editions
+    title: Art from the edge of failure
+    description: Visual work about resilience, signal, trust, and the fragile systems people spend their careers keeping intact.

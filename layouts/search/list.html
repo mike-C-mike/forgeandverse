@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{- $items := slice -}}
+{{- range site.RegularPages -}}
+  {{- if in (slice "works" "downloads" "journal" "roadmap") .Section -}}
+    {{- $kind := .Section -}}
+    {{- if eq .Section "downloads" }}{{ $kind = "Free work" }}{{ end -}}
+    {{- if eq .Section "works" }}{{ $kind = "Studio work" }}{{ end -}}
+    {{- if eq .Section "journal" }}{{ $kind = "Journal" }}{{ end -}}
+    {{- if eq .Section "roadmap" }}{{ $kind = "On the Anvil" }}{{ end -}}
+    {{- $discipline := .Params.discipline | default .Params.discipline_slug | default "" -}}
+    {{- $items = $items | append (dict
+      "title" .Title
+      "url" .RelPermalink
+      "summary" (.Params.summary | default .Description | default (.Summary | plainify))
+      "body" (.Plain | plainify | truncate 900)
+      "kind" $kind
+      "discipline" $discipline
+      "journalKind" (.Params.journal_kind_label | default "")
+      "tags" (.Params.tags | default (slice))
+    ) -}}
+  {{- end -}}
+{{- end -}}
+<header class="search-hero">
+  <div class="wrap search-hero-grid">
+    <div><p class="eyebrow">Studio search</p><h1>Find the line, tool, or room you remember.</h1></div>
+    <p>Search the archive, free releases, journal, and current studies without digging through a storefront taxonomy.</p>
+  </div>
+</header>
+<section class="search-workspace">
+  <div class="wrap search-layout">
+    <form class="search-form" role="search" data-search-form>
+      <label for="site-search">Search Forge &amp; Verse</label>
+      <div class="search-input-shell">
+        <input id="site-search" type="search" inputmode="search" autocomplete="off" placeholder="Try “intake,” “evidence room,” or “ink”" data-search-input>
+        <button type="submit">Search</button>
+      </div>
+      <p class="search-hint">Searches titles, summaries, disciplines, and page text.</p>
+    </form>
+    <div class="search-results-head">
+      <p data-search-status aria-live="polite">Showing the studio index.</p>
+      <button type="button" data-search-clear hidden>Clear search</button>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <noscript><p class="search-noscript">Search needs JavaScript. The full archive remains available through Work, Journal, Disciplines, and On the Anvil.</p></noscript>
+  </div>
+</section>
+<script type="application/json" id="search-data">{{ $items | jsonify | safeHTML }}</script>
+{{ end }}

@@ -1,33 +1,25 @@
-# Digital Forensics Intake Request - Release Notes
+# Digital Forensics Intake Kit Release Notes
 
-## Problem addressed
+## Version 1.1 - August 4, 2026
 
-Investigators often know why a device matters but do not naturally frame a request in terms that help an examiner establish authority, scope, targets, handling history, and examination priority.
+The original two-page intake form is now one part of a broader handoff kit.
 
-The template reduces avoidable clarification without pretending that one form can replace agency policy or legal review.
+### Added
 
-## Files
+- One-page requester guide for officers and investigators
+- Four-page implementation guide for forensic units and administrators
+- Editable DOCX versions of both guides
+- Versioned ZIP bundle
+- README and use terms
+- Internal component checksum manifest
+- Public checksum manifest that includes the complete bundle
+- Public release history and adoption path
+- Related practice note: `The Device Is Not the Question`
 
-- print-ready two-page PDF
-- editable two-page DOCX
+### Unchanged
 
-## Adaptation points
+The original intake request PDF and DOCX remain byte-for-byte unchanged from version 1.0. Their SHA-256 values remain the same.
 
-Departments should review and customize:
+## Version 1.0 - August 4, 2026
 
-- authority choices and local legal language
-- required approvals
-- evidence-system identifiers
-- emergency routing
-- services actually offered by the unit
-- credential-transfer instructions
-- signature and acceptance requirements
-- retention and records language
-
-## Design decisions
-
-- two pages rather than compressing the request into unreadable fields
-- the investigative question receives more space than tool selections
-- passwords are directed to an approved separate method
-- device identifiers and handling state are captured before the request reaches the bench
-- Forge & Verse branding is deliberately quiet and removable in adapted agency versions
+Initial release of the two-page Digital Forensics Intake Request as print-ready PDF and editable DOCX.

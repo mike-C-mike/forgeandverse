@@ -1,0 +1,2 @@
+{{- $slug := . -}}
+{{- range where hugo.Data.disciplines "slug" $slug -}}<a href="{{ .page }}">{{ .name }}</a>{{- end -}}
