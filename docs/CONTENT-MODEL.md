@@ -133,30 +133,3 @@ Design studies use `stage_step` from 1 through 5:
 5. Ready
 
 A polished image alone does not justify advancing a study. A sample advances only after it can be tested against the working moment and release standard.
-
-## Physical edition metadata
-
-A Work that may become a physical object can include an `edition` mapping. The public edition archive and work-page edition module are driven by this block.
-
-Required when `edition.enabled` is `true`:
-
-- `state`: one of `in-studio`, `proof-in-hand`, `edition-approved`, `available`, or `resting`
-- `headline`: the physical question the work is answering
-- `intended_room`: where the object is designed to live
-- `reading_distance`: how the work must perform in the room
-- `edition_model`: open, limited, or still under study
-- `availability_note`: plain-language explanation of current availability
-- `formats`: one or more physical specifications under consideration
-
-Each format requires:
-
-- `name`
-- `status`
-- `size_direction`
-- `surface`
-- `mount`
-- `fit`
-
-Use `proof-in-hand` only after a real physical sample exists. A digital mockup or room rendering remains `in-studio`.
-
-When an edition becomes `available`, the Work must also define `external_url`, `partner_name`, `fulfillment_note`, and `cta_label`.

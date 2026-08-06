@@ -8,8 +8,6 @@
     {{- if eq .Section "journal" }}{{ $kind = "Journal" }}{{ end -}}
     {{- if eq .Section "roadmap" }}{{ $kind = "On the Anvil" }}{{ end -}}
     {{- $discipline := .Params.discipline | default .Params.discipline_slug | default "" -}}
-    {{- $editionState := "" -}}
-    {{- with .Params.edition -}}{{- $editionState = .state | default "" -}}{{- end -}}
     {{- $items = $items | append (dict
       "title" .Title
       "url" .RelPermalink
@@ -18,8 +16,6 @@
       "kind" $kind
       "discipline" $discipline
       "journalKind" (.Params.journal_kind_label | default "")
-      "editionState" $editionState
-      "material" (.Params.material_intent | default "")
       "tags" (.Params.tags | default (slice))
     ) -}}
   {{- end -}}
@@ -27,7 +23,7 @@
 <header class="search-hero">
   <div class="wrap search-hero-grid">
     <div><p class="eyebrow">Studio search</p><h1>Find the line, tool, or room you remember.</h1></div>
-    <p>Search titles, working moments, disciplines, and the language inside the work.</p>
+    <p>Search the archive, free releases, journal, and current studies without digging through a storefront taxonomy.</p>
   </div>
 </header>
 <section class="search-workspace">

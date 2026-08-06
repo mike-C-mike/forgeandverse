@@ -1,0 +1,158 @@
+{{ define "main" }}
+{{ $openReleases := (site.GetPage "/downloads").Pages.ByWeight }}
+{{ $studies := (site.GetPage "/roadmap").Pages.ByWeight }}
+<header class="page-hero page-hero-dark release-desk-hero">
+  <div class="wrap page-hero-grid">
+    <div><p class="eyebrow">Release desk</p><h1>Files that have left the bench.</h1></div>
+    <p>Open releases ready to adapt, and field proofs ready to print and test. Direct downloads, visible versions, and published SHA-256 values. No account or email gate.</p>
+  </div>
+</header>
+
+<nav class="release-desk-nav" aria-label="Release desk sections">
+  <div class="wrap release-desk-nav-grid">
+    <a href="#open-releases"><span>01</span><strong>Open releases</strong><small>Ready to use or adapt</small></a>
+    <a href="#field-proofs"><span>02</span><strong>Field proofs</strong><small>Ready for controlled testing</small></a>
+    <a href="#verification"><span>03</span><strong>Verify a file</strong><small>Compare the published hash</small></a>
+    <a href="#machine-ledger"><span>04</span><strong>Machine ledger</strong><small>JSON and checksum manifest</small></a>
+  </div>
+</nav>
+
+<section class="section release-desk-section" id="open-releases">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Open releases</p><h2>Useful now.</h2></div>
+      <p>Finished files released for the purpose stated on their page. Adaptation rights, limitations, version history, and local-use guidance travel with the work.</p>
+    </div>
+    <div class="release-ledger-list">
+      {{ range $openReleases }}
+      {{ $release := . }}
+      <article class="release-ledger-card release-ledger-card-open">
+        <a class="release-ledger-preview" href="{{ .RelPermalink }}">
+          {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $release.Title }}" loading="lazy">{{ end }}
+          <span>Open release</span>
+        </a>
+        <div class="release-ledger-body">
+          <div class="release-ledger-meta"><span>{{ partial "discipline-label.html" .Params.discipline }}</span><span>Version {{ .Params.version }} · Updated {{ .Params.updated }}</span></div>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="release-ledger-summary">{{ .Params.summary }}</p>
+          <dl class="release-ledger-facts">
+            <div><dt>For</dt><dd>{{ .Params.audience }}</dd></div>
+            <div><dt>Need</dt><dd>{{ .Params.need }}</dd></div>
+            <div><dt>Form</dt><dd>{{ .Params.format_label }}</dd></div>
+          </dl>
+          <div class="release-ledger-actions">
+            {{ with .Params.bundle_url }}<a class="button button-dark" href="{{ . }}" download>Download complete kit</a>{{ end }}
+            <a class="text-link" href="{{ .RelPermalink }}">Read the release notes <span aria-hidden="true">→</span></a>
+          </div>
+          {{ with .Params.checksums }}{{ with (index . 0) }}
+          <div class="release-ledger-hash" data-copy-region>
+            <span>Bundle SHA-256</span>
+            <code>{{ .value }}</code>
+            <button type="button" data-copy="{{ .value }}">Copy</button>
+            <span class="sr-only" data-copy-status aria-live="polite"></span>
+          </div>
+          {{ end }}{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section release-desk-section release-desk-section-dark" id="field-proofs">
+  <div class="wrap">
+    <div class="section-heading split-heading split-heading-light">
+      <div><p class="eyebrow">Field proofs</p><h2>Useful enough to test. Not finished enough to pretend.</h2></div>
+      <p>Printable working proofs for controlled evaluation. Use fictitious or sanitized information unless an agency has approved a real-world test.</p>
+    </div>
+    <div class="field-proof-ledger-grid">
+      {{ range $studies }}{{ if .Params.proof_available }}
+      <article class="field-proof-ledger-card">
+        <div class="field-proof-ledger-head"><span>Field proof · v{{ .Params.proof_version }}</span><small>{{ .Params.proof_updated }}</small></div>
+        <h3><a href="{{ .RelPermalink }}#field-proof">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary }}</p>
+        <dl>
+          <div><dt>For</dt><dd>{{ .Params.audience }}</dd></div>
+          <div><dt>Test</dt><dd>{{ .Params.design_test }}</dd></div>
+          <div><dt>Form</dt><dd>{{ .Params.format }}</dd></div>
+        </dl>
+        <div class="field-proof-ledger-actions">
+          <a class="button button-light" href="{{ .Params.proof_bundle_url }}" download>{{ .Params.proof_bundle_label }}</a>
+          <a class="text-link text-link-light" href="{{ .RelPermalink }}#field-proof">Open the study <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="field-proof-ledger-hash" data-copy-region>
+          <span>Bundle SHA-256</span>
+          <code>{{ .Params.proof_bundle_sha256 }}</code>
+          <button type="button" data-copy="{{ .Params.proof_bundle_sha256 }}">Copy</button>
+          <span class="sr-only" data-copy-status aria-live="polite"></span>
+        </div>
+      </article>
+      {{ end }}{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section verification-section" id="verification">
+  <div class="wrap">
+    <div class="verification-grid">
+      <div class="verification-copy">
+        <p class="eyebrow">Verification</p>
+        <h2>A published hash is only useful when someone checks it.</h2>
+        <p>Calculate the SHA-256 value of the file you received, then compare it with the value shown on the release page or in the ledger manifest. A mismatch means the file is not byte-for-byte identical to the published release.</p>
+        <p class="verification-note">Checksums establish file identity. They do not replace local malware scanning, source review, policy approval, or testing.</p>
+      </div>
+      <div class="verification-commands" aria-label="SHA-256 verification commands">
+        <div><span>PowerShell</span><code>Get-FileHash .\filename.zip -Algorithm SHA256</code></div>
+        <div><span>Windows built-in</span><code>certutil -hashfile filename.zip SHA256</code></div>
+        <div><span>macOS</span><code>shasum -a 256 filename.zip</code></div>
+        <div><span>Linux</span><code>sha256sum filename.zip</code></div>
+      </div>
+    </div>
+    <div class="local-hash-verifier" data-hash-verifier>
+      <div class="local-hash-verifier-intro">
+        <p class="eyebrow">Local browser check</p>
+        <h3>Choose a published bundle and compare the file on your machine.</h3>
+        <p>The browser reads the selected file locally and calculates its SHA-256 value with the Web Crypto API. The file is not uploaded or transmitted.</p>
+      </div>
+      <div class="local-hash-verifier-form">
+        <label>Published bundle
+          <select data-hash-release>
+            <option value="">Choose a current bundle</option>
+            {{ range $openReleases }}{{ $deskRelease := . }}{{ with .Params.checksums }}{{ with (index . 0) }}<option value="{{ .value }}">{{ $deskRelease.Title }} · v{{ $deskRelease.Params.version }}</option>{{ end }}{{ end }}{{ end }}
+            {{ range $studies }}{{ if .Params.proof_available }}<option value="{{ .Params.proof_bundle_sha256 }}">{{ .Title }} field proof · v{{ .Params.proof_version }}</option>{{ end }}{{ end }}
+          </select>
+        </label>
+        <label>Downloaded file
+          <input type="file" data-hash-file>
+        </label>
+        <button class="button button-dark" type="button" data-hash-run>Calculate and compare</button>
+        <p class="local-hash-status" data-hash-status aria-live="polite">Select a published bundle and the file you downloaded.</p>
+      </div>
+      <div class="local-hash-result" data-hash-result hidden>
+        <strong data-hash-outcome></strong>
+        <dl>
+          <div><dt>File</dt><dd data-hash-filename></dd></div>
+          <div><dt>Size</dt><dd data-hash-size></dd></div>
+          <div><dt>Calculated</dt><dd><code data-hash-actual></code></dd></div>
+          <div><dt>Published</dt><dd><code data-hash-expected></code></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section machine-ledger-section" id="machine-ledger">
+  <div class="wrap machine-ledger-grid">
+    <div>
+      <p class="eyebrow">Machine-readable ledger</p>
+      <h2>The same release record, without the presentation layer.</h2>
+      <p>The JSON ledger lists current open releases and field proofs, their public pages, bundle hashes, file hashes, byte sizes, and media types. The checksum manifest provides a plain-text verification list.</p>
+    </div>
+    <div class="machine-ledger-actions">
+      <a class="button button-dark" href="/releases/forge-and-verse-release-ledger.json" download>Download JSON ledger</a>
+      <a class="button button-outline-dark" href="/releases/forge-and-verse-release-ledger.sha256" download>Download checksum manifest</a>
+      <a class="text-link" href="/use-and-rights/">Review use and rights <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+{{ end }}

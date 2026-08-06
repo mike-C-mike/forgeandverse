@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $edition := .Params.edition }}
 <header class="work-detail-hero">
   <div class="wrap work-detail-grid">
     <div class="work-detail-copy">
@@ -7,14 +6,12 @@
       <h1>{{ .Title }}</h1>
       <p class="work-detail-summary">{{ .Params.summary }}</p>
       <div class="work-detail-actions">
-        {{ if not (and $edition $edition.enabled) }}
         {{ with .Params.external_url }}
         <a class="button button-light" href="{{ . }}" rel="external noopener{{ if $.Params.affiliate }} sponsored{{ end }}">{{ $.Params.cta_label | default "View available edition" }}</a>
         {{ end }}
-        {{ end }}
         {{ with .Params.file_url }}<a class="button button-light" href="{{ . }}" download>Download free work</a>{{ end }}
       </div>
-      {{ if and .Params.external_url (not (and $edition $edition.enabled)) }}
+      {{ if .Params.external_url }}
       <p class="external-edition-note">
         {{ with .Params.partner_name }}Available through {{ . }}. {{ end }}
         {{ .Params.fulfillment_note | default "The external production partner handles ordering, production, shipping, and returns." }}
@@ -23,8 +20,7 @@
     </div>
     <div class="work-detail-facts" aria-label="Work details">
       <dl>
-                <div><dt>Studio state</dt><dd>{{ partial "status-label.html" .Params.status }}</dd></div>
-        {{ if and $edition $edition.enabled }}<div><dt>Edition state</dt><dd>{{ partial "edition-state.html" $edition.state }}</dd></div>{{ end }}
+                <div><dt>State</dt><dd>{{ partial "status-label.html" .Params.status }}</dd></div>
         <div><dt>Form</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
         {{ with .Params.material_intent }}<div><dt>Material direction</dt><dd>{{ . }} <a href="/materials/">About physical editions</a></dd></div>{{ end }}
         {{ with .Params.partner_name }}<div><dt>Produced by</dt><dd>{{ . }}</dd></div>{{ end }}
@@ -61,8 +57,6 @@
   </div>
 </section>
 {{ end }}
-
-{{ partial "edition-panel.html" . }}
 
 <section class="work-detail-body">
   <div class="wrap work-detail-body-grid">

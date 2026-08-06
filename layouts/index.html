@@ -7,7 +7,6 @@
 {{ $statusPad := site.GetPage "/roadmap/bench-status-pad" }}
 {{ $notebook := site.GetPage "/roadmap/examination-notebook" }}
 {{ $preserved := site.GetPage "/roadmap/preserved-until-it-matters" }}
-{{ $badgeWork := site.GetPage "/works/believe-in-the-badge" }}
 
 <section class="hero">
   <div class="wrap hero-grid">
@@ -58,7 +57,10 @@
           {{ end }}
         </div>
         {{ end }}
-        <span class="home-release-action">Open the release <b aria-hidden="true">→</b></span>
+        <div class="home-release-actions">
+          <span class="home-release-action">Open the release <b aria-hidden="true">→</b></span>
+          <span class="home-release-desk">Release Desk · versions and checksums</span>
+        </div>
       </div>
     </a>
     {{ end }}
@@ -72,12 +74,11 @@
       <span class="image-expand-label">Open room study</span>
     </a>
     <div class="home-edition-copy">
-      <div class="home-edition-kicker"><p class="eyebrow">Physical edition</p>{{ with $badgeWork }}{{ with .Params.edition }}{{ partial "edition-state.html" .state }}{{ end }}{{ end }}</div>
+      <p class="eyebrow">Edition study</p>
       <h2>A wall piece has to survive the wall.</h2>
       <p>Typography, scale, surface, edge, reflection, and mounting all change how a piece is read. Believe in the Badge is now being tested as an object in the room, not just an image on a screen.</p>
       <div class="home-edition-links">
         <a class="text-link text-link-light" href="/roadmap/believe-in-the-badge-edition/">Open the edition study <span aria-hidden="true">→</span></a>
-        <a class="text-link text-link-light" href="/editions/">Open physical editions <span aria-hidden="true">→</span></a>
         <a class="text-link text-link-light" href="/materials/">See the material approach <span aria-hidden="true">→</span></a>
       </div>
     </div>

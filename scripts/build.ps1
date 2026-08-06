@@ -27,6 +27,8 @@ $Python = Get-Command python.exe -ErrorAction SilentlyContinue
 if ($Python) {
     & $Python.Source -c "import yaml" 2>$null
     if ($LASTEXITCODE -eq 0) {
+        & $Python.Source (Join-Path $PSScriptRoot "build_release_ledger.py")
+        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
         & $Python.Source (Join-Path $PSScriptRoot "validate.py")
         if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
     } else {

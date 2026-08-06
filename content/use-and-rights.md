@@ -28,3 +28,7 @@ Linking to the original release page is always welcome. Broader public redistrib
 ## Outside sources
 
 When a work draws from licensed material, public-domain text, commentary, or another source, the page will identify that status. Display studies that are not cleared for release will not be offered as downloadable or purchasable editions.
+
+## Versions and file identity
+
+The [Release Desk](/releases/) publishes the current version and SHA-256 value for open releases and field proofs. The machine-readable ledger records the files that belong to each package. Checksums establish byte-for-byte file identity; they do not grant additional rights or replace local review.

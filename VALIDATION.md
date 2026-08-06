@@ -1,4 +1,4 @@
-# Forge & Verse v18.19 Validation
+# Forge & Verse v18 Validation
 
 Validated in the build environment on August 6, 2026.
 
@@ -11,61 +11,54 @@ Passed:
 - Required fields for works, free releases, journal entries, discipline pages, and design studies
 - Discipline, release-path, related-release, related-journal, related-study, and related-work relationships
 - Journal-kind validation
-- Five-state physical-edition data and ordering validation
-- Nested edition metadata, format specifications, and study-route checks
-- Production-partner and fulfillment requirements for any edition marked Available
 - Static image, download, proof-file, and proof-bundle references
-- Field-proof metadata and SHA-256 values
+- Field-proof metadata, bundles, and SHA-256 values
 - Release-manifest file sizes, routes, media records, and hashes
 - Intake field-map count and release-page metadata
-- 27 image files opened and verified
-- 15 PDF signatures verified
-- 4 DOCX archives verified, including `word/document.xml`
-- 4 ZIP archives tested with no corrupt members
-- Hugo template delimiter balance across 42 template files
-- CSS parsing: 1,040 qualified rules, 46 at-rules, zero parse errors
-- JavaScript syntax validation
+- Release Desk content and layout presence
+- Machine-readable release-ledger schema, entry count, routes, byte sizes, media types, and per-file SHA-256 values
+- Plain-text release-ledger checksum manifest
+- PDF signatures, DOCX archive structure, and ZIP integrity
+- Hugo template delimiter balance
+- CSS parsing: 1,056 rules, zero parse errors
+- JavaScript syntax validation, including the local browser hash verifier
 - Python compilation for repository scripts
 
-Command:
+Commands:
 
 ```text
+python scripts/build_release_ledger.py
 python scripts/validate.py
+node --check assets/js/site.js
 ```
 
 Result:
 
 ```text
 Forge & Verse validation passed.
-  Disciplines: 4
-  Study stages: 5
-  Edition states: 5
-  Works: 1
-  Free works: 1
-  Journal pieces: 5
-  Design studies: 4
-  Content files: 28
+Disciplines: 4
+Study stages: 5
+Works: 1
+Free works: 1
+Journal pieces: 5
+Design studies: 4
+Content files: 28
 ```
 
-## What this round specifically validates
+The generated release desk currently tracks:
 
-- `/editions/` content and layout are present.
-- Physical editions use only these public states: `in-studio`, `proof-in-hand`, `edition-approved`, `available`, and `resting`.
-- An edition cannot be marked `available` without an external URL, production-partner name, fulfillment note, and purchase-button label.
-- A digital room mockup does not silently promote a work to `proof-in-hand`.
-- The Believe in the Badge edition remains `in-studio` and has no ordering link.
-- Search metadata and Work structured data can include edition state and material direction.
-- Work archetypes include the edition model without enabling it by default.
+- 1 open release
+- 2 field-proof packages
+- 18 downloadable package files and supporting manifests
+- 1 machine-readable release ledger
 
 ## Remaining local check
 
-A Hugo executable is not available in this build container, so the final generated-site and browser review must run on the Windows development machine:
+Run the complete Hugo v0.164.0 build and rendered-site validator on the Windows development machine:
 
 ```powershell
 .\scripts\build.ps1
 ```
-
-The build script will run repository validation, Hugo, and rendered-site validation in sequence.
 
 Then start the local server and open the priority page set:
 
@@ -78,12 +71,10 @@ Priority review:
 
 - `/`
 - `/works/`
-- `/works/believe-in-the-badge/`
-- `/editions/`
-- `/materials/`
-- `/journal/`
-- `/roadmap/`
-- `/roadmap/believe-in-the-badge-edition/`
+- `/releases/`
+- `/downloads/`
 - `/downloads/digital-forensics-intake-request/`
+- `/roadmap/bench-status-pad/`
+- `/roadmap/examination-notebook/`
 
-Review desktop, tablet, and narrow mobile widths, with particular attention to heading balance, natural card height, edition-format cards, and long-page spacing.
+The Release Desk browser verifier should be tested in the local HTTPS or localhost context with one known matching bundle and one deliberately different file.

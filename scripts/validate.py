@@ -75,24 +75,13 @@ def main() -> int:
     check_static_reference((config.get("params") or {}).get("defaultImage"), "default social image", ROOT / "hugo.toml")
     if not (CONTENT / "search" / "_index.md").exists(): fail("Missing search content page")
     if not (ROOT / "layouts" / "search" / "list.html").exists(): fail("Missing search layout")
-    if not (CONTENT / "editions" / "_index.md").exists(): fail("Missing physical editions content page")
-    if not (ROOT / "layouts" / "editions" / "list.html").exists(): fail("Missing physical editions layout")
+    if not (CONTENT / "releases" / "_index.md").exists(): fail("Missing Release Desk content page")
+    if not (ROOT / "layouts" / "releases" / "list.html").exists(): fail("Missing Release Desk layout")
 
     disciplines = load_yaml(ROOT / "data" / "disciplines.yaml") or []
     stages = load_yaml(ROOT / "data" / "study-stages.yaml") or []
-    edition_states = load_yaml(ROOT / "data" / "edition-states.yaml") or []
     stage_steps = {item.get("step") for item in stages if isinstance(item, dict)}
     if stage_steps != set(range(1, 6)): fail("Study stages must define steps 1 through 5")
-    edition_state_slugs = {item.get("slug") for item in edition_states if isinstance(item, dict)}
-    expected_edition_states = {"in-studio", "proof-in-hand", "edition-approved", "available", "resting"}
-    if edition_state_slugs != expected_edition_states: fail(f"Edition states must define exactly: {sorted(expected_edition_states)}")
-    edition_state_orders = {item.get("order") for item in edition_states if isinstance(item, dict)}
-    if edition_state_orders != set(range(1, 6)): fail("Edition states must define orders 1 through 5")
-    for item in edition_states:
-        if not isinstance(item, dict):
-            fail("Each edition state entry must be a mapping")
-        else:
-            require(item, ("slug", "label", "short", "description", "order"), ROOT / "data" / "edition-states.yaml")
     discipline_slugs = {item.get("slug") for item in disciplines if isinstance(item, dict)}
     expected_paths = {"workbench", "workspace", "editions"}
     if len(discipline_slugs) != len(disciplines): fail("Discipline slugs are missing or duplicated")
@@ -113,34 +102,11 @@ def main() -> int:
         section = path.relative_to(CONTENT).parts[0]
         if path.name == "_index.md": continue
         if section in counts: counts[section] += 1
-        if section == "works":
-            require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights"), path)
-            edition = data.get("edition")
-            if edition:
-                if not isinstance(edition, dict):
-                    fail(f"Edition metadata must be a mapping: {path.relative_to(ROOT)}")
-                elif edition.get("enabled"):
-                    require(edition, ("state", "headline", "intended_room", "reading_distance", "edition_model", "availability_note", "formats"), path)
-                    if edition.get("state") not in edition_state_slugs:
-                        fail(f"Unknown edition state '{edition.get('state')}' in {path.relative_to(ROOT)}")
-                    formats = edition.get("formats") or []
-                    if not isinstance(formats, list) or not formats:
-                        fail(f"Physical edition needs at least one format: {path.relative_to(ROOT)}")
-                    else:
-                        for entry in formats:
-                            if not isinstance(entry, dict):
-                                fail(f"Invalid edition format in {path.relative_to(ROOT)}")
-                            else:
-                                require(entry, ("name", "status", "size_direction", "surface", "mount", "fit"), path)
-                    study_url = edition.get("study_url")
-                    if study_url: routes.append((study_url, path))
-                    if edition.get("state") == "available":
-                        require(data, ("external_url", "partner_name", "fulfillment_note", "cta_label"), path)
-                    elif data.get("external_url"):
-                        warn(f"External ordering URL present while edition state is not available: {path.relative_to(ROOT)}")
+        if section == "works": require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights"), path)
         elif section == "downloads":
-            require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights"), path)
+            require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights", "version", "updated", "checksums"), path)
             if not data.get("files") and not data.get("package_files"): fail(f"Download release needs files or package_files: {path.relative_to(ROOT)}")
+            if not isinstance(data.get("checksums"), list) or not data.get("checksums"): fail(f"Download release needs at least one published checksum: {path.relative_to(ROOT)}")
         elif section == "journal":
             require(data, ("title", "date", "summary", "status", "journal_kind", "journal_kind_label"), path)
             if data.get("journal_kind") not in {"practice-note", "essay", "studio-note"}:
@@ -282,6 +248,64 @@ def main() -> int:
     for route, source in routes:
         if not content_route_exists(route): fail(f"Broken internal content link '{route}' in {source.relative_to(ROOT)}")
 
+    ledger_json = STATIC / "releases" / "forge-and-verse-release-ledger.json"
+    ledger_hashes = STATIC / "releases" / "forge-and-verse-release-ledger.sha256"
+    if not ledger_json.exists():
+        fail("Missing machine-readable release ledger. Run scripts/build_release_ledger.py")
+    else:
+        try:
+            ledger = json.loads(ledger_json.read_text(encoding="utf-8"))
+            require(ledger, ("schema", "schema_version", "studio", "site", "updated", "entry_count", "entries"), ledger_json)
+            entries = ledger.get("entries") or []
+            if ledger.get("schema_version") != 1: fail("Release ledger schema_version must be 1")
+            if ledger.get("entry_count") != len(entries): fail("Release ledger entry_count does not match entries")
+            expected_ledger_entries = counts["downloads"] + sum(
+                1 for study in (CONTENT / "roadmap").glob("*.md")
+                if study.name != "_index.md" and front_matter(study)[0].get("proof_available")
+            )
+            if len(entries) != expected_ledger_entries:
+                fail(f"Release ledger has {len(entries)} entries; expected {expected_ledger_entries}")
+            seen_ids: set[str] = set()
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    fail("Release ledger entries must be mappings"); continue
+                require(entry, ("id", "title", "kind", "status", "version", "updated", "page", "discipline", "audience", "need", "format", "primary_download", "files"), ledger_json)
+                entry_id = str(entry.get("id"))
+                if entry_id in seen_ids: fail(f"Duplicate release ledger id: {entry_id}")
+                seen_ids.add(entry_id)
+                if entry.get("kind") not in {"open-release", "field-proof"}: fail(f"Unknown release ledger kind: {entry.get('kind')}")
+                page_route = str(entry.get("page") or "").split("#", 1)[0]
+                if not content_route_exists(page_route): fail(f"Release ledger references missing page: {page_route}")
+                file_records = entry.get("files") or []
+                if not file_records: fail(f"Release ledger entry has no files: {entry_id}")
+                primary = entry.get("primary_download")
+                if not isinstance(primary, dict): fail(f"Release ledger entry has no primary download: {entry_id}")
+                for record in file_records:
+                    if not isinstance(record, dict):
+                        fail(f"Invalid release ledger file record in {entry_id}"); continue
+                    require(record, ("label", "type", "path", "bytes", "media_type", "sha256"), ledger_json)
+                    target = static_target(str(record.get("path") or ""))
+                    if not target or not target.exists():
+                        fail(f"Release ledger file does not exist: {record.get('path')}"); continue
+                    if target.stat().st_size != int(record.get("bytes", -1)): fail(f"Release ledger byte count mismatch: {target.relative_to(ROOT)}")
+                    actual = hashlib.sha256(target.read_bytes()).hexdigest()
+                    if actual.lower() != str(record.get("sha256") or "").lower(): fail(f"Release ledger SHA-256 mismatch: {target.relative_to(ROOT)}")
+        except Exception as exc:
+            fail(f"Release ledger parse failed: {ledger_json.relative_to(ROOT)}: {exc}")
+    if not ledger_hashes.exists():
+        fail("Missing release ledger checksum manifest")
+    else:
+        for number, line in enumerate(ledger_hashes.read_text(encoding="utf-8").splitlines(), start=1):
+            if not line.strip(): continue
+            parts = line.split(None, 1)
+            if len(parts) != 2 or not re.fullmatch(r"[0-9a-fA-F]{64}", parts[0]):
+                fail(f"Invalid release ledger checksum line {number}"); continue
+            target = STATIC / parts[1].strip()
+            if not target.exists():
+                fail(f"Release ledger checksum references missing file: {parts[1].strip()}"); continue
+            actual = hashlib.sha256(target.read_bytes()).hexdigest()
+            if actual.lower() != parts[0].lower(): fail(f"Release ledger checksum mismatch: {target.relative_to(ROOT)}")
+
     import zipfile
     for artifact in sorted((STATIC / "downloads").rglob("*")):
         if not artifact.is_file():
@@ -326,7 +350,6 @@ def main() -> int:
     print("Forge & Verse validation passed.")
     print(f"  Disciplines: {len(disciplines)}")
     print(f"  Study stages: {len(stages)}")
-    print(f"  Edition states: {len(edition_states)}")
     print(f"  Works: {counts['works']}")
     print(f"  Free works: {counts['downloads']}")
     print(f"  Journal pieces: {counts['journal']}")

@@ -91,6 +91,88 @@
     });
   });
 
+
+  document.querySelectorAll('[data-hash-verifier]').forEach((verifier) => {
+    const release = verifier.querySelector('[data-hash-release]');
+    const fileInput = verifier.querySelector('[data-hash-file]');
+    const run = verifier.querySelector('[data-hash-run]');
+    const status = verifier.querySelector('[data-hash-status]');
+    const result = verifier.querySelector('[data-hash-result]');
+    const outcome = verifier.querySelector('[data-hash-outcome]');
+    const filename = verifier.querySelector('[data-hash-filename]');
+    const size = verifier.querySelector('[data-hash-size]');
+    const actual = verifier.querySelector('[data-hash-actual]');
+    const expected = verifier.querySelector('[data-hash-expected]');
+
+    if (!release || !fileInput || !run || !status || !result) return;
+
+    const reset = () => {
+      result.hidden = true;
+      result.classList.remove('is-match', 'is-mismatch');
+      status.textContent = 'Select a published bundle and the file you downloaded.';
+    };
+
+    const formatBytes = (bytes) => {
+      if (bytes < 1024) return `${bytes} bytes`;
+      const units = ['KB', 'MB', 'GB'];
+      let value = bytes / 1024;
+      let unit = units[0];
+      for (let index = 1; index < units.length && value >= 1024; index += 1) {
+        value /= 1024;
+        unit = units[index];
+      }
+      return `${value.toFixed(value >= 10 ? 1 : 2)} ${unit}`;
+    };
+
+    const toHex = (buffer) => Array.from(new Uint8Array(buffer))
+      .map((byte) => byte.toString(16).padStart(2, '0'))
+      .join('');
+
+    release.addEventListener('change', reset);
+    fileInput.addEventListener('change', reset);
+
+    run.addEventListener('click', async () => {
+      const selectedFile = fileInput.files?.[0];
+      const published = String(release.value || '').trim().toLowerCase();
+      if (!published) {
+        status.textContent = 'Choose the published bundle you want to verify.';
+        release.focus();
+        return;
+      }
+      if (!selectedFile) {
+        status.textContent = 'Choose the downloaded file from your machine.';
+        fileInput.focus();
+        return;
+      }
+      if (!window.crypto?.subtle) {
+        status.textContent = 'This browser does not provide the Web Crypto API. Use one of the command-line methods above.';
+        return;
+      }
+
+      run.disabled = true;
+      status.textContent = `Calculating SHA-256 for ${selectedFile.name} locally…`;
+      result.hidden = true;
+      try {
+        const digest = await window.crypto.subtle.digest('SHA-256', await selectedFile.arrayBuffer());
+        const calculated = toHex(digest);
+        const matches = calculated === published;
+        result.hidden = false;
+        result.classList.toggle('is-match', matches);
+        result.classList.toggle('is-mismatch', !matches);
+        if (outcome) outcome.textContent = matches ? 'Match. The file is byte-for-byte identical to the published bundle.' : 'Mismatch. Do not treat this file as the published bundle.';
+        if (filename) filename.textContent = selectedFile.name;
+        if (size) size.textContent = formatBytes(selectedFile.size);
+        if (actual) actual.textContent = calculated;
+        if (expected) expected.textContent = published;
+        status.textContent = matches ? 'Verification complete: the hashes match.' : 'Verification complete: the hashes do not match.';
+      } catch {
+        status.textContent = 'The browser could not calculate the file hash. Use one of the command-line methods above.';
+      } finally {
+        run.disabled = false;
+      }
+    });
+  });
+
   const lightbox = document.querySelector('[data-lightbox-dialog]');
   const lightboxImage = lightbox?.querySelector('[data-lightbox-image]');
   const lightboxCaption = lightbox?.querySelector('[data-lightbox-caption]');
@@ -195,8 +277,6 @@
       const kind = normalize(item.kind);
       const discipline = normalize(disciplineNames[item.discipline] || item.discipline);
       const journalKind = normalize(item.journalKind);
-      const editionState = normalize(item.editionState);
-      const material = normalize(item.material);
       const tags = normalize((item.tags || []).join(' '));
       let score = 0;
       for (const term of terms) {
@@ -206,11 +286,9 @@
         if (discipline.includes(term)) score += 5;
         if (kind.includes(term)) score += 3;
         if (journalKind.includes(term)) score += 4;
-        if (editionState.includes(term)) score += 3;
-        if (material.includes(term)) score += 4;
         if (tags.includes(term)) score += 5;
         if (body.includes(term)) score += 2;
-        if (![title, summary, body, kind, discipline, journalKind, editionState, material, tags].some((field) => field.includes(term))) return -1;
+        if (![title, summary, body, kind, discipline, journalKind, tags].some((field) => field.includes(term))) return -1;
       }
       return score;
     };

@@ -1,0 +1,237 @@
+{
+  "schema": "https://forgeandverse.com/schemas/release-ledger-v1",
+  "schema_version": 1,
+  "studio": "Forge & Verse",
+  "site": "https://forgeandverse.com",
+  "updated": "2026-08-05",
+  "entry_count": 3,
+  "entries": [
+    {
+      "id": "bench-status-pad",
+      "title": "Bench Status Pad",
+      "kind": "field-proof",
+      "status": "testing",
+      "version": "0.2",
+      "updated": "2026-08-05",
+      "page": "/roadmap/bench-status-pad/#field-proof",
+      "discipline": "examiner-bench",
+      "release_path": "workbench",
+      "audience": "The examiner stepping away from an active case overnight, over a weekend, or through an interruption",
+      "moment": "At the end of a shift, before the active state of a case disappears into the weekend.",
+      "need": "Restore the active case state without reconstructing yesterday from six windows and a half-remembered thought",
+      "format": "4 x 6 tear-away notepad",
+      "summary": "A 4 x 6 tear-away continuity sheet for the examiner who needs Friday's case state back in under thirty seconds.",
+      "test": "Monday-morning context returns in under thirty seconds.",
+      "notice": "A printable studio proof for controlled evaluation. Use fictitious or sanitized information unless your agency approves a test.",
+      "primary_download": {
+        "label": "Download the field-test pack",
+        "type": "ZIP bundle",
+        "path": "/downloads/studio-proofs/forge-and-verse-bench-status-pad-field-test-v0.2.zip",
+        "bytes": 163558,
+        "media_type": "application/zip",
+        "sha256": "3e690464c0a41440a7868273e9f653160962eff64dd617eca41059084935095d"
+      },
+      "files": [
+        {
+          "label": "Download the field-test pack",
+          "type": "ZIP bundle",
+          "path": "/downloads/studio-proofs/forge-and-verse-bench-status-pad-field-test-v0.2.zip",
+          "bytes": 163558,
+          "media_type": "application/zip",
+          "sha256": "3e690464c0a41440a7868273e9f653160962eff64dd617eca41059084935095d"
+        },
+        {
+          "label": "Field-test guide",
+          "type": "PDF",
+          "path": "/downloads/studio-proofs/bench-status-pad-field-test-v0.2/bench-status-pad-field-test-guide.pdf",
+          "bytes": 67476,
+          "media_type": "application/pdf",
+          "sha256": "04d84e1eeb9cdcece5c6b10d48a4cd51df044645938344b43805f22858717b30"
+        },
+        {
+          "label": "Exact-size 4 x 6 proof",
+          "type": "PDF",
+          "path": "/downloads/studio-proofs/bench-status-pad-field-test-v0.2/bench-status-pad-prototype-4x6.pdf",
+          "bytes": 52828,
+          "media_type": "application/pdf",
+          "sha256": "694bed7c9b94a73135f8e7f66fea37d219bc14d1742a8ff0bcf3a39dfad8961b"
+        },
+        {
+          "label": "Letter two-up print test",
+          "type": "PDF",
+          "path": "/downloads/studio-proofs/bench-status-pad-field-test-v0.2/bench-status-pad-prototype-letter-2up.pdf",
+          "bytes": 53176,
+          "media_type": "application/pdf",
+          "sha256": "7fe81a096bf564008c7a84322f35b918e1380dd9b7d980f2540587f2c9ee14d0"
+        }
+      ]
+    },
+    {
+      "id": "examination-notebook",
+      "title": "Examination Notebook",
+      "kind": "field-proof",
+      "status": "testing",
+      "version": "0.2",
+      "updated": "2026-08-05",
+      "page": "/roadmap/examination-notebook/#field-proof",
+      "discipline": "examiner-bench",
+      "release_path": "workspace",
+      "audience": "The examiner who thinks better with a pen in hand",
+      "moment": "During the part of an examination when the investigator needs room to map, question, and think before the final record is written.",
+      "need": "Offer enough structure to orient the work without turning every page into somebody else's boxes",
+      "format": "Purpose-built tactile notebook",
+      "summary": "A purpose-built notebook for the examiner who thinks better with a pen in hand.",
+      "test": "The structure disappears until it is needed; the writing space never does.",
+      "notice": "A printable studio proof for controlled evaluation. Use fictitious or sanitized information unless your agency approves a test.",
+      "primary_download": {
+        "label": "Download the field-test pack",
+        "type": "ZIP bundle",
+        "path": "/downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.2.zip",
+        "bytes": 162401,
+        "media_type": "application/zip",
+        "sha256": "ac44ea39fb7296db394c307f4d66194a755b5709518df1b9937fa81e193da107"
+      },
+      "files": [
+        {
+          "label": "Download the field-test pack",
+          "type": "ZIP bundle",
+          "path": "/downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.2.zip",
+          "bytes": 162401,
+          "media_type": "application/zip",
+          "sha256": "ac44ea39fb7296db394c307f4d66194a755b5709518df1b9937fa81e193da107"
+        },
+        {
+          "label": "Field-test guide",
+          "type": "PDF",
+          "path": "/downloads/studio-proofs/examination-notebook-field-test-v0.2/examination-notebook-field-test-guide.pdf",
+          "bytes": 67728,
+          "media_type": "application/pdf",
+          "sha256": "705ed95b1aea99d85e3af455fd20ca6474a73cb48e674b3c176f698b7485715c"
+        },
+        {
+          "label": "Twelve-page interior prototype",
+          "type": "PDF",
+          "path": "/downloads/studio-proofs/examination-notebook-field-test-v0.2/examination-notebook-interior-prototype.pdf",
+          "bytes": 117118,
+          "media_type": "application/pdf",
+          "sha256": "905096945496642801662fda3a9016f39f413e6f4b51cbc3f95a991f1f37db2a"
+        }
+      ]
+    },
+    {
+      "id": "digital-forensics-intake-request",
+      "title": "Digital Forensics Intake Kit",
+      "kind": "open-release",
+      "status": "released",
+      "version": "1.2",
+      "updated": "2026-08-05",
+      "page": "/downloads/digital-forensics-intake-request/",
+      "discipline": "examiner-bench",
+      "release_path": "workbench",
+      "audience": "Digital forensic units receiving requests from officers or investigators",
+      "moment": "When an officer or investigator knows what they need answered, but the request still has to survive the handoff into a forensic unit.",
+      "need": "Reduce avoidable clarification and create a more reliable handoff from investigative need to forensic examination",
+      "format": "Print PDF + fillable PDF + editable sources + guides",
+      "summary": "An agency-adaptable request form, requester guide, and implementation guide with print, fillable, and editable paths for handing examiners the authority, scope, evidence details, and investigative question needed to begin well.",
+      "permission": "May be used, modified, and reproduced for internal operational, administrative, or training use. Standalone resale is not permitted.",
+      "primary_download": {
+        "label": "Download the complete intake kit v1.2",
+        "type": "ZIP bundle",
+        "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.zip",
+        "bytes": 318922,
+        "media_type": "application/zip",
+        "sha256": "91ef34615c97a432bdb2c93d40bcc498da006f4ba12aea1ea0d3f72e7bae089c"
+      },
+      "files": [
+        {
+          "label": "Download the complete intake kit v1.2",
+          "type": "ZIP bundle",
+          "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.zip",
+          "bytes": 318922,
+          "media_type": "application/zip",
+          "sha256": "91ef34615c97a432bdb2c93d40bcc498da006f4ba12aea1ea0d3f72e7bae089c"
+        },
+        {
+          "label": "Intake Request Form",
+          "type": "Fillable PDF",
+          "path": "/downloads/intake-kit/digital-forensics-intake-request-fillable.pdf",
+          "bytes": 134942,
+          "media_type": "application/pdf",
+          "sha256": "10c361e4c03a19b6c83f9e33caa1a1299c50e27c484a37600f6a197bc359dbe3"
+        },
+        {
+          "label": "Intake Request Form",
+          "type": "Print PDF",
+          "path": "/downloads/intake-kit/digital-forensics-intake-request.pdf",
+          "bytes": 91409,
+          "media_type": "application/pdf",
+          "sha256": "0da8ca48173e9279bc69d7e30ecfd62d32d1d52de0d31630bb6447a624245cc2"
+        },
+        {
+          "label": "Intake Request Form",
+          "type": "Editable DOCX",
+          "path": "/downloads/intake-kit/digital-forensics-intake-request.docx",
+          "bytes": 41385,
+          "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "sha256": "062f2a56ea3b4d5f2bbcfd9baacd580641e582160fe9fe24f184a155fa694ac9"
+        },
+        {
+          "label": "Form Field Map",
+          "type": "JSON",
+          "path": "/downloads/intake-kit/digital-forensics-intake-request-field-map.json",
+          "bytes": 17271,
+          "media_type": "application/json",
+          "sha256": "937e529dd5b51c5a3e132f1c0d73f63e635656d3cbe51c3f3bc0e0edb3957ffe"
+        },
+        {
+          "label": "Before You Submit a Digital Forensics Request",
+          "type": "PDF",
+          "path": "/downloads/intake-kit/digital-forensics-intake-requester-guide.pdf",
+          "bytes": 54453,
+          "media_type": "application/pdf",
+          "sha256": "3f435c5af70e1822b80de0a59aa3d9460c0157e1dc603d6691c690378835de11"
+        },
+        {
+          "label": "Requester Guide",
+          "type": "Editable DOCX",
+          "path": "/downloads/intake-kit/digital-forensics-intake-requester-guide.docx",
+          "bytes": 40428,
+          "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "sha256": "e0773b536915cd92976f2f753c0cf178eeb9ee6921837704e8f8d6267b1d1f99"
+        },
+        {
+          "label": "Intake Kit Implementation Guide",
+          "type": "PDF",
+          "path": "/downloads/intake-kit/digital-forensics-intake-implementation-guide.pdf",
+          "bytes": 96772,
+          "media_type": "application/pdf",
+          "sha256": "579e1c1f0d2f48ad676e47671379b67b6ac85f88a4e3fc9aaf11b03a6d3cd200"
+        },
+        {
+          "label": "Implementation Guide",
+          "type": "Editable DOCX",
+          "path": "/downloads/intake-kit/digital-forensics-intake-implementation-guide.docx",
+          "bytes": 43315,
+          "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "sha256": "32d81f2bc45b9771fa68c894afad800a9e5c1c4cdaaaffe3bd2f7f7b53d96767"
+        },
+        {
+          "label": "Checksum manifest",
+          "type": "SHA-256 manifest",
+          "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.sha256",
+          "bytes": 1461,
+          "media_type": "application/octet-stream",
+          "sha256": "c7bb144918a0ea13f04b9599aac790eeba831146c750dc776e4ffb9709c37e87"
+        },
+        {
+          "label": "Release manifest",
+          "type": "JSON manifest",
+          "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.json",
+          "bytes": 4287,
+          "media_type": "application/json",
+          "sha256": "28a0da1ef3decdc4b8358481eaa41b7dedf7697e304dab4ddac3ed95d669c69a"
+        }
+      ]
+    }
+  ]
+}

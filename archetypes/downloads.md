@@ -12,11 +12,15 @@ need: ""
 format: "operational-release"
 format_label: "PDF + editable source"
 status: "preparing"
+version: "0.1"
+updated: '{{ now.Format "2006-01-02" }}'
 preview_image: ""
 usage: ""
 credit: ""
 license_note: ""
 bundle_url: ""
+manifest_url: ""
+release_manifest_url: ""
 package_files: []
 companion_previews: []
 adoption_steps: []

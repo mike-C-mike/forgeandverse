@@ -27,7 +27,7 @@ details:
 moment: During the part of an examination when the investigator needs room to map, question, and think before the final record is written.
 stage_step: 4
 prototype_title: An interior that knows when to get out of the way
-prototype_intro: The first interior proof places the structured pages at the front, then gives the majority of the book back to writing. The sample is intentionally unfinished as an object, but complete enough to test hierarchy, ruling, page density, and whether the structure feels helpful rather than supervisory.
+prototype_intro: The first interior proof places the structured pages at the front, then gives the majority of the book back to writing. The sample is intentionally incomplete as a product, but complete enough to test hierarchy, ruling, page density, and whether the structure feels helpful rather than supervisory.
 prototype_images:
 - image: /images/studies/examination-notebook/cover-proof.webp
   alt: A dark Examination Notebook cover prototype with the line For the examiner who thinks with ink.

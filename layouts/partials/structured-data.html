@@ -35,8 +35,6 @@
   "description": {{ $description | plainify | jsonify }},
   "url": {{ .Permalink | jsonify }},
   "image": {{ $image | jsonify }},
-  {{ with .Params.edition }}{{ with .state }}"creativeWorkStatus": {{ . | humanize | jsonify }},{{ end }}{{ end }}
-  {{ with .Params.material_intent }}"material": {{ . | jsonify }},{{ end }}
   "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}}
 }
 </script>

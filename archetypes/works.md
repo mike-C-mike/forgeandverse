@@ -21,22 +21,13 @@ external_url: ""
 cta_label: "View available edition"
 partner_name: ""
 fulfillment_note: ""
+related_journal: ""
+related_study: ""
 affiliate: false
 rights: "original"
 note: ""
-related_release: ""
 related_journal: ""
 related_study: ""
-edition:
-  enabled: false
-  state: "in-studio"
-  headline: "The work as an object."
-  intended_room: ""
-  reading_distance: ""
-  edition_model: ""
-  study_url: ""
-  availability_note: ""
-  formats: []
 draft: true
 ---
 
