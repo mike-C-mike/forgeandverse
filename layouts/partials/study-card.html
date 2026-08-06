@@ -1,0 +1,17 @@
+<article class="study-card{{ with .Params.card_image }} study-card-proof{{ end }}">
+  <a href="{{ .RelPermalink }}" class="study-card-link">
+    <div class="study-card-visual">
+      {{ with .Params.card_image }}
+      <img class="study-card-proof-image" src="{{ . }}" alt="{{ $.Params.card_image_alt | default $.Title }}" loading="lazy">
+      {{ else }}
+      {{ partial "concept-visual.html" .Params }}
+      {{ end }}
+    </div>
+    <div class="study-card-copy">
+      <div class="study-card-meta"><span>{{ .Params.stage }}</span><span>{{ partial "discipline-label.html" .Params.discipline_slug }}</span>{{ if .Params.proof_available }}<span class="study-proof-badge">Field proof</span>{{ end }}</div>{{ with .Params.moment }}<p class="study-card-moment"><strong>When</strong> {{ . }}</p>{{ end }}
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Params.summary }}</p>
+      <span class="study-card-action">Open the study <b aria-hidden="true">→</b></span>
+    </div>
+  </a>
+</article>

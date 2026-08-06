@@ -1,0 +1,12 @@
+{{- $item := . -}}
+<div class="concept-visual concept-visual-{{ $item.visual }}" aria-hidden="true">
+  {{- if eq $item.visual "status-pad" -}}
+  <div class="status-pad-stack"><i></i><i></i><div class="status-pad-sheet"><div class="status-pad-head"><span>Forge &amp; Verse</span><strong>Bench Status</strong></div><div class="status-pad-row status-pad-row-short"><span>Case</span><i></i><span>Paused</span><i></i></div><div class="status-pad-row"><span>Current process</span><i></i></div><div class="status-pad-row"><span>Last completed</span><i></i></div><div class="status-pad-row"><span>Next action</span><i></i></div><div class="status-pad-row"><span>Pending / do not forget</span><i></i></div><small>Securely discard according to policy.</small></div></div>
+  {{- else if eq $item.visual "notebook" -}}
+  <div class="notebook-scene"><div class="notebook-object"><div class="notebook-spine"></div><div class="notebook-cover"><span>Forge &amp; Verse</span><strong>Examination<br>Notebook</strong><small>For the examiner who thinks with ink.</small></div><div class="notebook-pages"></div></div><div class="notebook-open"><div class="notebook-open-page"><span>CASE / SOURCE / DATE</span><i></i><i></i><i></i><i></i><i></i></div><div class="notebook-open-page"><span>OPEN QUESTIONS</span><i></i><i></i><i></i><i></i><i></i></div></div><div class="notebook-pencil"></div></div>
+  {{- else if eq $item.visual "badge-edition" -}}
+  <div class="edition-frame">{{ with $item.image }}<img src="{{ . }}" alt="">{{ end }}<span class="edition-frame-shade"></span><div class="edition-frame-copy"><small>Believe in the Badge</small><strong>Lead with heart.<br>Keep showing up.</strong></div></div>
+  {{- else if eq $item.visual "evidence-edition" -}}
+  <div class="evidence-shelf"><div class="evidence-box evidence-box-back"><span>PROPERTY / EVIDENCE</span><i></i><i></i></div><div class="evidence-box evidence-box-front"><span>ITEM 01</span><strong>PRESERVED<br>UNTIL IT<br>MATTERS</strong><small>Preservation gives truth time to catch up.</small></div><div class="evidence-tag"><b>CHAIN OF CUSTODY</b><i></i><i></i><i></i></div></div>
+  {{- end -}}
+</div>

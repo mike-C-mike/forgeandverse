@@ -1,0 +1,9 @@
+{{- $p := .Params -}}
+<section class="person-need-band">
+  <div class="wrap person-need-grid">
+    {{ with $p.audience }}<div><span>For</span><p>{{ . }}</p></div>{{ end }}
+    {{ with $p.moment }}<div><span>When</span><p>{{ . }}</p></div>{{ end }}
+    {{ with $p.need }}<div><span>Why it exists</span><p>{{ . }}</p></div>{{ end }}
+    {{ with $p.format }}<div><span>Form</span><p>{{ $.Params.format_label | default . }}</p></div>{{ end }}
+  </div>
+</section>

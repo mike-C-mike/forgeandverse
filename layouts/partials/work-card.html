@@ -4,7 +4,7 @@
     <div class="work-card-body">
       <div class="work-card-meta">
         <span>{{ partial "discipline-label.html" .Params.discipline }}</span>
-        <span>{{ partial "status-label.html" .Params.status }}</span>
+        <span>{{ with .Params.release_path_label }}{{ . }} · {{ end }}{{ partial "status-label.html" .Params.status }}</span>
       </div>
       <h2>{{ .Title }}</h2>
       <p>{{ .Params.summary | default .Summary }}</p>

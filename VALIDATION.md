@@ -1,26 +1,93 @@
-# Validation Record
+# Forge & Verse v16 Validation
 
-Iteration 6 received the following local checks:
+Validated in the build environment on August 5, 2026.
 
-- `hugo.toml` parsed successfully
-- YAML data files parsed successfully
-- all public Markdown front matter parsed successfully
-- required Work and Free Work fields are present
-- referenced public images and download files exist
-- template delimiter counts are balanced
-- stylesheet braces are balanced
-- public PNG and WebP files passed image-integrity checks
-- retired decorative download assets and filler Work concepts are absent
-- the Digital Forensics Intake Request DOCX opened successfully and passed package checks
-- the corresponding PDF opened successfully and contains exactly two pages
-- both DOCX pages were rendered to PNG and visually reviewed for clipping, overflow, and layout defects
+## Repository checks
 
-Current public body of work:
+Passed:
 
-- 1 selective Work entry
-- 1 Journal entry
-- 1 functioning Free Work release
-- 2 downloadable intake-form files
-- 3 credible On the Anvil items
+- TOML, YAML, JSON, and front matter parsing
+- Reserved Hugo field checks
+- Required fields for works, free releases, journal entries, discipline pages, and design studies
+- Discipline, release-path, related-release, and related-journal relationships
+- Static image, download, proof-file, and proof-bundle references
+- Field-proof version, date, package metadata, and SHA-256 values
+- Release-manifest file sizes, media records, routes, and SHA-256 values
+- Intake field-map count and release-page metadata
+- PDF signatures, DOCX archive structure, and ZIP integrity
+- Hugo template delimiter balance
+- CSS brace balance
 
-Hugo is not installed in this environment, so the repository has not received a final Hugo-generated browser render. The next local review should use `hugo server` without deployment and inspect the homepage, Work archive, release page, Studio page, disciplines, and responsive breakpoints.
+Command:
+
+```text
+python scripts/validate.py
+```
+
+Result:
+
+```text
+Forge & Verse validation passed.
+Disciplines: 4
+Study stages: 5
+Works: 1
+Free works: 1
+Journal pieces: 4
+Design studies: 4
+Content files: 26
+```
+
+## Fillable intake form
+
+Passed:
+
+- Two-page PDF
+- 105 unique AcroForm fields
+- 61 text fields
+- 44 checkboxes
+- Field names and order match the machine-readable field map
+- No JavaScript, SubmitForm, or Launch action detected
+- Blank fillable render remains visually equivalent to the print edition
+- Representative text and checkbox values were filled, saved, reopened, and rendered
+- No clipping found in the filled review sample
+
+Command:
+
+```text
+python scripts/audit_fillable_intake_form.py
+```
+
+## Intake companion documents
+
+Visually reviewed after regeneration:
+
+- Requester guide: one page
+- Implementation guide: four pages
+- No clipping, overlaps, broken glyphs, or missing content found
+- Both footers identify Intake Kit v1.2
+- Implementation guide includes fillable-viewer, local-storage, save, print, routing, and records testing guidance
+
+## Intake package
+
+Passed:
+
+- Versioned v1.2 ZIP integrity
+- Component checksum manifest
+- Public SHA-256 manifest
+- Machine-readable JSON release manifest
+- Fillable PDF, print PDF, editable sources, field map, guides, README, release notes, and use terms present
+
+## Remaining local check
+
+Hugo Extended is not installed in this build environment. Run the complete Hugo v0.164.0 build and rendered-site validator on the Windows development machine:
+
+```powershell
+.\scripts\build.ps1
+```
+
+Priority browser review:
+
+- `/downloads/digital-forensics-intake-request/`
+- Homepage studio introduction
+- Mobile layout of the three working-style cards
+- Release manifest and checksum links

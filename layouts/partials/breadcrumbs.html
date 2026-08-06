@@ -1,0 +1,14 @@
+{{- $labels := dict "works" "Work" "downloads" "Free Works" "journal" "Journal" "disciplines" "Disciplines" "roadmap" "On the Anvil" "about" "Studio" "materials" "Materials" "search" "Search" -}}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="wrap breadcrumbs-inner">
+    <a href="/">Forge &amp; Verse</a>
+    {{- if .IsSection -}}
+      <span aria-hidden="true">/</span><span aria-current="page">{{ index $labels .Section | default .Title }}</span>
+    {{- else if .Section -}}
+      <span aria-hidden="true">/</span><a href="/{{ .Section }}/">{{ index $labels .Section | default (.Section | title) }}</a>
+      <span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+    {{- else -}}
+      <span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+    {{- end }}
+  </div>
+</nav>

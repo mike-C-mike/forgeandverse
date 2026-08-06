@@ -1,34 +1,49 @@
-# Bench Status Pad - Working Brief
+# Bench Status Pad Brief
 
 ## Purpose
 
-A disposable 4 x 6 inch status sheet used when an examiner pauses work for a night, weekend, training day, or extended interruption. The card should let the examiner re-enter the work without reconstructing the last hour from memory.
+A 4 x 6 tear-away continuity note for an examiner pausing work at the end of a day, before a weekend, during an interruption, or before a handoff.
 
-## Intended format
+## Success test
 
-- 4 x 6 inch tear-away notepad
-- portrait orientation
-- one-sided
-- enough space for handwriting without becoming a full case-note page
-- neutral enough to sit in any lab
-- no sensitive information visible beyond what agency practice allows
+Monday-morning context returns in under thirty seconds.
 
-## Proposed fields
+## Prototype 01
 
-- case number
-- evidence item or source
+The first exact-size proof now includes:
+
+- case or matter identifier
 - date and time paused
-- current tool, process, or acquisition
-- current status or percentage
+- process-running, safe-to-resume, and blocked state markers
+- current process or tool state
 - last completed action
-- next action
+- next intended action
 - pending question or blocker
-- output or destination path, when appropriate
-- do not forget
-- initials
+- one thing not to forget
+- secure-disposal reminder
 
-## Design test
+Source files:
 
-The pad succeeds when Monday-morning context returns in under thirty seconds.
+- `source-assets/prototypes/bench-status-pad-prototype-4x6.pdf`
+- `source-assets/prototypes/bench-status-pad-prototype-letter-2up.pdf`
 
-It is a reminder aid, not the official examination record. The final edition should say so plainly.
+## Design constraints
+
+- writable with ordinary pens
+- no dense boxes or microscopic labels
+- enough room for the next action and pending issue
+- visually scannable from arm's length
+- branding kept subordinate to the function
+- no assumption that the sheet is part of the formal examination record
+- fast enough to complete while the examiner is actually trying to leave
+
+## Questions for the next pass
+
+- Is the page physically large enough for ordinary handwriting?
+- Are all three state markers useful?
+- Does a dedicated evidence-source field deserve space?
+- Is the final prompt direct enough?
+
+## Handling note
+
+The pad may capture case information. The printed sheet and packaging should direct users to secure it while in use and dispose of it according to agency policy, records requirements, discovery obligations, and the sensitivity of the information written on it.

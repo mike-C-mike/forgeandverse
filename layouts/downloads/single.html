@@ -2,32 +2,116 @@
 <header class="download-detail-hero">
   <div class="wrap download-detail-grid">
     <div class="download-detail-copy">
-      <p class="eyebrow">Free work · {{ partial "discipline-label.html" .Params.discipline }}</p>
+      <p class="eyebrow discipline-backlink">Free work · {{ partial "discipline-link.html" .Params.discipline }}</p>
       <h1>{{ .Title }}</h1>
       <p>{{ .Params.summary }}</p>
-      {{ with .Params.files }}
       <div class="download-actions">
-        {{ range . }}<a class="button button-light" href="{{ .url }}" download>{{ .label }}</a>{{ end }}
+        {{ with .Params.bundle_url }}<a class="button button-light" href="{{ . }}" download>{{ $.Params.bundle_label | default "Download the complete kit" }}</a>{{ end }}
+        {{ if .Params.package_files }}<a class="button button-line" href="#individual-files">Choose individual files</a>{{ else }}{{ with .Params.files }}{{ range . }}<a class="button button-light" href="{{ .url }}" download>{{ .label }}</a>{{ end }}{{ end }}{{ end }}
       </div>
-      {{ end }}
+      {{ with .Params.version }}<p class="release-version">Version {{ . }}{{ with $.Params.updated }} · Updated {{ time.Format "January 2, 2006" . }}{{ end }}</p>{{ end }}
     </div>
-    <div class="download-detail-visual">
-      {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $.Title }}">{{ end }}
-    </div>
+    <div class="download-detail-visual">{{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $.Title }}">{{ end }}</div>
   </div>
 </header>
-<section class="work-detail-body">
-  <div class="wrap work-detail-body-grid">
-    <aside>
-      <p class="eyebrow">Release details</p>
-      <dl class="release-facts">
-        <div><dt>Format</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
-        <div><dt>Use</dt><dd>{{ .Params.usage | default "Personal and workplace use" }}</dd></div>
-        <div><dt>Credit</dt><dd>{{ .Params.credit | default "Keep the Forge & Verse mark intact" }}</dd></div>
-        {{ with .Params.license_note }}<div><dt>Permission</dt><dd>{{ . }}</dd></div>{{ end }}
-      </dl>
-    </aside>
-    <article class="prose prose-work">{{ .Content }}</article>
+
+{{ partial "person-need-strip.html" . }}
+
+{{ with .Params.use_modes }}
+<section class="release-choice-section">
+  <div class="wrap">
+    <div class="section-heading split-heading split-heading-light">
+      <div><p class="eyebrow">Choose the working style</p><h2>One intake structure. Three ways to use it.</h2></div>
+      <p>The release does not assume every department, requestor, or examiner wants the same interaction. Start with the version that fits the actual handoff.</p>
+    </div>
+    <div class="release-choice-grid">
+      {{ range . }}
+      <article class="release-choice-card">
+        <span class="release-choice-label">{{ .label }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <div class="release-choice-footer"><small>{{ .meta }}</small><a href="{{ .url }}" download>{{ .cta }} <b aria-hidden="true">→</b></a></div>
+      </article>
+      {{ end }}
+    </div>
+    {{ if $.Params.local_only }}<p class="release-local-note"><strong>Local by design.</strong> The fillable PDF saves entered values inside the file. It contains no form submission action, telemetry, or connection back to Forge & Verse.</p>{{ end }}
   </div>
 </section>
+{{ end }}
+
+{{ with .Params.package_files }}
+<section class="section release-package-section" id="individual-files">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Inside the release</p><h2>Use the whole kit, or take only what fits.</h2></div>
+      <p>{{ $.Params.package_intro | default "Each file has a specific job. The editable versions are included so the release can be adapted to a real unit rather than treated as a fixed universal form." }}</p>
+    </div>
+    <div class="release-package-grid">
+      {{ range . }}
+      <article class="release-file-card{{ if .featured }} release-file-card-featured{{ end }}">
+        <div class="release-file-meta"><span>{{ .type }}</span>{{ with .size }}<span>{{ . }}</span>{{ end }}</div>
+        <h3>{{ .label }}</h3>
+        <p>{{ .description }}</p>
+        <a class="text-link" href="{{ .url }}" download>Download {{ .download_label | default .type }} <span aria-hidden="true">→</span></a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.preview_pages }}
+<section class="section release-preview-section">
+  <div class="wrap">
+    <div class="section-heading split-heading"><div><p class="eyebrow">The request form</p><h2>See the structure before you deploy it.</h2></div><p>The preview shows the actual two-page form, not a decorative mockup.</p></div>
+    <div class="release-preview-grid">{{ range . }}<figure><a href="{{ .image }}" data-lightbox data-lightbox-caption="{{ .caption }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async"><span class="image-expand-label">Open preview</span></a><figcaption>{{ .caption }}</figcaption></figure>{{ end }}</div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.companion_previews }}
+<section class="section companion-preview-section">
+  <div class="wrap">
+    <div class="section-heading split-heading"><div><p class="eyebrow">Built around the handoff</p><h2>The form is not the whole workflow.</h2></div><p>The requester guide helps officers prepare a useful submission. The implementation guide helps a forensic unit adapt and maintain the release.</p></div>
+    <div class="companion-preview-grid">{{ range . }}<figure><a href="{{ .image }}" data-lightbox data-lightbox-caption="{{ .caption }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async"><span class="image-expand-label">Open preview</span></a><figcaption><strong>{{ .title }}</strong><span>{{ .caption }}</span></figcaption></figure>{{ end }}</div>
+  </div>
+</section>
+{{ end }}
+
+{{ if or .Params.use_when .Params.captures .Params.adaptation_notes }}
+<section class="section release-utility-section"><div class="wrap release-utility-grid">{{ with .Params.use_when }}<article><p class="eyebrow">Use it when</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}{{ with .Params.captures }}<article><p class="eyebrow">What it captures</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}{{ with .Params.adaptation_notes }}<article><p class="eyebrow">Before you deploy it</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div></section>
+{{ end }}
+
+{{ with .Params.adoption_steps }}
+<section class="release-adoption-section">
+  <div class="wrap release-adoption-grid">
+    <div><p class="eyebrow">From download to workflow</p><h2>Adapt it before it becomes official.</h2><p>The files are ready to review, not ready to bypass local judgment.</p></div>
+    <ol class="release-adoption-steps">{{ range $index, $step := . }}<li><span>0{{ add $index 1 }}</span><div><h3>{{ $step.title }}</h3><p>{{ $step.text }}</p></div></li>{{ end }}</ol>
+  </div>
+</section>
+{{ end }}
+
+<section class="work-detail-body"><div class="wrap work-detail-body-grid"><aside><p class="eyebrow">Use and permission</p><dl class="release-facts"><div><dt>Use</dt><dd>{{ .Params.usage | default "Personal and workplace use" }}</dd></div><div><dt>Credit</dt><dd>{{ .Params.credit | default "Keep the Forge & Verse mark intact" }}</dd></div>{{ with .Params.license_note }}<div><dt>Permission</dt><dd>{{ . }}</dd></div>{{ end }}</dl></aside><article class="prose prose-work">{{ .Content }}</article></div></section>
+
+{{ with .Params.related_journal }}
+{{ with site.GetPage . }}
+<section class="release-related-note">
+  <div class="wrap release-related-note-grid">
+    <div><p class="eyebrow">Practice note</p><h2>{{ .Title }}</h2></div>
+    <div><p>{{ .Params.summary }}</p><a class="text-link text-link-light" href="{{ .RelPermalink }}">Read the note <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ with .Params.release_history }}
+<section class="section release-history-section">
+  <div class="wrap release-history-grid">
+    <div><p class="eyebrow">Release history</p><h2>What changed, and why.</h2></div>
+    <div class="release-history-list">{{ range . }}<article><div><strong>Version {{ .version }}</strong><span>{{ time.Format "January 2, 2006" .date }}</span></div><p>{{ .note }}</p></article>{{ end }}</div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.checksums }}<section class="download-integrity"><div class="wrap download-integrity-grid"><div><p class="eyebrow">Verify the download</p><h2>The hashes are part of the release.</h2><p>Compare the SHA-256 value after download when file integrity matters in your workflow.</p>{{ with $.Params.manifest_url }}<a class="text-link text-link-light" href="{{ . }}" download>Download checksum manifest <span aria-hidden="true">→</span></a>{{ end }}{{ with $.Params.release_manifest_url }}<a class="text-link text-link-light" href="{{ . }}" download>Download release manifest JSON <span aria-hidden="true">→</span></a>{{ end }}</div><div class="checksum-list">{{ range . }}<div class="checksum-row"><div><span>{{ .label }} · {{ .algorithm }}</span><small>{{ .file }}</small></div><code>{{ .value }}</code><button type="button" data-copy="{{ .value }}" aria-label="Copy {{ .label }} SHA-256 checksum">Copy</button></div>{{ end }}<p class="copy-status" data-copy-status aria-live="polite"></p></div></div></section>{{ end }}
 {{ end }}

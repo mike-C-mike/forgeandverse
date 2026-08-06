@@ -1,4 +1,13 @@
 {{ define "main" }}
+{{ $intake := site.GetPage "/downloads/digital-forensics-intake-request" }}
+{{ $ink := site.GetPage "/journal/for-the-examiner-who-thinks-with-ink" }}
+{{ $question := site.GetPage "/journal/the-device-is-not-the-question" }}
+{{ $shelf := site.GetPage "/journal/the-shelf-remembers" }}
+{{ $roadmap := site.GetPage "/roadmap" }}
+{{ $statusPad := site.GetPage "/roadmap/bench-status-pad" }}
+{{ $notebook := site.GetPage "/roadmap/examination-notebook" }}
+{{ $preserved := site.GetPage "/roadmap/preserved-until-it-matters" }}
+
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -7,140 +16,120 @@
       <p class="lede">Art, writing, and useful objects for the people who examine, protect, preserve, and defend.</p>
       <div class="actions">
         <a class="button button-light" href="/works/">Explore the work</a>
-        <a class="button button-line" href="/downloads/">Free works</a>
+        <a class="button button-line" href="/roadmap/">On the anvil</a>
       </div>
     </div>
-    <div class="hero-mark" aria-hidden="true">
-      <span class="hero-orbit"></span>
-      <img src="/images/forge-verse-mark-light.png" alt="">
-    </div>
+    <div class="hero-mark" aria-hidden="true"><span class="hero-orbit"></span><img src="/images/forge-verse-mark-light.png" alt=""></div>
   </div>
 </section>
 
 <section class="studio-intro">
   <div class="wrap studio-intro-grid">
-    <p class="eyebrow">From the studio</p>
-    <p class="studio-intro-lede">The details are the point.</p>
-    <div class="studio-intro-copy">
-      <p>Digital examiners recover what others overlook. Evidence personnel preserve what courts depend on. Analysts, technicians, dispatchers, and defenders keep complicated systems moving.</p>
-      <p>Forge &amp; Verse makes work around their skill, pressure, pride, and peculiar humor.</p>
+    <p class="eyebrow">Made for the way people work</p>
+    <p class="studio-intro-lede">Not every useful thing belongs in a browser.</p>
+    <div class="studio-intro-copy"><p>A fillable form can clarify a handoff. A paper notebook can slow a difficult thought down long enough to see it. A wall edition can keep meaning present after the result disappears into a case file.</p><p>Different moments ask for different tools.</p></div>
+  </div>
+</section>
+
+<section class="section home-release-section">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Free work</p><h2>A better handoff begins before the device arrives.</h2></div>
+      <p>The Digital Forensics Intake Kit gives the requester a clearer place to explain authority, scope, evidence, and the question the examination should help answer.</p>
+    </div>
+    {{ with $intake }}
+    <a class="home-release-feature" href="{{ .RelPermalink }}">
+      <div class="home-release-preview">
+        {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of the Digital Forensics Intake Kit" loading="lazy">{{ end }}
+      </div>
+      <div class="home-release-body">
+        <div class="home-release-meta"><span>Free work</span><span>{{ partial "discipline-label.html" .Params.discipline }}</span></div>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.summary }}</p>
+        {{ with .Params.use_modes }}
+        <div class="home-release-modes" aria-label="Available working formats">
+          {{ range first 3 . }}
+          <div class="home-release-mode">
+            <span>{{ .label }}</span>
+            <strong>{{ .title }}</strong>
+            <small>{{ .meta }}</small>
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+        <span class="home-release-action">Open the release <b aria-hidden="true">→</b></span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="home-edition-feature">
+  <div class="wrap home-edition-grid">
+    <a class="home-edition-image" href="/images/studies/believe-in-the-badge/wall-mockup.webp" data-lightbox data-lightbox-caption="Believe in the Badge metal edition scale study.">
+      <img src="/images/studies/believe-in-the-badge/wall-mockup.webp" alt="Believe in the Badge shown as a floating metal wall edition in a dark professional room" loading="lazy">
+      <span class="image-expand-label">Open room study</span>
+    </a>
+    <div class="home-edition-copy">
+      <p class="eyebrow">Edition study</p>
+      <h2>A wall piece has to survive the wall.</h2>
+      <p>Typography, scale, surface, edge, reflection, and mounting all change how a piece is read. Believe in the Badge is now being tested as an object in the room, not just an image on a screen.</p>
+      <div class="home-edition-links">
+        <a class="text-link text-link-light" href="/roadmap/believe-in-the-badge-edition/">Open the edition study <span aria-hidden="true">→</span></a>
+        <a class="text-link text-link-light" href="/materials/">See the material approach <span aria-hidden="true">→</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-{{ $featured := first 1 (where (where site.RegularPages "Section" "works") ".Params.featured" true) }}
-{{ range $featured }}
-<section class="section feature-stage">
+<section class="section examiner-anchor">
   <div class="wrap">
-    <div class="section-heading split-heading">
-      <div>
-        <p class="eyebrow">Featured work</p>
-        <h2>{{ .Title }}</h2>
-      </div>
-      <div>
-        <p>{{ .Params.summary }}</p>
-        <a class="text-link" href="{{ .RelPermalink }}">View the work <span aria-hidden="true">→</span></a>
-      </div>
+    <div class="examiner-anchor-head">
+      <div><p class="eyebrow">Digital forensics</p><h2>The Examiner's Bench</h2><p class="examiner-anchor-line">The evidence may be digital. The judgment is not.</p></div>
+      <div><p>Tools for clearer handoffs. Paper for the examiner who thinks with ink. Work that recognizes the discipline behind careful acquisition, verification, interpretation, and documentation.</p><a class="text-link" href="/disciplines/examiner-bench/">Enter the bench <span aria-hidden="true">→</span></a></div>
     </div>
-    <a class="feature-frame" href="{{ .RelPermalink }}" aria-label="View {{ .Title }}">
-      {{ with .Params.image }}<img src="{{ . }}" alt="" loading="eager">{{ end }}
-      <span class="feature-frame-shade"></span>
-      <span class="feature-frame-caption">
-        <strong>{{ partial "discipline-label.html" .Params.discipline }}</strong>
-        <small>{{ .Params.format_label | default .Params.format }} · {{ partial "status-label.html" .Params.status }}</small>
-      </span>
-    </a>
+    <div class="examiner-study-grid">
+      {{ with $question }}<a class="examiner-note-card" href="{{ .RelPermalink }}"><span>{{ .Params.journal_kind_label | default "From the journal" }}</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>Read the note <b aria-hidden="true">→</b></strong></a>{{ end }}
+      {{ with $statusPad }}{{ partial "study-card.html" . }}{{ end }}
+      {{ with $notebook }}{{ partial "study-card.html" . }}{{ end }}
+    </div>
   </div>
 </section>
-{{ end }}
+
+<section class="evidence-feature">
+  <div class="wrap evidence-feature-grid">
+    <div class="evidence-feature-copy">
+      <p class="eyebrow">Property &amp; evidence</p>
+      <h2>The shelf remembers because someone made it remember.</h2>
+      {{ with $shelf }}<p>{{ .Params.summary }}</p><a class="text-link text-link-light" href="{{ .RelPermalink }}">Read the journal piece <span aria-hidden="true">→</span></a>{{ end }}
+    </div>
+    {{ with $preserved }}
+    <a class="evidence-feature-study" href="{{ .RelPermalink }}">
+      <div class="evidence-feature-visual">{{ with .Params.card_image }}<img src="{{ . }}" alt="{{ $.Params.card_image_alt | default $.Title }}" loading="lazy">{{ else }}{{ partial "concept-visual.html" $.Params }}{{ end }}</div>
+      <div><span>{{ .Params.stage }}</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>Open the study <b aria-hidden="true">→</b></strong></div>
+    </a>
+    {{ end }}
+  </div>
+</section>
 
 <section class="section disciplines-band">
   <div class="wrap">
     <div class="section-heading split-heading split-heading-light">
-      <div>
-        <p class="eyebrow">Disciplines</p>
-        <h2>Four rooms in the same house.</h2>
-      </div>
-      <p>The work moves between investigations, evidence, service, and defensive technology without losing the details that make each field its own.</p>
+      <div><p class="eyebrow">Disciplines</p><h2>Four rooms in the same house.</h2></div>
+      <p>Digital forensics, property and evidence, law-enforcement support, and cybersecurity. Each keeps its own language, pressure, humor, and point of view.</p>
     </div>
     <div class="discipline-cards">
-      {{ range site.Data.disciplines }}
-      <a class="discipline-card{{ if eq .priority 1 }} discipline-card-primary{{ end }}" href="/disciplines/#{{ .slug }}">
-        <span class="discipline-card-number">0{{ .priority }}</span>
-        <span class="discipline-card-plain">{{ .plain_name }}</span>
-        <h3>{{ .name }}</h3>
-        <p>{{ .description }}</p>
-        <span class="discipline-card-action">Enter <b aria-hidden="true">→</b></span>
-      </a>
+      {{ range hugo.Data.disciplines }}
+      <a class="discipline-card{{ if eq .priority 1 }} discipline-card-primary{{ end }}" href="{{ .page }}"><span class="discipline-card-number">0{{ .priority }}</span><span class="discipline-card-plain">{{ .plain_name }}</span><h3>{{ .name }}</h3><p>{{ .description }}</p><span class="discipline-card-action">Enter <b aria-hidden="true">→</b></span></a>
       {{ end }}
     </div>
   </div>
 </section>
-
-{{ range first 1 (where site.RegularPages "Section" "downloads") }}
-{{ $release := . }}
-<section class="section release-spotlight">
-  <div class="wrap release-spotlight-grid">
-    <div class="release-visual">
-      {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $release.Title }}" loading="lazy">{{ end }}
-    </div>
-    <div class="release-copy">
-      <p class="eyebrow">Open release</p>
-      <h2>{{ .Title }}</h2>
-      <p>{{ .Params.summary }}</p>
-      <div class="release-details">
-        <span>{{ .Params.format_label | default .Params.format }}</span>
-        <span>{{ partial "discipline-label.html" .Params.discipline }}</span>
-      </div>
-      <a class="button button-dark" href="{{ .RelPermalink }}">View the release</a>
-    </div>
-  </div>
-</section>
-{{ end }}
 
 <section class="section journal-preview">
   <div class="wrap">
-    <div class="section-heading split-heading">
-      <div>
-        <p class="eyebrow">Journal</p>
-        <h2>Notes from the work</h2>
-      </div>
-      <div>
-        <p>Essays, observations, and design notes from the overlap between technical work, professional culture, and language.</p>
-        <a class="text-link" href="/journal/">Read the journal <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="journal-list">
-      {{ $journalPages := where site.RegularPages "Section" "journal" }}
-      {{ range first 3 $journalPages.ByDate.Reverse }}
-        {{ partial "journal-row.html" . }}
-      {{ end }}
-    </div>
-  </div>
-</section>
-
-<section class="section anvil-preview">
-  <div class="wrap">
-    <div class="section-heading split-heading split-heading-light">
-      <div>
-        <p class="eyebrow">On the anvil</p>
-        <h2>Work taking shape</h2>
-      </div>
-      <div>
-        <p>Pieces currently being written, structured, composed, or tested.</p>
-        <a class="text-link text-link-light" href="/roadmap/">Visit the workbench <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="anvil-strip">
-      {{ range first 3 site.Data.roadmap }}
-      <article>
-        <span>{{ .state }}</span>
-        <h3>{{ .title }}</h3>
-        <p>{{ .note }}</p>
-        <small>{{ .discipline }} · {{ .format }}</small>
-      </article>
-      {{ end }}
-    </div>
+    <div class="section-heading split-heading"><div><p class="eyebrow">Journal</p><h2>Notes from the work</h2></div><div><p>Essays and observations from the overlap between technical practice, professional culture, and language.</p><a class="text-link" href="/journal/">Read the journal <span aria-hidden="true">→</span></a></div></div>
+    <div class="journal-list">{{ $journalPages := where site.RegularPages "Section" "journal" }}{{ range first 3 $journalPages.ByDate.Reverse }}{{ partial "journal-row.html" . }}{{ end }}</div>
   </div>
 </section>
 {{ end }}

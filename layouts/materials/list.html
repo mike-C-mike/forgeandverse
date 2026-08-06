@@ -1,0 +1,52 @@
+{{ define "main" }}
+<header class="materials-hero">
+  <div class="wrap materials-hero-grid">
+    <div><p class="eyebrow">Physical editions</p><h1>The image is only half the work.</h1></div>
+    <div><p>{{ .Description }}</p><span class="materials-swatch materials-swatch-metal"></span><span class="materials-swatch materials-swatch-paper"></span></div>
+  </div>
+</header>
+<section class="section materials-intro"><div class="wrap materials-intro-grid"><p class="eyebrow">Material follows meaning</p><article class="prose-inline">{{ .Content }}</article></div></section>
+
+<section class="section material-room-study">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">The same composition, two different rooms</p><h2>Surface changes the voice.</h2></div>
+      <p>Metal can carry luminosity and architectural presence. Paper can slow the work down and make the reading feel closer. Neither is automatically the premium answer.</p>
+    </div>
+    <div class="material-room-grid">
+      <figure>
+        <a href="/images/studies/believe-in-the-badge/wall-mockup.webp" data-lightbox data-lightbox-caption="Floating metal edition scale study.">
+          <img src="/images/studies/believe-in-the-badge/wall-mockup.webp" alt="Believe in the Badge shown as a floating metal edition in a dark professional room" loading="lazy">
+          <span class="image-expand-label">Open metal study</span>
+        </a>
+        <figcaption><strong>Metal</strong><span>Sharper light, clean edge, floating presence.</span></figcaption>
+      </figure>
+      <figure>
+        <a href="/images/studies/believe-in-the-badge/paper-frame-study.webp" data-lightbox data-lightbox-caption="Archival paper, mat, and frame scale study.">
+          <img src="/images/studies/believe-in-the-badge/paper-frame-study.webp" alt="Believe in the Badge shown on archival paper with a substantial mat and dark frame" loading="lazy">
+          <span class="image-expand-label">Open paper study</span>
+        </a>
+        <figcaption><strong>Archival paper</strong><span>Warmer reading, quieter surface, frame as architecture.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section material-cards-section"><div class="wrap"><div class="material-cards">
+  <article class="material-card material-card-metal"><div class="material-card-surface"></div><span>01 · Metal</span><h2>Light becomes part of the image.</h2><p>Metal suits work that needs crisp detail, saturated depth, luminous highlights, and a clean architectural presence. A float mount can let the edition sit slightly away from the wall rather than disappear into a conventional frame.</p><ul><li>Deep blacks and controlled sheen</li><li>Edge treatment considered in the composition</li><li>Mounting selected for the room and scale</li></ul></article>
+  <article class="material-card material-card-paper"><div class="material-card-surface"></div><span>02 · Archival paper</span><h2>Texture can quiet the room.</h2><p>Paper serves work that benefits from warmth, visible fiber, restrained contrast, and the intimacy of ink on a physical surface. Mat, frame, and glazing should support the piece rather than turn it into office décor by default.</p><ul><li>Paper stock matched to the typography and image</li><li>Low-glare presentation where appropriate</li><li>Framing with deliberate depth and proportion</li></ul></article>
+</div></div></section>
+
+<section class="section edition-scale-section">
+  <div class="wrap">
+    <div class="section-heading split-heading"><div><p class="eyebrow">Designed for a room</p><h2>Scale is part of the sentence.</h2></div><p>The final size follows reading distance, available wall space, text density, and whether the piece belongs to one person or a shared room.</p></div>
+    <div class="edition-scale-grid">
+      <article><span>Close</span><h3>Personal office</h3><p>Read from a chair or desk. Typography can be more intimate, and paper may carry the work beautifully.</p></article>
+      <article><span>Across</span><h3>Lab or briefing room</h3><p>Hierarchy must survive distance. A larger metal or framed edition can hold the room without becoming signage.</p></article>
+      <article><span>Passing</span><h3>Shared corridor</h3><p>The main line must land quickly while rewarding the person who stops long enough to read the full piece.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="materials-close"><div class="wrap materials-close-grid"><div><p class="eyebrow">The decision</p><h2>The room gets a vote.</h2></div><div><p>A finished edition has to work in the light, distance, and visual noise of the space where it will live. The file is a beginning. The object completes the thought.</p><a class="text-link text-link-light" href="/works/">Return to the work <span aria-hidden="true">→</span></a></div></div></section>
+{{ end }}

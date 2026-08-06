@@ -1,36 +1,27 @@
 {{ define "main" }}
 <header class="page-hero page-hero-compact">
   <div class="wrap page-hero-grid">
-    <div><p class="eyebrow">The rooms</p><h1>{{ .Title }}</h1></div>
+    <div><p class="eyebrow">Disciplines</p><h1>The rooms</h1></div>
     <p>{{ .Description }}</p>
   </div>
 </header>
-<section class="discipline-index">
-  {{ range site.Data.disciplines }}
-  {{ $works := where (where site.RegularPages "Section" "works") ".Params.discipline" .slug }}
-  {{ $downloads := where (where site.RegularPages "Section" "downloads") ".Params.discipline" .slug }}
-  <article class="discipline-panel{{ if eq .priority 1 }} discipline-panel-primary{{ end }}" id="{{ .slug }}">
-    <div class="wrap discipline-panel-grid">
-      <div class="discipline-panel-title">
-        <span class="discipline-number">0{{ .priority }}</span>
-        <p class="eyebrow">{{ .plain_name }}</p>
-        <h2>{{ .name }}</h2>
+<section class="section discipline-directory">
+  <div class="wrap discipline-directory-grid">
+    {{ range hugo.Data.disciplines }}
+    <a class="discipline-directory-card{{ if eq .priority 1 }} discipline-directory-card-primary{{ end }}" href="{{ .page }}">
+      <div class="discipline-directory-top">
+        <span>0{{ .priority }}</span>
+        <small>{{ .plain_name }}</small>
       </div>
-      <div class="discipline-panel-body">
-        <p class="discipline-lede">{{ .description }}</p>
-        <ul class="discipline-themes">{{ range .themes }}<li>{{ . }}</li>{{ end }}</ul>
-        {{ if or (gt (len $works) 0) (gt (len $downloads) 0) }}
-        <div class="discipline-links">
-          <div class="discipline-link-set">
-            {{ if gt (len $works) 0 }}<a class="text-link" href="/works/?discipline={{ .slug }}">Browse related work <span aria-hidden="true">→</span></a>{{ end }}
-            {{ if gt (len $downloads) 0 }}<a class="text-link" href="{{ (index $downloads 0).RelPermalink }}">View open release <span aria-hidden="true">→</span></a>{{ end }}
-          </div>
-          <span>{{ add (len $works) (len $downloads) }} {{ if eq (add (len $works) (len $downloads)) 1 }}release{{ else }}releases{{ end }} in this room</span>
-        </div>
-        {{ end }}
+      <h2>{{ .name }}</h2>
+      <p class="discipline-directory-line">{{ .line }}</p>
+      <p>{{ .description }}</p>
+      <div class="discipline-directory-paths" aria-hidden="true">
+        {{ range .paths }}<span>{{ .label }}</span>{{ end }}
       </div>
-    </div>
-  </article>
-  {{ end }}
+      <strong>Enter the room <b aria-hidden="true">→</b></strong>
+    </a>
+    {{ end }}
+  </div>
 </section>
 {{ end }}

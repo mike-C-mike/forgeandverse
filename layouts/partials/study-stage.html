@@ -1,0 +1,13 @@
+{{- $current := int (.Params.stage_step | default 1) -}}
+{{- $stages := index hugo.Data "study-stages" -}}
+{{- if not $stages -}}
+  {{- errorf "Missing data/study-stages.yaml required by layouts/partials/study-stage.html" -}}
+{{- end -}}
+<div class="study-progress" aria-label="Design study progress: step {{ $current }} of {{ len $stages }}">
+  {{ range $stages }}
+  <div class="study-progress-step{{ if lt .step $current }} is-complete{{ else if eq .step $current }} is-current{{ end }}">
+    <span aria-hidden="true">{{ .step }}</span>
+    <div><strong>{{ .label }}</strong><small>{{ .description }}</small></div>
+  </div>
+  {{ end }}
+</div>

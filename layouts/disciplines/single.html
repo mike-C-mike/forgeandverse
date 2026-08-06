@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ $slug := .Params.discipline_slug }}
+{{ $discipline := index (where hugo.Data.disciplines "slug" $slug) 0 }}
+{{ $works := where (where site.RegularPages "Section" "works") ".Params.discipline" $slug }}
+{{ $downloads := where (where site.RegularPages "Section" "downloads") ".Params.discipline" $slug }}
+{{ $journal := where (where site.RegularPages "Section" "journal") ".Params.discipline" $slug }}
+{{ $roadmapSection := site.GetPage "/roadmap" }}
+{{ $anvil := where $roadmapSection.Pages ".Params.discipline_slug" $slug }}
+<header class="discipline-hero discipline-hero-{{ $slug }}">
+  <div class="wrap discipline-hero-grid">
+    <div><div class="discipline-hero-meta"><span>0{{ $discipline.priority }}</span><p class="eyebrow">{{ $discipline.plain_name }}</p></div><h1>{{ .Title }}</h1><p class="discipline-hero-line">{{ $discipline.line }}</p></div>
+    <p>{{ $discipline.context }}</p>
+  </div>
+</header>
+<section class="section discipline-story"><div class="wrap discipline-story-grid"><div><p class="eyebrow">Inside the room</p><h2>{{ $discipline.description }}</h2></div><article class="prose-inline">{{ .Content }}</article></div></section>
+<section class="section discipline-path-section">
+  <div class="wrap">
+    <div class="section-heading split-heading"><div><p class="eyebrow">In this room</p><h2>Useful tools, familiar objects, and work worth mounting.</h2></div><p>The form changes with the need, but the details stay rooted in the profession.</p></div>
+    <div class="discipline-paths discipline-paths-single">{{ range $discipline.paths }}<article class="discipline-path-card" id="{{ .slug }}"><p class="discipline-path-label">{{ .label }}</p><h3>{{ .title }}</h3><p>{{ .description }}</p></article>{{ end }}</div>
+  </div>
+</section>
+{{ if or (gt (len $works) 0) (gt (len $downloads) 0) (gt (len $journal) 0) }}
+<section class="section discipline-shelf"><div class="wrap"><div class="section-heading split-heading"><div><p class="eyebrow">From {{ $discipline.name }}</p><h2>Current work and writing</h2></div></div><div class="discipline-shelf-grid">
+{{ range $works.ByWeight }}<a class="discipline-shelf-card discipline-shelf-card-work" href="{{ .RelPermalink }}">{{ with .Params.image }}<div class="discipline-shelf-image"><img src="{{ . }}" alt="" loading="lazy"></div>{{ end }}<div><span>Studio work · {{ partial "status-label.html" .Params.status }}</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>View the work <b aria-hidden="true">→</b></strong></div></a>{{ end }}
+{{ range $downloads.ByWeight }}<a class="discipline-shelf-card" href="{{ .RelPermalink }}"><div><span>Free work</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>View the release <b aria-hidden="true">→</b></strong></div></a>{{ end }}
+{{ range $journal.ByDate.Reverse }}<a class="discipline-shelf-card" href="{{ .RelPermalink }}"><div><span>Journal · {{ .Date.Format "January 2006" }}</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>Read the piece <b aria-hidden="true">→</b></strong></div></a>{{ end }}
+</div></div></section>{{ end }}
+{{ if gt (len $anvil) 0 }}
+<section class="section discipline-anvil"><div class="wrap"><div class="section-heading split-heading split-heading-light"><div><p class="eyebrow">On the anvil</p><h2>Taking shape in this room</h2></div><div><p>Work still being structured, written, composed, or tested.</p><a class="text-link text-link-light" href="/roadmap/">View all studies <span aria-hidden="true">→</span></a></div></div><div class="study-grid study-grid-discipline">{{ range $anvil.ByWeight }}{{ partial "study-card.html" . }}{{ end }}</div></div></section>
+{{ end }}
+{{ end }}

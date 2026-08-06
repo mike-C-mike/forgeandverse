@@ -1,19 +1,48 @@
 ---
-title: "Believe in the Badge"
+title: Believe in the Badge
 weight: 10
-summary: "A reflective tribute to service, compassion, and the resolve to keep showing up."
-description: "A law-enforcement art and writing piece built around the human weight of showing up."
-discipline: "watch"
-format: "wall-edition"
-format_label: "Ornate wall edition study"
-status: "forging"
+summary: A reflective tribute to service, compassion, and the resolve to keep showing
+  up.
+description: A law-enforcement art and writing piece built around the human weight
+  of showing up.
+discipline: watch
+release_path: editions
+release_path_label: Wall edition
+audience: Officers and support professionals who carry the human weight of service
+need: A reminder of compassion, resolve, and the people standing beside them
+format: wall-edition
+format_label: Ornate wall edition study
+status: forging
 featured: true
-cover_style: "watch"
-image: "/images/believe-in-the-badge-backdrop.webp"
-image_alt: "Police officers beneath an American flag at sunset"
-rights: "original"
-material_intent: "Large-format metal or archival wall edition"
-note: "The writing leads. The final composition is being built as a substantial wall piece, with material, depth, and mounting considered as part of the work rather than an afterthought."
+cover_style: watch
+image: /images/studies/believe-in-the-badge/composition-study.webp
+image_alt: Believe in the Badge composition study with the written piece placed over
+  a restrained law-enforcement backdrop
+rights: original
+material_intent: Large-format metal or archival wall edition
+note: The writing and image are now being tested as one composition. The current proof
+  is deliberately labeled as a study while typography, reading distance, surface,
+  and mounting are resolved.
+moment: When a room needs a reminder that steadiness, compassion, and showing up are
+  part of the job too.
+image_caption: Current composition study. Typography, contrast, and image are being
+  tested as one wall piece.
+gallery:
+- image: /images/studies/believe-in-the-badge/wall-mockup.webp
+  alt: Believe in the Badge composition shown as a floating metal wall edition in
+    a dark professional room
+  caption: Scale study for a floating metal edition. The goal is presence without
+    turning the room into a recruitment display.
+- image: /images/studies/believe-in-the-badge/edge-detail-study.webp
+  alt: Angled close study of the Believe in the Badge metal panel edge and floating
+    mount
+  caption: Surface and edge study. Reflection, panel depth, and wall separation must
+    support the writing rather than compete with it.
+- image: /images/studies/believe-in-the-badge/paper-frame-study.webp
+  alt: Believe in the Badge shown on archival paper with a wide mat and dark frame
+    in a warm professional room
+  caption: Paper and frame study. A warmer, quieter presentation may serve offices
+    where reading matters more than luminosity.
 ---
 To wear the badge is to answer a call bigger than yourself.
 

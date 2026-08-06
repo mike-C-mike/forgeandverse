@@ -1,0 +1,69 @@
+{{- $description := site.Params.description -}}
+{{- with .Description }}{{ $description = . }}{{ else }}{{ with .Params.summary }}{{ $description = . }}{{ end }}{{ end -}}
+{{- $image := site.Params.defaultImage | absURL -}}
+{{- with .Params.image }}{{ $image = . | absURL }}{{ else }}{{ with .Params.hero_image }}{{ $image = . | absURL }}{{ else }}{{ with .Params.card_image }}{{ $image = . | absURL }}{{ end }}{{ end }}{{ end -}}
+{{- if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "name": {{ site.Title | jsonify }},
+  "url": {{ site.BaseURL | jsonify }},
+  "description": {{ $description | plainify | jsonify }},
+  "logo": {{ ("/images/forge-verse-mark-dark.png" | absURL) | jsonify }}
+}
+</script>
+{{- else if and .IsPage (eq .Section "journal") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ $description | plainify | jsonify }},
+  "datePublished": {{ (.Date.Format "2006-01-02T15:04:05Z07:00") | jsonify }},
+  "mainEntityOfPage": {{ .Permalink | jsonify }},
+  "image": {{ $image | jsonify }},
+  "publisher": {"@type": "Brand", "name": {{ site.Title | jsonify }}}
+}
+</script>
+{{- else if and .IsPage (eq .Section "works") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | plainify | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "image": {{ $image | jsonify }},
+  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}}
+}
+</script>
+{{- else if and .IsPage (eq .Section "roadmap") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | plainify | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "image": {{ $image | jsonify }},
+  "creativeWorkStatus": {{ (.Params.stage | default "In development") | jsonify }},
+  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}}
+}
+</script>
+{{- else if and .IsPage (eq .Section "downloads") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | plainify | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  {{ with .Params.version }}"version": {{ . | jsonify }},{{ end }}
+  {{ with .Params.updated }}"dateModified": {{ . | jsonify }},{{ end }}
+  {{ with .Params.bundle_url }}"distribution": {"@type": "DataDownload", "contentUrl": {{ (. | absURL) | jsonify }}, "encodingFormat": "application/zip"},{{ end }}
+  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}},
+  "license": {{ ("/use-and-rights/" | absURL) | jsonify }}
+}
+</script>
+{{- end -}}

@@ -1,0 +1,743 @@
+{
+  "release": "Digital Forensics Intake Kit",
+  "version": "1.2",
+  "form": "digital-forensics-intake-request-fillable.pdf",
+  "field_count": 105,
+  "fields": [
+    {
+      "name": "requesting_agency_unit",
+      "label": "Requesting agency or unit",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "date_submitted",
+      "label": "Date submitted",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "requested_completion_date",
+      "label": "Requested completion date",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "requestor_name_title",
+      "label": "Requestor name and title",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "badge_employee_id",
+      "label": "Badge or employee ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "phone",
+      "label": "Phone",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "case_incident_number",
+      "label": "Case or incident number",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "evidence_system_number",
+      "label": "Evidence system number",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "incident_offense_type",
+      "label": "Incident or offense type",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "lead_investigator",
+      "label": "Lead investigator",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "prosecutor_legal_contact",
+      "label": "Prosecutor or legal contact",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "priority_routine",
+      "label": "Routine priority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "priority_expedited",
+      "label": "Expedited priority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "priority_emergency",
+      "label": "Emergency priority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "priority_justification",
+      "label": "Priority justification",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "authority_search_warrant",
+      "label": "Search warrant authority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_consent",
+      "label": "Consent authority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_exigent",
+      "label": "Exigent circumstances authority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_agency_owned",
+      "label": "Agency-owned system or device authority",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_other_selected",
+      "label": "Other authority selected",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_other",
+      "label": "Other authority",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "authority_documentation_attached",
+      "label": "Authority documentation attached",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_documentation_case_file",
+      "label": "Authority documentation available in case file",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_documentation_not_applicable",
+      "label": "Authority documentation not applicable",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "authority_date_expiration",
+      "label": "Authority date or expiration",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "scope_of_examination",
+      "label": "Scope of examination",
+      "page": 1,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "investigative_question",
+      "label": "Question the examination should help answer",
+      "page": 1,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "known_facts_time_sensitive",
+      "label": "Known facts and time-sensitive concerns",
+      "page": 1,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "device_1_evidence_id",
+      "label": "Device 1 item or evidence ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_1_description",
+      "label": "Device 1 device or media",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_1_make_model",
+      "label": "Device 1 make or model",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_1_serial_id",
+      "label": "Device 1 serial, IMEI, or service ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_1_power_condition",
+      "label": "Device 1 power or condition",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_1_owner_user",
+      "label": "Device 1 owner or primary user",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_2_evidence_id",
+      "label": "Device 2 item or evidence ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_2_description",
+      "label": "Device 2 device or media",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_2_make_model",
+      "label": "Device 2 make or model",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_2_serial_id",
+      "label": "Device 2 serial, IMEI, or service ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_2_power_condition",
+      "label": "Device 2 power or condition",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_2_owner_user",
+      "label": "Device 2 owner or primary user",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_3_evidence_id",
+      "label": "Device 3 item or evidence ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_3_description",
+      "label": "Device 3 device or media",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_3_make_model",
+      "label": "Device 3 make or model",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_3_serial_id",
+      "label": "Device 3 serial, IMEI, or service ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_3_power_condition",
+      "label": "Device 3 power or condition",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_3_owner_user",
+      "label": "Device 3 owner or primary user",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_4_evidence_id",
+      "label": "Device 4 item or evidence ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_4_description",
+      "label": "Device 4 device or media",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_4_make_model",
+      "label": "Device 4 make or model",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_4_serial_id",
+      "label": "Device 4 serial, IMEI, or service ID",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_4_power_condition",
+      "label": "Device 4 power or condition",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "device_4_owner_user",
+      "label": "Device 4 owner or primary user",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "packaging_intact",
+      "label": "Packaging intact",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "packaging_opened",
+      "label": "Packaging opened for safety or preservation",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "packaging_unsealed",
+      "label": "Packaging unsealed",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "packaging_other_selected",
+      "label": "Other packaging condition selected",
+      "page": 1,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "packaging_other",
+      "label": "Other packaging or seal condition",
+      "page": 1,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "service_preservation_isolation",
+      "label": "Preservation or isolation requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_mobile_acquisition",
+      "label": "Mobile acquisition requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_computer_image",
+      "label": "Computer or drive image requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_removable_media",
+      "label": "Removable media acquisition requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_targeted_extraction",
+      "label": "Targeted extraction requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_file_system_full",
+      "label": "File-system or full extraction requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_cloud_account",
+      "label": "Cloud or account collection requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_password_recovery",
+      "label": "Password recovery attempt requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_malware_triage",
+      "label": "Malware or incident triage requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_review_analysis",
+      "label": "Data review or analysis requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_technical_report",
+      "label": "Technical report requested",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_other_selected",
+      "label": "Other service selected",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "service_other",
+      "label": "Other requested service",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "requested_date_range",
+      "label": "Requested date range",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "known_accounts_usernames_phones",
+      "label": "Known accounts, usernames, or phone numbers",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "known_contacts_identifiers",
+      "label": "Known contacts or identifiers",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "known_keywords_filenames_apps",
+      "label": "Known keywords, filenames, or applications",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "specific_data_requested",
+      "label": "Specific data requested",
+      "page": 2,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "relevant_context",
+      "label": "Relevant context for the examiner",
+      "page": 2,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "passcode_yes",
+      "label": "Known passcode provided through approved method",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "passcode_no",
+      "label": "No known passcode",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "passcode_unknown",
+      "label": "Passcode status unknown",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "device_state_on",
+      "label": "Device state on",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "device_state_off",
+      "label": "Device state off",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "device_state_unknown",
+      "label": "Device state unknown",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "network_isolated",
+      "label": "Network isolated",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "network_connected",
+      "label": "Network connected",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "network_unknown",
+      "label": "Network state unknown",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_charger",
+      "label": "Charger submitted",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_cable",
+      "label": "Cable submitted",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_sim",
+      "label": "SIM submitted",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_memory_card",
+      "label": "Memory card submitted",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_external_storage",
+      "label": "External storage submitted",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_other_selected",
+      "label": "Other accessory selected",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "accessory_other",
+      "label": "Other accessory",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "handling_history",
+      "label": "Handling history, preservation steps, and unusual conditions",
+      "page": 2,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "additional_instructions",
+      "label": "Additional instructions or limitations",
+      "page": 2,
+      "type": "text",
+      "multiline": true
+    },
+    {
+      "name": "requestor_signature",
+      "label": "Requestor signature or typed name",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "requestor_signature_datetime",
+      "label": "Requestor date and time",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "received_by",
+      "label": "Received by",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "date_time_received",
+      "label": "Date and time received",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "evidence_location_transfer",
+      "label": "Evidence location or transfer record",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "forensic_request_queue_number",
+      "label": "Forensic request or queue number",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "scope_confirmed_yes",
+      "label": "Initial scope confirmed with requestor: yes",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "scope_confirmed_no",
+      "label": "Initial scope confirmed with requestor: no",
+      "page": 2,
+      "type": "checkbox",
+      "multiline": false
+    },
+    {
+      "name": "clarification_needed",
+      "label": "Clarification needed",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "name": "forensic_unit_intake_notes",
+      "label": "Forensic unit intake notes",
+      "page": 2,
+      "type": "text",
+      "multiline": false
+    }
+  ]
+}

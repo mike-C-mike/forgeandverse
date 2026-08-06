@@ -1,55 +1,16 @@
 {{ define "main" }}
-<header class="studio-hero">
-  <div class="wrap studio-hero-grid">
-    <div>
-      <p class="eyebrow">The studio</p>
-      <h1>Work with weight.<br>Words with an edge.</h1>
-    </div>
-    <div class="studio-hero-copy">
-      <p>{{ .Description }}</p>
-      <img src="/images/forge-verse-mark-light.png" alt="Forge and Verse anvil and quill emblem">
-    </div>
-  </div>
-</header>
-<section class="section studio-story">
-  <div class="wrap studio-story-grid">
-    <div><p class="eyebrow">Forge &amp; Verse</p><h2>The work comes first.</h2></div>
-    <article class="prose-inline">{{ .Content }}</article>
-  </div>
-</section>
-<section class="section studio-forms">
+<header class="studio-hero"><div class="wrap studio-hero-grid"><div><p class="eyebrow">The studio</p><h1>Work with weight.<br>Words with an edge.</h1></div><div class="studio-hero-copy"><p>{{ .Description }}</p><img src="/images/forge-verse-mark-light.png" alt="Forge and Verse anvil and quill emblem"></div></div></header>
+<section class="section studio-story"><div class="wrap studio-story-grid"><div><p class="eyebrow">Forge &amp; Verse</p><h2>The work comes first.</h2></div><article class="prose-inline">{{ .Content }}</article></div></section>
+<section class="section studio-rooms">
   <div class="wrap">
-    <div class="section-heading split-heading">
-      <div><p class="eyebrow">Forms</p><h2>What leaves the studio</h2></div>
-      <p>The form follows the idea. Some pieces belong on a wall. Others belong beside a keyboard, inside a field bag, or open on a desk.</p>
-    </div>
-    <div class="form-grid">
-      <article><span>01</span><h3>Art &amp; editions</h3><p>Ornate wall art, metal editions, archival prints, and physical pieces whose material and mounting are part of the design.</p></article>
-      <article><span>02</span><h3>Free works</h3><p>Forms, worksheets, templates, and occasional digital pieces released directly under the studio banner.</p></article>
-      <article><span>03</span><h3>Writing</h3><p>Essays, field notes, and observations from the overlap between technical work, professional culture, and language.</p></article>
-      <article><span>04</span><h3>Useful objects</h3><p>Notebooks, journals, desk pieces, and practical formats shaped around how the work is actually done.</p></article>
+    <div class="section-heading split-heading"><div><p class="eyebrow">What leaves the studio</p><h2>Made for the bench, the desk, and the wall.</h2></div><p>Each form has a different job. None exists only to carry a logo.</p></div>
+    <div class="studio-room-grid">
+      <article><span>At the bench</span><h3>Useful releases</h3><p>Forms, continuity aids, templates, and paper tools that make a real handoff or working moment clearer.</p><a class="text-link" href="/downloads/">See free works <b aria-hidden="true">→</b></a></article>
+      <article><span>At the desk</span><h3>Tactile objects</h3><p>Notebooks, pads, and objects for people who still find clarity in a pen, a page, and a physical ritual.</p><a class="text-link" href="/roadmap/examination-notebook/">See the notebook study <b aria-hidden="true">→</b></a></article>
+      <article><span>On the wall</span><h3>Mounted editions</h3><p>Art and writing given enough scale, material, and presence to change how a professional room feels.</p><a class="text-link" href="/materials/">See how material completes the work <b aria-hidden="true">→</b></a></article>
     </div>
   </div>
 </section>
-<section class="section materials-band">
-  <div class="wrap materials-grid">
-    <div>
-      <p class="eyebrow">Wall editions</p>
-      <h2>The surface carries part of the story.</h2>
-    </div>
-    <div>
-      <p>A finished wall piece is more than a file sent to a printer. Scale, finish, edge treatment, reflected light, and mounting change how the words and image occupy a room.</p>
-      <p>Some Forge &amp; Verse works may become metal editions. Others may belong on archival paper, acrylic, or another material chosen for the piece. The format follows the work.</p>
-    </div>
-  </div>
-</section>
-<section class="section founder-band">
-  <div class="wrap founder-grid">
-    <div><p class="eyebrow">Founded from the work</p><h2>Practitioner made</h2></div>
-    <div>
-      <p>Forge &amp; Verse was founded by <strong>Matthew McBride</strong>, a law-enforcement technology and digital-forensics practitioner whose work includes digital evidence, property and evidence operations, technical systems, and direct support for investigations.</p>
-      <p>The studio does not need a founder portrait to prove the point. The details in the work should do that.</p>
-    </div>
-  </div>
-</section>
+<section class="section tactile-band"><div class="wrap tactile-grid"><div><p class="eyebrow">Tactile by choice</p><h2>Not every thought wants to begin at a keyboard.</h2></div><div><p>Some people map a problem by hand. They remember the shape of a page, the pressure of a pen, and the moment a difficult idea becomes visible in ink.</p><p>Paper does not replace the digital record. It gives thinking, continuity, and reflection a physical place before the work returns to the system.</p></div></div></section>
+<section class="section founder-band"><div class="wrap founder-grid"><div><p class="eyebrow">Founded from the work</p><h2>Practitioner made</h2></div><div><p>Forge &amp; Verse was founded by <strong>Matthew McBride</strong>, a law-enforcement technology and digital-forensics practitioner whose work includes digital evidence, property and evidence operations, technical systems, and direct support for investigations.</p><p>The studio's point of view comes from direct work with the people, systems, and responsibilities it depicts.</p></div></div></section>
 {{ end }}

@@ -5,27 +5,37 @@
       <div>
         <p class="eyebrow">Forge &amp; Verse</p>
         <h2>Made for people whose work carries weight.</h2>
-        <p>Art, writing, free releases, and physical editions from an independent design studio.</p>
+        <p>Art, writing, open releases, tactile tools, and physical editions from an independent design studio.</p>
       </div>
     </div>
-    <div class="footer-grid">
+    <div class="footer-grid footer-grid-four">
       <div>
         <strong>Browse</strong>
-        <a href="/works/">Works</a>
+        <a href="/works/">Work</a>
         <a href="/downloads/">Free Works</a>
         <a href="/journal/">Journal</a>
+        <a href="/search/">Search</a>
+      </div>
+      <div>
+        <strong>Rooms</strong>
+        <a href="/disciplines/examiner-bench/">The Examiner's Bench</a>
+        <a href="/disciplines/evidence-room/">The Evidence Room</a>
+        <a href="/disciplines/watch/">The Watch</a>
+        <a href="/disciplines/signal/">The Signal</a>
       </div>
       <div>
         <strong>Studio</strong>
-        <a href="/disciplines/">Disciplines</a>
         <a href="/roadmap/">On the Anvil</a>
-        <a href="/about/">About</a>
+        <a href="/about/">About the Studio</a>
+        <a href="/materials/">Materials</a>
+        <a href="/disciplines/">All Disciplines</a>
       </div>
       <div>
         <strong>Fine print</strong>
         <a href="/use-and-rights/">Use &amp; Rights</a>
         <a href="/privacy/">Privacy</a>
         <a href="/affiliate-disclosure/">Disclosure</a>
+        <a href="/index.xml">RSS</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -34,5 +44,12 @@
     </div>
   </div>
 </footer>
+<dialog class="image-lightbox" data-lightbox-dialog aria-label="Image preview">
+  <button class="image-lightbox-close" type="button" data-lightbox-close aria-label="Close image preview">Close</button>
+  <figure>
+    <img src="" alt="" data-lightbox-image>
+    <figcaption data-lightbox-caption></figcaption>
+  </figure>
+</dialog>
 {{ $js := resources.Get "js/site.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

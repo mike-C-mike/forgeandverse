@@ -1,0 +1,17 @@
+FORGE & VERSE FREE OPERATIONAL RELEASE TERMS
+Digital Forensics Intake Kit v1.2
+
+You may:
+- Use the files for personal, organizational, administrative, operational, or training purposes.
+- Modify the editable files for your organization's internal workflow.
+- Reproduce and distribute an adapted version within your organization.
+- Share the original, unmodified release package without charge.
+
+You may not:
+- Sell the files as a standalone product or template package.
+- Present a modified version as an official Forge & Verse release.
+- Use the Forge & Verse name or mark to imply endorsement of an adapted policy, form, service, or organization.
+
+Attribution is appreciated but is not required on an agency-adapted operational form. Retain the Forge & Verse notice when sharing the original, unmodified release.
+
+The files are provided as a starting framework without warranty. The adopting organization is responsible for review against applicable law, agency policy, records requirements, prosecutor expectations, evidence procedures, accessibility requirements, and approved workflows.

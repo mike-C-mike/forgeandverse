@@ -1,0 +1,24 @@
+{{ with .Params.prototype_images }}
+<section class="study-proof-section">
+  <div class="wrap">
+    <div class="study-proof-heading">
+      <div>
+        <p class="eyebrow">Prototype proof</p>
+        <h2>{{ $.Params.prototype_title | default "The work in physical form" }}</h2>
+      </div>
+      {{ with $.Params.prototype_intro }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <div class="study-proof-grid study-proof-grid-{{ len . }}">
+      {{ range . }}
+      <figure class="study-proof-figure">
+        <a class="study-proof-image" href="{{ .image }}" data-lightbox data-lightbox-caption="{{ .caption }}">
+          <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+          <span class="image-expand-label">Open proof</span>
+        </a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

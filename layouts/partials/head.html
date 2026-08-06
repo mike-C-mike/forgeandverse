@@ -4,18 +4,19 @@
   {{ $description := site.Params.description }}
   {{ with .Description }}{{ $description = . }}{{ else }}{{ with .Params.summary }}{{ $description = . }}{{ end }}{{ end }}
   {{ $image := site.Params.defaultImage }}
-  {{ with .Params.image }}{{ $image = . }}{{ end }}
+  {{ with .Params.image }}{{ $image = . }}{{ else }}{{ with .Params.hero_image }}{{ $image = . }}{{ else }}{{ with .Params.card_image }}{{ $image = . }}{{ else }}{{ with .Params.preview_image }}{{ $image = . }}{{ end }}{{ end }}{{ end }}{{ end }}
   <title>{{ if .IsHome }}{{ site.Title }} | {{ site.Params.description }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ $description }}">
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="theme-color" content="#121313">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <meta property="og:site_name" content="{{ site.Title }}">
   <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta property="og:description" content="{{ $description }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ $image | absURL }}">
+  {{ with .Params.image_alt }}<meta property="og:image:alt" content="{{ . }}">{{ end }}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta name="twitter:description" content="{{ $description }}">
@@ -23,6 +24,8 @@
   <link rel="icon" href="/icons/icon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/icons/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="{{ site.Title }} RSS">
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ partial "structured-data.html" . }}
 </head>

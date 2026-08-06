@@ -14,7 +14,7 @@
         {{ with .Params.preview_image }}<img src="{{ . }}" alt="Preview of {{ $release.Title }}" loading="lazy">{{ end }}
       </a>
       <div class="download-card-body">
-        <div class="work-card-meta"><span>{{ partial "discipline-label.html" .Params.discipline }}</span><span>{{ partial "status-label.html" .Params.status }}</span></div>
+        <div class="work-card-meta"><span>{{ partial "discipline-label.html" .Params.discipline }}</span><span>{{ with .Params.release_path_label }}{{ . }} · {{ end }}{{ partial "status-label.html" .Params.status }}</span></div>
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         <p>{{ .Params.summary }}</p>
         <a class="text-link" href="{{ .RelPermalink }}">View release <span aria-hidden="true">→</span></a>

@@ -1,5 +1,5 @@
 baseURL = "https://forgeandverse.com/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Forge & Verse"
 enableRobotsTXT = true
 summaryLength = 28
@@ -9,6 +9,7 @@ disableKinds = ["taxonomy", "term"]
   pagerSize = 12
 
 [params]
+  frameworkVersion = "16.0"
   description = "Art, writing, and useful objects for the people who examine, protect, preserve, and defend."
   studioLine = "An independent literary-industrial design studio for people whose work carries weight."
   founder = "Matthew McBride"
@@ -25,22 +26,22 @@ disableKinds = ["taxonomy", "term"]
     url = "/works/"
     weight = 10
   [[menu.main]]
-    name = "Free Works"
-    url = "/downloads/"
-    weight = 20
-  [[menu.main]]
     name = "Journal"
     url = "/journal/"
-    weight = 30
+    weight = 20
   [[menu.main]]
     name = "Disciplines"
     url = "/disciplines/"
-    weight = 40
+    weight = 30
   [[menu.main]]
     name = "On the Anvil"
     url = "/roadmap/"
-    weight = 50
+    weight = 40
   [[menu.main]]
     name = "Studio"
     url = "/about/"
+    weight = 50
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
     weight = 60

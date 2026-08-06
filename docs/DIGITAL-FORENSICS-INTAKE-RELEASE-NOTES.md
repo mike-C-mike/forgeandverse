@@ -1,33 +1,43 @@
-# Digital Forensics Intake Request - Release Notes
+# Digital Forensics Intake Kit Release Notes
 
-## Problem addressed
+## Version 1.2 - August 5, 2026
 
-Investigators often know why a device matters but do not naturally frame a request in terms that help an examiner establish authority, scope, targets, handling history, and examination priority.
+The kit now supports paper-first, local digital, and agency-customized workflows without forcing one interaction model.
 
-The template reduces avoidable clarification without pretending that one form can replace agency policy or legal review.
+### Added
 
-## Files
+- Local-only fillable PDF with 105 named fields
+- 61 text fields and 44 checkboxes
+- Machine-readable JSON field map
+- Machine-readable public release manifest with sizes, media types, and SHA-256 values
+- Public working-style choices for fillable PDF, print PDF, and editable DOCX
+- Fillable-PDF build and audit scripts
+- Viewer, save, print, routing, and records testing guidance in the implementation guide
 
-- print-ready two-page PDF
-- editable two-page DOCX
+### Security and privacy boundary
 
-## Adaptation points
+The fillable PDF contains no JavaScript, automatic submission action, telemetry, or connection to Forge & Verse. The adopting organization remains responsible for storage, routing, access, retention, and protection of completed files.
 
-Departments should review and customize:
+## Version 1.1 - August 4, 2026
 
-- authority choices and local legal language
-- required approvals
-- evidence-system identifiers
-- emergency routing
-- services actually offered by the unit
-- credential-transfer instructions
-- signature and acceptance requirements
-- retention and records language
+The original two-page intake form is now one part of a broader handoff kit.
 
-## Design decisions
+### Added
 
-- two pages rather than compressing the request into unreadable fields
-- the investigative question receives more space than tool selections
-- passwords are directed to an approved separate method
-- device identifiers and handling state are captured before the request reaches the bench
-- Forge & Verse branding is deliberately quiet and removable in adapted agency versions
+- One-page requester guide for officers and investigators
+- Four-page implementation guide for forensic units and administrators
+- Editable DOCX versions of both guides
+- Versioned ZIP bundle
+- README and use terms
+- Internal component checksum manifest
+- Public checksum manifest that includes the complete bundle
+- Public release history and adoption path
+- Related practice note: `The Device Is Not the Question`
+
+### Unchanged
+
+The original intake request PDF and DOCX remain byte-for-byte unchanged from version 1.0. Their SHA-256 values remain the same.
+
+## Version 1.0 - August 4, 2026
+
+Initial release of the two-page Digital Forensics Intake Request as print-ready PDF and editable DOCX.

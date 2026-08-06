@@ -1,4 +1,4 @@
 ---
-title: "Works"
-description: "Finished art and editions from the studio. The archive grows when a piece earns its place."
+title: "Work"
+description: "A small archive of finished pieces, useful releases, and current studies from the studio."
 ---

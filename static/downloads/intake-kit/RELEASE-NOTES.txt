@@ -1,0 +1,16 @@
+FORGE & VERSE
+DIGITAL FORENSICS INTAKE KIT
+Release Notes
+
+VERSION 1.2 - AUGUST 5, 2026
+- Added a local-only fillable PDF edition with 105 form fields.
+- Added a machine-readable field map for form review and workflow mapping.
+- Added a machine-readable public release manifest with file sizes, media types, and SHA-256 values.
+- Kept the print-ready PDF and editable DOCX as separate choices for paper-first and agency-customized workflows.
+- No JavaScript, automatic submission, telemetry, or connection to Forge & Verse is included in the fillable PDF.
+
+VERSION 1.1 - AUGUST 4, 2026
+- Expanded the original form into a complete kit with a one-page requester guide, four-page implementation guide, editable source files, bundled release, and component checksums.
+
+VERSION 1.0 - AUGUST 4, 2026
+- Initial two-page intake request released as print-ready PDF and editable DOCX.

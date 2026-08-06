@@ -1,34 +1,26 @@
 {{ define "main" }}
-<header class="page-hero page-hero-compact">
+{{ $works := .Pages.ByWeight }}
+{{ $downloads := (site.GetPage "/downloads").Pages.ByWeight }}
+{{ $studies := (site.GetPage "/roadmap").Pages.ByWeight }}
+{{ $benchReleases := where $downloads ".Params.release_path" "workbench" }}
+{{ $benchStudies := where $studies ".Params.release_path" "workbench" }}
+{{ $deskStudies := where $studies ".Params.release_path" "workspace" }}
+{{ $editionWorks := where $works ".Params.release_path" "editions" }}
+{{ $editionStudies := where $studies ".Params.release_path" "editions" }}
+<header class="page-hero page-hero-compact studio-index-hero">
   <div class="wrap page-hero-grid">
-    <div>
-      <p class="eyebrow">Studio archive</p>
-      <h1>{{ .Title }}</h1>
-    </div>
-    <p>{{ .Description }}</p>
+    <div><p class="eyebrow">Studio index</p><h1>{{ .Title }}</h1></div>
+    <p>Useful releases, tactile objects, mounted editions, and writing shaped by the work itself.</p>
   </div>
 </header>
-<section class="section archive-section">
-  <div class="wrap">
-    {{ if gt (len .Pages) 3 }}
-    <div class="archive-toolbar" data-filter-toolbar>
-      <div class="filter-group" role="group" aria-label="Filter works by discipline">
-        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
-        {{ range site.Data.disciplines }}
-        <button class="filter-button" type="button" data-filter="{{ .slug }}" aria-pressed="false">{{ .plain_name }}</button>
-        {{ end }}
-      </div>
-      <p class="archive-count"><span data-visible-count>{{ len .Pages }}</span> works shown</p>
-    </div>
-    {{ end }}
-    <div class="work-grid work-grid-archive{{ if eq (len .Pages) 1 }} work-grid-single{{ end }}" data-work-grid>
-      {{ range .Pages.ByWeight }}
-        {{ partial "work-card.html" . }}
-      {{ else }}
-        <p>The archive is quiet for now.</p>
-      {{ end }}
-    </div>
-    <p class="filter-empty" data-filter-empty hidden>No work in that room yet. The anvil is not offended.</p>
+<section class="purpose-index">
+  <div class="wrap purpose-index-grid">
+    <a href="#do-the-work"><span>01</span><strong>Help with the work</strong><small>Forms and continuity tools</small></a>
+    <a href="#make-room"><span>02</span><strong>Make room for thought</strong><small>Paper, ink, and tactile practice</small></a>
+    <a href="#hold-the-meaning"><span>03</span><strong>Hold the meaning</strong><small>Work made for the wall</small></a>
   </div>
 </section>
+<section class="section purpose-shelf" id="do-the-work"><div class="wrap"><div class="purpose-shelf-head"><div><p class="eyebrow">At the bench</p><h2>Help with the work.</h2></div><p>Made for a handoff, pause, question, or working moment that deserves a better physical structure.</p></div><div class="purpose-shelf-grid">{{ range $benchReleases }}{{ partial "release-card.html" . }}{{ end }}{{ range $benchStudies }}{{ partial "study-card.html" . }}{{ end }}</div></div></section>
+<section class="section purpose-shelf purpose-shelf-dark" id="make-room"><div class="wrap"><div class="purpose-shelf-head purpose-shelf-head-light"><div><p class="eyebrow">At the desk</p><h2>Make room for thought.</h2></div><p>For the person who reaches for a page because the act of writing changes how the problem becomes visible.</p></div><div class="purpose-shelf-grid">{{ range $deskStudies }}{{ partial "study-card.html" . }}{{ end }}<a class="purpose-journal-card" href="/journal/for-the-examiner-who-thinks-with-ink/"><span>Journal</span><h3>For the Examiner Who Thinks With Ink</h3><p>The tools and final record may be digital. The thinking does not have to begin there.</p><strong>Read the piece <b aria-hidden="true">→</b></strong></a></div></div></section>
+<section class="section purpose-shelf" id="hold-the-meaning"><div class="wrap"><div class="purpose-shelf-head"><div><p class="eyebrow">On the wall</p><h2>Hold the meaning.</h2></div><div><p>Art given the scale and material presence to change how a professional room feels.</p><a class="text-link" href="/materials/">How material completes the work <span aria-hidden="true">→</span></a></div></div><div class="purpose-shelf-grid">{{ range $editionWorks }}{{ partial "work-card.html" . }}{{ end }}{{ range $editionStudies }}{{ partial "study-card.html" . }}{{ end }}</div></div></section>
 {{ end }}
