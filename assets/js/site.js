@@ -29,27 +29,29 @@
     });
   }
 
-  const toolbar = document.querySelector('[data-filter-toolbar]');
-  const cards = Array.from(document.querySelectorAll('[data-work-card]'));
+  document.querySelectorAll('[data-filter-scope]').forEach((scope) => {
+    const buttons = Array.from(scope.querySelectorAll('[data-filter]'));
+    const items = Array.from(scope.querySelectorAll('[data-filter-item]'));
+    const count = scope.querySelector('[data-filter-count]');
+    const empty = scope.querySelector('[data-filter-empty]');
+    const queryKey = scope.dataset.filterQuery || 'view';
 
-  if (toolbar && cards.length) {
-    const buttons = Array.from(toolbar.querySelectorAll('[data-filter]'));
-    const count = document.querySelector('[data-visible-count]');
-    const empty = document.querySelector('[data-filter-empty]');
+    if (!buttons.length || !items.length) return;
 
-    const applyFilter = (filter, updateUrl = true) => {
-      const valid = filter === 'all' || buttons.some((button) => button.dataset.filter === filter);
-      const activeFilter = valid ? filter : 'all';
+    const applyFilter = (requested, updateUrl = true) => {
+      const valid = requested === 'all' || buttons.some((button) => button.dataset.filter === requested);
+      const filter = valid ? requested : 'all';
       let visible = 0;
 
-      cards.forEach((card) => {
-        const show = activeFilter === 'all' || card.dataset.discipline === activeFilter;
-        card.hidden = !show;
+      items.forEach((item) => {
+        const values = (item.dataset.filterValues || '').split(/\s+/).filter(Boolean);
+        const show = filter === 'all' || values.includes(filter);
+        item.hidden = !show;
         if (show) visible += 1;
       });
 
       buttons.forEach((button) => {
-        const active = button.dataset.filter === activeFilter;
+        const active = button.dataset.filter === filter;
         button.classList.toggle('is-active', active);
         button.setAttribute('aria-pressed', String(active));
       });
@@ -59,19 +61,19 @@
 
       if (updateUrl) {
         const url = new URL(window.location.href);
-        if (activeFilter === 'all') url.searchParams.delete('discipline');
-        else url.searchParams.set('discipline', activeFilter);
+        if (filter === 'all') url.searchParams.delete(queryKey);
+        else url.searchParams.set(queryKey, filter);
         window.history.replaceState({}, '', url);
       }
     };
 
     buttons.forEach((button) => {
-      button.addEventListener('click', () => applyFilter(button.dataset.filter));
+      button.addEventListener('click', () => applyFilter(button.dataset.filter || 'all'));
     });
 
-    const initial = new URL(window.location.href).searchParams.get('discipline') || 'all';
+    const initial = new URL(window.location.href).searchParams.get(queryKey) || 'all';
     applyFilter(initial, false);
-  }
+  });
 
   document.querySelectorAll('[data-copy]').forEach((button) => {
     button.addEventListener('click', async () => {
@@ -193,6 +195,8 @@
       const kind = normalize(item.kind);
       const discipline = normalize(disciplineNames[item.discipline] || item.discipline);
       const journalKind = normalize(item.journalKind);
+      const editionState = normalize(item.editionState);
+      const material = normalize(item.material);
       const tags = normalize((item.tags || []).join(' '));
       let score = 0;
       for (const term of terms) {
@@ -202,9 +206,11 @@
         if (discipline.includes(term)) score += 5;
         if (kind.includes(term)) score += 3;
         if (journalKind.includes(term)) score += 4;
+        if (editionState.includes(term)) score += 3;
+        if (material.includes(term)) score += 4;
         if (tags.includes(term)) score += 5;
         if (body.includes(term)) score += 2;
-        if (![title, summary, body, kind, discipline, journalKind, tags].some((field) => field.includes(term))) return -1;
+        if (![title, summary, body, kind, discipline, journalKind, editionState, material, tags].some((field) => field.includes(term))) return -1;
       }
       return score;
     };
@@ -268,13 +274,41 @@
     searchInput.value = initialQuery;
     renderSearch(initialQuery, false);
 
-    document.addEventListener('keydown', (event) => {
-      const target = event.target;
-      const isTyping = target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target?.isContentEditable;
-      if (event.key === '/' && !isTyping) {
-        event.preventDefault();
-        searchInput.focus();
-      }
-    });
+    if (new URL(window.location.href).searchParams.get('focus') === '1') {
+      searchInput.focus();
+    }
   }
+
+  document.addEventListener('keydown', (event) => {
+    const target = event.target;
+    const isTyping = target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target?.isContentEditable;
+    if (event.key === '/' && !isTyping && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      event.preventDefault();
+      if (searchInput) searchInput.focus();
+      else window.location.href = '/search/?focus=1';
+    }
+  });
+  document.querySelectorAll('[data-print-page]').forEach((button) => {
+    button.addEventListener('click', () => window.print());
+  });
+
+  const readingArticle = document.querySelector('[data-reading-article]');
+  const readingProgress = document.querySelector('[data-reading-progress]');
+
+  if (readingArticle && readingProgress) {
+    const updateReadingProgress = () => {
+      const rect = readingArticle.getBoundingClientRect();
+      const articleTop = window.scrollY + rect.top;
+      const articleHeight = readingArticle.offsetHeight;
+      const viewport = window.innerHeight;
+      const distance = Math.max(articleHeight - viewport * 0.35, 1);
+      const progress = Math.min(1, Math.max(0, (window.scrollY - articleTop + viewport * 0.18) / distance));
+      readingProgress.style.transform = `scaleX(${progress})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener('scroll', updateReadingProgress, { passive: true });
+    window.addEventListener('resize', updateReadingProgress);
+  }
+
 })();

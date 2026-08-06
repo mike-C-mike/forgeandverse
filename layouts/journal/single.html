@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $toc := .TableOfContents }}
+<div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
 <header class="article-hero">
   <div class="wrap article-hero-inner">
     <p class="eyebrow">{{ .Params.journal_kind_label | default "Journal" }} · {{ .Date.Format "January 2, 2006" }}</p>
@@ -7,15 +9,20 @@
     <div class="article-meta"><span>{{ .ReadingTime }} minute read</span>{{ with .Params.discipline }}<span>{{ partial "discipline-label.html" . }}</span>{{ end }}{{ with .Params.tags }}<span>{{ delimit . " · " }}</span>{{ end }}</div>
   </div>
 </header>
-<article class="prose prose-article">{{ .Content }}</article>
-{{ with .Params.related_release }}{{ with site.GetPage . }}
-<section class="article-related-release">
-  <div class="wrap article-related-release-grid">
-    <div><p class="eyebrow">Related free work</p><h2>{{ .Title }}</h2></div>
-    <div><p>{{ .Params.summary }}</p><a class="button button-light" href="{{ .RelPermalink }}">Open the release</a></div>
-  </div>
+<section class="article-reading-shell wrap">
+  <aside class="article-reading-rail" aria-label="Reading tools">
+    {{ if strings.Contains $toc "<li>" }}
+    <div class="article-toc"><p class="eyebrow">In this piece</p>{{ $toc }}</div>
+    {{ end }}
+    <div class="article-tools">
+      <button type="button" data-print-page>Print or save as PDF</button>
+      {{ with .Params.discipline }}<a href="/disciplines/{{ . }}/">Enter {{ partial "discipline-label.html" . }}</a>{{ end }}
+      <a href="/journal/">Back to the journal</a>
+    </div>
+  </aside>
+  <article class="prose prose-article" data-reading-article>{{ .Content }}</article>
 </section>
-{{ end }}{{ end }}
+{{ partial "studio-connections.html" . }}
 <nav class="article-nav wrap" aria-label="Journal navigation">
   {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Previous</span><strong>{{ .Title }}</strong></a>{{ end }}
   {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span>Next</span><strong>{{ .Title }}</strong></a>{{ end }}

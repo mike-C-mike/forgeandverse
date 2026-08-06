@@ -13,7 +13,7 @@
       {{ $currentPath := .RelPermalink }}
       {{ range site.Menus.main }}
       {{ $active := or (eq $currentPath .URL) (and (ne .URL "/") (hasPrefix $currentPath .URL)) }}
-      <a href="{{ .URL }}"{{ if eq .Name "Search" }} class="nav-search-link" aria-label="Search Forge and Verse"{{ end }}{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      <a href="{{ .URL }}"{{ if eq .Name "Search" }} class="nav-search-link" aria-label="Search Forge and Verse"{{ end }}{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}{{ if eq .Name "Search" }}<kbd aria-hidden="true">/</kbd>{{ end }}</a>
       {{ end }}
     </nav>
   </div>

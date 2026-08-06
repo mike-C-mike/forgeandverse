@@ -56,6 +56,7 @@ open_questions:
 - Should the final object be rendered with photographic realism or remain almost archival
   and symbolic?
 - Does the piece belong on quiet paper, low-sheen metal, or in two distinct editions?
+related_journal: /journal/the-shelf-remembers/
 prototype_source_files:
 - source-assets/prototypes/preserved-until-it-matters-composition-study.pdf
 ---

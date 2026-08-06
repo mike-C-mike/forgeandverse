@@ -23,6 +23,8 @@ adoption_steps: []
 release_history: []
 checksums: []
 rights: "original-free-release"
+related_journal: ""
+related_study: ""
 draft: true
 ---
 

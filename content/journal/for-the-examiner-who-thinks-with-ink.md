@@ -6,6 +6,7 @@ status: "published"
 journal_kind: "essay"
 journal_kind_label: "Essay"
 discipline: "examiner-bench"
+related_study: "/roadmap/examination-notebook/"
 ---
 The modern answer to almost every professional need is another field, another dashboard, another widget, or another window waiting behind the one already open.
 

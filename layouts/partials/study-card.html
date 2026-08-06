@@ -1,4 +1,4 @@
-<article class="study-card{{ with .Params.card_image }} study-card-proof{{ end }}">
+<article class="study-card{{ with .Params.card_image }} study-card-proof{{ end }}" data-filter-item data-filter-values="{{ .Params.discipline_slug }} {{ .Params.release_path }}{{ if .Params.proof_available }} proof{{ end }} stage-{{ .Params.stage_step }}">
   <a href="{{ .RelPermalink }}" class="study-card-link">
     <div class="study-card-visual">
       {{ with .Params.card_image }}

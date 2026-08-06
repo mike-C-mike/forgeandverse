@@ -8,6 +8,7 @@ journal_kind: "practice-note"
 journal_kind_label: "Practice note"
 tags: []
 related_release: ""
+related_study: ""
 draft: true
 ---
 

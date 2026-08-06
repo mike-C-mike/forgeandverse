@@ -93,16 +93,7 @@
 
 <section class="work-detail-body"><div class="wrap work-detail-body-grid"><aside><p class="eyebrow">Use and permission</p><dl class="release-facts"><div><dt>Use</dt><dd>{{ .Params.usage | default "Personal and workplace use" }}</dd></div><div><dt>Credit</dt><dd>{{ .Params.credit | default "Keep the Forge & Verse mark intact" }}</dd></div>{{ with .Params.license_note }}<div><dt>Permission</dt><dd>{{ . }}</dd></div>{{ end }}</dl></aside><article class="prose prose-work">{{ .Content }}</article></div></section>
 
-{{ with .Params.related_journal }}
-{{ with site.GetPage . }}
-<section class="release-related-note">
-  <div class="wrap release-related-note-grid">
-    <div><p class="eyebrow">Practice note</p><h2>{{ .Title }}</h2></div>
-    <div><p>{{ .Params.summary }}</p><a class="text-link text-link-light" href="{{ .RelPermalink }}">Read the note <span aria-hidden="true">→</span></a></div>
-  </div>
-</section>
-{{ end }}
-{{ end }}
+{{ partial "studio-connections.html" . }}
 
 {{ with .Params.release_history }}
 <section class="section release-history-section">

@@ -1,6 +1,6 @@
-# Forge & Verse v16 Validation
+# Forge & Verse v18.19 Validation
 
-Validated in the build environment on August 5, 2026.
+Validated in the build environment on August 6, 2026.
 
 ## Repository checks
 
@@ -9,14 +9,23 @@ Passed:
 - TOML, YAML, JSON, and front matter parsing
 - Reserved Hugo field checks
 - Required fields for works, free releases, journal entries, discipline pages, and design studies
-- Discipline, release-path, related-release, and related-journal relationships
+- Discipline, release-path, related-release, related-journal, related-study, and related-work relationships
+- Journal-kind validation
+- Five-state physical-edition data and ordering validation
+- Nested edition metadata, format specifications, and study-route checks
+- Production-partner and fulfillment requirements for any edition marked Available
 - Static image, download, proof-file, and proof-bundle references
-- Field-proof version, date, package metadata, and SHA-256 values
-- Release-manifest file sizes, media records, routes, and SHA-256 values
+- Field-proof metadata and SHA-256 values
+- Release-manifest file sizes, routes, media records, and hashes
 - Intake field-map count and release-page metadata
-- PDF signatures, DOCX archive structure, and ZIP integrity
-- Hugo template delimiter balance
-- CSS brace balance
+- 27 image files opened and verified
+- 15 PDF signatures verified
+- 4 DOCX archives verified, including `word/document.xml`
+- 4 ZIP archives tested with no corrupt members
+- Hugo template delimiter balance across 42 template files
+- CSS parsing: 1,040 qualified rules, 46 at-rules, zero parse errors
+- JavaScript syntax validation
+- Python compilation for repository scripts
 
 Command:
 
@@ -28,66 +37,53 @@ Result:
 
 ```text
 Forge & Verse validation passed.
-Disciplines: 4
-Study stages: 5
-Works: 1
-Free works: 1
-Journal pieces: 4
-Design studies: 4
-Content files: 26
+  Disciplines: 4
+  Study stages: 5
+  Edition states: 5
+  Works: 1
+  Free works: 1
+  Journal pieces: 5
+  Design studies: 4
+  Content files: 28
 ```
 
-## Fillable intake form
+## What this round specifically validates
 
-Passed:
-
-- Two-page PDF
-- 105 unique AcroForm fields
-- 61 text fields
-- 44 checkboxes
-- Field names and order match the machine-readable field map
-- No JavaScript, SubmitForm, or Launch action detected
-- Blank fillable render remains visually equivalent to the print edition
-- Representative text and checkbox values were filled, saved, reopened, and rendered
-- No clipping found in the filled review sample
-
-Command:
-
-```text
-python scripts/audit_fillable_intake_form.py
-```
-
-## Intake companion documents
-
-Visually reviewed after regeneration:
-
-- Requester guide: one page
-- Implementation guide: four pages
-- No clipping, overlaps, broken glyphs, or missing content found
-- Both footers identify Intake Kit v1.2
-- Implementation guide includes fillable-viewer, local-storage, save, print, routing, and records testing guidance
-
-## Intake package
-
-Passed:
-
-- Versioned v1.2 ZIP integrity
-- Component checksum manifest
-- Public SHA-256 manifest
-- Machine-readable JSON release manifest
-- Fillable PDF, print PDF, editable sources, field map, guides, README, release notes, and use terms present
+- `/editions/` content and layout are present.
+- Physical editions use only these public states: `in-studio`, `proof-in-hand`, `edition-approved`, `available`, and `resting`.
+- An edition cannot be marked `available` without an external URL, production-partner name, fulfillment note, and purchase-button label.
+- A digital room mockup does not silently promote a work to `proof-in-hand`.
+- The Believe in the Badge edition remains `in-studio` and has no ordering link.
+- Search metadata and Work structured data can include edition state and material direction.
+- Work archetypes include the edition model without enabling it by default.
 
 ## Remaining local check
 
-Hugo Extended is not installed in this build environment. Run the complete Hugo v0.164.0 build and rendered-site validator on the Windows development machine:
+A Hugo executable is not available in this build container, so the final generated-site and browser review must run on the Windows development machine:
 
 ```powershell
 .\scripts\build.ps1
 ```
 
-Priority browser review:
+The build script will run repository validation, Hugo, and rendered-site validation in sequence.
 
+Then start the local server and open the priority page set:
+
+```powershell
+.\scripts\dev.ps1
+.\scripts\open-review-pages.ps1
+```
+
+Priority review:
+
+- `/`
+- `/works/`
+- `/works/believe-in-the-badge/`
+- `/editions/`
+- `/materials/`
+- `/journal/`
+- `/roadmap/`
+- `/roadmap/believe-in-the-badge-edition/`
 - `/downloads/digital-forensics-intake-request/`
-- Homepage studio introduction
-- Mobile layout of the three working-style cards
-- Release manifest and checksum links
+
+Review desktop, tablet, and narrow mobile widths, with particular attention to heading balance, natural card height, edition-format cards, and long-page spacing.

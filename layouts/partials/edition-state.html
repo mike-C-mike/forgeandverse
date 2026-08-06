@@ -1,0 +1,9 @@
+{{- $slug := . -}}
+{{- $states := index hugo.Data "edition-states" -}}
+{{- $match := where $states "slug" $slug -}}
+{{- if gt (len $match) 0 -}}
+  {{- $state := index $match 0 -}}
+  <span class="edition-state edition-state-{{ $state.slug }}">{{ $state.label }}</span>
+{{- else -}}
+  <span class="edition-state">{{ $slug | humanize }}</span>
+{{- end -}}

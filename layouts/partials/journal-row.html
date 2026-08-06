@@ -1,4 +1,4 @@
-<a class="journal-row" href="{{ .RelPermalink }}">
+<a class="journal-row" href="{{ .RelPermalink }}" data-filter-item data-filter-values="{{ .Params.journal_kind }} {{ .Params.discipline }}">
   <span class="journal-date">{{ .Date.Format "Jan 2, 2006" }}</span>
   <span class="journal-kind">{{ .Params.journal_kind_label | default "Journal" }}</span>
   <span class="journal-title">{{ .Title }}</span>

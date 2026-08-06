@@ -63,6 +63,7 @@ proof_files:
   size: 52 KB
   url: /downloads/studio-proofs/bench-status-pad-field-test-v0.2/bench-status-pad-prototype-letter-2up.pdf
   description: Two copies on one letter-size page for ordinary office printers.
+related_journal: /journal/the-pause-is-part-of-the-examination/
 prototype_source_files:
 - source-assets/prototypes/bench-status-pad-prototype-4x6.pdf
 - source-assets/prototypes/bench-status-pad-prototype-letter-2up.pdf

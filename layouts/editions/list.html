@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ $works := where site.RegularPages "Section" "works" }}
+<header class="edition-index-hero">
+  <div class="wrap edition-index-hero-grid">
+    <div><p class="eyebrow">Forge &amp; Verse editions</p><h1>The work leaves the screen only when the object adds something.</h1></div>
+    <div><p>{{ .Description }}</p><a class="text-link text-link-light" href="/materials/">How material completes the work <span aria-hidden="true">→</span></a></div>
+  </div>
+</header>
+
+<section class="edition-state-guide">
+  <div class="wrap">
+    <div class="edition-state-guide-head"><p class="eyebrow">Availability at a glance</p><p>Every edition page states exactly where the physical work stands. A polished mockup is not the same thing as a tested object.</p></div>
+    <div class="edition-state-guide-grid">
+      {{ range index hugo.Data "edition-states" }}
+      <article><span>0{{ .order }}</span><strong>{{ .label }}</strong><p>{{ .short }}</p></article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section edition-index-current">
+  <div class="wrap">
+    <div class="section-heading split-heading"><div><p class="eyebrow">Current editions</p><h2>Physical work in the studio archive.</h2></div><p>Some are still being resolved. Others may eventually be approved or offered through an outside production partner. The page for each work carries the current state.</p></div>
+    <div class="edition-index-grid">
+      {{ range $works }}{{ if and .Params.edition .Params.edition.enabled }}{{ partial "edition-card.html" . }}{{ end }}{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="edition-index-close"><div class="wrap edition-index-close-grid"><div><p class="eyebrow">Made for the room</p><h2>Built to belong.</h2></div><div><p>A finished edition should feel inevitable in the space it inhabits. Scale, finish, edge, mounting, packaging, and the room itself all have to support the work.</p><a class="text-link text-link-light" href="/works/">Return to the full studio index <span aria-hidden="true">→</span></a></div></div></section>
+{{ end }}

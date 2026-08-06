@@ -15,6 +15,8 @@ need: ""
 visual: "status-pad"
 design_test: ""
 material_direction: ""
+related_journal: ""
+related_work: ""
 details:
   - ""
   - ""

@@ -1,37 +1,45 @@
-# Forge & Verse v16
+# Forge & Verse v18.19
 
-This iteration gives the first open operational release a real choice of working styles instead of assuming every department wants the same interface.
+This release combines the visual-consolidation round with the first complete physical-edition system.
 
-## Public changes
+## Visual consolidation
 
-- Upgraded the Digital Forensics Intake Kit to v1.2.
-- Added a local-only fillable PDF with 105 named fields.
-- Kept the print-ready PDF and editable DOCX as distinct first-class options.
-- Added a release-page section that helps visitors choose between typing locally, writing by hand, and adapting an agency source.
-- Added plain language explaining that the fillable PDF contains no JavaScript, telemetry, or automatic submission.
-- Added a machine-readable form field map and release manifest.
-- Updated the requester and implementation guides for Intake Kit v1.2.
-- Refined homepage and Studio language around tools fitting the person and the working moment.
+- Rebalanced split headings so supporting text no longer sits beside oversized display type.
+- Reduced maximum hero and detail-page heading sizes while preserving strong editorial hierarchy.
+- Standardized section spacing, content width, card gaps, and responsive breakpoints.
+- Changed study and work cards to respect their natural content height instead of stretching to the tallest neighbor.
+- Reworked journal rows so date and article type read as one metadata group rather than separate columns floating across the page.
+- Tightened homepage edition typography, footer hierarchy, mobile spacing, and long-page rhythm.
+- Added balanced typography through `text-wrap`, narrower measures, and more consistent heading limits.
 
-## Foundation changes
+## Physical edition system
 
-- Added reproducible fillable-PDF generation over the approved print layout.
-- Added a fillable-form audit for page count, field count, field types, unique names, field-map parity, and active PDF actions.
-- Added a rebuild script for the intake release.
-- Added validation for release manifests, working-style downloads, file byte counts, and hashes.
-- Added the Fillable PDF Standard.
-- Expanded release packaging documentation for print, fillable, editable, and machine-readable artifacts.
+- Added `/editions/` as a quiet physical-work archive rather than a storefront.
+- Added five honest public states: In the studio, Proof in hand, Edition approved, Available, and Resting.
+- Added a reusable edition-state partial, edition cards, and a complete work-page edition module.
+- Added room, reading-distance, edition-model, material, surface, mounting, and format metadata.
+- Added format comparison cards for metal and archival-paper directions.
+- Added availability handling that shows no purchase link until a work is explicitly marked Available.
+- Added validator rules requiring production-partner and fulfillment details before an edition can become Available.
+- Added edition metadata to search and CreativeWork structured data.
+- Added physical-edition fields to the Work archetype and documented the approval path.
 
-## Digital Forensics Intake Kit v1.2
+## First converted work
 
-- 105 total form fields
-- 61 text fields
-- 44 checkboxes
-- Print-ready PDF
-- Local-only fillable PDF
-- Editable DOCX
-- One-page requester guide in PDF and DOCX
-- Four-page implementation guide in PDF and DOCX
-- JSON field map
-- JSON release manifest
-- README, release notes, use terms, and SHA-256 manifests
+**Believe in the Badge** now uses the full physical-edition model. It remains **In the studio** because the current images are composition and room studies, not a real physical sample.
+
+The page records two directions under evaluation:
+
+- floating metal panel
+- archival paper with substantial mat and frame
+
+No ordering link is shown.
+
+## Content count
+
+- 1 studio work
+- 1 complete free release
+- 5 journal pieces
+- 4 active design studies
+- 2 printable field-proof packages
+- 1 physical edition in the studio archive

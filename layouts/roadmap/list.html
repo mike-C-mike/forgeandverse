@@ -1,16 +1,39 @@
 {{ define "main" }}
+{{ $pages := .Pages.ByWeight }}
+{{ $proofs := where $pages ".Params.proof_available" true }}
+{{ $editions := where $pages ".Params.release_path" "editions" }}
+{{ $bench := where $pages ".Params.discipline_slug" "examiner-bench" }}
 <header class="page-hero page-hero-compact page-hero-dark">
   <div class="wrap page-hero-grid">
     <div><p class="eyebrow">Inside the studio</p><h1>{{ .Title }}</h1></div>
     <p>{{ .Description }}</p>
   </div>
 </header>
-<section class="section study-index-section">
+<section class="anvil-ledger" aria-label="Current studio studies">
+  <div class="wrap anvil-ledger-grid">
+    <div><span>{{ len $pages }}</span><p>Active studies</p></div>
+    <div><span>{{ len $proofs }}</span><p>Printable field proofs</p></div>
+    <div><span>{{ len $editions }}</span><p>Wall-edition studies</p></div>
+    <div><span>{{ len $bench }}</span><p>From the Examiner's Bench</p></div>
+  </div>
+</section>
+<section class="section study-index-section" data-filter-scope data-filter-query="view">
   <div class="wrap">
-    <div class="study-index-intro study-index-intro-progress"><p>Each study stays open long enough to resolve the person, the working moment, the form, and the release test. When a concept is ready to meet real hands, a printable field proof appears on its study page.</p><div class="study-index-key"><span>Question</span><i></i><span>Structure</span><i></i><span>Material</span><i></i><span>Sample</span><i></i><span>Ready</span></div></div>
-    <div class="study-grid">
-      {{ range .Pages.ByWeight }}{{ partial "study-card.html" . }}{{ end }}
+    <div class="study-index-intro study-index-intro-progress"><p>The work stays here while form, language, material, and use are still being tested. Printable proofs appear only when a question is ready to meet real hands.</p><div class="study-index-key"><span>Question</span><i></i><span>Structure</span><i></i><span>Material</span><i></i><span>Sample</span><i></i><span>Ready</span></div></div>
+    <div class="archive-toolbar" aria-label="Filter current studies">
+      <div class="archive-toolbar-buttons">
+        <button type="button" class="is-active" data-filter="all" aria-pressed="true">All studies</button>
+        <button type="button" data-filter="proof" aria-pressed="false">Field proofs</button>
+        <button type="button" data-filter="examiner-bench" aria-pressed="false">Digital forensics</button>
+        <button type="button" data-filter="evidence-room" aria-pressed="false">Property &amp; evidence</button>
+        <button type="button" data-filter="editions" aria-pressed="false">Wall editions</button>
+      </div>
+      <p><span data-filter-count>{{ len $pages }}</span> studies</p>
     </div>
+    <div class="study-grid" data-filter-list>
+      {{ range $pages }}{{ partial "study-card.html" . }}{{ end }}
+    </div>
+    <p class="archive-empty" data-filter-empty hidden>No current study matches that view.</p>
   </div>
 </section>
 {{ end }}

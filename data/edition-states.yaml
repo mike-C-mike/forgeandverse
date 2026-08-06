@@ -1,0 +1,25 @@
+- slug: in-studio
+  label: In the studio
+  short: The physical form is still being resolved.
+  description: Composition, scale, surface, mounting, and production details remain under review. No ordering link is shown.
+  order: 1
+- slug: proof-in-hand
+  label: Proof in hand
+  short: A physical sample exists and is being tested.
+  description: The studio is reviewing color, surface, reading distance, construction, packaging, and how the piece behaves in a real room.
+  order: 2
+- slug: edition-approved
+  label: Edition approved
+  short: The physical specification is locked.
+  description: Material, size, finish, mounting, and production requirements have passed review. Availability may still be pending.
+  order: 3
+- slug: available
+  label: Available
+  short: This edition can be ordered from the listed production partner.
+  description: Ordering, production, shipping, and returns are handled according to the details shown on the work page.
+  order: 4
+- slug: resting
+  label: Resting
+  short: The edition is no longer actively offered.
+  description: The work remains in the studio archive, but no current purchase link is provided.
+  order: 5

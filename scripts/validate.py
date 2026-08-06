@@ -75,11 +75,24 @@ def main() -> int:
     check_static_reference((config.get("params") or {}).get("defaultImage"), "default social image", ROOT / "hugo.toml")
     if not (CONTENT / "search" / "_index.md").exists(): fail("Missing search content page")
     if not (ROOT / "layouts" / "search" / "list.html").exists(): fail("Missing search layout")
+    if not (CONTENT / "editions" / "_index.md").exists(): fail("Missing physical editions content page")
+    if not (ROOT / "layouts" / "editions" / "list.html").exists(): fail("Missing physical editions layout")
 
     disciplines = load_yaml(ROOT / "data" / "disciplines.yaml") or []
     stages = load_yaml(ROOT / "data" / "study-stages.yaml") or []
+    edition_states = load_yaml(ROOT / "data" / "edition-states.yaml") or []
     stage_steps = {item.get("step") for item in stages if isinstance(item, dict)}
     if stage_steps != set(range(1, 6)): fail("Study stages must define steps 1 through 5")
+    edition_state_slugs = {item.get("slug") for item in edition_states if isinstance(item, dict)}
+    expected_edition_states = {"in-studio", "proof-in-hand", "edition-approved", "available", "resting"}
+    if edition_state_slugs != expected_edition_states: fail(f"Edition states must define exactly: {sorted(expected_edition_states)}")
+    edition_state_orders = {item.get("order") for item in edition_states if isinstance(item, dict)}
+    if edition_state_orders != set(range(1, 6)): fail("Edition states must define orders 1 through 5")
+    for item in edition_states:
+        if not isinstance(item, dict):
+            fail("Each edition state entry must be a mapping")
+        else:
+            require(item, ("slug", "label", "short", "description", "order"), ROOT / "data" / "edition-states.yaml")
     discipline_slugs = {item.get("slug") for item in disciplines if isinstance(item, dict)}
     expected_paths = {"workbench", "workspace", "editions"}
     if len(discipline_slugs) != len(disciplines): fail("Discipline slugs are missing or duplicated")
@@ -100,11 +113,38 @@ def main() -> int:
         section = path.relative_to(CONTENT).parts[0]
         if path.name == "_index.md": continue
         if section in counts: counts[section] += 1
-        if section == "works": require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights"), path)
+        if section == "works":
+            require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights"), path)
+            edition = data.get("edition")
+            if edition:
+                if not isinstance(edition, dict):
+                    fail(f"Edition metadata must be a mapping: {path.relative_to(ROOT)}")
+                elif edition.get("enabled"):
+                    require(edition, ("state", "headline", "intended_room", "reading_distance", "edition_model", "availability_note", "formats"), path)
+                    if edition.get("state") not in edition_state_slugs:
+                        fail(f"Unknown edition state '{edition.get('state')}' in {path.relative_to(ROOT)}")
+                    formats = edition.get("formats") or []
+                    if not isinstance(formats, list) or not formats:
+                        fail(f"Physical edition needs at least one format: {path.relative_to(ROOT)}")
+                    else:
+                        for entry in formats:
+                            if not isinstance(entry, dict):
+                                fail(f"Invalid edition format in {path.relative_to(ROOT)}")
+                            else:
+                                require(entry, ("name", "status", "size_direction", "surface", "mount", "fit"), path)
+                    study_url = edition.get("study_url")
+                    if study_url: routes.append((study_url, path))
+                    if edition.get("state") == "available":
+                        require(data, ("external_url", "partner_name", "fulfillment_note", "cta_label"), path)
+                    elif data.get("external_url"):
+                        warn(f"External ordering URL present while edition state is not available: {path.relative_to(ROOT)}")
         elif section == "downloads":
             require(data, ("title", "summary", "discipline", "release_path", "audience", "moment", "need", "format", "status", "rights"), path)
             if not data.get("files") and not data.get("package_files"): fail(f"Download release needs files or package_files: {path.relative_to(ROOT)}")
-        elif section == "journal": require(data, ("title", "date", "summary", "status", "journal_kind", "journal_kind_label"), path)
+        elif section == "journal":
+            require(data, ("title", "date", "summary", "status", "journal_kind", "journal_kind_label"), path)
+            if data.get("journal_kind") not in {"practice-note", "essay", "studio-note"}:
+                fail(f"Unknown journal_kind '{data.get('journal_kind')}' in {path.relative_to(ROOT)}")
         elif section == "disciplines": require(data, ("title", "description", "discipline_slug"), path)
         elif section == "roadmap":
             require(data, ("title", "weight", "summary", "stage", "stage_step", "discipline_slug", "release_path", "format", "audience", "moment", "need", "visual", "design_test", "details"), path)
@@ -236,6 +276,8 @@ def main() -> int:
         if related_release: routes.append((related_release, path))
         related_journal = data.get("related_journal")
         if related_journal: routes.append((related_journal, path))
+        related_study = data.get("related_study")
+        if related_study: routes.append((related_study, path))
 
     for route, source in routes:
         if not content_route_exists(route): fail(f"Broken internal content link '{route}' in {source.relative_to(ROOT)}")
@@ -284,6 +326,7 @@ def main() -> int:
     print("Forge & Verse validation passed.")
     print(f"  Disciplines: {len(disciplines)}")
     print(f"  Study stages: {len(stages)}")
+    print(f"  Edition states: {len(edition_states)}")
     print(f"  Works: {counts['works']}")
     print(f"  Free works: {counts['downloads']}")
     print(f"  Journal pieces: {counts['journal']}")

@@ -1,0 +1,36 @@
+{{- $page := . -}}
+{{- $relations := slice
+  (dict "key" "related_release" "label" "Useful release" "action" "Open the release")
+  (dict "key" "related_journal" "label" "From the journal" "action" "Read the piece")
+  (dict "key" "related_study" "label" "On the anvil" "action" "Open the study")
+  (dict "key" "related_work" "label" "Studio work" "action" "View the work")
+-}}
+{{- $items := slice -}}
+{{- range $relation := $relations -}}
+  {{- $route := index $page.Params $relation.key -}}
+  {{- with $route -}}
+    {{- with site.GetPage . -}}
+      {{- $items = $items | append (dict "page" . "label" $relation.label "action" $relation.action) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt (len $items) 0 -}}
+<section class="studio-connections" aria-labelledby="studio-connections-title">
+  <div class="wrap">
+    <div class="studio-connections-head">
+      <div><p class="eyebrow">Follow the thread</p><h2 id="studio-connections-title">The idea continues elsewhere.</h2></div>
+      <p>A useful object, a practice note, and a developing study can approach the same working moment from different directions.</p>
+    </div>
+    <div class="studio-connections-grid">
+      {{- range $items }}
+      <a class="studio-connection-card" href="{{ .page.RelPermalink }}">
+        <span>{{ .label }}</span>
+        <h3>{{ .page.Title }}</h3>
+        <p>{{ .page.Params.summary | default .page.Description }}</p>
+        <strong>{{ .action }} <b aria-hidden="true">→</b></strong>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end -}}

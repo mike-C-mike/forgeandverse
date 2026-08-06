@@ -1,29 +1,27 @@
-# Forge & Verse v16
+# Forge & Verse v18.19
 
 A local-first Hugo framework for **forgeandverse.com**.
 
-Forge & Verse is an independent design studio creating original art, writing, open operational releases, tactile tools, and useful objects for people behind consequential work. Digital forensics leads the studio, followed by property and evidence, law-enforcement support, and cybersecurity.
+Forge & Verse is an independent design studio creating original art, writing, open operational releases, tactile tools, and physical editions for people behind consequential work. Digital forensics leads the studio, followed by property and evidence, law-enforcement support, and cybersecurity.
+
+Deployment remains intentionally deferred. The current goal is a durable local foundation, strong work, and honest physical proofs.
 
 ## Current foundation
 
-- Responsive Hugo layouts with no database, account system, email gate, or deployment dependency
-- Digital-forensics-first homepage built around The Examiner's Bench
-- Dedicated pages for all four professional disciplines
-- Three internal release paths across every discipline, presented publicly as useful tools, objects for the room, and wall editions
-- Selective Work archive designed to remain intentional even when only one piece is public
-- Public release pages that explain who a piece serves, what it solves, and how it is meant to be used
-- Journal archive and article layouts with essays, practice notes, studio notes, tags, and connected releases
-- Static client-side search across work, free releases, journal pieces, and active design studies
-- Free Works archive with a complete Digital Forensics Intake Kit, including request form, requester guide, implementation guide, editable source files, bundled release, version history, and SHA-256 manifests
-- Visual On the Anvil studies for a small number of credible works in progress
-- Prototype-proof galleries for studies that have reached physical or production-ready testing
-- Versioned print-and-use field-test packs for the Bench Status Pad and Examination Notebook, including test protocols, evaluation sheets, and SHA-256 manifests
-- Future-ready outside-edition support with production-partner and fulfillment disclosure fields
-- Studio, privacy, use-and-rights, material, and disclosure pages
-- Open Graph metadata, structured data, manifest, icons, and social preview art
-- Accessible navigation, breadcrumbs, image lightbox, reduced-motion support, print rules, and keyboard-friendly interactions
-- Local repository validation, rendered-site link and HTML validation, plus Windows PowerShell development and build scripts
-- Internal curation, rights, content, voice, prototype-testing, physical-format, and release documentation
+- Static Hugo site with no database, accounts, email gate, or required outside service
+- Digital-forensics-first homepage and dedicated pages for four professional disciplines
+- Selective Work archive that does not need filler to look complete
+- Complete Digital Forensics Intake Kit with printable, fillable, and editable formats
+- Filterable Journal and On the Anvil archives
+- Static client-side search across work, releases, writing, and studies
+- Long-form reading tools, breadcrumbs, image lightbox, print support, and reduced-motion behavior
+- Testable proof packages for the Bench Status Pad and Examination Notebook
+- Physical-edition archive with explicit public availability states
+- Work-page edition specifications for room, reading distance, material, surface, mounting, and format
+- Materials page comparing metal and archival-paper presentation
+- Open Graph metadata, structured data, icons, RSS, security headers, and social preview art
+- Repository and rendered-output validators
+- Windows PowerShell development, build, and review scripts
 
 ## The four rooms
 
@@ -32,87 +30,115 @@ Forge & Verse is an independent design studio creating original art, writing, op
 - **The Watch**: law enforcement and support
 - **The Signal**: cybersecurity and defensive technology
 
-Each room has its own page, language, useful tools, objects for the room, wall editions, related writing, and visible works in progress when they exist.
+Each room can hold useful releases, tactile objects, physical editions, writing, and current studies. Empty paths remain empty until a piece earns its place.
+
+## Public studio areas
+
+- `/works/` — the complete studio index
+- `/downloads/` — free operational releases
+- `/journal/` — essays, practice notes, and studio notes
+- `/roadmap/` — work still on the anvil
+- `/editions/` — physical-edition archive and current availability states
+- `/materials/` — metal, paper, scale, edge, frame, and mounting approach
+- `/disciplines/` — the four professional rooms
+- `/about/` — the studio
+
+## Physical edition states
+
+Physical work uses five public states:
+
+1. `in-studio` — physical form is still being resolved
+2. `proof-in-hand` — a real physical sample exists and is being tested
+3. `edition-approved` — material, size, finish, and mounting are locked
+4. `available` — a current external ordering link is present
+5. `resting` — the edition remains archived but is not currently offered
+
+A room mockup does not count as a physical proof.
+
+Physical metadata lives in the nested `edition` block on a Work page. See:
+
+- `docs/PHYSICAL-EDITION-SYSTEM.md`
+- `docs/CONTENT-MODEL.md`
+- `docs/RELEASE-CHECKLIST.md`
+
+When an edition becomes available, the Work must include:
+
+- `external_url`
+- `partner_name`
+- `fulfillment_note`
+- `cta_label`
+
+The studio remains the canonical presentation of the work. The named outside partner handles ordering, production, shipping, and returns.
 
 ## Internal release paths
 
-The repository retains stable slugs for filtering and future expansion:
+Stable slugs support filtering and related content:
 
-- `workbench`: useful forms, templates, continuity aids, references, and structured tools
-- `workspace`: tactile notebooks, desk objects, and insider pieces
-- `editions`: substantial mounted art and visual reminders
+- `workbench` — forms, templates, continuity aids, references, and structured tools
+- `workspace` — tactile notebooks, desk objects, and insider pieces
+- `editions` — substantial mounted art and physical visual work
 
-Public pages use natural language rather than presenting this internal model as a brand strategy.
+Public pages use natural language rather than exposing the internal model as a strategy diagram.
 
 ## Included open release
 
 The **Digital Forensics Intake Kit v1.2** includes:
 
-- a two-page print-ready intake request PDF
-- a local-only fillable PDF with 105 named fields and no JavaScript or automatic submission
-- an editable intake request DOCX
-- a machine-readable JSON field map
-- a one-page requester guide in PDF and editable DOCX
-- a four-page implementation guide in PDF and editable DOCX
-- a versioned ZIP bundle
-- a README, release notes, use terms, component checksums, a public SHA-256 manifest, and a machine-readable release manifest
-- authority, scope, device, target-data, handling, and acceptance fields
-- adaptation, pilot, publication, version-control, and records guidance
+- two-page print-ready PDF
+- local fillable PDF with 105 named fields and no automatic submission
+- editable DOCX
+- requester guide in PDF and DOCX
+- implementation guide in PDF and DOCX
+- JSON field map
+- release manifest and SHA-256 records
+- versioned ZIP bundle
 
-The release is a starting framework. It is not a substitute for local policy, legal review, prosecutor requirements, evidence procedures, records obligations, accessibility review, or testing in the agency-approved PDF viewer.
+The kit is a starting framework. Agencies must review it against local policy, legal requirements, evidence procedures, records obligations, accessibility needs, and approved software.
 
-## Current prototype proofs
-
-Four On the Anvil studies now include meaningful visual or physical proofs. Two include exact-size working prototypes:
+## Current field proofs
 
 ### Bench Status Pad
 
-- exact-size 4 x 6 inch proof
-- landscape letter-size two-up print test
-- public prototype gallery on the study page
-- open questions for handwriting, field priority, and end-of-shift speed
+- exact-size 4 × 6 inch proof
+- letter-size two-up print test
+- field-test guide and evaluation sheet
+- target: restore Monday-morning case context in under thirty seconds
 
 ### Examination Notebook
 
-- 12-page, 5.5 x 8.5 inch interior prototype
-- case orientation, source index, tool references, open questions, findings index, and pause/resume pages
-- multiple open-note treatments for testing ruling and personal preference
-- public cover and spread previews on the study page
+- 12-page, 5.5 × 8.5 inch interior proof
+- structured orientation and index pages
+- multiple open-note treatments
+- field-test guide for writing space, structure, pen response, and re-entry
 
-Prototype source PDFs live under `source-assets/prototypes/`. Hugo does not publish that directory. The approved test copies are packaged separately under `static/downloads/studio-proofs/` with guides, README files, and SHA-256 manifests.
-
-Rebuild both field-test packs with:
-
-```powershell
-python -m pip install -r .\scripts\requirements-proofs.txt
-python .\scripts\build_studio_proof_packs.py
-```
-
-The generated bundle checksums are written to the console. Update the matching roadmap front matter whenever a proof package changes.
+Source proofs live under `source-assets/prototypes/`. Public test bundles live under `static/downloads/studio-proofs/`.
 
 ## Local development on Windows
 
-The repository includes a PowerShell launcher that looks for `hugo.exe` inside the repository, in the repository's parent folder, or on PATH.
-
-From the repository root:
+The launcher looks for `hugo.exe` in the repository, the parent directory, or PATH.
 
 ```powershell
 .\scripts\dev.ps1
 ```
 
-The default local address is:
+Default preview:
 
 ```text
 http://localhost:1314/
+```
+
+Open the priority visual-review pages:
+
+```powershell
+.\scripts\open-review-pages.ps1
 ```
 
 Use another port when needed:
 
 ```powershell
 .\scripts\dev.ps1 -Port 1320
+.\scripts\open-review-pages.ps1 -Port 1320
 ```
-
-The script runs the local validator when Python and PyYAML are available, then starts Hugo with drafts and future content enabled. The Hugo preview still starts when the optional Python dependency is absent.
 
 ## Production-style local build
 
@@ -120,7 +146,7 @@ The script runs the local validator when Python and PyYAML are available, then s
 .\scripts\build.ps1
 ```
 
-The generated site is written to `public/`.
+The generated site is written to `public/`. The build script runs repository validation before Hugo and rendered-site validation afterward.
 
 ## Validation only
 
@@ -130,150 +156,92 @@ Install the validator dependency once:
 python -m pip install -r .\scripts\requirements.txt
 ```
 
-Then run:
+Run:
 
 ```powershell
 python .\scripts\validate.py
 ```
 
-The repository validator checks:
+The validator checks:
 
-- field-proof metadata, downloadable files, bundle hashes, and ZIP integrity
+- TOML, YAML, JSON, and front matter parsing
+- reserved Hugo fields
+- discipline and release-path relationships
+- journal types and editorial connections
+- physical edition states and nested format specifications
+- availability requirements for outside ordering links
+- roadmap stages, proof metadata, galleries, and source proofs
+- release manifests, hashes, file sizes, PDF signatures, DOCX structure, and ZIP integrity
+- static references, internal content routes, template delimiters, and stylesheet braces
 
-- TOML, YAML, and front matter parsing
-- reserved Hugo front matter fields
-- required fields for works, downloads, journal entries, and discipline pages
-- discipline and purpose-path references
-- roadmap relationships, stages, visual studies, prototype galleries, open questions, and source proofs
-- static images, social preview art, roadmap images, and download files
-- prototype PDF signatures
-- Hugo template delimiter balance
-- stylesheet brace balance
-- work-gallery and source-proof references
+After Hugo renders, `scripts/validate_public.py` checks generated links, assets, fragments, duplicate IDs, main landmarks, image alt attributes, and unresolved template markers.
 
-After Hugo builds, `scripts/validate_public.py` also checks generated HTML, internal links, assets, duplicate IDs, unresolved template markers, main landmarks, and image alt attributes.
-
-## Content commands
-
-Create a work:
+## Creating content
 
 ```powershell
 hugo new works/name-of-work.md
-```
-
-Create a journal entry:
-
-```powershell
 hugo new journal/name-of-entry.md
-```
-
-Create a free release:
-
-```powershell
 hugo new downloads/name-of-release.md
-```
-
-Create an On the Anvil study:
-
-```powershell
 hugo new roadmap/name-of-study.md
 ```
 
-Or use the repository helper, which also fills the discipline and release path:
+Or:
 
 ```powershell
 python .\scripts\new_content.py roadmap "Working Title" --discipline examiner-bench --release-path workbench
 ```
 
-The archetypes create drafts. A discipline never needs to be padded to look complete.
+Archetypes create drafts. A discipline never needs to be padded to look complete.
 
 ## Public work states
 
-- `concept` becomes **Study**
-- `forging` becomes **In the studio**
-- `preview` becomes **Preview**
-- `released` becomes **Released**
-- `archived` becomes **Archived**
+- `concept` → **Study**
+- `forging` → **In the studio**
+- `preview` → **Preview**
+- `released` → **Released**
+- `archived` → **Archived**
 
-## Discipline slugs
+These describe the creative work. Physical availability is described separately by the edition state.
 
-- `examiner-bench`
-- `evidence-room`
-- `watch`
-- `signal`
+## Rebuilding release packages
 
-## Purpose path slugs
-
-- `workbench`
-- `workspace`
-- `editions`
-
-Use `release_path` in front matter. Do not use `path`; Hugo reserves that field.
-
-## Outside editions
-
-A work page shows no outside-edition button until `external_url` is populated. Future physical releases can also define:
-
-- `partner_name`
-- `fulfillment_note`
-- `affiliate`
-- `cta_label`
-
-The studio site remains the canonical presentation of the work while the outside production partner handles the transaction and fulfillment.
-
-## Rebuilding the intake kit
-
-The fillable PDF, field map, bundle, and manifests can be rebuilt with:
+Intake kit:
 
 ```powershell
 python -m pip install -r .\scripts\requirements.txt -r .\scripts\requirements-forms.txt
 .\scripts\rebuild_intake_release.ps1
 ```
 
-To regenerate the requester and implementation guides as well, install the document dependency and run:
+Include document-guide regeneration:
 
 ```powershell
 python -m pip install -r .\scripts\requirements-docs.txt
 .\scripts\rebuild_intake_release.ps1 -RebuildGuides
 ```
 
-Every changed DOCX and PDF must be rendered and visually inspected before the updated bundle is treated as approved. The bundle checksum changes whenever the archive is rebuilt. Update release front matter when approved files change.
+Studio proof packs:
+
+```powershell
+python -m pip install -r .\scripts\requirements-proofs.txt
+python .\scripts\build_studio_proof_packs.py
+```
+
+Every changed PDF or DOCX must be rendered and visually inspected before its package is treated as approved.
 
 ## Source assets
 
-High-resolution originals and test proofs are retained under `source-assets/`. Web-optimized assets live under `static/` so working files are not published unnecessarily.
+High-resolution originals, production studies, and exact-size proofs live under `source-assets/`. Web-optimized previews and public downloads live under `static/`.
 
-## Documentation
+## Key documentation
 
-- `docs/PRODUCT-MAP.md`
 - `docs/CURATION-STANDARD.md`
 - `docs/VOICE-AND-TONE.md`
 - `docs/CONTENT-MODEL.md`
+- `docs/CONTENT-WORKFLOW.md`
+- `docs/PHYSICAL-EDITION-SYSTEM.md`
 - `docs/RIGHTS-CHECKLIST.md`
 - `docs/RELEASE-CHECKLIST.md`
-- `docs/PROTOTYPE-TESTING.md`
-- `docs/DIGITAL-FORENSICS-INTAKE-RELEASE-NOTES.md`
-- `docs/BENCH-STATUS-PAD-BRIEF.md`
-- `docs/EXAMINER-NOTEBOOK-BRIEF.md`
-- `docs/PRESERVED-UNTIL-IT-MATTERS-BRIEF.md`
-- `docs/STUDIO-STUDIES.md`
-- `docs/SEARCH-AND-GALLERIES.md`
-- `docs/OPEN-RELEASE-PACKAGING.md`
-- `docs/FILLABLE-PDF-STANDARD.md`
 - `docs/STUDIO-PROOF-STANDARD.md`
-- `docs/CONTENT-WORKFLOW.md`
-
-## Deployment
-
-Deployment remains deferred. The current priority is local content, physical proof review, and a durable studio foundation.
-
-## v13 additions
-
-- Full static studio search with shareable query URLs
-- Simplified primary navigation and breadcrumbs
-- Accessible image lightbox for previews and proof galleries
-- Believe in the Badge composition, room, paper, and edge studies
-- Preserved Until It Matters composition and room studies
-- Expanded material and reading-distance presentation
-- Work-gallery front matter support
-- Rendered-site validation after production builds
+- `docs/PROTOTYPE-TESTING.md`
+- `docs/FILLABLE-PDF-STANDARD.md`
+- `docs/OPEN-RELEASE-PACKAGING.md`

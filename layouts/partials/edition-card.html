@@ -1,0 +1,18 @@
+{{- $edition := .Params.edition -}}
+<article class="edition-card">
+  <a class="edition-card-link" href="{{ .RelPermalink }}">
+    <div class="edition-card-visual">
+      {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="lazy" decoding="async">{{ else }}{{ partial "work-cover.html" . }}{{ end }}
+    </div>
+    <div class="edition-card-body">
+      <div class="edition-card-meta">
+        {{ partial "edition-state.html" $edition.state }}
+        <span>{{ .Params.format_label | default .Params.format }}</span>
+      </div>
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Params.summary }}</p>
+      {{ with $edition.intended_room }}<p class="edition-card-room"><strong>Made for</strong> {{ . }}</p>{{ end }}
+      <span class="edition-card-action">View the edition <b aria-hidden="true">→</b></span>
+    </div>
+  </a>
+</article>

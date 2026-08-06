@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $pages := .Pages.ByDate.Reverse }}
 <header class="page-hero page-hero-compact">
   <div class="wrap page-hero-grid">
     <div><p class="eyebrow">Essays, practice notes, and field observations</p><h1>{{ .Title }}</h1></div>
@@ -11,15 +12,27 @@
     <div><span>Practice notes</span><span>Essays</span><span>Studio notes</span></div>
   </div>
 </section>
-<section class="section journal-archive">
+<section class="section journal-archive" data-filter-scope data-filter-query="journal">
   <div class="wrap">
-    <div class="journal-list journal-list-large">
-      {{ range .Pages.ByDate.Reverse }}
+    <div class="archive-toolbar" aria-label="Filter journal entries">
+      <div class="archive-toolbar-buttons">
+        <button type="button" class="is-active" data-filter="all" aria-pressed="true">All writing</button>
+        <button type="button" data-filter="practice-note" aria-pressed="false">Practice notes</button>
+        <button type="button" data-filter="essay" aria-pressed="false">Essays</button>
+        <button type="button" data-filter="studio-note" aria-pressed="false">Studio notes</button>
+        <button type="button" data-filter="examiner-bench" aria-pressed="false">Digital forensics</button>
+        <button type="button" data-filter="evidence-room" aria-pressed="false">Property &amp; evidence</button>
+      </div>
+      <p><span data-filter-count>{{ len $pages }}</span> pieces</p>
+    </div>
+    <div class="journal-list journal-list-large" data-filter-list>
+      {{ range $pages }}
         {{ partial "journal-row.html" . }}
       {{ else }}
         <p>The journal is quiet for now. Quiet is not the same as empty.</p>
       {{ end }}
     </div>
+    <p class="archive-empty" data-filter-empty hidden>No pieces match that view yet.</p>
   </div>
 </section>
 {{ end }}
