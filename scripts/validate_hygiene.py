@@ -170,6 +170,11 @@ def check_tracked_hygiene(files: list[str]) -> None:
         "static/downloads/digital-forensics-intake-request.sha256",
         "static/downloads/forge-and-verse-digital-forensics-intake-kit-v1.1.zip",
         "static/downloads/forge-and-verse-digital-forensics-intake-kit-v1.1.sha256",
+        "content/works/keeper-of-the-krapola.md",
+        "content/works/a-hash-is-a-promise.md",
+        "content/works/every-item-has-a-story.md",
+        "content/works/the-hash-matched.md",
+        "content/works/the-quiet-work-behind-the-case.md",
     )
     for item in obsolete:
         if (ROOT / item).exists():

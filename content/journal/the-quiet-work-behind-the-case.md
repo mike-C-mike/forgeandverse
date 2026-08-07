@@ -4,6 +4,8 @@ date: 2026-08-04
 summary: "Most cases are held together by professionals whose names never appear in the headline."
 discipline: "examiner-bench"
 status: "published"
+journal_kind: "essay"
+journal_kind_label: "Essay"
 ---
 The public sees the arrest, the verdict, or the press conference. It rarely sees the hours spent preserving a device, reconciling an inventory, correcting a record, locating a missing signature, or explaining a technical fact in language a courtroom can trust.
 

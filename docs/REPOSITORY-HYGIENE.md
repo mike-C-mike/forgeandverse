@@ -56,3 +56,9 @@ The framework version must agree across:
 Rejected concepts and superseded public files are deleted rather than left in the active release tree. Historical version notes may remain in Markdown without retaining every old downloadable bundle.
 
 See `docs/ARCHIVE-POLICY.md`.
+
+## Public Work retirement
+
+A concept is removed from `content/works/` when it is rejected, duplicated by a better editorial home, or does not yet satisfy the current Work content model. Git history is sufficient recovery for retired concepts; the active Work archive should not be used as a backlog.
+
+The hygiene validator keeps a small explicit denylist for retired public paths that must not silently return during future merges or ZIP overlays.

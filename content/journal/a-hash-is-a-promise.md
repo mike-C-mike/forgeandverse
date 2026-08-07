@@ -4,6 +4,8 @@ date: 2026-08-03
 summary: "Integrity is not a feeling. It is a claim supported by method, verification, and a record another person can follow."
 discipline: "examiner-bench"
 status: "published"
+journal_kind: "practice-note"
+journal_kind_label: "Practice note"
 ---
 A hash value is small enough to fit on one line, but it carries a large promise.
 

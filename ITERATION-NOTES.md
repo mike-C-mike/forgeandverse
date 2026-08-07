@@ -33,3 +33,14 @@ This is a consolidation release built from the audited GitHub repository rather 
 ## Public behavior
 
 The update does not add filler works or announce internal brand strategy. It strengthens the systems already visible to visitors: Work, Editions, Journal, On the Anvil, Free Works, and the Release Desk.
+
+## v19.2 cleanup hotfix
+
+- Fixed invalid YAML quoting in the roadmap archetype that stopped GitHub Actions at the hygiene stage.
+- Removed five stale or rejected Work entries so the public Work archive contains only work that meets the current content model.
+- Removed `Keeper of the Krapola` from the active repository and added a regression guard preventing it from returning as public Work.
+- Kept `A Hash Is a Promise` and `The Quiet Work Behind the Case` in their more appropriate Journal form and completed their Journal type metadata.
+- Updated the GitHub Actions checkout and Python setup actions to their Node 24-compatible v6 lines.
+- Expanded the hygiene obsolete-file guard to reject the retired Work paths.
+
+The framework remains v19.0; v19.2 identifies the cleanup hotfix applied to that baseline.

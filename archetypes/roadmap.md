@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: '{{ replace .Name "-" " " | title }}'
 weight: 100
 summary: ""
 description: ""
