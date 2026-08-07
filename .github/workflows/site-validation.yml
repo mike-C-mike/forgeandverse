@@ -41,6 +41,9 @@ jobs:
       - name: Test rendered-site validator
         run: python scripts/test_validate_public.py
 
+      - name: Test release-ledger portability
+        run: python scripts/test_build_release_ledger.py
+
       - name: Validate repository hygiene
         run: python scripts/validate_hygiene.py
 

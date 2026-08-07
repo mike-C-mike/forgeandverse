@@ -1,46 +1,83 @@
 # Forge & Verse v19 Validation
 
-The v19.3 validator hotfix was prepared against GitHub `main` at:
+The v19.4 release-ledger portability hotfix was prepared against GitHub `main` at:
 
 ```text
-84fb5d93e57a556cd58c2bc4a44b00b65e5800a0
+c6fd5716d27b60066c3f652098d9ea1b80d1b8da
 ```
 
-## What the v19.2 CI run proved
+## What the v19.3 CI run proved
 
-The repository hygiene audit passed, the release ledger rebuilt, source and release validation passed, and Hugo Extended 0.164.0 completed the production build successfully. The workflow reached the final rendered-site validator for the first time.
+The v19.3 workflow passed every substantive validation stage:
 
-That final validator reported 112 errors in two categories:
+1. rendered-site validator regression tests
+2. repository hygiene
+3. release-ledger generation
+4. source and release-artifact validation
+5. Hugo Extended 0.164.0 production build
+6. rendered-site validation
 
-- 100 alleged missing `alt` attributes
-- 12 alleged unresolved `}}` template markers
+The production build rendered 45 Hugo pages, and the rendered-site validator passed over 32 HTML pages and 107 static files.
 
-Both categories were validator false positives. Hugo's HTML minifier may serialize an explicit empty `alt=""` as the valid HTML5 minimized form `alt`, which Python's `HTMLParser` reports with a `None` value even though the attribute is present. Separately, valid JSON-LD can contain adjacent closing braces `}}`, so a bare closing pair is not sufficient evidence of an unresolved Hugo template.
+The only failure occurred in the final reproducibility check:
 
-## Corrected by v19.3
+```text
+git diff --exit-code -- static/releases
+```
 
-- tracks `alt` attribute presence independently from its parsed value
-- still fails when an image genuinely has no `alt` attribute
-- removes bare `}}` from the unresolved-template marker set
-- continues to fail on `{{`, `ZgotmplZ`, `<no value>`, and `<nil>`
-- adds regression tests for minified empty alt text, genuinely missing alt text, JSON-LD closing braces, and actual Hugo failure markers
-- runs the regression test in both `scripts/build.ps1` and GitHub Actions
+Windows had previously generated ZIP media types as:
+
+```text
+application/x-zip-compressed
+```
+
+while the Linux GitHub runner regenerated them as:
+
+```text
+application/zip
+```
+
+The release files, byte counts, and SHA-256 values were unchanged. The defect was host-dependent metadata generation.
+
+## Corrected by v19.4
+
+- removes dependence on Python's OS MIME registry for release records
+- defines canonical media types for supported Forge & Verse release-file extensions
+- records ZIP as `application/zip` on every platform
+- uses `application/octet-stream` for unknown extensions until intentionally classified
+- writes generated ledger and checksum records with LF line endings
+- adds six portability regression tests
+- runs the new tests in both `scripts/build.ps1` and GitHub Actions
+- warns during a local production build if the ledger was regenerated differently from the committed records
 
 ## Local verification
 
+Run:
+
 ```powershell
+python .\scripts\test_build_release_ledger.py
 python .\scripts\test_validate_public.py
 .\scripts\clean.ps1
 .\scripts\build.ps1
 ```
 
-Expected result:
+The first v19.4 build is expected to update:
 
-1. six validator regression tests pass
+```text
+static/releases/forge-and-verse-release-ledger.json
+static/releases/forge-and-verse-release-ledger.sha256
+```
+
+because the committed records were generated under Windows MIME rules. Review those two deterministic changes and include them in the v19.4 commit.
+
+Expected GitHub result after pushing:
+
+1. both regression-test suites pass
 2. repository hygiene passes
 3. release ledger rebuilds
 4. source validation passes
 5. Hugo production build succeeds
 6. rendered-site validation passes
+7. final release-ledger diff is clean
 
-The GitHub Actions push should then reach the final ledger-diff check.
+At that point the complete v19 validation pipeline is green.

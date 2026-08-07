@@ -30,6 +30,16 @@ Every public file record includes:
 
 The JSON ledger also preserves the person, moment, need, form, discipline, public page, version, and release status.
 
+## Deterministic media types
+
+Release metadata must be identical regardless of the machine that generated it.
+
+The generator therefore uses a Forge & Verse canonical extension-to-media-type table instead of Python's host-dependent `mimetypes` registry. This prevents Windows and Linux from disagreeing about values such as ZIP files (`application/x-zip-compressed` versus `application/zip`).
+
+Unknown release-file extensions are recorded as `application/octet-stream` until they are intentionally added to the canonical table.
+
+Generated ledger files are also written with LF line endings so their bytes remain stable across supported development environments.
+
 ## Rebuild
 
 ```powershell
@@ -56,7 +66,9 @@ Both `dev.ps1` and `build.ps1` rebuild the ledger before validation.
 - every recorded SHA-256 value
 - the plain-text checksum manifest
 
-A changed file therefore requires a rebuilt ledger before the repository can pass validation.
+`scripts/test_build_release_ledger.py` protects the canonical media-type rules from platform-specific regression.
+
+GitHub Actions rebuilds the ledger on Linux and then requires `git diff --exit-code -- static/releases` to remain clean. A Windows-generated ledger that changes when rebuilt on Linux is therefore treated as a reproducibility defect.
 
 ## Design rule
 

@@ -54,3 +54,13 @@ The framework remains v19.0; v19.2 identifies the cleanup hotfix applied to that
 - Added six regression tests and runs them in both the local production build and GitHub Actions before rendered-site validation.
 
 The framework remains v19.0; v19.3 is a validator-only hotfix and does not change public content or design.
+
+## v19.4 release-ledger portability hotfix
+
+- Corrected the final CI failure exposed by v19.3: Windows and Linux disagreed on the MIME type assigned to ZIP files by Python's host-dependent `mimetypes` registry.
+- Replaced OS MIME discovery with a canonical extension-to-media-type table.
+- Standardized generated ledger text on LF line endings.
+- Added release-ledger portability regression tests to the local production build and GitHub Actions.
+- Added a local build warning when rebuilding the ledger changes tracked release records.
+
+The framework remains v19.0; v19.4 is a reproducibility hotfix and does not change public content or design.

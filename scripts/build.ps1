@@ -78,6 +78,7 @@ if (-not (Test-PythonModule -PythonPath $Python.Source -Module "yaml")) {
 }
 
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "test_validate_public.py"))
+Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "test_build_release_ledger.py"))
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate_hygiene.py"))
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "build_release_ledger.py"))
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate.py"))
@@ -89,5 +90,21 @@ Invoke-CheckedNative -FilePath $Hugo -Arguments @(
     "--logLevel", "info"
 )
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate_public.py"))
+
+$Git = Get-Command git.exe -ErrorAction SilentlyContinue
+if ($Git) {
+    $PreviousPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        & $Git.Source -C $RepoRoot diff --quiet -- static/releases
+        $LedgerDiff = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $PreviousPreference
+    }
+    if ($LedgerDiff -ne 0) {
+        Write-Warning "The release ledger changed during this build. Review and commit static/releases before pushing."
+    }
+}
 
 Write-Host "Build completed: $RepoRoot\public" -ForegroundColor Green

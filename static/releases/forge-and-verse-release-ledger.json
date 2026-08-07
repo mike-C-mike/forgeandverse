@@ -28,7 +28,7 @@
         "type": "ZIP bundle",
         "path": "/downloads/studio-proofs/forge-and-verse-bench-status-pad-field-test-v0.2.zip",
         "bytes": 163558,
-        "media_type": "application/x-zip-compressed",
+        "media_type": "application/zip",
         "sha256": "3e690464c0a41440a7868273e9f653160962eff64dd617eca41059084935095d"
       },
       "files": [
@@ -37,7 +37,7 @@
           "type": "ZIP bundle",
           "path": "/downloads/studio-proofs/forge-and-verse-bench-status-pad-field-test-v0.2.zip",
           "bytes": 163558,
-          "media_type": "application/x-zip-compressed",
+          "media_type": "application/zip",
           "sha256": "3e690464c0a41440a7868273e9f653160962eff64dd617eca41059084935095d"
         },
         {
@@ -88,7 +88,7 @@
         "type": "ZIP bundle",
         "path": "/downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.2.zip",
         "bytes": 162401,
-        "media_type": "application/x-zip-compressed",
+        "media_type": "application/zip",
         "sha256": "ac44ea39fb7296db394c307f4d66194a755b5709518df1b9937fa81e193da107"
       },
       "files": [
@@ -97,7 +97,7 @@
           "type": "ZIP bundle",
           "path": "/downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.2.zip",
           "bytes": 162401,
-          "media_type": "application/x-zip-compressed",
+          "media_type": "application/zip",
           "sha256": "ac44ea39fb7296db394c307f4d66194a755b5709518df1b9937fa81e193da107"
         },
         {
@@ -139,7 +139,7 @@
         "type": "ZIP bundle",
         "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.zip",
         "bytes": 318922,
-        "media_type": "application/x-zip-compressed",
+        "media_type": "application/zip",
         "sha256": "91ef34615c97a432bdb2c93d40bcc498da006f4ba12aea1ea0d3f72e7bae089c"
       },
       "files": [
@@ -148,7 +148,7 @@
           "type": "ZIP bundle",
           "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.zip",
           "bytes": 318922,
-          "media_type": "application/x-zip-compressed",
+          "media_type": "application/zip",
           "sha256": "91ef34615c97a432bdb2c93d40bcc498da006f4ba12aea1ea0d3f72e7bae089c"
         },
         {
@@ -220,7 +220,7 @@
           "type": "SHA-256 manifest",
           "path": "/downloads/forge-and-verse-digital-forensics-intake-kit-v1.2.sha256",
           "bytes": 1461,
-          "media_type": "application/octet-stream",
+          "media_type": "text/plain",
           "sha256": "c7bb144918a0ea13f04b9599aac790eeba831146c750dc776e4ffb9709c37e87"
         },
         {
