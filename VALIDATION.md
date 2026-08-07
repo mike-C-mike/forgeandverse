@@ -1,45 +1,46 @@
 # Forge & Verse v19 Validation
 
-The v19.2 cleanup hotfix was prepared against GitHub `main` at:
+The v19.3 validator hotfix was prepared against GitHub `main` at:
 
 ```text
-a1725823dcd6e3b9a6caa116aefa1dfb3020182e
+84fb5d93e57a556cd58c2bc4a44b00b65e5800a0
 ```
 
-## Why v19.2 exists
+## What the v19.2 CI run proved
 
-The first v19 GitHub Actions run correctly exposed a malformed Hugo archetype before the workflow could reach source validation or the Hugo production render. A second repository crawl also found stale Work entries left behind by earlier iterations and two Journal entries missing the current type metadata.
+The repository hygiene audit passed, the release ledger rebuilt, source and release validation passed, and Hugo Extended 0.164.0 completed the production build successfully. The workflow reached the final rendered-site validator for the first time.
 
-## Corrected by v19.2
+That final validator reported 112 errors in two categories:
 
-- fixed `archetypes/roadmap.md` so its Hugo title expression is valid YAML
-- removed the rejected `Keeper of the Krapola` Work entry
-- removed duplicate or undeveloped Work entries for `A Hash Is a Promise`, `Every Item Has a Story`, `The Hash Matched`, and `The Quiet Work Behind the Case`
-- retained the two completed ideas that belong in Journal and normalized their Journal type metadata
-- added retired Work paths to repository-hygiene regression checks
-- moved `actions/checkout` and `actions/setup-python` to v6 to avoid the Node 20 deprecation path
+- 100 alleged missing `alt` attributes
+- 12 alleged unresolved `}}` template markers
 
-## Required local checks after applying
+Both categories were validator false positives. Hugo's HTML minifier may serialize an explicit empty `alt=""` as the valid HTML5 minimized form `alt`, which Python's `HTMLParser` reports with a `None` value even though the attribute is present. Separately, valid JSON-LD can contain adjacent closing braces `}}`, so a bare closing pair is not sufficient evidence of an unresolved Hugo template.
+
+## Corrected by v19.3
+
+- tracks `alt` attribute presence independently from its parsed value
+- still fails when an image genuinely has no `alt` attribute
+- removes bare `}}` from the unresolved-template marker set
+- continues to fail on `{{`, `ZgotmplZ`, `<no value>`, and `<nil>`
+- adds regression tests for minified empty alt text, genuinely missing alt text, JSON-LD closing braces, and actual Hugo failure markers
+- runs the regression test in both `scripts/build.ps1` and GitHub Actions
+
+## Local verification
 
 ```powershell
-python .\scripts\validate_hygiene.py
-python .\scripts\build_release_ledger.py
-python .\scripts\validate.py
+python .\scripts\test_validate_public.py
+.\scripts\clean.ps1
 .\scripts\build.ps1
 ```
 
-Then review:
+Expected result:
 
-```text
-/
-/works/
-/works/believe-in-the-badge/
-/journal/
-/journal/a-hash-is-a-promise/
-/journal/the-quiet-work-behind-the-case/
-/editions/
-/releases/
-/roadmap/
-```
+1. six validator regression tests pass
+2. repository hygiene passes
+3. release ledger rebuilds
+4. source validation passes
+5. Hugo production build succeeds
+6. rendered-site validation passes
 
-The next push should allow GitHub Actions to continue past repository hygiene and exercise the release-ledger, source, Hugo, rendered-site, and ledger-diff checks.
+The GitHub Actions push should then reach the final ledger-diff check.

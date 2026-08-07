@@ -77,6 +77,7 @@ if (-not (Test-PythonModule -PythonPath $Python.Source -Module "yaml")) {
     throw "PyYAML is not installed. Run: python -m pip install -r .\scripts\requirements.txt"
 }
 
+Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "test_validate_public.py"))
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate_hygiene.py"))
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "build_release_ledger.py"))
 Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate.py"))

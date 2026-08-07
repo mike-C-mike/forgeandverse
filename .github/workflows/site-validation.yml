@@ -38,6 +38,9 @@ jobs:
           hugo-version: "0.164.0"
           extended: true
 
+      - name: Test rendered-site validator
+        run: python scripts/test_validate_public.py
+
       - name: Validate repository hygiene
         run: python scripts/validate_hygiene.py
 

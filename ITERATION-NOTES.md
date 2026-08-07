@@ -44,3 +44,13 @@ The update does not add filler works or announce internal brand strategy. It str
 - Expanded the hygiene obsolete-file guard to reject the retired Work paths.
 
 The framework remains v19.0; v19.2 identifies the cleanup hotfix applied to that baseline.
+
+## v19.3 rendered-site validator hotfix
+
+- Corrected the rendered-site validator after the first complete v19.2 CI run exposed two validator false positives rather than site-render failures.
+- Treats HTML5's minimized `alt` attribute as present, preserving valid decorative-image handling after Hugo minification.
+- Stops treating a bare `}}` sequence as an unresolved Hugo template marker because valid JSON-LD routinely contains adjacent closing braces.
+- Continues to reject actual missing `alt` attributes, `{{` template openings, `ZgotmplZ`, `<no value>`, and `<nil>` render failures.
+- Added six regression tests and runs them in both the local production build and GitHub Actions before rendered-site validation.
+
+The framework remains v19.0; v19.3 is a validator-only hotfix and does not change public content or design.
