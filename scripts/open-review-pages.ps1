@@ -6,11 +6,14 @@ $Base = "http://localhost:$Port"
 $Pages = @(
     "/",
     "/works/",
+    "/works/believe-in-the-badge/",
+    "/editions/",
+    "/materials/",
     "/releases/",
     "/journal/",
-    "/journal/the-pause-is-part-of-the-examination/",
     "/roadmap/",
     "/roadmap/bench-status-pad/",
+    "/roadmap/examination-notebook/",
     "/downloads/digital-forensics-intake-request/"
 )
 

@@ -1,28 +1,35 @@
-# Forge & Verse v18
+# Forge & Verse v19
 
-This iteration adds a public release-verification layer without changing the studio into a download warehouse.
+This is a consolidation release built from the audited GitHub repository rather than another additive layer.
 
-## Public changes
+## Restored and reconciled
 
-- Added the Release Desk for current open releases and printable field proofs.
-- Separated finished operational releases from controlled field proofs.
-- Added visible versions, update dates, bundle hashes, direct downloads, and concise purpose context.
-- Added platform-specific SHA-256 verification commands for PowerShell, Windows, macOS, and Linux.
-- Added a machine-readable JSON release ledger and plain-text checksum manifest.
-- Added Release Desk entry points from Work, Free Works, the homepage, and the footer.
-- Clarified that direct downloads do not require an account or email gate and that the fillable intake PDF contains no telemetry or automatic submission.
+- Restored the physical-edition model removed during the Release Desk update.
+- Kept the Release Desk, machine ledger, browser hash verification, and release validation.
+- Reconnected physical-edition metadata to Work pages.
+- Restored `Believe in the Badge` as an `in-studio` physical edition with metal and archival-paper directions.
+- Restored edition navigation from Materials and the footer.
 
-## Foundation changes
+## Repository cleanup
 
-- Added deterministic release-ledger generation from front matter and actual public files.
-- Added per-file byte counts, media types, and SHA-256 values to the generated JSON.
-- Added a PowerShell rebuild helper.
-- Updated development and production scripts to rebuild the ledger before validation.
-- Expanded repository validation to catch missing files, stale byte counts, stale hashes, invalid ledger entries, and broken checksum-manifest lines.
-- Added internal documentation for maintaining the ledger.
+- Removed the rejected Verification Desk Card and wallpaper.
+- Removed superseded v1.1 intake bundles and obsolete standalone intake duplicates.
+- Removed committed Python bytecode and cache directories.
+- Expanded `.gitignore` and `.gitattributes`.
+- Added `.editorconfig`.
+- Repaired duplicate fields in the Work archetype.
+- Normalized the framework version to `19.0`.
 
-## Current release desk
+## Validation and automation
 
-- 1 open operational release
-- 2 printable field proofs
-- 18 current public package files and manifests tracked by SHA-256
+- Added duplicate-key-aware YAML and front-matter checks.
+- Added physical-edition metadata validation.
+- Added version-alignment checks.
+- Added forbidden-file and repository-hygiene checks.
+- Added GitHub Actions production validation.
+- Added cleanup and environment-doctor scripts.
+- Updated build and development scripts to run hygiene validation first.
+
+## Public behavior
+
+The update does not add filler works or announce internal brand strategy. It strengthens the systems already visible to visitors: Work, Editions, Journal, On the Anvil, Free Works, and the Release Desk.

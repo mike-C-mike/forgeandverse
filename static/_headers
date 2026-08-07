@@ -3,10 +3,13 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
   X-Frame-Options: DENY
+  X-Permitted-Cross-Domain-Policies: none
 
 /downloads/*
   Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff
 
 /images/*
   Cache-Control: public, max-age=31536000, immutable

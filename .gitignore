@@ -1,4 +1,27 @@
 /public/
 /resources/_gen/
 .hugo_build.lock
+
+# Local operating-system and editor files
 .DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.code-workspace
+
+# Python build and environment files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Local tools and updater backups
+/hugo.exe
+/.forge-backups/

@@ -1,6 +1,51 @@
 $ErrorActionPreference = "Stop"
 $RepoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 
+function Test-PythonModule {
+    param(
+        [Parameter(Mandatory = $true)][string]$PythonPath,
+        [Parameter(Mandatory = $true)][string]$Module
+    )
+
+    $StdOut = [System.IO.Path]::GetTempFileName()
+    $StdErr = [System.IO.Path]::GetTempFileName()
+    try {
+        $Arguments = "-c `"import $Module`""
+        $Process = Start-Process -FilePath $PythonPath `
+            -ArgumentList $Arguments `
+            -Wait `
+            -PassThru `
+            -NoNewWindow `
+            -RedirectStandardOutput $StdOut `
+            -RedirectStandardError $StdErr
+        return ($Process.ExitCode -eq 0)
+    }
+    finally {
+        Remove-Item $StdOut, $StdErr -Force -ErrorAction SilentlyContinue
+    }
+}
+
+function Invoke-CheckedNative {
+    param(
+        [Parameter(Mandatory = $true)][string]$FilePath,
+        [Parameter(Mandatory = $true)][string[]]$Arguments
+    )
+
+    $PreviousPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        & $FilePath @Arguments
+        $ExitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $PreviousPreference
+    }
+
+    if ($ExitCode -ne 0) {
+        exit $ExitCode
+    }
+}
+
 $Candidates = @(
     (Join-Path $RepoRoot "hugo.exe"),
     (Join-Path $RepoRoot "..\hugo.exe")
@@ -24,24 +69,24 @@ if (-not $Hugo) {
 }
 
 $Python = Get-Command python.exe -ErrorAction SilentlyContinue
-if ($Python) {
-    & $Python.Source -c "import yaml" 2>$null
-    if ($LASTEXITCODE -eq 0) {
-        & $Python.Source (Join-Path $PSScriptRoot "build_release_ledger.py")
-        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-        & $Python.Source (Join-Path $PSScriptRoot "validate.py")
-        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-    } else {
-        Write-Warning "PyYAML is not installed, so repository validation was skipped. Run: python -m pip install -r .\scripts\requirements.txt"
-    }
+if (-not $Python) {
+    throw "Python was not found. Install Python and run: python -m pip install -r .\scripts\requirements.txt"
 }
 
-& $Hugo --source $RepoRoot --gc --minify --cleanDestinationDir --logLevel info
-if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-
-if ($Python) {
-    & $Python.Source (Join-Path $PSScriptRoot "validate_public.py")
-    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+if (-not (Test-PythonModule -PythonPath $Python.Source -Module "yaml")) {
+    throw "PyYAML is not installed. Run: python -m pip install -r .\scripts\requirements.txt"
 }
+
+Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate_hygiene.py"))
+Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "build_release_ledger.py"))
+Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate.py"))
+Invoke-CheckedNative -FilePath $Hugo -Arguments @(
+    "--source", $RepoRoot,
+    "--gc",
+    "--minify",
+    "--cleanDestinationDir",
+    "--logLevel", "info"
+)
+Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate_public.py"))
 
 Write-Host "Build completed: $RepoRoot\public" -ForegroundColor Green

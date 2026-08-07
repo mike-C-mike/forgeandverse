@@ -9,7 +9,7 @@ disableKinds = ["taxonomy", "term"]
   pagerSize = 12
 
 [params]
-  frameworkVersion = "18.0"
+  frameworkVersion = "19.0"
   description = "Art, writing, and useful objects for the people who examine, protect, preserve, and defend."
   studioLine = "An independent literary-industrial design studio for people whose work carries weight."
   founder = "Matthew McBride"

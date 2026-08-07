@@ -1,0 +1,57 @@
+name: Validate Forge and Verse
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: forge-and-verse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: scripts/requirements*.txt
+
+      - name: Install validation requirements
+        run: python -m pip install -r scripts/requirements.txt
+
+      - name: Set up Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.164.0"
+          extended: true
+
+      - name: Validate repository hygiene
+        run: python scripts/validate_hygiene.py
+
+      - name: Rebuild release ledger
+        run: python scripts/build_release_ledger.py
+
+      - name: Validate source and release artifacts
+        run: python scripts/validate.py
+
+      - name: Build production site
+        run: hugo --gc --minify --cleanDestinationDir --logLevel info
+
+      - name: Validate rendered site
+        run: python scripts/validate_public.py
+
+      - name: Confirm generated ledger is current
+        run: git diff --exit-code -- static/releases

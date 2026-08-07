@@ -35,7 +35,9 @@
   "description": {{ $description | plainify | jsonify }},
   "url": {{ .Permalink | jsonify }},
   "image": {{ $image | jsonify }},
-  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}}
+  {{ with .Params.edition }}{{ if .enabled }}{{ with .state }}"creativeWorkStatus": {{ . | humanize | jsonify }},{{ end }}{{ end }}{{ end }}
+  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}
+  }
 }
 </script>
 {{- else if and .IsPage (eq .Section "roadmap") -}}
@@ -48,7 +50,8 @@
   "url": {{ .Permalink | jsonify }},
   "image": {{ $image | jsonify }},
   "creativeWorkStatus": {{ (.Params.stage | default "In development") | jsonify }},
-  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}}
+  "creator": {"@type": "Brand", "name": {{ site.Title | jsonify }}
+  }
 }
 </script>
 {{- else if and .IsPage (eq .Section "downloads") -}}

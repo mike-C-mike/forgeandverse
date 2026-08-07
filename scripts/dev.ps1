@@ -5,6 +5,51 @@ param(
 $ErrorActionPreference = "Stop"
 $RepoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 
+function Test-PythonModule {
+    param(
+        [Parameter(Mandatory = $true)][string]$PythonPath,
+        [Parameter(Mandatory = $true)][string]$Module
+    )
+
+    $StdOut = [System.IO.Path]::GetTempFileName()
+    $StdErr = [System.IO.Path]::GetTempFileName()
+    try {
+        $Arguments = "-c `"import $Module`""
+        $Process = Start-Process -FilePath $PythonPath `
+            -ArgumentList $Arguments `
+            -Wait `
+            -PassThru `
+            -NoNewWindow `
+            -RedirectStandardOutput $StdOut `
+            -RedirectStandardError $StdErr
+        return ($Process.ExitCode -eq 0)
+    }
+    finally {
+        Remove-Item $StdOut, $StdErr -Force -ErrorAction SilentlyContinue
+    }
+}
+
+function Invoke-CheckedNative {
+    param(
+        [Parameter(Mandatory = $true)][string]$FilePath,
+        [Parameter(Mandatory = $true)][string[]]$Arguments
+    )
+
+    $PreviousPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        & $FilePath @Arguments
+        $ExitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $PreviousPreference
+    }
+
+    if ($ExitCode -ne 0) {
+        exit $ExitCode
+    }
+}
+
 $Candidates = @(
     (Join-Path $RepoRoot "hugo.exe"),
     (Join-Path $RepoRoot "..\hugo.exe")
@@ -29,23 +74,37 @@ if (-not $Hugo) {
 
 $Python = Get-Command python.exe -ErrorAction SilentlyContinue
 if ($Python) {
-    & $Python.Source -c "import yaml" 2>$null
-    if ($LASTEXITCODE -eq 0) {
-        & $Python.Source (Join-Path $PSScriptRoot "build_release_ledger.py")
-        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-        & $Python.Source (Join-Path $PSScriptRoot "validate.py")
-        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-    } else {
+    if (Test-PythonModule -PythonPath $Python.Source -Module "yaml") {
+        Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate_hygiene.py"))
+        Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "build_release_ledger.py"))
+        Invoke-CheckedNative -FilePath $Python.Source -Arguments @((Join-Path $PSScriptRoot "validate.py"))
+    }
+    else {
         Write-Warning "PyYAML is not installed, so repository validation was skipped. Run: python -m pip install -r .\scripts\requirements.txt"
     }
 }
+else {
+    Write-Warning "Python was not found, so repository validation was skipped."
+}
 
 Write-Host "Starting Forge & Verse on http://localhost:$Port/" -ForegroundColor Cyan
-& $Hugo server `
-    --source $RepoRoot `
-    --port $Port `
-    --disableFastRender `
-    --ignoreCache `
-    --noHTTPCache `
-    --buildDrafts `
-    --buildFuture
+$PreviousPreference = $ErrorActionPreference
+try {
+    $ErrorActionPreference = "Continue"
+    & $Hugo server `
+        --source $RepoRoot `
+        --port $Port `
+        --disableFastRender `
+        --ignoreCache `
+        --noHTTPCache `
+        --buildDrafts `
+        --buildFuture
+    $ExitCode = $LASTEXITCODE
+}
+finally {
+    $ErrorActionPreference = $PreviousPreference
+}
+
+if ($ExitCode -ne 0) {
+    exit $ExitCode
+}

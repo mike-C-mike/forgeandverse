@@ -27,5 +27,7 @@
   <link rel="alternate" type="application/rss+xml" href="/index.xml" title="{{ site.Title }} RSS">
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $editionCss := resources.Get "css/edition-v19.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $editionCss.RelPermalink }}" integrity="{{ $editionCss.Data.Integrity }}">
   {{ partial "structured-data.html" . }}
 </head>

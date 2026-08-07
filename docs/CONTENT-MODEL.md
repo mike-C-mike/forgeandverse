@@ -2,17 +2,17 @@
 
 ## Shared purpose fields
 
-Works and Free Works should identify:
+Works and Free Works identify:
 
-- `discipline`: the professional room
+- `discipline`: professional room
 - `release_path`: `workbench`, `workspace`, or `editions`
 - `release_path_label`: public display label
 - `audience`: who the release is made for
-- `moment`: the specific working or emotional moment where it belongs
+- `moment`: the working or emotional moment where it belongs
 - `need`: the need, behavior, or meaning it addresses
 - `format`: the physical or digital form carrying the idea
 
-These fields allow the site to present an item as an answer to a real person rather than a commodity category.
+These fields let the site present an item as an answer to a real person rather than a commodity category.
 
 ## Works
 
@@ -38,6 +38,8 @@ Useful optional fields:
 - `cover_style`
 - `image`
 - `image_alt`
+- `image_caption`
+- `gallery`
 - `series`
 - `note`
 - `material_intent`
@@ -46,16 +48,66 @@ Useful optional fields:
 - `partner_name`
 - `fulfillment_note`
 - `affiliate`
+- `related_journal`
+- `related_release`
+- `related_study`
+- `related_work`
 
 There is no target number of works per discipline or path.
 
+## Physical editions
+
+A Work with `release_path: editions` must define an `edition` block.
+
+```yaml
+edition:
+  enabled: true
+  state: in-studio
+  headline: The work as an object.
+  intended_room: Personal offices and shared professional rooms
+  reading_distance: Close reading and across-room recognition
+  edition_model: Format and edition model still under study
+  study_url: /roadmap/example-edition/
+  availability_note: No ordering link appears until the physical specification is approved.
+  formats:
+    - name: Floating metal panel
+      status: Under evaluation
+      size_direction: Large format; final dimensions pending proof
+      surface: Low-gloss or matte surface under evaluation
+      mount: Concealed float mount
+      fit: Rooms where depth and architectural presence support the work
+```
+
+Valid edition states:
+
+1. `in-studio`
+2. `proof-in-hand`
+3. `edition-approved`
+4. `available`
+5. `resting`
+
+Use `proof-in-hand` only after a real physical sample exists. A rendering or room mockup remains `in-studio`.
+
+An `available` edition must also define:
+
+- `external_url`
+- `partner_name`
+- `fulfillment_note`
+- `cta_label`
+
 ## Journal
 
-Journal entries carry essays, field notes, professional observations, and design thinking. A journal entry can inspire a separate Work entry without automatically becoming one.
+Journal entries carry essays, practice notes, professional observations, and studio writing. A journal entry can inspire a separate Work without automatically becoming one.
+
+Supported kinds:
+
+- `practice-note`
+- `essay`
+- `studio-note`
 
 ## Free Works
 
-Free Works are direct releases. Each page should identify:
+Free Works are direct operational or creative releases. Each page should identify:
 
 - the person served
 - the problem solved or reason to keep the file
@@ -66,6 +118,8 @@ Free Works are direct releases. Each page should identify:
 - dimensions or print details
 - required local policy, legal, or workflow review
 - limitations on redistribution or resale
+- current version and update date
+- published SHA-256 values
 
 ## Disciplines
 
@@ -86,7 +140,7 @@ Add a new discipline only when credible work has already created the need for an
 
 ## Design studies
 
-Current concepts live as Markdown pages under `content/roadmap/`. They are directly linkable, editable, and rendered with the `roadmap/single.html` layout.
+Current concepts live as Markdown pages under `content/roadmap/` and render with `roadmap/single.html`.
 
 Every study requires:
 
@@ -110,17 +164,17 @@ Every study requires:
 
 When a study reaches a testable proof, add:
 
-- `card_image`: optimized image used in study cards
-- `card_image_alt`: accessible description
-- `hero_image`: larger study-page image
-- `hero_image_alt`: accessible description
-- `prototype_title`: public heading for the proof section
-- `prototype_intro`: what the proof is intended to test
-- `prototype_images`: list of images with `image`, `alt`, and `caption`
-- `open_questions`: the unresolved questions that determine the next pass
-- `prototype_source_files`: unpublished repository paths to exact-size PDFs or production proofs
+- `card_image`
+- `card_image_alt`
+- `hero_image`
+- `hero_image_alt`
+- `prototype_title`
+- `prototype_intro`
+- `prototype_images`
+- `open_questions`
+- `prototype_source_files`
 
-Prototype source files belong under `source-assets/prototypes/`. Only preview images belong under `static/`.
+Prototype source files belong under `source-assets/prototypes/`. Only optimized preview images and approved public packages belong under `static/`.
 
 ## Study progression
 
