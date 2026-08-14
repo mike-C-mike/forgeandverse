@@ -1,0 +1,4 @@
+85963233758a5dff4735d85eeaa918dc4a549e75ee21af25f0ba63e3d5e993ef  bench-status-pad-field-test-guide.pdf
+8b5b9b13dad9f9dda018d8aa55633db96ead1cad46ff3482a9adf300a3b97012  bench-status-pad-prototype-4x6.pdf
+297e1a5ed6871f0a4b27ed708ffab52895af1c16df9d6d67e0fad8849141c833  bench-status-pad-prototype-letter-2up.pdf
+95765730d969fc53e00edd84179e315e8f93831ff57d354cd813db0ae1169a9e  README.txt

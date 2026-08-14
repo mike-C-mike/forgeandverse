@@ -1,18 +1,18 @@
 Bench Status Pad Field Test
 ===========================
 
-Version: 0.2
+Version: 0.3
 Publisher: Forge & Verse
 
 Purpose
 -------
-A controlled print-and-use test for the 4 x 6 continuity-pad concept.
+A controlled print-and-use test for the refined 4 x 6 continuity-pad concept.
 
 Included files
 --------------
-- bench-status-pad-field-test-guide.pdf: Two-page test protocol and evaluation sheet.
-- bench-status-pad-prototype-4x6.pdf: Exact-size portrait proof.
-- bench-status-pad-prototype-letter-2up.pdf: Two-up letter-size print test.
+- bench-status-pad-field-test-guide.pdf: Two-page interruption test and evaluation sheet.
+- bench-status-pad-prototype-4x6.pdf: Exact-size refined portrait proof.
+- bench-status-pad-prototype-letter-2up.pdf: Two-up letter-size office-printer test.
 
 Testing and records caution
 ---------------------------
@@ -20,7 +20,7 @@ Use fictitious or sanitized information unless your agency has approved the proo
 
 Permission
 ----------
-You may print and internally evaluate these studio proofs. You may not sell, rebrand, redistribute, or represent them as an approved Forge & Verse release.
+You may print and internally evaluate these studio proofs. You may not sell, rebrand, redistribute, or represent them as a finished Forge & Verse release.
 
 Verification
 ------------

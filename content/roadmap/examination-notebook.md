@@ -1,100 +1,102 @@
 ---
 title: Examination Notebook
 weight: 20
-summary: A purpose-built notebook for the examiner who thinks better with a pen in hand.
-description: A design study for a tactile digital-forensics notebook with light structure and generous writing space.
-stage: Interior prototype
+summary: A 32-page, 5.5 x 8.5 production-oriented dummy for the examiner who thinks better with a pen in hand.
+description: A tactile examination-notebook study now testing trim, gutter, page mix, and physical writing behavior rather than adding more forms.
+stage: Production-oriented dummy
 discipline_slug: examiner-bench
 release_path: workspace
 release_path_label: For the room
-format: Purpose-built tactile notebook
+format: 5.5 x 8.5 tactile notebook dummy
 audience: The examiner who thinks better with a pen in hand
 need: Offer enough structure to orient the work without turning every page into somebody else's boxes
 visual: notebook
 card_image: /images/studies/examination-notebook/cover-proof.webp
-card_image_alt: A dark Forge and Verse Examination Notebook cover prototype on a neutral surface.
+card_image_alt: The dark Forge and Verse Examination Notebook cover proof for version 0.3.
 hero_image: /images/studies/examination-notebook/orientation-spread.webp
-hero_image_alt: An open Examination Notebook prototype showing a case orientation page beside an evidence source index.
+hero_image_alt: Version 0.3 Examination Notebook pages showing the compact case orientation and evidence-source index.
 design_test: The structure disappears until it is needed; the writing space never does.
-material_direction: Lay-flat binding, low-glare paper, durable cover, and stock chosen for a clean pen response
+material_direction: 5.5 x 8.5 trim, mirrored gutter margins, lay-flat binding direction, and opaque uncoated stock with enough tooth for ordinary pens
 details:
-- Case and authority snapshot
-- Evidence-source index
-- Tool and version references
-- Open questions and findings index
-- Interruption and handoff pages
-- Generous, lightly ruled note pages
-moment: During the part of an examination when the investigator needs room to map, question, and think before the final record is written.
+- Five structured interior pages after the cover
+- Twenty-six open working pages out of thirty-one interior pages
+- 83.9 percent of the interior returned to handwriting
+- Mirrored gutter margins for a bound object
+- Light ruled, ruled-with-margin, dot-grid, and open page runs
+- Case, source, date, and page reference kept deliberately small on note pages
+moment: During the part of an examination when the examiner needs room to map, question, and think before the final record is written.
 stage_step: 4
-prototype_title: An interior that knows when to get out of the way
-prototype_intro: The first interior proof places the structured pages at the front, then gives the majority of the book back to writing. The sample is intentionally incomplete as a product, but complete enough to test hierarchy, ruling, page density, and whether the structure feels helpful rather than supervisory.
+prototype_title: The notebook is now long enough to behave like a notebook
+prototype_intro: Version 0.3 moves from a twelve-page architecture sample to a thirty-two-page production-oriented dummy. Seven structured pages were compressed into five, the interior now uses mirrored gutter margins, and twenty-six pages are reserved for actual handwriting. The four note treatments are grouped into test runs so a practitioner can judge them instead of admiring a sampler.
 prototype_images:
 - image: /images/studies/examination-notebook/cover-proof.webp
-  alt: A dark Examination Notebook cover prototype with the line For the examiner who thinks with ink.
-  caption: Cover direction. Quiet enough for a professional bench, specific enough to belong to the examiner carrying it.
+  alt: Dark Examination Notebook cover proof with restrained Forge and Verse branding.
+  caption: Cover direction. The notebook should feel deliberate without asking the cover to do the work of the interior.
 - image: /images/studies/examination-notebook/orientation-spread.webp
-  alt: An open notebook spread with case orientation fields on the left and an evidence source index on the right.
-  caption: Orientation spread. A small amount of structure establishes the case without trying to dictate the examination.
+  alt: Case orientation and evidence-source index pages from the version 0.3 notebook dummy.
+  caption: Orientation spread. The structured front matter has been compressed so it can orient the work and then get out of the way.
 - image: /images/studies/examination-notebook/working-index-spread.webp
-  alt: An open notebook spread showing tool and version references beside an open questions page.
-  caption: Working index spread. Tool references preserve context; open questions keep uncertainty visible before it hardens into a conclusion.
+  alt: Working index and pause-and-resume pages from the version 0.3 Examination Notebook.
+  caption: Working index and pause page. Tools, open questions, finding references, and continuity are kept compact rather than becoming separate workbook chapters.
 - image: /images/studies/examination-notebook/notes-spread.webp
-  alt: Two open, lightly ruled working pages with small case, source, and date fields.
-  caption: The real center of the notebook. Most pages remain open, with only enough metadata to reconnect the thought to the case.
+  alt: Two open working-page treatments from the version 0.3 Examination Notebook dummy.
+  caption: The reason to carry it. Most of the interior belongs to handwriting, diagrams, relationships, and unfinished thought.
 open_questions:
-- Does 5.5 x 8.5 inches provide enough writing room without making the notebook cumbersome at a crowded bench?
-- Which ruling feels most natural under common gel, rollerball, and ballpoint pens?
-- How many structured pages are useful before the book begins to feel like a paper application?
-- Should the working pages be ruled, dot-grid, mixed, or offered as separate editions for different thinkers?
-- Which lay-flat binding survives actual bench use without feeling like generic office stationery?
+- Does 5.5 x 8.5 remain comfortable once the dummy is actually bound, or does the writing hand need a 6 x 9 trim?
+- Is the mirrored gutter generous enough for a true lay-flat or sewn binding sample?
+- Which page treatment best disappears during real technical reasoning?
+- Is a mixed interior genuinely useful, or would practitioners rather choose one ruling style per notebook?
+- What paper weight and tooth minimize show-through without making a small notebook unnecessarily bulky?
 proof_available: true
-proof_version: "0.2"
-proof_updated: 2026-08-05
-proof_bundle_url: /downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.2.zip
+proof_version: "0.3"
+proof_updated: 2026-08-07
+proof_bundle_url: /downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.3.zip
 proof_bundle_label: Download the field-test pack
-proof_bundle_sha256: ac44ea39fb7296db394c307f4d66194a755b5709518df1b9937fa81e193da107
-proof_notice: A printable studio proof for controlled evaluation. Use fictitious or sanitized information unless your agency approves a test.
+proof_bundle_sha256: 2fabe14e62943f9647af3d30a1f4737e14f4fd2871e63aadda5e80548db5ae6f
+proof_notice: A printable production-oriented studio proof for controlled evaluation. Use fictitious or sanitized information unless your agency approves a test.
 proof_files:
 - label: Field-test guide
   type: PDF
-  size: 67 KB
-  url: /downloads/studio-proofs/examination-notebook-field-test-v0.2/examination-notebook-field-test-guide.pdf
-  description: Two-page protocol for testing structure, writing room, pen response, and re-entry.
-- label: Twelve-page interior prototype
+  size: 6 KB
+  url: /downloads/studio-proofs/examination-notebook-field-test-v0.3/examination-notebook-field-test-guide.pdf
+  description: Two-page physical test protocol focused on trim, gutter, ruling, page mix, and pen behavior.
+- label: Thirty-two-page interior dummy
   type: PDF
-  size: 115 KB
-  url: /downloads/studio-proofs/examination-notebook-field-test-v0.2/examination-notebook-interior-prototype.pdf
-  description: Structured front matter and four working-page treatments for print-and-use evaluation.
+  size: 166 KB
+  url: /downloads/studio-proofs/examination-notebook-field-test-v0.3/examination-notebook-interior-prototype.pdf
+  description: Exact 5.5 x 8.5 production-oriented interior with mirrored margins and four working-page treatments.
 related_journal: /journal/for-the-examiner-who-thinks-with-ink/
 prototype_source_files:
 - source-assets/prototypes/examination-notebook-interior-prototype.pdf
 ---
-## For the examiner who thinks with ink
+## The structure lost pages on purpose
 
-The evidence, tools, and final record may all be digital. The thinking does not have to begin there.
+The first notebook proof was useful because it exposed the architecture: case orientation, evidence-source index, tool references, open questions, findings, continuity, and several note-page styles.
 
-Some examiners map relationships by hand. They rewrite a question until it becomes precise. They remember where an idea sat on a page. The physical act of writing slows the work just enough for a pattern to become visible.
+It was also too easy to mistake that sampler for the direction of the finished object.
 
-This notebook is for that person.
+Version 0.3 compresses the structured interior from seven pages to five. Tool/version references, open questions, and finding references now share one compact working index. The pause-and-resume page remains because continuity is a distinct working moment. The rest of the notebook belongs to the examiner.
 
-## Light structure, not a paper application
+## A real dummy instead of a twelve-page tour
 
-The first interior proof contains a case-orientation page, evidence-source index, tool and version references, open questions, a findings index, and a pause-and-resume page. Those sections help the examiner re-enter the work and reconnect an observation to its source.
+The new proof is thirty-two pages at 5.5 x 8.5 inches. After the cover, twenty-six of thirty-one pages are open working pages: **83.9 percent of the interior**.
 
-They are not the notebook's center.
+That is much closer to the studio rule behind the piece. The notebook should be lightly structured, not administratively impressive.
 
-Most pages remain open. A restrained header for case identifier, source, date, and page number is enough. The page should feel available rather than occupied.
+The dummy also introduces mirrored gutter margins. A page can look generous as a loose PDF and become frustrating when the binding steals the inner edge. Version 0.3 starts testing the notebook as an object rather than a stack of rectangles.
 
-## The ratio matters
+## Four writing treatments, tested deliberately
 
-A production notebook should be roughly fifteen percent structure and eighty-five percent room to think. The exact ratio can change after testing, but the principle should not: the notebook earns its value by helping at a few critical moments, then stepping aside.
+The working pages are grouped into runs of light ruled, ruled-with-margin, dot-grid, and nearly open pages. The purpose is not to make the notebook look varied. It is to let a practitioner spend enough time in each treatment to notice whether the ruling helps or keeps announcing itself.
 
-The current prototype includes multiple working-page treatments so pen response, visual noise, and personal preference can be judged before one ruling becomes the default.
+The next physical sample should answer whether a mixed interior is worth keeping at all.
 
-## A physical object with a job
+## What the notebook still refuses to become
 
-The notebook must lie flat, accept common pens without distracting bleed-through, and withstand repeated use at a bench or in a field kit. Paper, ruling, binding, cover texture, and page count are part of the design, not production details to settle at the end.
+It is not a paper forensic suite. It does not try to reproduce every case-management field, acquisition record, tool output, or report section. Those systems already exist.
 
-## Records reality
+This notebook is for the part of the work where a person is still thinking.
 
-Handwritten notes may become discoverable case material or official records depending on policy and practice. The notebook acknowledges that plainly. Tactile does not mean informal, and useful does not mean outside the rules.
+## The next honest gate
+
+The architecture is mature enough for a bound sample. The unresolved questions are now physical: binding behavior, hand comfort, paper opacity and tooth, pen response, and which page treatment earns the majority of the interior.

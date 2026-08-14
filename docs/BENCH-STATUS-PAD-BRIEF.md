@@ -6,20 +6,22 @@ A 4 x 6 tear-away continuity note for an examiner pausing work at the end of a d
 
 ## Success test
 
-Monday-morning context returns in under thirty seconds.
+The examiner can recover the active case state accurately in under thirty seconds without reopening full notes first.
 
-## Prototype 01
+## Field proof 0.3
 
-The first exact-size proof now includes:
+Version 0.3 keeps the 4 x 6 trim but changes the information model after three representative desk simulations.
+
+It now includes:
 
 - case or matter identifier
 - date and time paused
-- process-running, safe-to-resume, and blocked state markers
+- Process running, Do not interrupt, and Blocked state markers
 - current process or tool state
 - last completed action
 - next intended action
-- pending question or blocker
-- one thing not to forget
+- open loop or blocker
+- critical context
 - secure-disposal reminder
 
 Source files:
@@ -27,23 +29,30 @@ Source files:
 - `source-assets/prototypes/bench-status-pad-prototype-4x6.pdf`
 - `source-assets/prototypes/bench-status-pad-prototype-letter-2up.pdf`
 
+## What changed from 0.2
+
+- Removed `Safe to resume`; it asked for interpretation rather than recording an actionable condition.
+- Added `Do not interrupt`; it matters only when a running process should not be disturbed.
+- Replaced `Do not forget` with `Critical context`; the field should own a distinct kind of fragile information.
+- Rebalanced vertical space after representative technical scenarios were written into the exact-size card.
+- Retained 4 x 6 because the simulated notes fit without miniature typography.
+
+The simulations were layout and information-load exercises, not practitioner field validation.
+
 ## Design constraints
 
 - writable with ordinary pens
 - no dense boxes or microscopic labels
-- enough room for the next action and pending issue
+- enough room for the next action and open loop
 - visually scannable from arm's length
-- branding kept subordinate to the function
+- branding subordinate to the function
 - no assumption that the sheet is part of the formal examination record
 - fast enough to complete while the examiner is actually trying to leave
 
-## Questions for the next pass
+## Next gate
 
-- Is the page physically large enough for ordinary handwriting?
-- Are all three state markers useful?
-- Does a dedicated evidence-source field deserve space?
-- Is the final prompt direct enough?
+The geometry is mature enough for practitioner pilot testing. The card remains at the Sample stage until ordinary handwriting, real interruptions, and measured re-entry time prove that the fields earn their space.
 
 ## Handling note
 
-The pad may capture case information. The printed sheet and packaging should direct users to secure it while in use and dispose of it according to agency policy, records requirements, discovery obligations, and the sensitivity of the information written on it.
+The pad may capture case information. Printed sheets must be secured, retained, disclosed, incorporated, or destroyed according to agency policy, records requirements, discovery obligations, and the sensitivity of the information written on them.

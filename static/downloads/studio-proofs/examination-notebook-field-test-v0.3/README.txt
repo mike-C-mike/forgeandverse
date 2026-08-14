@@ -1,17 +1,17 @@
 Examination Notebook Field Test
 ===============================
 
-Version: 0.2
+Version: 0.3
 Publisher: Forge & Verse
 
 Purpose
 -------
-A controlled print-and-use test for the tactile Examination Notebook interior.
+A controlled print-and-use test for the production-oriented Examination Notebook dummy.
 
 Included files
 --------------
-- examination-notebook-field-test-guide.pdf: Two-page test protocol and evaluation sheet.
-- examination-notebook-interior-prototype.pdf: Twelve-page interior proof with structured and open working pages.
+- examination-notebook-field-test-guide.pdf: Two-page physical test protocol and evaluation sheet.
+- examination-notebook-interior-prototype.pdf: Thirty-two-page 5.5 x 8.5 interior dummy.
 
 Testing and records caution
 ---------------------------
@@ -19,7 +19,7 @@ Use fictitious or sanitized information unless your agency has approved the proo
 
 Permission
 ----------
-You may print and internally evaluate these studio proofs. You may not sell, rebrand, redistribute, or represent them as an approved Forge & Verse release.
+You may print and internally evaluate these studio proofs. You may not sell, rebrand, redistribute, or represent them as a finished Forge & Verse release.
 
 Verification
 ------------

@@ -1,66 +1,52 @@
-# Forge & Verse v19
+# Forge & Verse v20
 
-This is a consolidation release built from the audited GitHub repository rather than another additive layer.
+v20 is the studio-maturity round: less framework work, more pressure on the actual objects and editions.
 
-## Restored and reconciled
+## Bench Status Pad v0.3
 
-- Restored the physical-edition model removed during the Release Desk update.
-- Kept the Release Desk, machine ledger, browser hash verification, and release validation.
-- Reconnected physical-edition metadata to Work pages.
-- Restored `Believe in the Badge` as an `in-studio` physical edition with metal and archival-paper directions.
-- Restored edition navigation from Materials and the footer.
+- Refined the exact 4 x 6 continuity card after three representative desk simulations: a running mobile acquisition, an analysis task blocked on investigator confirmation, and a verification/documentation pass ready for targeted review.
+- Replaced the ambiguous `Safe to resume` state with the actionable `Do not interrupt` state.
+- Replaced the vague `Do not forget` field with `Critical context`.
+- Kept `Process running` and `Blocked` because they alter what the returning examiner should do.
+- Rebuilt the exact-size and letter two-up proofs and repackaged the field-test bundle as v0.3.
+- Kept the study at Sample / stage 4. Desk simulation proves layout and information load, not practitioner effectiveness.
 
-## Repository cleanup
+## Examination Notebook v0.3
 
-- Removed the rejected Verification Desk Card and wallpaper.
-- Removed superseded v1.1 intake bundles and obsolete standalone intake duplicates.
-- Removed committed Python bytecode and cache directories.
-- Expanded `.gitignore` and `.gitattributes`.
-- Added `.editorconfig`.
-- Repaired duplicate fields in the Work archetype.
-- Normalized the framework version to `19.0`.
+- Expanded the 12-page architecture sample into a 32-page, 5.5 x 8.5 production-oriented dummy.
+- Compressed structured interior material to five pages: records/policy note, case orientation, evidence-source index, combined tools/open-questions/findings index, and pause/resume.
+- Returned 26 of 31 interior pages to open work, or 83.9 percent of the interior.
+- Added mirrored gutter margins so the proof behaves more like a bound object.
+- Grouped light ruled, ruled-with-margin, dot-grid, and nearly open pages into deliberate runs so physical testing can compare writing behavior rather than sample novelty.
+- Rebuilt the field-test bundle as v0.3.
 
-## Validation and automation
+## Believe in the Badge production preflight
 
-- Added duplicate-key-aware YAML and front-matter checks.
-- Added physical-edition metadata validation.
-- Added version-alignment checks.
-- Added forbidden-file and repository-hygiene checks.
-- Added GitHub Actions production validation.
-- Added cleanup and environment-doctor scripts.
-- Updated build and development scripts to run hygiene validation first.
+- Converted the study from room-mockup confidence to production preflight.
+- Found a real production blocker: the current backdrop master is 1536 x 1024 pixels.
+- At the working 36 x 24 inch metal target, that source provides only about 42.7 pixels per inch.
+- Established a minimum photographic master of 5400 x 3600 pixels for that target, with 7200 x 4800 or higher preferred.
+- Set working directions of 36 x 24 floating metal and 30 x 20 archival paper and frame.
+- Documented temporary bleed, safe-area, reading-distance, reflection, edge, and physical-sample checks without pretending a vendor template has already been selected.
+- Reset the study from stage 4 to stage 3. A polished room mockup is not a physical or production-ready proof.
 
-## Public behavior
+## Preserved Until It Matters art-direction reset
 
-The update does not add filler works or announce internal brand strategy. It strengthens the systems already visible to visitors: Work, Editions, Journal, On the Anvil, Free Works, and the Release Desk.
+- Retired the teddy bear as the hero of the composition.
+- Kept the first study only as design history because it made one anecdotal object more memorable than the profession being honored.
+- Shifted the visual grammar toward custody over time: anonymous evidence, shelf geometry, labels, seals, and elapsed-time rhythm.
+- Preserved the line `Preservation gives truth time to catch up.` while stripping away generic crime-scene visual language.
+- Added a new direction study for the next full composition round.
 
-## v19.2 cleanup hotfix
+## What v20 intentionally does not do
 
-- Fixed invalid YAML quoting in the roadmap archetype that stopped GitHub Actions at the hygiene stage.
-- Removed five stale or rejected Work entries so the public Work archive contains only work that meets the current content model.
-- Removed `Keeper of the Krapola` from the active repository and added a regression guard preventing it from returning as public Work.
-- Kept `A Hash Is a Promise` and `The Quiet Work Behind the Case` in their more appropriate Journal form and completed their Journal type metadata.
-- Updated the GitHub Actions checkout and Python setup actions to their Node 24-compatible v6 lines.
-- Expanded the hygiene obsolete-file guard to reject the retired Work paths.
+- No new navigation system.
+- No new release-verification infrastructure.
+- No filler catalogue entries.
+- No purchase links before physical proof.
+- No claim that desk simulation equals practitioner field validation.
+- No claim that a 1536 x 1024 backdrop is suitable for a premium 36 x 24 wall edition.
 
-The framework remains v19.0; v19.2 identifies the cleanup hotfix applied to that baseline.
+## v19 foundation retained
 
-## v19.3 rendered-site validator hotfix
-
-- Corrected the rendered-site validator after the first complete v19.2 CI run exposed two validator false positives rather than site-render failures.
-- Treats HTML5's minimized `alt` attribute as present, preserving valid decorative-image handling after Hugo minification.
-- Stops treating a bare `}}` sequence as an unresolved Hugo template marker because valid JSON-LD routinely contains adjacent closing braces.
-- Continues to reject actual missing `alt` attributes, `{{` template openings, `ZgotmplZ`, `<no value>`, and `<nil>` render failures.
-- Added six regression tests and runs them in both the local production build and GitHub Actions before rendered-site validation.
-
-The framework remains v19.0; v19.3 is a validator-only hotfix and does not change public content or design.
-
-## v19.4 release-ledger portability hotfix
-
-- Corrected the final CI failure exposed by v19.3: Windows and Linux disagreed on the MIME type assigned to ZIP files by Python's host-dependent `mimetypes` registry.
-- Replaced OS MIME discovery with a canonical extension-to-media-type table.
-- Standardized generated ledger text on LF line endings.
-- Added release-ledger portability regression tests to the local production build and GitHub Actions.
-- Added a local build warning when rebuilding the ledger changes tracked release records.
-
-The framework remains v19.0; v19.4 is a reproducibility hotfix and does not change public content or design.
+The v19 series remains the stable technical foundation beneath this round: repository hygiene, deterministic release records, GitHub Actions, rendered-site validation, the Release Desk, the physical-edition state model, and the cleanup of rejected or stale public work all remain in place.

@@ -8,58 +8,72 @@ The examiner who thinks better with a pen in hand and wants a tactile place to m
 
 Useful structure without stealing writing space.
 
-Target approximately 15 percent guided structure and 85 percent open note space across the notebook.
+The v20 target is approximately 15 percent guided structure and 85 percent open note space across the interior.
 
-## Interior prototype
+## Field proof 0.3
 
-The first 5.5 x 8.5 inch proof contains:
+The current production-oriented dummy is:
 
-- cover direction
-- records and policy reminder
-- case orientation
-- evidence-source index
-- tool and version references
-- open questions
-- findings index
-- pause-and-resume page
-- ruled, margin, dot-grid, and nearly blank note-page treatments
+- 5.5 x 8.5 inches
+- 32 pages total
+- 1 cover + 31 interior pages
+- 5 structured interior pages
+- 26 open working pages
+- 83.9 percent open working space across the interior
+- mirrored gutter margins for a bound object
+
+Structured pages:
+
+1. records and policy reminder
+2. case orientation
+3. evidence-source index
+4. working index for tools, open questions, and finding references
+5. pause-and-resume page
+
+Working-page runs:
+
+- light ruled
+- ruled with margin
+- dot grid
+- nearly open
 
 Source file:
 
 - `source-assets/prototypes/examination-notebook-interior-prototype.pdf`
 
-The sample demonstrates architecture. It is not a proposed final page count or a case-use document.
+## Why 5.5 x 8.5 remains the current trim
 
-## Regular note pages
+The smaller format still provides enough room for ordinary technical notes in the digital proof and keeps the notebook portable enough for a field kit or crowded examination bench.
 
-Keep headers restrained:
+That is not a final production decision. A bound sample must prove that the inner gutter does not make the trim feel smaller than it looks on screen. If it does, 6 x 9 remains the next comparison size.
 
-- case identifier
-- date
-- evidence source
-- page number
+## Binding direction
 
-Do not turn every page into a form. The examiner must be able to draw, map, write longhand, make temporary connections, and use the page in an individual way.
+The v0.3 dummy uses mirrored inner margins so the page is no longer designed as a loose PDF.
 
-## Material questions
+The preferred physical test is a lay-flat or sewn/lay-flat-capable binding. The exact construction should be chosen after a printer or binder confirms practical page-count and stock constraints.
 
-- 5.5 x 8.5 versus 6 x 9 inch trim
-- line spacing and ruling treatment
-- mixed or separate note-page editions
-- paper weight, opacity, tooth, and pen response
-- lay-flat binding durability
-- cover texture and field-kit resistance
+## Paper questions
 
-## Records warning
+The next sample should compare:
 
-The inside cover should remind the user that handwritten examination notes may become agency or case records and must be stored, retained, disclosed, and disposed of according to applicable policy and law.
+- opacity and show-through
+- tooth with ballpoint, gel, rollerball, and pencil
+- feathering and dry time
+- hand comfort near the gutter
+- bulk at the final page count
 
 ## Failure conditions
 
-Reject the design if it becomes:
+Reject or revise the design if it becomes:
 
 - generic lined paper beneath a forensic cover
 - a workbook with too little room to think
 - a substitute for required digital case documentation
 - overloaded with branding
 - filled with decorative technical elements that interfere with writing
+- a page architecture that only works while the sheets are unbound
+
+## Next gate
+
+The architecture is mature enough for a bound physical sample. The next questions are material, binding, pen behavior, and whether practitioners want a mixed interior or a single ruling treatment.

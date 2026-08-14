@@ -5,19 +5,17 @@ param(
 $Base = "http://localhost:$Port"
 $Pages = @(
     "/",
-    "/works/",
-    "/works/believe-in-the-badge/",
-    "/editions/",
-    "/materials/",
-    "/releases/",
-    "/journal/",
     "/roadmap/",
     "/roadmap/bench-status-pad/",
     "/roadmap/examination-notebook/",
-    "/downloads/digital-forensics-intake-request/"
+    "/roadmap/believe-in-the-badge-edition/",
+    "/roadmap/preserved-until-it-matters/",
+    "/works/believe-in-the-badge/",
+    "/releases/",
+    "/materials/"
 )
 
-Write-Host "Opening Forge & Verse review pages from $Base" -ForegroundColor Cyan
+Write-Host "Opening Forge & Verse v20 review pages from $Base" -ForegroundColor Cyan
 foreach ($Page in $Pages) {
     Start-Process "$Base$Page"
 }

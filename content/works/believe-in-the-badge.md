@@ -10,7 +10,7 @@ audience: Officers and support professionals who carry the human weight of servi
 need: A reminder of compassion, resolve, and the people standing beside them
 moment: When a room needs a reminder that steadiness, compassion, and showing up are part of the job too.
 format: wall-edition
-format_label: Ornate wall edition study
+format_label: Wall edition in production preflight
 status: forging
 featured: true
 cover_style: watch
@@ -20,7 +20,7 @@ image_caption: Current composition study. Typography, contrast, and image are be
 rights: original
 related_study: /roadmap/believe-in-the-badge-edition/
 material_intent: Large-format metal or archival wall edition
-note: The writing and image are being tested as one composition. The current images remain studies while typography, reading distance, surface, and mounting are resolved.
+note: The 3:2 composition is now in production preflight. The current 1536 x 1024 backdrop is not sufficient for the working large-format targets, so a higher-resolution master is required before any physical sample is ordered.
 gallery:
 - image: /images/studies/believe-in-the-badge/wall-mockup.webp
   alt: Believe in the Badge composition shown as a floating metal wall edition in a dark professional room
@@ -37,19 +37,20 @@ edition:
   headline: The writing, image, and room have to become one object.
   intended_room: Personal offices, briefing rooms, and shared law-enforcement workspaces
   reading_distance: Close enough to read in full, strong enough to hold together across the room
-  edition_model: Physical format and edition model still under study
+  edition_model: >-
+    Working targets: 36 x 24 floating metal and 30 x 20 archival paper with frame; final model remains contingent on a high-resolution master and physical proof
   study_url: /roadmap/believe-in-the-badge-edition/
-  availability_note: No ordering link appears until a real physical sample resolves finish, scale, reflection, mounting, and reading distance.
+  availability_note: No ordering link appears until a higher-resolution master exists and a real physical sample resolves finish, scale, reflection, mounting, and reading distance.
   formats:
   - name: Floating metal panel
     status: Under evaluation
-    size_direction: Large format; final dimensions pending physical proof
+    size_direction: 36 x 24 in working target; final dimensions pending physical proof
     surface: Low-gloss or matte metal with deep blacks and restrained reflection
     mount: Concealed float mount with deliberate wall separation
     fit: Shared rooms where architectural presence supports the full composition
   - name: Archival paper and frame
     status: Under evaluation
-    size_direction: Reading-led scale with generous mat and frame proportion
+    size_direction: 30 x 20 in working target with generous mat and frame proportion
     surface: Archival paper with controlled contrast and low-glare presentation
     mount: Substantial dark frame; mat depth treated as part of the composition
     fit: Personal offices and quieter rooms where close reading matters most

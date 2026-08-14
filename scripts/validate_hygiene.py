@@ -127,12 +127,12 @@ def check_versions() -> None:
         fail(f"hugo.toml parse failed: {exc}")
         return
     version = str((config.get("params") or {}).get("frameworkVersion") or "")
-    if version != "19.0":
-        fail(f"hugo.toml frameworkVersion must be 19.0, found {version!r}")
+    if version != "20.0":
+        fail(f"hugo.toml frameworkVersion must be 20.0, found {version!r}")
     expected_headings = {
-        "README.md": "# Forge & Verse v19",
-        "ITERATION-NOTES.md": "# Forge & Verse v19",
-        "VALIDATION.md": "# Forge & Verse v19 Validation",
+        "README.md": "# Forge & Verse v20",
+        "ITERATION-NOTES.md": "# Forge & Verse v20",
+        "VALIDATION.md": "# Forge & Verse v20 Validation",
     }
     for name, heading in expected_headings.items():
         path = ROOT / name
@@ -170,6 +170,10 @@ def check_tracked_hygiene(files: list[str]) -> None:
         "static/downloads/digital-forensics-intake-request.sha256",
         "static/downloads/forge-and-verse-digital-forensics-intake-kit-v1.1.zip",
         "static/downloads/forge-and-verse-digital-forensics-intake-kit-v1.1.sha256",
+        "static/downloads/studio-proofs/bench-status-pad-field-test-v0.2",
+        "static/downloads/studio-proofs/examination-notebook-field-test-v0.2",
+        "static/downloads/studio-proofs/forge-and-verse-bench-status-pad-field-test-v0.2.zip",
+        "static/downloads/studio-proofs/forge-and-verse-examination-notebook-field-test-v0.2.zip",
         "content/works/keeper-of-the-krapola.md",
         "content/works/a-hash-is-a-promise.md",
         "content/works/every-item-has-a-story.md",
@@ -279,7 +283,7 @@ def check_foundation_files() -> None:
     )
     for item in required:
         if not (ROOT / item).exists():
-            fail(f"Missing v19 foundation file: {item}")
+            fail(f"Missing foundation file: {item}")
 
 
 def main() -> int:
@@ -302,7 +306,7 @@ def main() -> int:
         return 1
     print("Forge & Verse repository hygiene passed.")
     print(f"  Tracked files reviewed: {len(files)}")
-    print("  Framework version: 19.0")
+    print("  Framework version: 20.0")
     print("  Physical edition model: connected")
     return 0
 
