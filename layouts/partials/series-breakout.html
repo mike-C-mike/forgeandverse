@@ -1,0 +1,12 @@
+{{ with site.GetPage "/series" }}
+<section class="series-breakout" aria-labelledby="series-breakout-title">
+  <div class="wrap series-breakout-inner">
+    <div>
+      <p class="eyebrow">{{ .Params.journal_banner_eyebrow | default "Long-Form Series" }}</p>
+      <h2 id="series-breakout-title">{{ .Params.journal_banner_title | default .Title }}</h2>
+      {{ with .Params.journal_banner_summary }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <a class="button button-line" href="{{ .RelPermalink }}">{{ .Params.journal_banner_cta | default "Explore Series" }} <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+{{ end }}
