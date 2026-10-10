@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ $seriesKey := .Params.series_key }}
+{{ $entries := where (where site.RegularPages "Section" "journal") "Params.series" $seriesKey }}
+{{ $entries = sort $entries "Params.series_number" "asc" }}
+<header class="page-hero page-hero-compact series-detail-hero">
+  <div class="wrap page-hero-grid">
+    <div>
+      <p class="eyebrow">{{ .Params.eyebrow | default "Long-Form Series" }}</p>
+      <h1>{{ .Title }}</h1>
+    </div>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+<section class="section series-detail-intro">
+  <div class="wrap series-detail-intro-grid">
+    <div class="series-detail-facts">
+      {{ with .Params.status }}<span>{{ . | title }} series</span>{{ end }}
+      <span>{{ len $entries }} {{ if eq (len $entries) 1 }}essay{{ else }}essays{{ end }}</span>
+    </div>
+    <div class="prose">{{ .Content }}</div>
+  </div>
+</section>
+<section class="section series-entries">
+  <div class="wrap">
+    <header class="series-section-heading">
+      <div><p class="eyebrow">The Essays</p><h2>Explore the series</h2></div>
+      <p>Read in order, or start with the question that catches you.</p>
+    </header>
+    <div class="series-entry-list">
+      {{ range $entries }}
+      <a class="series-entry" href="{{ .RelPermalink }}">
+        <span class="series-entry-number">Essay {{ .Params.series_number }}</span>
+        <span class="series-entry-copy">
+          <strong>{{ .Title }}</strong>
+          <span>{{ .Params.summary }}</span>
+        </span>
+        <span class="series-entry-meta">{{ .ReadingTime }} min read</span>
+        <span class="series-entry-arrow" aria-hidden="true">→</span>
+      </a>
+      {{ else }}
+      <p>The journey has not begun yet.</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

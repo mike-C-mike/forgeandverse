@@ -1,0 +1,18 @@
+<article class="series-card">
+  {{ $seriesKey := .Params.series_key }}
+  {{ $entries := where (where site.RegularPages "Section" "journal") "Params.series" $seriesKey }}
+  <div>
+    <p class="eyebrow">{{ .Params.eyebrow | default "Series" }}</p>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ with .Params.summary }}
+      <p>{{ . }}</p>
+    {{ else }}
+      <p>{{ $.Description }}</p>
+    {{ end }}
+  </div>
+  <div class="series-card-footer">
+    <span>{{ len $entries }} {{ if eq (len $entries) 1 }}essay{{ else }}essays{{ end }}</span>
+    {{ with .Params.status }}<span>{{ . | title }}</span>{{ end }}
+  </div>
+  <a class="text-link" href="{{ .RelPermalink }}">Explore the series <span aria-hidden="true">→</span></a>
+</article>

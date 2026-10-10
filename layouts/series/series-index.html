@@ -1,0 +1,24 @@
+{{ define "main" }}
+<header class="page-hero page-hero-compact">
+  <div class="wrap page-hero-grid">
+    <div><p class="eyebrow">Long-form collections</p><h1>{{ .Title }}</h1></div>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+{{ with .Content }}
+<section class="section series-index-intro">
+  <div class="wrap"><div class="prose">{{ . }}</div></div>
+</section>
+{{ end }}
+<section class="section series-index">
+  <div class="wrap">
+    <div class="series-grid">
+      {{ range .Sections.ByWeight }}
+        {{ partial "series-card.html" . }}
+      {{ else }}
+        <p>No series have been published yet.</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

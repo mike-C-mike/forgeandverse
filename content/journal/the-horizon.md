@@ -5,7 +5,7 @@ summary: "A personal attempt to stop drifting, start steering, and explore what 
 status: "published"
 journal_kind: "essay"
 journal_kind_label: "Essay"
-series: "the-horizon-essays"
+series: "the-horizon"
 series_label: "The Horizon Essays"
 series_number: 1
 tags:
