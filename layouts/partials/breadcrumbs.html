@@ -1,14 +1,12 @@
-{{- $labels := dict "works" "Work" "downloads" "Free Works" "journal" "Journal" "disciplines" "Disciplines" "roadmap" "On the Anvil" "about" "Studio" "materials" "Materials" "search" "Search" -}}
+{{- $labels := dict "works" "Work" "downloads" "Free Works" "journal" "Journal" "series" "Series" "disciplines" "Disciplines" "roadmap" "On the Anvil" "editions" "Editions" "releases" "Release Desk" "about" "Studio" "materials" "Materials" "search" "Search" -}}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <div class="wrap breadcrumbs-inner">
     <a href="/">Forge &amp; Verse</a>
-    {{- if .IsSection -}}
-      <span aria-hidden="true">/</span><span aria-current="page">{{ index $labels .Section | default .Title }}</span>
-    {{- else if .Section -}}
-      <span aria-hidden="true">/</span><a href="/{{ .Section }}/">{{ index $labels .Section | default (.Section | title) }}</a>
-      <span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
-    {{- else -}}
-      <span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
-    {{- end }}
+    {{- range .Ancestors.Reverse -}}
+      {{- if not .IsHome -}}
+        <span aria-hidden="true">/</span><a href="{{ .RelPermalink }}">{{ index $labels .Section | default .Title }}</a>
+      {{- end -}}
+    {{- end -}}
+    <span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
   </div>
 </nav>

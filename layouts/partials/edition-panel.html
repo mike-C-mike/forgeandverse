@@ -52,6 +52,10 @@
         {{ if eq $edition.state "available" }}
           <h3>This edition is available.</h3>
           <p>{{ $edition.availability_note | default "Ordering details are provided by the production partner." }}</p>
+          <div class="edition-trust-signals" aria-label="Production trust signals">
+            {{ if $edition.proof_approved }}<span>Studio proof approved</span>{{ end }}
+            {{ with .Params.partner_name }}<span>Vetted production partner · {{ . }}</span>{{ end }}
+          </div>
         {{ else if eq $edition.state "resting" }}
           <h3>This edition is resting.</h3>
           <p>{{ $edition.availability_note | default "The work remains in the archive, but it is not currently offered." }}</p>
@@ -62,8 +66,9 @@
       </div>
       <div class="edition-availability-action">
         {{ if and (eq $edition.state "available") .Params.external_url }}
-          <a class="button button-dark" href="{{ .Params.external_url }}" rel="external noopener{{ if .Params.affiliate }} sponsored{{ end }}">{{ .Params.cta_label | default "View available edition" }}</a>
-          {{ with .Params.partner_name }}<small>Produced and fulfilled by {{ . }}.</small>{{ end }}
+          <a class="button button-dark" href="{{ .Params.external_url }}" rel="external noopener{{ if .Params.affiliate }} sponsored{{ end }}">{{ .Params.cta_label | default "Order this edition" }}</a>
+          {{ with .Params.partner_name }}<small>Checkout opens with {{ . }}, the specialist producing and fulfilling this edition.</small>{{ end }}
+          <a class="edition-ordering-link" href="/ordering-and-fulfillment/">How ordering &amp; fulfillment works</a>
         {{ else }}
           <a class="text-link" href="{{ $edition.study_url | default .Params.related_study | default "/roadmap/" }}">Follow the physical study <span aria-hidden="true">→</span></a>
         {{ end }}

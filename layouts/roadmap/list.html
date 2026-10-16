@@ -23,10 +23,13 @@
     <div class="archive-toolbar" aria-label="Filter current studies">
       <div class="archive-toolbar-buttons">
         <button type="button" class="is-active" data-filter="all" aria-pressed="true">All studies</button>
-        <button type="button" data-filter="proof" aria-pressed="false">Field proofs</button>
-        <button type="button" data-filter="examiner-bench" aria-pressed="false">Digital forensics</button>
-        <button type="button" data-filter="evidence-room" aria-pressed="false">Property &amp; evidence</button>
-        <button type="button" data-filter="editions" aria-pressed="false">Wall editions</button>
+        {{ if gt (len $proofs) 0 }}<button type="button" data-filter="proof" aria-pressed="false">Field proofs</button>{{ end }}
+        {{ range hugo.Data.disciplines }}
+          {{ $slug := .slug }}
+          {{ $matches := where $pages ".Params.discipline_slug" $slug }}
+          {{ if gt (len $matches) 0 }}<button type="button" data-filter="{{ $slug }}" aria-pressed="false">{{ .plain_name }}</button>{{ end }}
+        {{ end }}
+        {{ if gt (len $editions) 0 }}<button type="button" data-filter="editions" aria-pressed="false">Wall editions</button>{{ end }}
       </div>
       <p><span data-filter-count>{{ len $pages }}</span> studies</p>
     </div>

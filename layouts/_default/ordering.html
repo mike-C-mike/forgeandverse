@@ -1,0 +1,109 @@
+{{ define "main" }}
+<header class="ordering-hero">
+  <div class="wrap ordering-hero-grid">
+    <div>
+      <p class="eyebrow">Ordering &amp; fulfillment</p>
+      <h1>The object determines the maker.</h1>
+    </div>
+    <div>
+      <p>{{ .Description }}</p>
+      <a class="text-link text-link-light" href="/materials/">See how material decisions are made <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="ordering-flow" aria-label="How a physical work becomes available">
+  <div class="wrap ordering-flow-grid">
+    <article><span>01</span><strong>Design</strong><p>The work is developed around a real use, room, or professional moment.</p></article>
+    <article><span>02</span><strong>Proof</strong><p>A real sample is ordered in the proposed material, size, finish, and construction.</p></article>
+    <article><span>03</span><strong>Approve</strong><p>The studio handles and reviews the object before that configuration is presented as approved.</p></article>
+    <article><span>04</span><strong>Partner fulfills</strong><p>When available, ordering moves to the vetted specialist that actually makes and ships the object.</p></article>
+  </div>
+</section>
+
+<section class="section ordering-responsibility">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">A deliberate split</p><h2>Design responsibility stays with the studio. Transaction responsibility stays with the fulfiller.</h2></div>
+      <p>Keeping those roles clear lets Forge &amp; Verse qualify the right manufacturer for each object without becoming a warehouse, shipping operation, or generic merchandise catalog.</p>
+    </div>
+    <div class="ordering-responsibility-grid">
+      <article>
+        <p class="eyebrow">Forge &amp; Verse</p>
+        <h3>Owns the work and the specification.</h3>
+        <ul>
+          <li>Design and production direction</li>
+          <li>Material, size, finish, and construction decisions</li>
+          <li>Physical proof review and approval</li>
+          <li>Accurate product photography and studio notes</li>
+          <li>Quality concerns about whether the object matches the approved work</li>
+        </ul>
+      </article>
+      <article>
+        <p class="eyebrow">Production partner</p>
+        <h3>Owns the transaction and fulfillment.</h3>
+        <ul>
+          <li>Secure checkout and payment</li>
+          <li>Applicable taxes</li>
+          <li>Manufacturing</li>
+          <li>Shipping and order status</li>
+          <li>Returns and transaction-specific customer service</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="ordering-checkout-band">
+  <div class="wrap ordering-checkout-grid">
+    <div>
+      <p class="eyebrow">External checkout, by design</p>
+      <h2>You will know where you are ordering before you leave Forge &amp; Verse.</h2>
+    </div>
+    <div>
+      <p>Available product pages identify the specialist production partner and make it clear that checkout opens on that partner's platform. Forge &amp; Verse does not disguise an outside transaction as an internal cart.</p>
+      <p>That tradeoff is intentional: the goal is to send the approved work to the manufacturer best equipped to make it, not to force every object through one fulfillment system for the sake of a uniform checkout.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section ordering-proof">
+  <div class="wrap ordering-proof-grid">
+    <div>
+      <p class="eyebrow">Studio proof approved</p>
+      <h2>A badge that has to be earned physically.</h2>
+      <p>Forge &amp; Verse uses this language only after the intended production configuration has been ordered, handled, and reviewed as a real object. A render, mockup, or vendor preview is not a physical proof.</p>
+    </div>
+    <div class="ordering-proof-card">
+      <span>What gets reviewed</span>
+      <ul>
+        <li>Print and color behavior</li>
+        <li>Surface and glare</li>
+        <li>Reading distance and usable scale</li>
+        <li>Paper, binding, edge, mount, or construction</li>
+        <li>Packaging and arrival condition where relevant</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section ordering-content">
+  <div class="wrap ordering-content-grid">
+    <p class="eyebrow">The operating model</p>
+    <article class="prose prose-work">{{ .Content }}</article>
+  </div>
+</section>
+
+<section class="ordering-close">
+  <div class="wrap ordering-close-grid">
+    <div><p class="eyebrow">See the work take shape</p><h2>The proof is part of the design process.</h2></div>
+    <div>
+      <p>Material studies and edition states remain visible while physical work is being resolved.</p>
+      <div class="ordering-close-links">
+        <a class="text-link text-link-light" href="/editions/">Browse physical editions <span aria-hidden="true">→</span></a>
+        <a class="text-link text-link-light" href="/roadmap/">Follow work on the anvil <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
