@@ -4,30 +4,18 @@ description: "How Forge & Verse qualifies physical products and works with speci
 layout: "ordering"
 ---
 
-Forge & Verse is a design studio, not a warehouse.
+## Before you order
 
-Physical works are produced by specialist partners chosen for the needs of the object rather than forced through one generic manufacturer. A wall edition, notebook, tear-off pad, or future object may therefore be made by different partners.
+Every available physical-work page identifies the production partner, the approved configuration, and the current edition state before the order link. If a work is still being tested, Forge & Verse does not show a purchase link.
 
-## What Forge & Verse does
+## If there is a problem with the order
 
-Forge & Verse creates the work, defines the production specification, orders and reviews physical proofs, and approves the configuration that appears on the site.
+For billing, shipping, delivery status, returns, or another transaction-specific issue, contact the production partner shown on the work page. They hold the order information and are the fastest source for transaction support.
 
-When a product page says **Studio proof approved**, that exact production direction has been physically handled and reviewed before it is offered publicly.
+If the physical object appears materially different from the Forge & Verse design or approved production specification, Forge & Verse wants to know. Production quality remains part of the studio's responsibility even when fulfillment is handled elsewhere.
 
-## What the production partner does
+## Why there is no Forge & Verse warehouse
 
-For partner-fulfilled works, the production partner handles the transaction after you select **Order this edition**. Their checkout handles payment, applicable taxes, production, shipping, order status, returns, and transaction-specific customer service.
+Carrying inventory would not make the object better. It would move studio time away from design, testing, writing, and quality review and into storage, packing, shipping, and returns.
 
-The product page identifies the production partner before you leave Forge & Verse.
-
-## Why the checkout may open somewhere else
-
-Different objects need different equipment, materials, and manufacturing expertise. Forge & Verse would rather send a customer to the vetted specialist making the approved object than carry inventory or compromise the work to keep every checkout under one roof.
-
-External checkout is therefore intentional, not a missing part of the site.
-
-## Quality questions
-
-If an order has a billing, shipping, delivery, or return problem, the production partner is the fastest source for order-specific support.
-
-If the physical object appears materially different from the Forge & Verse design or production specification, Forge & Verse wants to know. Production quality remains part of the studio's responsibility even when fulfillment is handled elsewhere.
+The studio instead keeps responsibility for the decisions that shape the work and uses vetted production specialists for the logistics they are built to handle.
