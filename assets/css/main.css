@@ -2710,3 +2710,12 @@ body.lightbox-open { overflow: hidden; }
   .ordering-flow article { min-height: 0; }
   .ordering-flow article > strong { margin-top: 1.5rem; padding-top: 0; }
 }
+
+
+.edition-index-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.4rem;
+  margin-top: .9rem;
+}
+.edition-index-hero-links .text-link { margin-top: 0; }
