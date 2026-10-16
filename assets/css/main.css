@@ -2515,3 +2515,26 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 820px) {
   .production-philosophy-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Growth foundation: interaction accessibility */
+.nav-toggle,
+.archive-toolbar button,
+.search-results-head button,
+.release-ledger-hash button,
+.field-proof-ledger-hash button {
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
