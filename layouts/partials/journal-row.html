@@ -1,6 +1,6 @@
-<a class="journal-row" href="{{ .RelPermalink }}" data-filter-item data-filter-values="{{ .Params.journal_kind }} {{ .Params.discipline }}">
+<a class="journal-row" href="{{ .RelPermalink }}" data-filter-item data-filter-values="{{ .Params.journal_kind }} {{ .Params.discipline }}{{ if .Params.series }} series {{ .Params.series }}{{ end }}">
   <span class="journal-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-  <span class="journal-kind">{{ .Params.journal_kind_label | default "Journal" }}</span>
+  <span class="journal-kind">{{ if .Params.series }}{{ .Params.series_label | default "Series" }}{{ else }}{{ .Params.journal_kind_label | default "Journal" }}{{ end }}</span>
   <span class="journal-title">{{ .Title }}</span>
   <span class="journal-summary">{{ .Params.summary | default .Summary }}</span>
   <span class="journal-read">{{ .ReadingTime }} min</span>
