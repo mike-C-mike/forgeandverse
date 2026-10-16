@@ -1,6 +1,7 @@
 ---
 title: "Ordering & Fulfillment"
 description: "How Forge & Verse qualifies physical products and works with specialist production partners."
+layout: "ordering"
 ---
 
 Forge & Verse is a design studio, not a warehouse.
