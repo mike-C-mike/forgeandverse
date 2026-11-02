@@ -36,6 +36,19 @@
   {{- end -}}
 {{- end -}}
 
+{{- with site.GetPage "/collection" -}}
+  {{- $items = $items | append (dict
+    "title" .Title
+    "url" .RelPermalink
+    "summary" (.Description | default (.Summary | plainify))
+    "body" (.Plain | plainify | truncate 900)
+    "kind" "Studio collection"
+    "discipline" ""
+    "journalKind" ""
+    "tags" (slice "collection" "studio")
+  ) -}}
+{{- end -}}
+
 {{- with site.GetPage "/disciplines" -}}
   {{- range .Pages -}}
     {{- $items = $items | append (dict
