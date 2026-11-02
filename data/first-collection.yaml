@@ -1,0 +1,135 @@
+- slug: examiner-bench
+  name: The Examiner's Bench
+  plain_name: Digital Forensics
+  line: For the people who recover what others overlook.
+  items:
+  - title: Digital Forensics Intake Kit
+    role: Open release
+    format: Free download
+    state: released
+    state_label: Released
+    url: /downloads/digital-forensics-intake-request/
+    action: View the release
+    note: A local-first intake package for scoping requests before an examination begins.
+  - title: Bench Status Pad
+    role: Working object
+    format: 4 x 6 tear-away pad
+    state: field-proof
+    state_label: Field proof
+    url: /roadmap/bench-status-pad/
+    action: Open the study
+    note: A continuity card for restoring active examination context after an interruption.
+  - title: Examination Notebook
+    role: Desk object
+    format: 5.5 x 8.5 notebook
+    state: field-proof
+    state_label: Field proof
+    url: /roadmap/examination-notebook/
+    action: Open the study
+    note: A lightly structured notebook that leaves most of the interior to actual thinking.
+  - title: A Hash Is a Promise
+    role: Wall edition
+    format: Mounted edition
+    state: queued
+    state_label: In the queue
+    note: A wall piece about verification, integrity, and being able to stand behind what happened.
+
+- slug: evidence-room
+  name: The Evidence Room
+  plain_name: Property & Evidence
+  line: For the people who give evidence a long memory.
+  items:
+  - title: Evidence Intake Check Card
+    role: Open release
+    format: Printable reference
+    state: in-studio
+    state_label: In the studio
+    url: /roadmap/evidence-intake-check-card/
+    action: Open the study
+    note: A local-policy-aware intake review card for catching missing context before an item disappears into storage.
+  - title: Custody Status Pad
+    role: Working object
+    format: Tear-away desk pad
+    state: in-studio
+    state_label: In the studio
+    url: /roadmap/custody-status-pad/
+    action: Open the study
+    note: A continuity pad for the human work around pending releases, transfers, holds, and follow-up.
+  - title: Evidence Room Working Ledger
+    role: Desk object
+    format: Bound working notebook
+    state: in-studio
+    state_label: In the studio
+    url: /roadmap/evidence-room-working-ledger/
+    action: Open the study
+    note: A notebook for inventories, discrepancies, destruction projects, vendor issues, and operational follow-through.
+  - title: Preserved Until It Matters
+    role: Wall edition
+    format: Mounted edition
+    state: in-studio
+    state_label: In the studio
+    url: /roadmap/preserved-until-it-matters/
+    action: Open the study
+    note: A wall study about patience, custody, and the long memory of evidence.
+
+- slug: watch
+  name: The Watch
+  plain_name: Law Enforcement & Support
+  line: For the people who keep showing up.
+  items:
+  - title: Shift Handoff Sheet
+    role: Open release
+    format: Printable handoff sheet
+    state: queued
+    state_label: In the queue
+    note: A role-neutral handoff sheet for unfinished work, pending decisions, and what the next person needs to know.
+  - title: Watch Notes Pad
+    role: Working object
+    format: Tear-away desk pad
+    state: queued
+    state_label: In the queue
+    note: A simple operational pad built around now, next, waiting on, tell someone, and before I leave.
+  - title: The Watch Field Notebook
+    role: Desk object
+    format: Field notebook
+    state: queued
+    state_label: In the queue
+    note: A durable working notebook for names, timelines, sketches, follow-up, and shift-level thinking.
+  - title: Believe in the Badge
+    role: Wall edition
+    format: Mounted edition
+    state: in-studio
+    state_label: In the studio
+    url: /works/believe-in-the-badge/
+    action: View the work
+    note: A wall edition about compassion, resolve, and the human weight of showing up.
+
+- slug: signal
+  name: The Signal
+  plain_name: Cybersecurity
+  line: For the people standing between order and outage.
+  items:
+  - title: The First 30 Minutes
+    role: Open release
+    format: Incident-response card
+    state: queued
+    state_label: In the queue
+    note: A first-response thinking aid for preserving context, establishing ownership, and making the next decision visible.
+  - title: Incident Status Pad
+    role: Working object
+    format: Tear-away desk pad
+    state: queued
+    state_label: In the queue
+    note: A compact incident-state card for current condition, containment, owner, checkpoint, and do-not-change context.
+  - title: Incident & Recovery Notebook
+    role: Desk object
+    format: Bound working notebook
+    state: queued
+    state_label: In the queue
+    note: A notebook for timelines, decisions, affected systems, recovery notes, and the questions that survive the first hour.
+  - title: The Quiet Day
+    role: Wall edition
+    format: Mounted edition
+    state: queued
+    state_label: In the queue
+    note: "A wall piece about the strange success condition of defensive work: nothing happened today because somebody prepared."

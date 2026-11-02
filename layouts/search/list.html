@@ -36,6 +36,26 @@
   {{- end -}}
 {{- end -}}
 
+{{- with site.GetPage "/collection" -}}
+  {{- $collectionText := "" -}}
+  {{- range index hugo.Data "first-collection" -}}
+    {{- $collectionText = printf "%s %s %s" $collectionText .name .plain_name -}}
+    {{- range .items -}}
+      {{- $collectionText = printf "%s %s %s %s %s" $collectionText .title .role .format .state_label -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $items = $items | append (dict
+    "title" .Title
+    "url" .RelPermalink
+    "summary" (.Description | default (.Summary | plainify))
+    "body" $collectionText
+    "kind" "Studio collection"
+    "discipline" ""
+    "journalKind" ""
+    "tags" (slice "collection" "studio")
+  ) -}}
+{{- end -}}
+
 {{- with site.GetPage "/disciplines" -}}
   {{- range .Pages -}}
     {{- $items = $items | append (dict

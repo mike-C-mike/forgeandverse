@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{ $collection := index hugo.Data "first-collection" }}
+{{ $active := 0 }}
+{{ range $collection }}{{ range .items }}{{ if ne .state "queued" }}{{ $active = add $active 1 }}{{ end }}{{ end }}{{ end }}
+<header class="collection-hero">
+  <div class="wrap collection-hero-grid">
+    <div>
+      <p class="eyebrow">The first collection</p>
+      <h1>Four rooms.<br>Four forms.</h1>
+    </div>
+    <div>
+      <p>{{ .Description }}</p>
+      <a class="text-link text-link-light" href="/roadmap/">See what is actively on the anvil <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="collection-ledger" aria-label="Collection overview">
+  <div class="wrap collection-ledger-grid">
+    <div><span>16</span><p>Collection works</p></div>
+    <div><span>4</span><p>Professional rooms</p></div>
+    <div><span>4</span><p>Forms in each room</p></div>
+    <div><span>{{ $active }}</span><p>Released or in active study</p></div>
+  </div>
+</section>
+
+<section class="section collection-principle">
+  <div class="wrap collection-principle-grid">
+    <p class="eyebrow">The shape of a room</p>
+    <div>
+      <h2>Useful first. Physical when the object earns it.</h2>
+      <article class="prose-inline">{{ .Content }}</article>
+    </div>
+  </div>
+</section>
+
+<section class="collection-form-key">
+  <div class="wrap collection-form-key-grid">
+    <article><span>01</span><strong>Open release</strong><p>A useful file someone can put to work without buying anything.</p></article>
+    <article><span>02</span><strong>Working object</strong><p>A small physical tool built around a recurring professional moment.</p></article>
+    <article><span>03</span><strong>Desk object</strong><p>A more substantial notebook or object that earns regular space in the work.</p></article>
+    <article><span>04</span><strong>Wall edition</strong><p>A piece that carries the meaning of the profession beyond the immediate task.</p></article>
+  </div>
+</section>
+
+{{ range $index, $room := $collection }}
+<section class="section collection-room collection-room-{{ $room.slug }}" id="{{ $room.slug }}">
+  <div class="wrap">
+    <header class="collection-room-head">
+      <div>
+        <p class="eyebrow">0{{ add $index 1 }} · {{ $room.plain_name }}</p>
+        <h2>{{ $room.name }}</h2>
+      </div>
+      <p>{{ $room.line }}</p>
+    </header>
+    <div class="collection-work-grid">
+      {{ range $slot, $item := $room.items }}
+      <article class="collection-work-card collection-state-{{ $item.state }}">
+        <div class="collection-work-top">
+          <span>0{{ add $slot 1 }} · {{ $item.role }}</span>
+          <span class="collection-state">{{ $item.state_label }}</span>
+        </div>
+        <div class="collection-work-copy">
+          <p class="collection-format">{{ $item.format }}</p>
+          <h3>{{ $item.title }}</h3>
+          <p>{{ $item.note }}</p>
+        </div>
+        {{ with $item.url }}
+        <a class="collection-work-action" href="{{ . }}">{{ $item.action | default "Open" }} <span aria-hidden="true">→</span></a>
+        {{ else }}
+        <span class="collection-work-queued">Not yet on the anvil</span>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="collection-close">
+  <div class="wrap collection-close-grid">
+    <div><p class="eyebrow">The rule</p><h2>A concept becomes a study only when there is something real to test.</h2></div>
+    <div><p>The collection map can show the direction of travel. On the Anvil stays narrower: only work with a defined person, need, form, and release question belongs there.</p><a class="text-link text-link-light" href="/roadmap/">Open On the Anvil <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+{{ end }}
