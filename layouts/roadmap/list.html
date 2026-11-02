@@ -2,7 +2,8 @@
 {{ $pages := .Pages.ByWeight }}
 {{ $proofs := where $pages ".Params.proof_available" true }}
 {{ $editions := where $pages ".Params.release_path" "editions" }}
-{{ $bench := where $pages ".Params.discipline_slug" "examiner-bench" }}
+{{ $activeRooms := 0 }}
+{{ range hugo.Data.disciplines }}{{ $slug := .slug }}{{ $matches := where $pages ".Params.discipline_slug" $slug }}{{ if gt (len $matches) 0 }}{{ $activeRooms = add $activeRooms 1 }}{{ end }}{{ end }}
 <header class="page-hero page-hero-compact page-hero-dark">
   <div class="wrap page-hero-grid">
     <div><p class="eyebrow">Inside the studio</p><h1>{{ .Title }}</h1></div>
@@ -14,7 +15,13 @@
     <div><span>{{ len $pages }}</span><p>Active studies</p></div>
     <div><span>{{ len $proofs }}</span><p>Printable field proofs</p></div>
     <div><span>{{ len $editions }}</span><p>Wall-edition studies</p></div>
-    <div><span>{{ len $bench }}</span><p>From the Examiner's Bench</p></div>
+    <div><span>{{ $activeRooms }}</span><p>Professional rooms active</p></div>
+  </div>
+</section>
+<section class="collection-roadmap-callout">
+  <div class="wrap collection-roadmap-callout-grid">
+    <p><strong>The anvil is deliberately narrower than the collection.</strong> See the full sixteen-work map, including ideas still waiting for a real design question.</p>
+    <a class="button button-dark" href="/collection/">Open the first collection</a>
   </div>
 </section>
 <section class="section study-index-section" data-filter-scope data-filter-query="view">
