@@ -130,6 +130,20 @@ def main() -> int:
                     else:
                         require(entry, ("label", "type", "url", "description"), path)
                         check_static_reference(entry.get("url"), "proof file", path)
+            if data.get("proof_order_ready"):
+                proof_order = data.get("proof_order")
+                if not isinstance(proof_order, dict):
+                    fail(f"Proof-order-ready study needs proof_order mapping: {path.relative_to(ROOT)}")
+                else:
+                    require(proof_order, ("version", "target", "file", "file_label", "first_test", "test_focus"), path)
+                    focus = proof_order.get("test_focus") or []
+                    if not isinstance(focus, list) or len(focus) < 3:
+                        fail(f"Proof order needs at least three test-focus items: {path.relative_to(ROOT)}")
+                    proof_source = ROOT / str(proof_order.get("file") or "")
+                    if not proof_source.exists():
+                        fail(f"Proof order source file is missing: {proof_source.relative_to(ROOT)}")
+                    elif proof_source.suffix.lower() == ".pdf" and not proof_source.read_bytes().startswith(b"%PDF"):
+                        fail(f"Proof order PDF signature is invalid: {proof_source.relative_to(ROOT)}")
         discipline = data.get("discipline") or data.get("discipline_slug")
         if discipline and discipline not in discipline_slugs: fail(f"Unknown discipline '{discipline}' in {path.relative_to(ROOT)}")
         release_path = data.get("release_path")
