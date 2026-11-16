@@ -68,31 +68,42 @@ For every pad:
 
 ## Bound notebooks
 
-Working first-choice proof vendor: Printivity Wire-O or Spiral Bound Booklets.
+Working first-choice proof vendor: HelloPrint Wire-O Booklets.
+
+Why this is the first-proof path:
+- 5.5 x 8.5 is a standard offered format.
+- Wire-O supports one-copy orders.
+- 36 total pages is a standard selectable page count.
+- Writable/uncoated paper options are available.
+- Wire-O lies flat, which is the main physical behavior these notebooks need to prove.
+- The vendor sends a digital proof before production.
+
+Current vendor entry:
+https://www.helloprint.com/en-us/booklet-printing
 
 Current file geometry:
 - finished trim: 5.5 x 8.5 inches;
 - submitted production file: 5.75 x 8.75 inches to provide 0.125 inch bleed on all four edges;
 - single pages in reading order;
-- critical content kept away from the binding edge;
-- full cover and interior contained in one PDF.
-
-Current vendor guidance:
-https://www.printivity.com/insights/how-to-make-a-spiral-bound-booklet
-https://www.printivity.com/help-center/file-design-questions
-
-Before paying for production, use Printivity's complimentary file check / digital proof process. Ask for or quote the smallest practical Wire-O or spiral sample; a hardcopy proof is preferable when available for the configured order.
+- mirrored binding-side gutters on odd and even pages;
+- at least approximately 0.595 inch from finished trim to critical content on the wire side, exceeding the vendor's published 11 mm wire-side safety guidance;
+- full cover and interior contained in one 36-page PDF.
 
 ### First notebook order
 
+Order **one copy of each design** before considering a batch.
+
 Start with:
 - 5.5 x 8.5 finished size;
-- Wire-O if available at a sensible proof cost; spiral/coil is acceptable if it gives a better low-quantity test;
-- uncoated writable interior;
-- dark durable cover;
-- no premium coating on interior pages.
+- Wire-O binding;
+- writable/uncoated interior stock;
+- dark cover with no finishing for the first proof;
+- 36 total pages;
+- standard production speed.
 
-The first goal is not luxury. It is to learn whether the trim, binding, paper, page mix, and cover construction deserve another round.
+The first goal is not luxury. It is to learn whether the trim, wire, paper, page mix, and cover construction deserve another round.
+
+Printivity remains a useful secondary production comparison, especially if its paper or binding quality ultimately proves better. Its current prepress guidance also calls for 0.125 inch bleed and generous binding-side safety, so the same proof geometry is intentionally portable rather than vendor-locked.
 
 ### Notebook acceptance test
 
