@@ -14,14 +14,17 @@ format_label: Wall edition in physical proof
 status: forging
 featured: true
 cover_style: watch
-image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
-image_alt: A typography-led Believe in the Badge material proof on a dark field with restrained shield geometry
-image_caption: Current material-proof direction. The writing is being tested without the earlier low-resolution photographic dependency.
+image: /images/studies/believe-in-the-badge/composition-study.webp
+image_alt: Original Believe in the Badge photographic composition study with officers and the writing arranged across the artwork
+image_caption: Original photographic design direction, preserved for comparison. This screen-resolution study is not a large-format production master; a separate typography-led 12 x 8 material proof is ready to test.
 rights: original
 related_study: /roadmap/believe-in-the-badge-edition/
 material_intent: Large-format metal or archival wall edition
 note: A 12 x 8 typography-led material proof is now ready to order. The earlier photo-backed composition remains design history; final scale and whether a photographic edition returns will be decided only after the first physical proof.
 gallery:
+- image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
+  alt: The current 12 x 8 typography-led physical material proof, without the earlier photographic backdrop
+  caption: Print-test direction. This vector-led alternate exists because the original photo is not yet high resolution enough for a large metal edition.
 - image: /images/studies/believe-in-the-badge/wall-mockup.webp
   alt: Believe in the Badge composition shown as a floating metal wall edition in a dark professional room
   caption: Scale study for a floating metal edition. The goal is presence without turning the room into a recruitment display.
