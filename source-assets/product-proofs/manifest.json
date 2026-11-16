@@ -1,0 +1,65 @@
+{
+  "generated": "2026-11-15",
+  "items": [
+    {
+      "file": "evidence-custody-status-pad-v0.1-5x7-bleed.pdf",
+      "bytes": 2606,
+      "sha256": "5ba1cfa4f2d4dfc27f4d34829fdf616eeb0bfebe04371ed14c717f2f6d48915d"
+    },
+    {
+      "file": "evidence-preserved-until-it-matters-proof-12x8.pdf",
+      "bytes": 2702,
+      "sha256": "3140223f336ba1d62b05ad9df633645f4ae54cd04e1809f3f766dd44467c4e9e"
+    },
+    {
+      "file": "evidence-working-ledger-v0.1-5.5x8.5.pdf",
+      "bytes": 163086,
+      "sha256": "59aaaf8455616f9a6f7e49704b0f7660419db9620cde5b36062ef2a66d79fffc"
+    },
+    {
+      "file": "examiner-a-hash-is-a-promise-proof-8x12.pdf",
+      "bytes": 2614,
+      "sha256": "04b02ad11901d74d7a4aac0c471340bc3bc0a28fa08492ca97d9ad1db437441b"
+    },
+    {
+      "file": "examiner-bench-status-pad-v0.4-4x6-bleed.pdf",
+      "bytes": 2548,
+      "sha256": "f03fb7d7aabf036418a26d9eac2ec71e3d3023d3d0f3c35f78d0db483cf2cab0"
+    },
+    {
+      "file": "examiner-examination-notebook-v0.4-5.5x8.5.pdf",
+      "bytes": 163404,
+      "sha256": "38f28cb02c8e89abee2e19c4dbcf84cc31079cbecdf0b2f967e285c93dd1760f"
+    },
+    {
+      "file": "signal-incident-recovery-notebook-v0.1-5.5x8.5.pdf",
+      "bytes": 163565,
+      "sha256": "14698495c754b02949e3cf253882b3e3c06093dc83b82ec1bc77e898dfc3b297"
+    },
+    {
+      "file": "signal-incident-status-pad-v0.1-5x7-bleed.pdf",
+      "bytes": 2578,
+      "sha256": "aa77826491dee6c7fe71f01efb0a07fc7d02a01146b7c718fa0e50fe64a4dacc"
+    },
+    {
+      "file": "signal-the-quiet-day-proof-12x8.pdf",
+      "bytes": 4501,
+      "sha256": "e551b19908d1aad634f45d34afc82e0f77b8d5af7bc72226e561b5bf99c7b588"
+    },
+    {
+      "file": "watch-believe-in-the-badge-proof-12x8.pdf",
+      "bytes": 2471,
+      "sha256": "b8965cf02456d01cd1871ed7953640ac1b6f552b4e1933888eefbe696ca50910"
+    },
+    {
+      "file": "watch-field-notebook-v0.1-5.5x8.5.pdf",
+      "bytes": 162802,
+      "sha256": "85fc7df77bcf6d4b0dfed5e3303eeeddae3077286a43c9d418f321c48f945888"
+    },
+    {
+      "file": "watch-notes-pad-v0.1-5x7-bleed.pdf",
+      "bytes": 2460,
+      "sha256": "b95bee66764546e4be31b525294ec1e9e2a753b360c64f583d92fd844aa0171b"
+    }
+  ]
+}
