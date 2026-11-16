@@ -10,17 +10,17 @@ audience: Officers and support professionals who carry the human weight of servi
 need: A reminder of compassion, resolve, and the people standing beside them
 moment: When a room needs a reminder that steadiness, compassion, and showing up are part of the job too.
 format: wall-edition
-format_label: Wall edition in production preflight
+format_label: Wall edition in physical proof
 status: forging
 featured: true
 cover_style: watch
-image: /images/studies/believe-in-the-badge/composition-study.webp
-image_alt: Believe in the Badge composition study with the written piece placed over a restrained law-enforcement backdrop
-image_caption: Current composition study. Typography, contrast, and image are being tested as one wall piece.
+image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
+image_alt: A typography-led Believe in the Badge material proof on a dark field with restrained shield geometry
+image_caption: Current material-proof direction. The writing is being tested without the earlier low-resolution photographic dependency.
 rights: original
 related_study: /roadmap/believe-in-the-badge-edition/
 material_intent: Large-format metal or archival wall edition
-note: The 3:2 composition is now in production preflight. The current 1536 x 1024 backdrop is not sufficient for the working large-format targets, so a higher-resolution master is required before any physical sample is ordered.
+note: A 12 x 8 typography-led material proof is now ready to order. The earlier photo-backed composition remains design history; final scale and whether a photographic edition returns will be decided only after the first physical proof.
 gallery:
 - image: /images/studies/believe-in-the-badge/wall-mockup.webp
   alt: Believe in the Badge composition shown as a floating metal wall edition in a dark professional room
@@ -38,9 +38,9 @@ edition:
   intended_room: Personal offices, briefing rooms, and shared law-enforcement workspaces
   reading_distance: Close enough to read in full, strong enough to hold together across the room
   edition_model: >-
-    Working targets: 36 x 24 floating metal and 30 x 20 archival paper with frame; final model remains contingent on a high-resolution master and physical proof
+    First physical gate: 12 x 8 typography-led material proof. Earlier 36 x 24 floating-metal and 30 x 20 framed-paper studies remain scale references; final model waits on physical approval.
   study_url: /roadmap/believe-in-the-badge-edition/
-  availability_note: No ordering link appears until a higher-resolution master exists and a real physical sample resolves finish, scale, reflection, mounting, and reading distance.
+  availability_note: No public ordering link appears until the 12 x 8 material proof is physically reviewed and the final finish, scale, reflection, mounting, and reading distance are resolved.
   formats:
   - name: Floating metal panel
     status: Under evaluation
