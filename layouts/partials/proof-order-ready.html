@@ -1,0 +1,25 @@
+{{- if .Params.proof_order_ready -}}
+{{- $proof := .Params.proof_order -}}
+<section class="proof-order-ready">
+  <div class="wrap proof-order-ready-grid">
+    <div>
+      <p class="eyebrow">Production file prepared</p>
+      <h2>Ready for the first physical proof.</h2>
+      <p>This is the point where another screen review stops being useful. The production file exists; the next decision belongs to paper, binding, surface, scale, and actual hands.</p>
+    </div>
+    <div class="proof-order-spec">
+      <div><span>Proof version</span><strong>{{ $proof.version }}</strong></div>
+      <div><span>Physical target</span><strong>{{ $proof.target }}</strong></div>
+      <div><span>Production file</span><strong>{{ $proof.file_label | default "Prepared in the studio source archive" }}</strong></div>
+      {{ with $proof.first_test }}<div><span>First test</span><strong>{{ . }}</strong></div>{{ end }}
+      {{ with $proof.test_focus }}
+      <div class="proof-order-focus">
+        <span>What the proof must answer</span>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{ end }}
+      <p class="proof-order-warning">Production-ready does not mean edition-approved. No public order link appears until a real sample has been handled and approved by the studio.</p>
+    </div>
+  </div>
+</section>
+{{- end -}}
