@@ -8,7 +8,7 @@
       {{ end }}
     </div>
     <div class="study-card-copy">
-      <div class="study-card-meta"><span>{{ .Params.stage }}</span><span>{{ partial "discipline-label.html" .Params.discipline_slug }}</span>{{ if .Params.proof_available }}<span class="study-proof-badge">Field proof</span>{{ end }}</div>{{ with .Params.moment }}<p class="study-card-moment"><strong>When</strong> {{ . }}</p>{{ end }}
+      <div class="study-card-meta"><span>{{ .Params.stage }}</span><span>{{ partial "discipline-label.html" .Params.discipline_slug }}</span>{{ if .Params.proof_available }}<span class="study-proof-badge">Field proof</span>{{ end }}{{ if .Params.proof_order_ready }}<span class="study-order-badge">Proof order ready</span>{{ end }}</div>{{ with .Params.moment }}<p class="study-card-moment"><strong>When</strong> {{ . }}</p>{{ end }}
       <h3>{{ .Title }}</h3>
       <p>{{ .Params.summary }}</p>
       <span class="study-card-action">Open the study <b aria-hidden="true">→</b></span>

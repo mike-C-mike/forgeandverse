@@ -3,7 +3,7 @@ title: Evidence Room Working Ledger
 weight: 37
 summary: A bound working notebook for the projects, discrepancies, audits, vendor issues, inventories, and follow-through that happen around the evidence system.
 description: An Evidence Room desk-object study that gives operational work a durable place without becoming an unofficial evidence ledger.
-stage: Structure study
+stage: Production proof ready
 discipline_slug: evidence-room
 release_path: workspace
 release_path_label: For the room
@@ -12,7 +12,7 @@ audience: Property and evidence custodians whose work includes inventories, dest
 need: Keep project-level thinking, decisions, and follow-up together without forcing that work into sticky notes or pretending it belongs in the item-level custody record
 visual: notebook
 design_test: The notebook earns desk space by helping manage evidence-room operations while making it impossible to confuse the book with the official chain-of-custody or evidence management system.
-material_direction: Working 6 x 9 or 5.5 x 8.5 lay-flat format, durable cover, opaque uncoated interior, mostly open pages with light project structure
+material_direction: 5.5 x 8.5 lay-flat first proof, durable cover, opaque uncoated interior, mostly open pages with light project structure
 details:
 - Project or issue orientation pages
 - Date, owner, status, and next checkpoint
@@ -23,7 +23,23 @@ details:
 - Mostly open ruled or dot-grid pages
 - Explicit non-record / local-retention reminder
 moment: During the long administrative work that keeps the room reliable but does not belong on an evidence label.
-stage_step: 2
+stage_step: 4
+card_image: /images/product-proofs/evidence-working-ledger-v0.1-5.5x8.5.webp
+card_image_alt: The dark Forge and Verse Evidence Room Working Ledger production cover.
+hero_image: /images/product-proofs/evidence-working-ledger-v0.1-5.5x8.5.webp
+hero_image_alt: The first physical-proof file for the Evidence Room Working Ledger.
+proof_order_ready: true
+proof_order:
+  version: "0.1"
+  target: 5.5 x 8.5 lay-flat wire or coil-bound notebook
+  file: source-assets/product-proofs/evidence-working-ledger-v0.1-5.5x8.5.pdf
+  file_label: 36-page 5.75 x 8.75 full-bleed PDF for 5.5 x 8.5 finished trim
+  first_test: One bound copy on uncoated writable interior stock
+  test_focus:
+  - Whether Working Ledger feels useful without implying an official evidence ledger
+  - Hand comfort and page usability near the binding
+  - Whether three structured pages are enough for room-level project work
+  - Paper opacity, tooth, and ordinary pen behavior
 open_questions:
 - Is 6 x 9 more comfortable for evidence-room project work than the 5.5 x 8.5 Examiner notebook format?
 - How little structure is enough to make long-running projects easier to resume?
@@ -76,6 +92,6 @@ If that distinction cannot be made cleanly, the name should change before produc
 
 ## The next honest gate
 
-The next pass should prototype two trim sizes and a thirty-two-page interior dummy with no more than five structured pages.
+A thirty-six-page 5.5 x 8.5 production proof now exists with three structured working pages and the rest returned to ordinary writing space.
 
-The question is not whether we can invent more fields. It is whether the book gives the custodian a better place to think.
+The next question belongs to a bound object: does the name feel too official, does the wire or coil stay out of the writing hand, and does the paper make this a better place to think than the sticky-note system it is meant to replace?

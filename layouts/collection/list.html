@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{ $collection := index hugo.Data "first-collection" }}
 {{ $active := 0 }}
-{{ range $collection }}{{ range .items }}{{ if ne .state "queued" }}{{ $active = add $active 1 }}{{ end }}{{ end }}{{ end }}
+{{ $proofReady := 0 }}
+{{ range $collection }}{{ range .items }}{{ if ne .state "queued" }}{{ $active = add $active 1 }}{{ end }}{{ if eq .state "proof-ready" }}{{ $proofReady = add $proofReady 1 }}{{ end }}{{ end }}{{ end }}
 <header class="collection-hero">
   <div class="wrap collection-hero-grid">
     <div>
@@ -20,7 +21,7 @@
     <div><span>16</span><p>Collection works</p></div>
     <div><span>4</span><p>Professional rooms</p></div>
     <div><span>4</span><p>Forms in each room</p></div>
-    <div><span>{{ $active }}</span><p>Released or in active study</p></div>
+    <div><span>{{ $proofReady }}</span><p>Physical proofs ready to order</p></div>
   </div>
 </section>
 

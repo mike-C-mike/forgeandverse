@@ -3,7 +3,7 @@ title: Preserved Until It Matters
 weight: 40
 summary: A property-and-evidence wall study that now makes custody over time the visual subject instead of centering one sentimental object.
 description: A mounted-edition study about patience, custody, and the long memory of evidence, reset around a more disciplined visual grammar.
-stage: Art direction reset
+stage: Production proof ready
 discipline_slug: evidence-room
 release_path: editions
 release_path_label: Wall edition
@@ -21,11 +21,23 @@ details:
 - No real case numbers, agency identifiers, or borrowed anecdotal details
 - Language centered on preservation, possibility, and institutional memory
 moment: When the long consequence of careful custody deserves to be visible in the room where that work happens.
-stage_step: 3
-card_image: /images/studies/preserved-until-it-matters/direction-study.webp
-card_image_alt: A dark Forge and Verse direction study using evidence shelving, generic labels, and an anonymous sealed item to represent custody over time.
-hero_image: /images/studies/preserved-until-it-matters/direction-study.webp
-hero_image_alt: Preserved Until It Matters v20 direction study with quiet evidence-shelf geometry and an anonymous sealed item rather than a teddy bear.
+stage_step: 4
+card_image: /images/product-proofs/evidence-preserved-until-it-matters-proof-12x8.webp
+card_image_alt: A dark 12 by 8 production proof using evidence shelf geometry and anonymous retained items.
+hero_image: /images/product-proofs/evidence-preserved-until-it-matters-proof-12x8.webp
+hero_image_alt: The production-ready material proof for Preserved Until It Matters with quiet evidence-shelf geometry.
+proof_order_ready: true
+proof_order:
+  version: "0.1"
+  target: 12 x 8 landscape wall material proof
+  file: source-assets/product-proofs/evidence-preserved-until-it-matters-proof-12x8.pdf
+  file_label: Vector 12 x 8 PDF plus 300 DPI JPG
+  first_test: One small paper or metal print before any large-format edition
+  test_focus:
+  - Whether shelf geometry reads as custody rather than generic warehouse imagery
+  - Black density and glare under evidence-room or office lighting
+  - Whether the anonymous focal item remains quiet enough
+  - Satin, mid-gloss, or archival matte surface choice
 prototype_title: Custody becomes the subject
 prototype_intro: >-
   The first composition taught the studio something useful: the teddy bear was memorable enough to become the story. That is exactly the wrong hierarchy for a piece meant to honor a system of careful custody across many kinds of cases. The v20 direction removes the mascot object and lets shelving, generic labels, seals, and elapsed time carry the consequence.
@@ -86,4 +98,6 @@ The goal is recognition, not costume.
 
 ## The next honest gate
 
-The direction is stronger, but the art is not finished. The next round needs one full composition built from this custody-centered grammar and then judged on paper and low-sheen metal at realistic wall scale.
+The custody-centered grammar is now resolved enough for a small 12 x 8 material proof. The design deliberately stays vector-led and anonymous so the first order can answer surface, black density, glare, and whether the shelf geometry reads as custody rather than generic storage.
+
+If that object works, the next proof can grow to realistic wall scale. If it does not, no amount of size will rescue it.

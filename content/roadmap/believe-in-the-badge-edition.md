@@ -1,35 +1,48 @@
 ---
 title: 'Believe in the Badge: Edition Study'
 weight: 30
-summary: The wall composition has reached production preflight, where a real source-resolution problem matters more than another room mockup.
-description: The physical-edition study for Believe in the Badge, now defining target sizes, print requirements, and the asset gate before a real sample.
-stage: Production preflight
+summary: A typography-led 12 x 8 material proof is ready to test whether Believe in the Badge can become a physical object without depending on the low-resolution photographic backdrop.
+description: The physical-edition study for Believe in the Badge, now carrying a vector-led alternate proof direction into its first real material test.
+stage: Production proof ready
 discipline_slug: watch
 release_path: editions
 release_path_label: Wall edition
-format: 3:2 mounted wall edition
+format: 12 x 8 material proof; larger 3:2 wall edition after approval
 audience: Officers and support professionals who carry the human weight of service
 need: Hold compassion, resolve, and solidarity in a piece substantial enough to carry a room
 visual: badge-edition
 image: /images/believe-in-the-badge-backdrop.webp
 related_work: /works/believe-in-the-badge/
-design_test: A premium physical sample can be produced at target size without asking a low-resolution source image to pretend it is production art.
-material_direction: Working targets are a 36 x 24 floating metal panel and a 30 x 20 archival-paper edition once a higher-resolution master exists
+design_test: The writing can carry the physical piece through typography, proportion, and restrained badge geometry without depending on the low-resolution photographic backdrop.
+material_direction: First proof is a 12 x 8 typography-led material test on low-glare metal or archival matte paper; final large format remains unresolved
 details:
-- Existing 3:2 composition retained as the working format
-- 36 x 24 inch floating-metal direction
-- 30 x 20 inch archival-paper and frame direction
-- Working 0.25 inch bleed and 0.75 inch critical-text safe area until a vendor template exists
-- 5400 x 3600 pixel minimum photographic master for the 36 x 24 target at 150 ppi
-- Physical reflection, edge, wall-separation, and reading-distance test defined before ordering
+- Original long-form writing remains the heart of the work
+- First physical proof uses typography and abstract shield geometry rather than the low-resolution photo backdrop
+- 12 x 8 landscape proof keeps the first material decision inexpensive
+- Earlier 36 x 24 metal and 30 x 20 framed-paper room studies remain useful scale history
+- The photo-backed direction can still return later if a genuinely suitable high-resolution source earns its place
+- Physical reflection, edge, wall separation, and reading distance remain release gates
 moment: When a professional space needs something more enduring than a slogan pinned to a wall.
-stage_step: 3
-card_image: /images/studies/believe-in-the-badge/wall-mockup.webp
-card_image_alt: Believe in the Badge wall composition shown as a floating metal edition in a dark professional room.
-hero_image: /images/studies/believe-in-the-badge/composition-study.webp
-hero_image_alt: Believe in the Badge composition study with the full written piece and law-enforcement image.
-prototype_title: The room mockup exposed a production gate
-prototype_intro: The composition is coherent enough to define real physical targets, but the current backdrop master is only 1536 x 1024 pixels. At a 36 x 24 inch target that is roughly 42.7 pixels per inch before crop or compositing. The mockups proved direction, not printable detail. The study deliberately returns to the Material gate until a higher-resolution, rights-cleared master exists.
+stage_step: 4
+card_image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
+card_image_alt: A dark 12 by 8 typography-led Believe in the Badge material proof with restrained shield geometry.
+hero_image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
+hero_image_alt: The production-ready typography-led material proof for Believe in the Badge.
+proof_order_ready: true
+proof_order:
+  version: "0.2"
+  target: 12 x 8 landscape wall material proof
+  file: source-assets/product-proofs/watch-believe-in-the-badge-proof-12x8.pdf
+  file_label: Vector 12 x 8 PDF plus 300 DPI JPG
+  first_test: One small paper or metal print before any large-format edition
+  test_focus:
+  - Whether typography alone carries enough emotional weight without the photo backdrop
+  - Whether the abstract shield reads as structure rather than generic police iconography
+  - Black density and glare under ordinary office lighting
+  - Satin, mid-gloss, or archival matte surface choice
+prototype_title: The resolution blocker created a second design direction
+prototype_intro: >-
+  The earlier room studies proved that the writing could hold a professional wall, but the 1536 x 1024 photographic backdrop could not support a premium large-format print. Rather than upscale a weak source or stall the entire edition, the first physical proof now tests a second direction: the same emotional center carried through typography, proportion, and restrained abstract shield geometry.
 prototype_images:
 - image: /images/studies/believe-in-the-badge/composition-study.webp
   alt: Believe in the Badge composition study with text arranged on the left and officers on the right.
@@ -44,54 +57,56 @@ prototype_images:
   alt: Believe in the Badge shown on archival paper with a wide mat and dark frame in a warm professional room
   caption: Framed-paper direction. A quieter secondary format remains worth testing beside metal once the master artwork is ready.
 open_questions:
-- What higher-resolution, rights-cleared source image replaces the current 1536 x 1024 backdrop without changing the emotional register of the piece?
-- Can the full writing remain comfortable from roughly three to five feet at a 36 x 24 inch trim?
-- Which low-reflection metal surface preserves deep blacks without turning office lighting into part of the composition?
-- Does the framed 30 x 20 paper edition ultimately fit the writing better than metal?
+- Does the typography-led proof keep enough emotional force without the officer image?
+- Does the shield geometry feel architectural and restrained rather than generic police merchandise?
+- Which low-reflection surface preserves deep blacks without turning office lighting into part of the composition?
+- If the first proof succeeds, what final scale gives the writing presence without becoming signage?
 prototype_source_files:
 - source-assets/prototypes/believe-in-the-badge-composition-study.pdf
 - source-assets/prototypes/believe-in-the-badge-production-preflight-v0.1.pdf
 ---
-## The most useful v20 discovery is a blocker
+## The blocker changed the design
 
-The room studies did their job. They showed that the piece can hold a professional wall without needing more symbols, more police imagery, or more decorative language.
+The earlier room studies did their job. They showed that the writing could hold a professional wall and that the 3:2 format had enough presence for an office or briefing room.
 
-They also made it tempting to call the piece nearly production-ready.
+They also exposed a hard production limit: the photographic backdrop was only **1536 x 1024 pixels**.
 
-It is not.
+The correct answer was never to upscale that file and pretend the problem disappeared.
 
-The current underlying backdrop is **1536 x 1024 pixels**. At the working 36 x 24 inch metal target, that source would provide only about **42.7 pixels per inch** before crop or recomposition. Upscaling it would create a larger file, not a premium master.
+Instead, the production constraint created a second visual direction.
 
-That matters more than another mockup.
+## The first physical proof is deliberately typography-led
 
-## Working physical targets
+The new 12 x 8 material proof keeps the emotional center of Believe in the Badge but removes the photographic dependency.
 
-The composition keeps its 3:2 ratio. Two formats are worth carrying into the next real sample:
+The composition now relies on:
 
-- **36 x 24 floating metal** for a briefing room or shared professional space.
-- **30 x 20 archival paper with a substantial frame** for a quieter, reading-led office presentation.
+- the original writing;
+- a restrained dark field;
+- brass and oxblood hierarchy;
+- abstract shield geometry used as architecture rather than as a logo;
+- enough negative space for the words to remain the subject.
 
-Until a production partner supplies an exact template, the working preflight uses a 0.25 inch bleed outside trim and keeps critical text at least 0.75 inch inside the trim edge. Vendor specifications will override those temporary values.
+This is not a declaration that the old photographic direction is dead. It is a test of whether the work was stronger than the photograph in the first place.
 
-For the 36 x 24 target, the photographic master should be at least **5400 x 3600 pixels** for 150 ppi at final size; **7200 x 4800** or higher is preferred when the source supports it. Typography and linework should remain vector where possible.
+## Why the first proof is 12 x 8
 
-## Why the study moved back to Material
+A small material proof lets the studio answer the expensive questions cheaply.
 
-The studio progress scale is supposed to mean something. Step four is for a physical or production-ready sample. The current room mockups are neither.
+Does the black hold detail? Does the surface glare? Does the brass feel warm or muddy? Does the type remain comfortable? Does the shield disappear into structure or announce itself like generic police merchandise?
 
-So the study moves from Sample back to Material until the image source, output geometry, and finish requirements are real enough to order a sample without hand-waving.
+If the object fails at twelve inches wide, there is no reason to buy it at thirty-six.
 
-That is progress, even if the number got smaller.
+## The larger room studies still matter
 
-## The physical test is already defined
+The earlier **36 x 24 floating-metal** and **30 x 20 framed-paper** targets remain useful scale references.
 
-Once the master artwork is ready, the sample has to survive several ordinary conditions:
+They are no longer the immediate order.
 
-- full copy readable from roughly three to five feet
-- title and composition recognizable across the room
-- deep blacks retaining detail under office lighting
-- controlled reflection from front and oblique angles
-- edge and float depth supporting rather than distracting
-- metal and framed paper judged in the same room
+The immediate order is one inexpensive physical object that can tell us whether this visual direction deserves to become one of those larger editions.
 
-The production-preflight PDF in the studio source records those gates so the next step is a test, not another mood board.
+## The next honest gate
+
+Order the 12 x 8 proof on a low-reflection material. Handle it in ordinary office light. Read it at desk distance and across the room.
+
+If the material and typography survive that test, the next version can resolve final scale, mounting, and whether a second photographic edition is worth pursuing.
