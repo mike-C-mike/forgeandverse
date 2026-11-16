@@ -1,7 +1,7 @@
 ---
 title: The Quiet Day
 weight: 62
-summary: A restrained cybersecurity wall edition built around the strange success condition of defensive work: nothing happened because somebody prepared.
+summary: "A restrained cybersecurity wall edition built around the strange success condition of defensive work: nothing happened because somebody prepared."
 description: A Signal wall-edition study about resilience, preparation, and quiet technical competence.
 stage: Production proof ready
 discipline_slug: signal
