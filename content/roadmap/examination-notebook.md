@@ -1,9 +1,9 @@
 ---
 title: Examination Notebook
 weight: 20
-summary: A 32-page, 5.5 x 8.5 production-oriented dummy for the examiner who thinks better with a pen in hand.
+summary: A 36-page, 5.5 x 8.5 production proof for the examiner who thinks better with a pen in hand.
 description: A tactile examination-notebook study now testing trim, gutter, page mix, and physical writing behavior rather than adding more forms.
-stage: Production-oriented dummy
+stage: Production proof ready
 discipline_slug: examiner-bench
 release_path: workspace
 release_path_label: For the room
@@ -11,10 +11,10 @@ format: 5.5 x 8.5 tactile notebook dummy
 audience: The examiner who thinks better with a pen in hand
 need: Offer enough structure to orient the work without turning every page into somebody else's boxes
 visual: notebook
-card_image: /images/studies/examination-notebook/cover-proof.webp
-card_image_alt: The dark Forge and Verse Examination Notebook cover proof for version 0.3.
-hero_image: /images/studies/examination-notebook/orientation-spread.webp
-hero_image_alt: Version 0.3 Examination Notebook pages showing the compact case orientation and evidence-source index.
+card_image: /images/product-proofs/examiner-examination-notebook-v0.4-5.5x8.5.webp
+card_image_alt: The dark Forge and Verse Examination Notebook production cover for version 0.4.
+hero_image: /images/product-proofs/examiner-examination-notebook-v0.4-5.5x8.5.webp
+hero_image_alt: The version 0.4 Examination Notebook production proof cover.
 design_test: The structure disappears until it is needed; the writing space never does.
 material_direction: 5.5 x 8.5 trim, mirrored gutter margins, lay-flat binding direction, and opaque uncoated stock with enough tooth for ordinary pens
 details:
@@ -26,6 +26,18 @@ details:
 - Case, source, date, and page reference kept deliberately small on note pages
 moment: During the part of an examination when the examiner needs room to map, question, and think before the final record is written.
 stage_step: 4
+proof_order_ready: true
+proof_order:
+  version: "0.4"
+  target: 5.5 x 8.5 lay-flat wire or coil-bound notebook
+  file: source-assets/product-proofs/examiner-examination-notebook-v0.4-5.5x8.5.pdf
+  file_label: 36-page complete production proof PDF
+  first_test: One bound copy on uncoated writable interior stock
+  test_focus:
+  - Hand comfort at the binding edge
+  - Whether the compressed front matter earns its pages
+  - Pen behavior, opacity, show-through, and paper tooth
+  - Whether mixed ruling helps or should collapse to one page treatment
 prototype_title: The notebook is now long enough to behave like a notebook
 prototype_intro: Version 0.3 moves from a twelve-page architecture sample to a thirty-two-page production-oriented dummy. Seven structured pages were compressed into five, the interior now uses mirrored gutter margins, and twenty-six pages are reserved for actual handwriting. The four note treatments are grouped into test runs so a practitioner can judge them instead of admiring a sampler.
 prototype_images:
