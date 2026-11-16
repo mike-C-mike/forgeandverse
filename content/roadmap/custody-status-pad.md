@@ -3,7 +3,7 @@ title: Custody Status Pad
 weight: 36
 summary: A desk continuity pad for the work around evidence that is waiting, blocked, due for transfer, pending release, or otherwise not finished yet.
 description: A small Evidence Room working-object study for preserving the operational context that lives around, but not inside, the official custody record.
-stage: Structure study
+stage: Production proof ready
 discipline_slug: evidence-room
 release_path: workbench
 release_path_label: Useful tool
@@ -23,7 +23,23 @@ details:
 - Critical context or discrepancy
 - Reminder that the official evidence system remains the record
 moment: When an evidence-room task is not finished, but the reason it is not finished may be obvious only to the person leaving for the day.
-stage_step: 2
+stage_step: 4
+card_image: /images/product-proofs/evidence-custody-status-pad-v0.1-5x7-bleed.webp
+card_image_alt: The production-ready 5 by 7 Custody Status Pad proof.
+hero_image: /images/product-proofs/evidence-custody-status-pad-v0.1-5x7-bleed.webp
+hero_image_alt: The first production proof for the Evidence Room Custody Status Pad.
+proof_order_ready: true
+proof_order:
+  version: "0.1"
+  target: 5 x 7 top-glued tear-away pad
+  file: source-assets/product-proofs/evidence-custody-status-pad-v0.1-5x7-bleed.pdf
+  file_label: 5.25 x 7.25 PDF with 0.125 inch bleed
+  first_test: 8 to 12 pads on uncoated writable stock with chipboard back
+  test_focus:
+  - Handwriting room with real pending-work scenarios
+  - Whether Do not release or move until is useful without looking authoritative
+  - Top-glue and tear behavior at the 5 x 7 trim
+  - Whether the pad remains operational working memory rather than a shadow custody record
 open_questions:
 - Does 5 x 7 provide enough room without becoming another full-page form?
 - Which state markers change behavior rather than merely label the task?
