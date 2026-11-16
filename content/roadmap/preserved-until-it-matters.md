@@ -98,4 +98,6 @@ The goal is recognition, not costume.
 
 ## The next honest gate
 
-The direction is stronger, but the art is not finished. The next round needs one full composition built from this custody-centered grammar and then judged on paper and low-sheen metal at realistic wall scale.
+The custody-centered grammar is now resolved enough for a small 12 x 8 material proof. The design deliberately stays vector-led and anonymous so the first order can answer surface, black density, glare, and whether the shelf geometry reads as custody rather than generic storage.
+
+If that object works, the next proof can grow to realistic wall scale. If it does not, no amount of size will rescue it.
