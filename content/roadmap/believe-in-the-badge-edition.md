@@ -26,8 +26,8 @@ moment: When a professional space needs something more enduring than a slogan pi
 stage_step: 4
 card_image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
 card_image_alt: A dark 12 by 8 typography-led Believe in the Badge material proof with restrained shield geometry.
-hero_image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
-hero_image_alt: The production-ready typography-led material proof for Believe in the Badge.
+hero_image: /images/studies/believe-in-the-badge/composition-study.webp
+hero_image_alt: Original image-backed Believe in the Badge composition study, retained as an earlier artistic direction and not a print-ready photographic master.
 proof_order_ready: true
 proof_order:
   version: "0.2"
@@ -44,9 +44,12 @@ prototype_title: The resolution blocker created a second design direction
 prototype_intro: >-
   The earlier room studies proved that the writing could hold a professional wall, but the 1536 x 1024 photographic backdrop could not support a premium large-format print. Rather than upscale a weak source or stall the entire edition, the first physical proof now tests a second direction: the same emotional center carried through typography, proportion, and restrained abstract shield geometry.
 prototype_images:
+- image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
+  alt: Typography-led 12 by 8 material proof with abstract shield geometry and brass-and-oxblood hierarchy.
+  caption: Active print-test direction. This vector-led proof can test the physical surface without relying on the low-resolution photograph.
 - image: /images/studies/believe-in-the-badge/composition-study.webp
-  alt: Believe in the Badge composition study with text arranged on the left and officers on the right.
-  caption: Composition proof. The hierarchy still works as a 3:2 wall piece, but this screen-scale proof is not a production master.
+  alt: Original Believe in the Badge composition study with text arranged on the left and officers on the right.
+  caption: Original photographic direction, restored to the page as a visible option. This screen-scale study is not a production master.
 - image: /images/studies/believe-in-the-badge/wall-mockup.webp
   alt: Believe in the Badge composition shown mounted in a dark professional room.
   caption: Room and scale proof. Useful for judging presence; not evidence that the current raster source can support the target print size.
