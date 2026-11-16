@@ -1,0 +1,76 @@
+name: Build first-collection product proofs
+
+on:
+  push:
+    branches: [product/proof-ready-catalog]
+    paths:
+      - "scripts/build_product_proofs.py"
+      - ".github/workflows/build-product-proofs-branch.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-proof-build-\${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v6
+        with:
+          ref: product/proof-ready-catalog
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install proof requirements
+        run: python -m pip install -r scripts/requirements-proofs.txt
+
+      - name: Install render utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils webp
+
+      - name: Generate proof PDFs
+        run: python scripts/build_product_proofs.py
+
+      - name: Generate wall-print JPGs and site previews
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p static/images/product-proofs
+          for pdf in source-assets/product-proofs/*.pdf; do
+            base="$(basename "$pdf" .pdf)"
+            pdftoppm -f 1 -singlefile -r 115 -png "$pdf" "/tmp/$base"
+            cwebp -quiet -q 88 "/tmp/$base.png" -o "static/images/product-proofs/$base.webp"
+          done
+
+          for pdf in \
+            source-assets/product-proofs/examiner-a-hash-is-a-promise-proof-8x12.pdf \
+            source-assets/product-proofs/evidence-preserved-until-it-matters-proof-12x8.pdf \
+            source-assets/product-proofs/watch-believe-in-the-badge-proof-12x8.pdf \
+            source-assets/product-proofs/signal-the-quiet-day-proof-12x8.pdf; do
+            base="$(basename "$pdf" .pdf)"
+            pdftoppm -f 1 -singlefile -r 300 -jpeg -jpegopt quality=95 "$pdf" "source-assets/product-proofs/$base"
+          done
+
+      - name: Commit generated proof assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Forge & Verse Proof Builder"
+          git config user.email "actions@users.noreply.github.com"
+          git add source-assets/product-proofs static/images/product-proofs
+          if git diff --cached --quiet; then
+            echo "Generated assets are already current."
+            exit 0
+          fi
+          git commit -m "Generate first-collection product proof assets"
+          git push origin HEAD:product/proof-ready-catalog
