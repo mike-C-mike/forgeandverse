@@ -18,9 +18,27 @@
   </div>
 </section>
 
+{{ $studies := where (where site.RegularPages "Section" "roadmap") ".Params.release_path" "editions" }}
+{{ $materialProofs := where $studies ".Params.proof_order_ready" true }}
+{{ if gt (len $materialProofs) 0 }}
+<section class="section study-index-section">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Material proofs · Four rooms</p><h2>The first metal directions are ready for a physical test.</h2></div>
+      <p>One small material-proof design from each professional room is prepared for a first order, not approved for sale. Two further original art directions per room remain in concept development, rather than appearing here as imaginary finished products.</p>
+    </div>
+    <div class="study-grid">
+      {{ range $materialProofs.ByWeight }}
+        {{ partial "study-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <section class="section edition-index-current">
   <div class="wrap">
-    <div class="section-heading split-heading"><div><p class="eyebrow">Current editions</p><h2>Physical work in the studio archive.</h2></div><p>Some are still being resolved. Others may eventually be approved or offered through an outside production partner. The page for each work carries the current state.</p></div>
+    <div class="section-heading split-heading"><div><p class="eyebrow">The works archive</p><h2>Pieces with their own studio pages.</h2></div><p>Some are still being resolved. Others may eventually be approved or offered through an outside production partner. The page for each work carries the current state.</p></div>
     <div class="edition-index-grid">
       {{ range $works }}{{ if and .Params.edition .Params.edition.enabled }}{{ partial "edition-card.html" . }}{{ end }}{{ end }}
     </div>
