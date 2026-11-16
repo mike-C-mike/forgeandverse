@@ -85,6 +85,6 @@ Five by seven is a working hypothesis: still small enough to live beside a keybo
 
 ## The next honest gate
 
-The next pass should load the pad with representative scenarios: pending property release, transfer to another agency, inventory discrepancy, destruction batch, court hold follow-up, and vendor/service issue.
+The structure has now been loaded into a production-size 5 x 7 proof with bleed and enough room to test the fields as an object rather than a diagram.
 
-If the same fields survive all six without becoming vague, the structure earns a printable proof.
+The next useful evidence comes from paper: order the smallest practical pad run, use it across pending release, transfer, inventory discrepancy, destruction, court-hold, and vendor scenarios, and watch for any prompt that starts behaving like an unofficial custody instruction.
