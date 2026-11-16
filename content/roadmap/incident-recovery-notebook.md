@@ -31,7 +31,7 @@ proof_order:
   version: "0.1"
   target: 5.5 x 8.5 lay-flat wire or coil-bound notebook
   file: source-assets/product-proofs/signal-incident-recovery-notebook-v0.1-5.5x8.5.pdf
-  file_label: 36-page complete proof PDF
+  file_label: 36-page 5.75 x 8.75 full-bleed PDF for 5.5 x 8.5 finished trim
   first_test: One bound copy on uncoated writable interior stock
   test_focus:
   - Whether the decision log is useful under time pressure
