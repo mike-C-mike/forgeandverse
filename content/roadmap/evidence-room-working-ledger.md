@@ -92,6 +92,6 @@ If that distinction cannot be made cleanly, the name should change before produc
 
 ## The next honest gate
 
-The next pass should prototype two trim sizes and a thirty-two-page interior dummy with no more than five structured pages.
+A thirty-six-page 5.5 x 8.5 production proof now exists with three structured working pages and the rest returned to ordinary writing space.
 
-The question is not whether we can invent more fields. It is whether the book gives the custodian a better place to think.
+The next question belongs to a bound object: does the name feel too official, does the wire or coil stay out of the writing hand, and does the paper make this a better place to think than the sticky-note system it is meant to replace?
