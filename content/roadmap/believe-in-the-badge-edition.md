@@ -41,7 +41,8 @@ proof_order:
   - Black density and glare under ordinary office lighting
   - Satin, mid-gloss, or archival matte surface choice
 prototype_title: The resolution blocker created a second design direction
-prototype_intro: The earlier room studies proved that the writing could hold a professional wall, but the 1536 x 1024 photographic backdrop could not support a premium large-format print. Rather than upscale a weak source or stall the entire edition, the first physical proof now tests a second direction: the same emotional center carried through typography, proportion, and restrained abstract shield geometry.
+prototype_intro: >-
+  The earlier room studies proved that the writing could hold a professional wall, but the 1536 x 1024 photographic backdrop could not support a premium large-format print. Rather than upscale a weak source or stall the entire edition, the first physical proof now tests a second direction: the same emotional center carried through typography, proportion, and restrained abstract shield geometry.
 prototype_images:
 - image: /images/studies/believe-in-the-badge/composition-study.webp
   alt: Believe in the Badge composition study with text arranged on the left and officers on the right.
