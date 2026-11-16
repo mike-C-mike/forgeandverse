@@ -73,10 +73,10 @@ def draw_wrapped(c: canvas.Canvas, text: str, x: float, y: float, width: float,
 def brand(c: canvas.Canvas, w: float, h: float, dark: bool = False) -> None:
     c.setFillColor(PAPER if dark else INK)
     c.setFont(SERIF_B, 8)
-    c.drawString(0.42 * inch, h - 0.40 * inch, "FORGE & VERSE")
+    c.drawString(0.62 * inch, h - 0.40 * inch, "FORGE & VERSE")
     c.setStrokeColor(BRASS)
     c.setLineWidth(1)
-    c.line(0.42 * inch, h - 0.47 * inch, w - 0.42 * inch, h - 0.47 * inch)
+    c.line(0.62 * inch, h - 0.47 * inch, w - 0.62 * inch, h - 0.47 * inch)
 
 
 def field(c: canvas.Canvas, x: float, y: float, w: float, h: float,
@@ -151,18 +151,29 @@ def build_pad(filename: str, title: str, room: str, fields: list[dict],
     c.save()
 
 
+def notebook_margins(w: float, page_no: int) -> tuple[float, float]:
+    # Wire-O artwork guidance requires extra safety on the binding side.
+    # Odd reading pages bind on the left; even reading pages bind on the right.
+    gutter = 0.72 * inch
+    outer = 0.52 * inch
+    if page_no % 2:
+        return gutter, w - outer
+    return outer, w - gutter
+
+
 def notebook_header(c: canvas.Canvas, w: float, h: float, room: str,
                     title: str, page_no: int) -> None:
+    x0, x1 = notebook_margins(w, page_no)
     c.setStrokeColor(LINE)
     c.setLineWidth(0.45)
-    c.line(0.55 * inch, h - 0.45 * inch, w - 0.45 * inch, h - 0.45 * inch)
+    c.line(x0, h - 0.45 * inch, x1, h - 0.45 * inch)
     c.setFont(SANS_B, 6.0)
     c.setFillColor(STEEL)
-    c.drawString(0.55 * inch, h - 0.45 * inch, room.upper())
-    c.drawRightString(w - 0.55 * inch, h - 0.45 * inch, title.upper())
-    c.line(0.55 * inch, 0.50 * inch, w - 0.55 * inch, 0.50 * inch)
+    c.drawString(x0, h - 0.45 * inch, room.upper())
+    c.drawRightString(x1, h - 0.45 * inch, title.upper())
+    c.line(x0, 0.50 * inch, x1, 0.50 * inch)
     c.setFont(SANS, 5.8)
-    c.drawRightString(w - 0.55 * inch, 0.39 * inch, str(page_no))
+    c.drawRightString(x1, 0.39 * inch, str(page_no))
 
 
 def cover(c: canvas.Canvas, w: float, h: float, room: str, title: str,
@@ -210,13 +221,14 @@ def cover(c: canvas.Canvas, w: float, h: float, room: str, title: str,
 def structured_page(c: canvas.Canvas, w: float, h: float, room: str,
                     title: str, page_no: int, headline: str, fields: list[dict]) -> None:
     notebook_header(c, w, h, room, title, page_no)
+    x0, x1 = notebook_margins(w, page_no)
     c.setFont(SERIF_B, 20)
     c.setFillColor(INK)
-    c.drawString(0.65 * inch, h - 0.92 * inch, headline)
+    c.drawString(x0, h - 0.92 * inch, headline)
     y = h - 1.15 * inch
     for item in fields:
         fh = item.get("h", 0.68) * inch
-        field(c, 0.65 * inch, y, w - 1.1 * inch, fh, item["label"],
+        field(c, x0, y, x1 - x0, fh, item["label"],
               item.get("lines", 2), item.get("accent", False))
         y -= fh + 7
 
@@ -224,8 +236,7 @@ def structured_page(c: canvas.Canvas, w: float, h: float, room: str,
 def writing_page(c: canvas.Canvas, w: float, h: float, room: str,
                  title: str, page_no: int, kind: str) -> None:
     notebook_header(c, w, h, room, title, page_no)
-    x0 = 0.65 * inch
-    x1 = w - 0.45 * inch
+    x0, x1 = notebook_margins(w, page_no)
     ytop = h - 0.75 * inch
     ybot = 0.62 * inch
 
@@ -250,12 +261,13 @@ def writing_page(c: canvas.Canvas, w: float, h: float, room: str,
             yy -= 22
         if kind == "margin":
             c.setStrokeColor(BRASS)
-            c.line(x0 + 0.48 * inch, ytop, x0 + 0.48 * inch, ybot)
+            margin_x = x0 + 0.48 * inch if page_no % 2 else x1 - 0.48 * inch
+            c.line(margin_x, ytop, margin_x, ybot)
 
 
 def build_notebook(filename: str, room: str, title: str, kicker: str,
                    subtitle: str, structure: list[dict], pages: int = 36) -> None:
-    # Printivity-style full-bleed geometry: 5.5 x 8.5 finished trim plus
+    # Vendor-safe full-bleed geometry: 5.5 x 8.5 finished trim plus
     # 0.125 inch bleed on every edge, submitted as single pages.
     W = 5.75 * inch
     H = 8.75 * inch
@@ -269,13 +281,13 @@ def build_notebook(filename: str, room: str, title: str, kicker: str,
     brand(c, W, H)
     c.setFont(SERIF_B, 13)
     c.setFillColor(INK)
-    c.drawString(0.65 * inch, H - 1.05 * inch, "This notebook belongs to")
+    c.drawString(0.72 * inch, H - 1.05 * inch, "This notebook belongs to")
     c.setStrokeColor(LINE)
-    c.line(0.65 * inch, H - 1.45 * inch, W - 0.6 * inch, H - 1.45 * inch)
+    c.line(0.72 * inch, H - 1.45 * inch, W - 0.72 * inch, H - 1.45 * inch)
     c.setFont(SANS, 7)
     c.setFillColor(STEEL)
     c.drawString(
-        0.65 * inch, 0.65 * inch,
+        0.72 * inch, 0.65 * inch,
         "Working notes may be subject to local retention, discovery, security, and evidence-handling requirements."
     )
     c.showPage()
@@ -298,11 +310,11 @@ def build_notebook(filename: str, room: str, title: str, kicker: str,
     brand(c, W, H)
     c.setFont(SERIF_B, 15)
     c.setFillColor(INK)
-    c.drawString(0.65 * inch, H - 1.05 * inch, "Before this book closes")
+    c.drawString(0.72 * inch, H - 1.05 * inch, "Before this book closes")
     draw_wrapped(
         c,
         "Move anything that belongs in an official system, report, case file, ticket, incident record, or evidence record to the place your policy requires. Then retain or dispose of these working notes according to local rules.",
-        0.65 * inch, H - 1.4 * inch, W - 1.25 * inch, SANS, 8.5, 11, STEEL
+        0.72 * inch, H - 1.4 * inch, W - 1.44 * inch, SANS, 8.5, 11, STEEL
     )
     c.showPage()
 

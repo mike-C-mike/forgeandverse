@@ -3,63 +3,63 @@
   "items": [
     {
       "file": "evidence-custody-status-pad-v0.1-5x7-bleed.pdf",
-      "bytes": 2606,
-      "sha256": "f1f36788a4bb381ccf739be5b6290e89422f70a17b18a1ba99dd2be34e99a448"
+      "bytes": 2611,
+      "sha256": "345905ce7bfbb005f80cfd262ad6dc129c4a0d16454a4d1cdbc7537f15e1add5"
     },
     {
       "file": "evidence-preserved-until-it-matters-proof-12x8.pdf",
-      "bytes": 2700,
-      "sha256": "1c735ed38d6b3901628e93f7c8cce9a176e5080211aa988fd525ef458ce0a53a"
+      "bytes": 2699,
+      "sha256": "eacaf933795c44084c96b82957b37835a7c3f04cff939e992020b8bcc0340973"
     },
     {
       "file": "evidence-working-ledger-v0.1-5.5x8.5.pdf",
-      "bytes": 175277,
-      "sha256": "d7f042d55d995e029aba5d7f8e6b2a6227e0e92ac16ad4de1e35e12f0b7aa8af"
+      "bytes": 175435,
+      "sha256": "058a71b91330dedd447504c1d310e7b2020ef041517936d344c2a34a764fe82e"
     },
     {
       "file": "examiner-a-hash-is-a-promise-proof-8x12.pdf",
       "bytes": 2611,
-      "sha256": "38659869ab0b93caf3ce239a1716ff2d6cfea8eca21dbaec264d41559e9a6299"
+      "sha256": "51c6e11d3437e56e02ed426cd75ac74b8a8cd645e165f1a440116c1ac16779fb"
     },
     {
       "file": "examiner-bench-status-pad-v0.4-4x6-bleed.pdf",
       "bytes": 2549,
-      "sha256": "3e54ea06873f734f3c8215a75ffcf94dcdf41ec5713c141b463cd115cfbec48a"
+      "sha256": "58fc5abc5ae086e8ba43c330c694e890067f446149437e47c48d5100d62b1352"
     },
     {
       "file": "examiner-examination-notebook-v0.4-5.5x8.5.pdf",
-      "bytes": 175632,
-      "sha256": "db7778f91b9a5bedf93e8f6455f53f6f7207a1f324677ab14bfe2d5c07750e4f"
+      "bytes": 175773,
+      "sha256": "ce2bf3234f59ef5377f3018c6018eee8d2a54e49b7aaf76deb869cb3c6472944"
     },
     {
       "file": "signal-incident-recovery-notebook-v0.1-5.5x8.5.pdf",
-      "bytes": 175790,
-      "sha256": "20fd2c5a35a650ebd91faa358b7946ea54e41f32e7242706990b2e3e70c308a9"
+      "bytes": 175961,
+      "sha256": "0bdcd22462f21b4bf21db5820e9ede8792a644d62548acb8a6daabe8b2fd6a49"
     },
     {
       "file": "signal-incident-status-pad-v0.1-5x7-bleed.pdf",
-      "bytes": 2580,
-      "sha256": "1791f5829a18e17dcbb0582f4c895d5dc2a2a84412211802bda964722c562f05"
+      "bytes": 2574,
+      "sha256": "b40938bd225b325d378e9fc8a12d90789b79b0f93ec8b6dbc660a39d894a1555"
     },
     {
       "file": "signal-the-quiet-day-proof-12x8.pdf",
       "bytes": 4497,
-      "sha256": "a2ee2bed3896dc3a3da3b233c8ffdd6e5efb6922f1b69236745631a30f41f79a"
+      "sha256": "aef00750e8421f5a0e448f9ed0947debbfafca0589363c6a1fdbc9595ef981f3"
     },
     {
       "file": "watch-believe-in-the-badge-proof-12x8.pdf",
-      "bytes": 2470,
-      "sha256": "7d60141db486a5b1b52a44c038c3db71eb0852b9068bc165bbc97462e4d235e7"
+      "bytes": 2468,
+      "sha256": "017f100f73ec9ef3f5d6a6c9f7d1ddf76a6b9aaba0e8ffc56149d067854a4cfe"
     },
     {
       "file": "watch-field-notebook-v0.1-5.5x8.5.pdf",
-      "bytes": 175013,
-      "sha256": "b9c378855ea6663f082734585c39af0995be5f4147b9778cc8353f5db2b95992"
+      "bytes": 175173,
+      "sha256": "d2c7be8403af3fe7aba55052b3c39e65947b3dee29d52b4af5926acd744dca3a"
     },
     {
       "file": "watch-notes-pad-v0.1-5x7-bleed.pdf",
-      "bytes": 2459,
-      "sha256": "132b690d6b609fdd6f0db454462d8197001c096e54fd9a5471d35d69fe46a2de"
+      "bytes": 2460,
+      "sha256": "d9597a4822f862fd13c98a27b69cc5294bdd0852cfcfecee5af7132e5fcfafbe"
     }
   ]
 }
