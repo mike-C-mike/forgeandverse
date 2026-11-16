@@ -73,10 +73,10 @@ def draw_wrapped(c: canvas.Canvas, text: str, x: float, y: float, width: float,
 def brand(c: canvas.Canvas, w: float, h: float, dark: bool = False) -> None:
     c.setFillColor(PAPER if dark else INK)
     c.setFont(SERIF_B, 8)
-    c.drawString(0.33 * inch, h - 0.28 * inch, "FORGE & VERSE")
+    c.drawString(0.42 * inch, h - 0.40 * inch, "FORGE & VERSE")
     c.setStrokeColor(BRASS)
     c.setLineWidth(1)
-    c.line(0.33 * inch, h - 0.34 * inch, w - 0.33 * inch, h - 0.34 * inch)
+    c.line(0.42 * inch, h - 0.47 * inch, w - 0.42 * inch, h - 0.47 * inch)
 
 
 def field(c: canvas.Canvas, x: float, y: float, w: float, h: float,
@@ -158,11 +158,11 @@ def notebook_header(c: canvas.Canvas, w: float, h: float, room: str,
     c.line(0.55 * inch, h - 0.45 * inch, w - 0.45 * inch, h - 0.45 * inch)
     c.setFont(SANS_B, 6.0)
     c.setFillColor(STEEL)
-    c.drawString(0.55 * inch, h - 0.34 * inch, room.upper())
-    c.drawRightString(w - 0.45 * inch, h - 0.34 * inch, title.upper())
-    c.line(0.55 * inch, 0.38 * inch, w - 0.45 * inch, 0.38 * inch)
+    c.drawString(0.55 * inch, h - 0.45 * inch, room.upper())
+    c.drawRightString(w - 0.55 * inch, h - 0.45 * inch, title.upper())
+    c.line(0.55 * inch, 0.50 * inch, w - 0.55 * inch, 0.50 * inch)
     c.setFont(SANS, 5.8)
-    c.drawRightString(w - 0.45 * inch, 0.24 * inch, str(page_no))
+    c.drawRightString(w - 0.55 * inch, 0.39 * inch, str(page_no))
 
 
 def cover(c: canvas.Canvas, w: float, h: float, room: str, title: str,
@@ -255,8 +255,10 @@ def writing_page(c: canvas.Canvas, w: float, h: float, room: str,
 
 def build_notebook(filename: str, room: str, title: str, kicker: str,
                    subtitle: str, structure: list[dict], pages: int = 36) -> None:
-    W = 5.5 * inch
-    H = 8.5 * inch
+    # Printivity-style full-bleed geometry: 5.5 x 8.5 finished trim plus
+    # 0.125 inch bleed on every edge, submitted as single pages.
+    W = 5.75 * inch
+    H = 8.75 * inch
     c = pdf(OUT / filename, (W, H))
 
     cover(c, W, H, room, title, kicker, subtitle)
