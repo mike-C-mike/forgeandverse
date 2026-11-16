@@ -3,7 +3,7 @@ title: Bench Status Pad
 weight: 10
 summary: A refined 4 x 6 continuity proof for getting an active examination back into working memory in under thirty seconds.
 description: A field-tested-in-structure digital-forensics continuity pad now ready for practitioner pilot testing.
-stage: Refined field proof
+stage: Production proof ready
 discipline_slug: examiner-bench
 release_path: workbench
 release_path_label: Useful tool
@@ -11,10 +11,10 @@ format: 4 x 6 tear-away notepad
 audience: The examiner stepping away from an active case overnight, over a weekend, or through an interruption
 need: Restore the active case state without reconstructing yesterday from six windows and a half-remembered thought
 visual: status-pad
-card_image: /images/studies/bench-status-pad/prototype-proof.webp
-card_image_alt: The refined Forge and Verse Bench Status field proof with compact state markers and handwriting space for active examination context.
-hero_image: /images/studies/bench-status-pad/prototype-proof.webp
-hero_image_alt: The version 0.3 Bench Status Pad field proof at its intended 4 by 6 inch format.
+card_image: /images/product-proofs/examiner-bench-status-pad-v0.4-4x6-bleed.webp
+card_image_alt: The production-ready 4 by 6 Bench Status Pad proof with compact state markers and handwriting space.
+hero_image: /images/product-proofs/examiner-bench-status-pad-v0.4-4x6-bleed.webp
+hero_image_alt: The version 0.4 Bench Status Pad production proof at its intended 4 by 6 inch format.
 design_test: Monday-morning context returns accurately in under thirty seconds.
 material_direction: Uncoated writing stock with a firm chipboard back and clean tear-away binding
 details:
@@ -28,6 +28,18 @@ details:
 - Secure-disposal reminder
 moment: At the end of a shift, before the active state of a case disappears into the weekend.
 stage_step: 4
+proof_order_ready: true
+proof_order:
+  version: "0.4"
+  target: 4 x 6 top-glued tear-away pad
+  file: source-assets/product-proofs/examiner-bench-status-pad-v0.4-4x6-bleed.pdf
+  file_label: 4.25 x 6.25 PDF with 0.125 inch bleed
+  first_test: 9 to 25 pads on uncoated writable stock with chipboard back
+  test_focus:
+  - Ordinary handwriting room across every field
+  - Top-glue clearance and clean tear behavior
+  - Whether Running, Do not interrupt, and Blocked alter behavior
+  - Repeatable return to active state in under thirty seconds
 prototype_title: A smaller card after a harder desk test
 prototype_intro: Version 0.3 was loaded with three representative examination scenarios before being repackaged for field testing. The exercise exposed two weak prompts in the earlier proof and confirmed that ordinary-length technical notes can still fit without shrinking the card into a miniature form. This is structured desk simulation, not practitioner field validation yet.
 prototype_images:
