@@ -14,24 +14,26 @@
   - title: Bench Status Pad
     role: Working object
     format: 4 x 6 tear-away pad
-    state: field-proof
-    state_label: Field proof
+    state: proof-ready
+    state_label: Proof order ready
     url: /roadmap/bench-status-pad/
     action: Open the study
     note: A continuity card for restoring active examination context after an interruption.
   - title: Examination Notebook
     role: Desk object
     format: 5.5 x 8.5 notebook
-    state: field-proof
-    state_label: Field proof
+    state: proof-ready
+    state_label: Proof order ready
     url: /roadmap/examination-notebook/
     action: Open the study
     note: A lightly structured notebook that leaves most of the interior to actual thinking.
   - title: A Hash Is a Promise
     role: Wall edition
     format: Mounted edition
-    state: queued
-    state_label: In the queue
+    state: proof-ready
+    state_label: Proof order ready
+    url: /roadmap/a-hash-is-a-promise-edition/
+    action: Open the study
     note: A wall piece about verification, integrity, and being able to stand behind what happened.
 
 - slug: evidence-room
@@ -50,24 +52,24 @@
   - title: Custody Status Pad
     role: Working object
     format: Tear-away desk pad
-    state: in-studio
-    state_label: In the studio
+    state: proof-ready
+    state_label: Proof order ready
     url: /roadmap/custody-status-pad/
     action: Open the study
     note: A continuity pad for the human work around pending releases, transfers, holds, and follow-up.
   - title: Evidence Room Working Ledger
     role: Desk object
     format: Bound working notebook
-    state: in-studio
-    state_label: In the studio
+    state: proof-ready
+    state_label: Proof order ready
     url: /roadmap/evidence-room-working-ledger/
     action: Open the study
     note: A notebook for inventories, discrepancies, destruction projects, vendor issues, and operational follow-through.
   - title: Preserved Until It Matters
     role: Wall edition
     format: Mounted edition
-    state: in-studio
-    state_label: In the studio
+    state: proof-ready
+    state_label: Proof order ready
     url: /roadmap/preserved-until-it-matters/
     action: Open the study
     note: A wall study about patience, custody, and the long memory of evidence.
@@ -86,20 +88,24 @@
   - title: Watch Notes Pad
     role: Working object
     format: Tear-away desk pad
-    state: queued
-    state_label: In the queue
+    state: proof-ready
+    state_label: Proof order ready
+    url: /roadmap/watch-notes-pad/
+    action: Open the study
     note: A simple operational pad built around now, next, waiting on, tell someone, and before I leave.
   - title: The Watch Field Notebook
     role: Desk object
     format: Field notebook
-    state: queued
-    state_label: In the queue
+    state: proof-ready
+    state_label: Proof order ready
+    url: /roadmap/watch-field-notebook/
+    action: Open the study
     note: A durable working notebook for names, timelines, sketches, follow-up, and shift-level thinking.
   - title: Believe in the Badge
     role: Wall edition
     format: Mounted edition
-    state: in-studio
-    state_label: In the studio
+    state: proof-ready
+    state_label: Proof order ready
     url: /works/believe-in-the-badge/
     action: View the work
     note: A wall edition about compassion, resolve, and the human weight of showing up.
@@ -118,18 +124,24 @@
   - title: Incident Status Pad
     role: Working object
     format: Tear-away desk pad
-    state: queued
-    state_label: In the queue
+    state: proof-ready
+    state_label: Proof order ready
+    url: /roadmap/incident-status-pad/
+    action: Open the study
     note: A compact incident-state card for current condition, containment, owner, checkpoint, and do-not-change context.
   - title: Incident & Recovery Notebook
     role: Desk object
     format: Bound working notebook
-    state: queued
-    state_label: In the queue
+    state: proof-ready
+    state_label: Proof order ready
+    url: /roadmap/incident-recovery-notebook/
+    action: Open the study
     note: A notebook for timelines, decisions, affected systems, recovery notes, and the questions that survive the first hour.
   - title: The Quiet Day
     role: Wall edition
     format: Mounted edition
-    state: queued
-    state_label: In the queue
+    state: proof-ready
+    state_label: Proof order ready
+    url: /roadmap/the-quiet-day-edition/
+    action: Open the study
     note: "A wall piece about the strange success condition of defensive work: nothing happened today because somebody prepared."
