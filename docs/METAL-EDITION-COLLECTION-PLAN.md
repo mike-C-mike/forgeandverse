@@ -1,23 +1,26 @@
-# Metal Edition Collection — Twelve Candidates, Four Rooms
+# Metal Edition Studies — Profession-Led Candidate Directions
 
-Status: 2026-11-16 · **Editorial direction, not a release or production approval**
+Status: 2026-11-17 · **Editorial direction, not a release or production approval**
+
+**Governing standard:** [Professional Lane Standard](PROFESSIONAL-LANE-STANDARD.md). The four professions are distinct audiences; this study is not an instruction to make every lane look or sound the same.
 
 ## Decision
 
-Develop **three distinct metal wall-art candidates for each Forge & Verse discipline** (twelve total). This is a separate track from the existing working pads and bound notebooks. The first four metal designs already have vector-led, small-format material proofs. The other eight are **concepts**, not finished compositions, manufacturing files, or approved merchandise.
+Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. The other eight remain unproduced concepts.
 
-Do not promote a concept into the public Work archive merely to meet the count. The three positions in each room are **different human or professional questions**, not color swaps of one slogan.
+**Do not make every profession the same trilogy.** The earlier *principle / practice / people* structure was a convenient cross-category planning device, but it diluted the actual differences in the work. It is retired as a compulsory format. Each lane should develop concepts from its own vocational reality, vocabulary, emotional stakes, physical environment, preferred aesthetics, and insider details.
 
-Each room gets:
-1. **Principle** — the professional standard or responsibility.
-2. **Practice** — what the work actually asks of the person.
-3. **People** — a human consequence, overlooked role, or emotional truth that the practitioner will recognize.
+Professional contrast matters:
+- **Digital forensics:** artifacts, verification, interpretation, scope, uncertainty, technical defensibility, meticulous bench culture.
+- **Property & Evidence:** custody, shelving, storage, records, time, inventory, release, disposition, and institutional memory.
+- **Law enforcement:** judgment, restraint, human contact, service, scene decisions, shifts, leadership, and what the officer takes from one call to the next.
+- **Cybersecurity:** monitoring, resilience, signals, response, systems dependencies, backup/restore, and invisible prevention.
 
-Do not force every concept into the same metallic-black/brass centered-quote template. Materials and visual systems should vary enough to feel curated together, but each must be able to stand on its own.
+**The profession is the creative brief; metal is a possible output.** Do not force a uniform palette, shared geometry, generic slogan hierarchy, or identical product mix. A completed piece should belong immediately and unmistakably to its home profession. Concepts too close to another lane should be moved, not blended.
 
 ## The Examiner's Bench · Digital Forensics
 
-### E1. A Hash Is a Promise — PRINCIPLE · EXISTING MATERIAL PROOF
+### E1. A Hash Is a Promise · EXISTING MATERIAL PROOF
 
 - **Meaning:** Defensibility and reproducible verification. A hash is valuable because another examiner can check it, not because the number looks impressive.
 - **Central language:** “A Hash Is a Promise.”
@@ -26,7 +29,7 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 - **Distinctive test:** Can technical seriousness survive as wall art without reading as compliance signage?
 - **Existing study:** /roadmap/a-hash-is-a-promise-edition/
 
-### E2. The Device Is Not the Question — PRACTICE · NEW CONCEPT
+### E2. The Device Is Not the Question · NEW CONCEPT
 
 - **Meaning:** The device is a source; the investigative question and its limits decide which examination is useful. A finding without scope or context can mislead.
 - **Working line:** “The question gives the evidence its meaning.”
@@ -36,7 +39,7 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 - **Editorial connection:** Existing Journal piece, “The Device Is Not the Question.”
 - **Current state:** Concept/structure only. No print-ready artwork.
 
-### E3. Between the Timestamps — PEOPLE / JUDGMENT · NEW CONCEPT
+### E3. Between the Timestamps · NEW CONCEPT
 
 - **Meaning:** Events do not automatically explain themselves. Clock drift, timestamp provenance, time zones, and incomplete records demand interpretation.
 - **Working line:** “A sequence is not yet an explanation.”
@@ -65,7 +68,7 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 - **First test:** Does the imagery honor accountable practice without misrepresenting what constitutes a legally sufficient custody record?
 - **Current state:** Concept only. No print-ready artwork.
 
-### R3. The Final Signature — PEOPLE / END OF LIFECYCLE · NEW CONCEPT
+### R3. The Final Signature · NEW CONCEPT
 
 - **Meaning:** Release, lawful disposition, inventory reconciliation, and closure take as much care as intake and retention. The profession does not stop at the storage shelf.
 - **Working line:** “Custody does not end at storage.”
@@ -74,38 +77,42 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 - **First test:** Does an evidence professional recognize disposition and release work, rather than read the empty slot as missing evidence?
 - **Current state:** Concept only. No print-ready artwork.
 
-## The Watch · Law Enforcement & Support
+## The Watch · Law Enforcement
 
-### W1. Believe in the Badge — PRINCIPLE / COMPASSION · EXISTING MATERIAL PROOF
+The Watch is a lane for law-enforcement practitioners rather than a catchall for every employee associated with a police department. The three candidates address **compassion, judgment, and continuity under pressure**, grounded in officers' real work rather than a replicated category template.
+
+### W1. Believe in the Badge · EXISTING MATERIAL PROOF
 
 - **Meaning:** Steadiness, compassion, service, and the emotional weight of showing up.
 - **Central language:** “Stand tall. Lead with heart. Keep showing up.”
-- **Visual treatment:** Keep **two distinct directions visible**: the original officer-photography composition (historical visual study, insufficient source resolution for a premium 36 x 24 print) and the new abstract shield/typography-led vector small proof.
+- **Visual treatment:** Keep **two distinct directions visible**: the original officer-photography composition (historical visual study, insufficient source resolution for a premium 36 x 24 print) and the newer abstract-shield typography-led vector small proof. Restore emotional photography if a suitable high-resolution master can be established.
 - **First proof:** Existing **12 x 8 landscape** vector-led PDF/JPG; **proof-order-ready**, not physically approved.
-- **Distinctive test:** Which composition preserves the genuine emotional impact without looking like recruiting material?
+- **Distinctive test:** Which composition preserves the writing's emotional impact without looking like recruitment or generic police merchandise?
 - **Existing study:** /roadmap/believe-in-the-badge-edition/
 
-### W2. The Voice That Answered — PRACTICE / DISPATCH · NEW CONCEPT
+### W2. The Decision to Listen · NEW LAW-ENFORCEMENT CONCEPT
 
-- **Meaning:** Dispatchers meet the crisis before responders do, and carry the ordinary burden of being the first calm voice.
-- **Working line:** “Before anyone arrived, someone answered.”
-- **Visual treatment:** A single uninterrupted audio waveform that becomes an organized dispatch timeline, against deep blue-black and copper signal strokes. Human, not technical spectacle; no invented 911 call transcripts.
-- **Suggested geometry:** **12 x 8 landscape**; test legibility from across a shared communications room.
-- **First test:** Does it honor dispatch on its own terms, not as an afterthought to a police hero image?
+- **Meaning:** A response can turn on an officer's restraint, attention, judgment, and ability to understand the person in front of them before choosing the next action.
+- **Working line:** “Before the next word, there is a choice.”
+- **Visual treatment:** A quiet, realistic scene at a doorway or curbside conversation viewed from respectful distance; atmospheric light, meaningful body language, no hero poses or exaggerated confrontation. Integrate typography like a considered editorial photograph rather than another dark abstract diagram.
+- **Suggested geometry:** **12 x 8 landscape** with a properly sourced photographic or original art master; paper vs. metal must be justified by physical proof.
+- **First test:** Would patrol personnel recognize the lived difficulty of judgment without interpreting the work as simplistic instructions or a political statement?
 - **Current state:** Concept only. No print-ready artwork.
 
-### W3. Behind the Shift — PEOPLE / UNSEEN SUPPORT · NEW CONCEPT
+### W3. The Next Call · NEW LAW-ENFORCEMENT CONCEPT
 
-- **Meaning:** Records, evidence, technology, analysts, fleet, administrative staff, and countless others carry operational responsibility without always being visible.
-- **Working line:** “One response rests on more work than anyone sees.”
-- **Visual treatment:** Multiple narrow interconnected work areas resolving into one clean continuous line; no faces required, no collage of occupational icons. Deep warm neutral with restrained blue/brass.
-- **Suggested geometry:** **12 x 8 landscape**, potentially larger later if horizontal detail survives.
-- **First test:** Does the work make unseen personnel feel recognized while still belonging in a law-enforcement room?
+- **Meaning:** Officers have to carry professionalism into a new interaction after a difficult or unresolved call; the next person is not responsible for what happened previously.
+- **Working line:** “The next person deserves a fresh beginning.”
+- **Visual treatment:** A calm, early-shift or late-shift patrol environment after the scene is over: empty passenger seat, muted daylight through a cruiser window, a quiet transitional moment. Avoid flags, dramatic lights, generic thin-line imagery, or slogans about toughness.
+- **Suggested geometry:** **8 x 12 portrait** for a distinct silhouette alongside the wide Badge piece.
+- **First test:** Is this a credible, humane recognition of emotional reset and public-facing duty without becoming a motivational poster?
 - **Current state:** Concept only. No print-ready artwork.
+
+**Dispatch belongs in its own exploration:** “The Voice That Answered” is *removed from The Watch's three law-enforcement candidates*, not abandoned. Its intended audience is call-takers and dispatchers; the [Professional Lane Standard](PROFESSIONAL-LANE-STANDARD.md) retains it as a potential Dispatch & Emergency Communications lane rather than counting it as a police print. Other support professions should receive the same consideration when their work has sufficient depth.
 
 ## The Signal · Cybersecurity and Operational Resilience
 
-### S1. The Quiet Day — PRINCIPLE / PREVENTION · EXISTING MATERIAL PROOF
+### S1. The Quiet Day · EXISTING MATERIAL PROOF
 
 - **Meaning:** Defensive preparation is often successful precisely when nothing dramatic occurs.
 - **Central language:** “Nothing happened today. That was the work.”
@@ -114,7 +121,7 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 - **Distinctive test:** Is the restraint intentional at wall scale, rather than simply looking empty?
 - **Existing study:** /roadmap/the-quiet-day-edition/
 
-### S2. The Restore Test — PRACTICE / RECOVERY · NEW CONCEPT
+### S2. The Restore Test · NEW CONCEPT
 
 - **Meaning:** A backup is not demonstrated recoverability; a successful restore test closes that gap.
 - **Working line:** “A backup is a possibility. A restore is proof.”
@@ -123,7 +130,7 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 - **First test:** Does the distinction land for an administrator, defender, or incident responder without an explanatory label?
 - **Current state:** Concept only. No print-ready artwork.
 
-### S3. The First Alert — PEOPLE / TRIAGE · NEW CONCEPT
+### S3. The First Alert · NEW CONCEPT
 
 - **Meaning:** Detection is only the beginning; human judgment makes the signal actionable under uncertainty.
 - **Working line:** “A signal is only the beginning of an answer.”
@@ -136,9 +143,9 @@ Do not force every concept into the same metallic-black/brass centered-quote tem
 
 Before a concept receives its own public study or a physical proof file:
 
-- Read the **line on its own** to a practitioner. Does it mean something specific, or could it hang in any office?
+- Read the **line on its own** to a practitioner in its intended profession. Would they recognize it as theirs, or could it hang unchanged in another professional lane?
 - View the composition **with all words hidden**. Does the form still have an identity? Do not create twelve interchangeable black quote slides.
-- Test each room's trio side by side. Distinguish **principle, practice, and people**; remove overlapping pieces instead of finding more synonyms.
+- Test each profession's candidates side by side. Confirm the pieces recognize distinct experiences **within that profession**, and do not recycle the same three-theme structure across professions.
 - Validate professional statements. Do not make security or evidence claims the design cannot defend.
 - Use original wording, non-identifying abstraction, and original/license-cleared assets only.
 - Resolve typography first at small proof dimensions; verify reading distance, crop, dead space, edge clearance, and dark-tone separation.
@@ -147,7 +154,7 @@ Before a concept receives its own public study or a physical proof file:
 ## First proof purchasing sequence
 
 1. **First batch:** Order one small sample of each of the **four existing vector-led metal candidates**, preferably on comparable low-glare surfaces. Learn how the vendor renders black, brass, oxblood, and fine lines before scaling up.
-2. **Second batch:** Build genuinely distinct **composition studies** for E2/E3, R2/R3, W2/W3, S2/S3. Review all eight in one room-by-room contact sheet. Reject or revise weak pieces before manufacturing.
+2. **Second batch:** Build profession-led **composition studies** for E2/E3, R2/R3, W2/W3, S2/S3. Review eight concepts first within each lane, then across lanes for unwanted lookalikes. Reject or revise weak pieces before manufacturing.
 3. **Third batch:** When each new design has a valid production master, order **one physical proof of each of the remaining approved-to-test candidates**, not a production run.
 4. Capture photos of the real object in ordinary working spaces, compare finish and mount choices, and mark the edition approved **only after** the physical gate.
 
