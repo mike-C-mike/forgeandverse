@@ -1,4 +1,4 @@
 ---
-title: "Disciplines"
-description: "Digital forensics, property and evidence, law-enforcement support, and cybersecurity. Each room holds practical tools, practitioner objects, and editions shaped around the people who work there."
+title: "Professions"
+description: "Dedicated spaces for digital forensic practitioners, property and evidence professionals, law-enforcement officers, and cybersecurity defenders. Each has its own identity and a common product lifecycle."
 ---
