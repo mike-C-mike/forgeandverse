@@ -1,0 +1,15 @@
+{{- $state := partial "lifecycle-state.html" . -}}
+{{- $image := .Params.preview_image | default .Params.image | default .Params.card_image | default .Params.hero_image -}}
+<article class="profession-piece">
+  <a class="profession-piece-link" href="{{ .RelPermalink }}">
+    {{ with $image }}
+    <div class="profession-piece-image"><img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Params.card_image_alt | default $.Params.preview_image_alt | default $.Title }}" loading="lazy"></div>
+    {{ end }}
+    <div class="profession-piece-body">
+      <p class="profession-piece-meta">{{ partial "lifecycle-label.html" $state }}<span class="profession-piece-type">{{ if eq .Section "roadmap" }}Studio study{{ else if eq .Section "downloads" }}Open release{{ else }}{{ .Params.format_label | default "Studio work" }}{{ end }}</span></p>
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Params.summary }}</p>
+      <span class="profession-piece-action">{{ if eq $state.phase_slug "production" }}View the release{{ else }}View development{{ end }} <b aria-hidden="true">→</b></span>
+    </div>
+  </a>
+</article>
