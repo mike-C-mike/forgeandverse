@@ -53,29 +53,29 @@
 - slug: watch
   page: /disciplines/watch/
   name: The Watch
-  plain_name: Law Enforcement & Support
+  plain_name: Law Enforcement
   priority: 3
-  line: For the people who keep showing up.
-  description: Thoughtful work for officers and the civilian professionals who keep operations moving.
-  context: Service is carried by more people than the public sees. Officers, dispatchers, analysts, technicians, supervisors, and support staff each hold a different part of the same difficult day.
+  line: For the officers who keep showing up, and the judgment they carry into every call.
+  description: Art, writing, field tools, and professional culture made for law-enforcement officers and supervisors.
+  context: Law enforcement is a human profession practiced under uncertainty. The work includes decisions not to escalate, reporting and accountability, compassion, restraint, leadership, and what the next person deserves after a hard call. Dispatch, digital evidence examination, property custody, and police technology are distinct crafts, not interchangeable motifs for this lane.
   themes:
-  - Service, resolve, compassion, and presence
-  - Dispatch, analysts, technicians, and support staff
-  - Leadership without theatrics
-  - The humor that gets a hard shift through the door
+  - Patrol and investigative judgment, accountability, and discretion
+  - Compassion, restraint, service, and the real work between calls
+  - Report writing, shifts, supervision, and responsibility
+  - Humor that officers recognize without turning the profession into recruitment graphics
   paths:
   - slug: workbench
     label: Useful tools
-    title: Practical pieces for the shift
-    description: Select field notes, handoff aids, and useful formats where a paper tool genuinely serves the work.
+    title: Tools for the officer's shift
+    description: Field and follow-up notes, useful handoffs, and role-appropriate resources rooted in patrol or investigative work.
   - slug: workspace
     label: For the room
-    title: Recognition with an inside voice
-    description: Objects that carry pride, levity, and the details understood by the people who have actually worked the room.
+    title: Objects with an officer's perspective
+    description: Working notebooks, personal desk objects, and distinctive humor grounded in law-enforcement experiences rather than generic public-safety branding.
   - slug: editions
     label: Wall editions
-    title: Service rendered with weight
-    description: Wall pieces about compassion, presence, resolve, and the human consequence behind the badge and the headset.
+    title: Judgment and service, made visible
+    description: Art that recognizes the humanity, discretion, consequence, and continuity of law-enforcement work without defaulting to heroic iconography.
 - slug: signal
   page: /disciplines/signal/
   name: The Signal
