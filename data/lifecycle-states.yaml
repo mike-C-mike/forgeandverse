@@ -1,0 +1,51 @@
+# Public lifecycle language shared by all professions and product formats.
+- slug: planned
+  phase: Development
+  phase_slug: development
+  label: Planned
+  description: Proposed for this profession; active production work has not begun.
+- slug: concept
+  phase: Development
+  phase_slug: development
+  label: Concept
+  description: The professional need and first direction are being established.
+- slug: in-development
+  phase: Development
+  phase_slug: development
+  label: In development
+  description: Writing, structure, artwork, or materials are still being developed.
+- slug: proof-ready
+  phase: Development
+  phase_slug: development
+  label: Proof ready
+  description: A small physical manufacturing proof can be ordered; this is not a reviewed sample or finished product.
+- slug: field-proof
+  phase: Development
+  phase_slug: development
+  label: Field proof available
+  description: A printable prototype is available for practitioner testing, not a final release.
+- slug: proof-in-hand
+  phase: Development
+  phase_slug: development
+  label: Physical proof in review
+  description: A physical sample exists and is undergoing material and use testing.
+- slug: production-approved
+  phase: Production
+  phase_slug: production
+  label: Approved for production
+  description: Design and production requirements are approved; ordering may not yet be available.
+- slug: available
+  phase: Production
+  phase_slug: production
+  label: Available
+  description: This physical edition is currently offered through its stated production partner.
+- slug: released
+  phase: Production
+  phase_slug: production
+  label: Released
+  description: A completed digital or free work can be downloaded or used as described.
+- slug: archived
+  phase: Archive
+  phase_slug: archive
+  label: Archived
+  description: Preserved for reference but no longer actively offered.
