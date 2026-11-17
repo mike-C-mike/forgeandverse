@@ -76,8 +76,8 @@
 
 - slug: watch
   name: The Watch
-  plain_name: Law Enforcement & Support
-  line: For the people who keep showing up.
+  plain_name: Law Enforcement
+  line: For the officers who keep showing up, and the judgment they carry into every call.
   items:
   - title: Shift Handoff Sheet
     role: Open release
