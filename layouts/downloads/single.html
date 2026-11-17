@@ -3,6 +3,7 @@
   <div class="wrap download-detail-grid">
     <div class="download-detail-copy">
       <p class="eyebrow discipline-backlink">Free work · {{ partial "discipline-link.html" .Params.discipline }}</p>
+      <p>{{ partial "lifecycle-label.html" (partial "lifecycle-state.html" .) }}</p>
       <h1>{{ .Title }}</h1>
       <p>{{ .Params.summary }}</p>
       <div class="download-actions">
