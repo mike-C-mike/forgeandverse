@@ -1,6 +1,8 @@
 # Product Map
 
-Forge & Verse organizes releases by the need they fill, not by a quota of commodity formats.
+Forge & Verse organizes releases first by **the profession served**, then by the need the work fills, not by a quota of commodity formats. The Examiner's Bench, Evidence Room, Watch, and Signal have different professional identities. Workbench, Workspace, and Editions are optional paths **within** each lane, not an identical shopping list imposed on every category.
+
+See [Professional Lane Standard](PROFESSIONAL-LANE-STANDARD.md).
 
 ## Workbench
 
