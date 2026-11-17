@@ -43,7 +43,7 @@
 [data-material-finish-demo][data-finish="matte"] .materials-finish-surface img { filter:saturate(.92) contrast(.98); }
 [data-material-finish-demo][data-finish="satin"] .materials-finish-surface img { filter:saturate(1) contrast(1.03); }
 [data-material-finish-demo][data-finish="gloss"] .materials-finish-surface img { filter:saturate(1.07) contrast(1.11); }
-[data-material-finish-demo][data-light="indirect"] .materials-finish-reflection { background:linear-gradient(122deg,transparent 18%,rgba(255,249,234,.18) 43%,transparent 72%); opacity:calc(var(--reflection-opacity) * .45); }
+[data-material-finish-demo][data-light="indirect"] .materials-finish-reflection { background:linear-gradient(122deg,transparent 18%,rgba(255,249,234,.18) 43%,transparent 72%); opacity:var(--reflection-opacity); }
 [data-material-finish-demo][data-light="window"] .materials-finish-reflection { background:linear-gradient(118deg,transparent 13%,rgba(240,242,237,.12) 30%,rgba(255,250,227,.85) 39%,rgba(255,255,255,.48) 46%,rgba(255,249,236,.12) 58%,transparent 72%); opacity:var(--reflection-opacity); }
 [data-material-finish-demo][data-light="spot"] .materials-finish-reflection { background:radial-gradient(ellipse at 67% 16%,rgba(255,249,224,.94) 0%,rgba(255,248,223,.65) 15%,rgba(255,250,235,.08) 35%,transparent 61%); opacity:var(--reflection-opacity); }
 .materials-sun-note { display:grid; grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); gap:clamp(1rem,4vw,3.5rem); margin-top:1.6rem; border-top:1px solid #b9a98f; padding-top:1.5rem; }
