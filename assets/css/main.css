@@ -2719,3 +2719,86 @@ body.lightbox-open { overflow: hidden; }
   margin-top: .9rem;
 }
 .edition-index-hero-links .text-link { margin-top: 0; }
+
+
+/* v21: distinct professional landing pages with one product lifecycle. */
+.profession-hero { overflow:hidden; }
+.profession-hero-grid { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr); gap:clamp(2rem,6vw,5rem); align-items:center; }
+.profession-hero .eyebrow { color:var(--brass-light); }
+.profession-hero-description { max-width:660px; margin:1.6rem 0 0; color:rgba(241,237,227,.79); font-size:1.08rem; line-height:1.75; }
+.profession-hero-figure { margin:0; min-width:0; }
+.profession-hero-figure img { width:100%; height:clamp(260px,33vw,470px); object-fit:cover; background:#101212; border:1px solid rgba(241,237,227,.13); }
+.profession-hero-figure figcaption { margin-top:.7rem; color:rgba(241,237,227,.58); font-size:.73rem; line-height:1.5; }
+.profession-jump { display:flex; gap:1rem 1.5rem; flex-wrap:wrap; margin-top:2rem; }
+.profession-jump a { color:var(--paper); text-decoration:none; font-size:.82rem; border-bottom:1px solid rgba(241,237,227,.42); padding-bottom:.3rem; }
+.profession-jump a:hover { border-color:var(--brass-light); }
+.discipline-hero-examiner-bench { background:linear-gradient(115deg,#111719,#27343a); }
+.discipline-hero-evidence-room { background:linear-gradient(115deg,#201b18,#453729); }
+.discipline-hero-watch { background:linear-gradient(115deg,#181d26,#38302f); }
+.discipline-hero-signal { background:linear-gradient(115deg,#101b23,#223a3d); }
+.discipline-hero-evidence-room .discipline-hero-line { color:#e0bf8f; }
+.discipline-hero-watch .discipline-hero-line { color:#d0b8ab; }
+.discipline-hero-signal .discipline-hero-line { color:#9fbfc5; }
+.profession-specialties { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:clamp(2rem,5vw,4rem); }
+.profession-specialties p { margin:0; padding:1rem 1.1rem; background:var(--paper); color:#474a48; font-size:.9rem; }
+.profession-lifecycle-guide { background:#e5ded0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.profession-lifecycle-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.profession-lifecycle-grid > div { padding:1.55rem 1.8rem 1.55rem 0; }
+.profession-lifecycle-grid > div + div { border-left:1px solid var(--line); padding-left:1.8rem; }
+.profession-lifecycle-grid strong { font-family:var(--serif); font-size:1.35rem; }
+.profession-lifecycle-grid p { margin:.4rem 0 0; color:#555653; font-size:.89rem; }
+.profession-available { background:var(--ivory); scroll-margin-top:95px; }
+.profession-development { background:#141718; color:var(--paper); scroll-margin-top:95px; }
+.profession-development .section-heading p { color:rgba(241,237,227,.66); }
+.profession-development-group { margin-top:3rem; }
+.profession-development-group > header { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.6fr); gap:.3rem 2rem; border-top:1px solid rgba(241,237,227,.22); padding:1.4rem 0 1.2rem; }
+.profession-development-group > header .eyebrow { grid-column:1/-1; color:var(--brass-light); }
+.profession-development-group > header h3 { margin:0; font-family:var(--serif); font-size:clamp(1.6rem,3vw,2.4rem); font-weight:550; }
+.profession-development-group > header > p:last-child { margin:0; color:rgba(241,237,227,.63); }
+.profession-piece-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.profession-piece { min-width:0; background:var(--paper); color:var(--ink); }
+.profession-piece-link { display:flex; flex-direction:column; height:100%; text-decoration:none; }
+.profession-piece-image { height:220px; overflow:hidden; background:#252525; }
+.profession-piece-image img { width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }
+.profession-piece-link:hover .profession-piece-image img { transform:scale(1.025); }
+.profession-piece-body { display:flex; flex-direction:column; flex:1; padding:1.3rem 1.35rem 1.45rem; }
+.profession-piece-meta { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:.5rem 1rem; margin:0; }
+.profession-piece-type { color:#6c6255; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
+.profession-piece h3 { margin:1.1rem 0 .6rem; font-family:var(--serif); font-size:clamp(1.55rem,2.8vw,2.1rem); line-height:1.07; }
+.profession-piece-body > p:not(.profession-piece-meta) { margin:0; color:#555957; font-size:.94rem; }
+.profession-piece-action { display:block; margin-top:auto; padding-top:1.4rem; font-weight:750; font-size:.83rem; }
+.profession-piece-action b { margin-left:.5rem; }
+.profession-empty { padding:1.5rem; border:1px solid var(--line); max-width:760px; }
+.profession-development .profession-empty { border-color:rgba(241,237,227,.22); }
+.profession-writing { scroll-margin-top:95px; background:var(--paper); }
+.profession-neighbors { padding:3rem 0; background:var(--ivory); border-top:1px solid var(--line); }
+.profession-neighbor-links { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem; }
+.profession-neighbor-links a { padding:.65rem .8rem; border:1px solid var(--line); font-size:.83rem; text-decoration:none; }
+.profession-neighbor-links a:hover { background:var(--paper); }
+.lifecycle-label { display:inline; font-family:var(--sans); font-size:.7rem; letter-spacing:.015em; font-weight:650; line-height:1.45; text-transform:none; white-space:normal; }
+.lifecycle-label strong { font-weight:800; }
+.lifecycle-label-development { color:#855b2b; }
+.lifecycle-label-production { color:#336454; }
+.lifecycle-label-archive { color:#666; }
+.profession-piece .lifecycle-label { font-size:.73rem; }
+.study-card .lifecycle-label, .work-card .lifecycle-label, .release-card .lifecycle-label, .download-card .lifecycle-label { font-size:inherit; color:inherit; }
+.study-detail-stage .lifecycle-label, .work-detail-facts .lifecycle-label { font-size:inherit; color:inherit; }
+.edition-system-state .lifecycle-label, .edition-card .lifecycle-label { font-size:inherit; }
+@media (max-width:1000px) {
+  .profession-piece-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .profession-specialties { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:820px) {
+  .profession-hero-grid { grid-template-columns:1fr; }
+  .profession-hero-figure img { height:clamp(230px,52vw,410px); }
+  .profession-development-group > header { grid-template-columns:1fr; }
+  .profession-lifecycle-grid { grid-template-columns:1fr; }
+  .profession-lifecycle-grid > div { padding:1.15rem 0; }
+  .profession-lifecycle-grid > div + div { padding-left:0; border-left:0; border-top:1px solid var(--line); }
+}
+@media (max-width:600px) {
+  .profession-piece-grid, .profession-specialties { grid-template-columns:1fr; }
+  .profession-piece-image { height:200px; }
+  .profession-hero-figure img { height:250px; }
+  .profession-jump { gap:.75rem 1.15rem; }
+}
