@@ -4,28 +4,114 @@
 {{ $works := where (where site.RegularPages "Section" "works") ".Params.discipline" $slug }}
 {{ $downloads := where (where site.RegularPages "Section" "downloads") ".Params.discipline" $slug }}
 {{ $journal := where (where site.RegularPages "Section" "journal") ".Params.discipline" $slug }}
-{{ $roadmapSection := site.GetPage "/roadmap" }}
-{{ $anvil := where $roadmapSection.Pages ".Params.discipline_slug" $slug }}
-<header class="discipline-hero discipline-hero-{{ $slug }}">
-  <div class="wrap discipline-hero-grid">
-    <div><div class="discipline-hero-meta"><span>0{{ $discipline.priority }}</span><p class="eyebrow">{{ $discipline.plain_name }}</p></div><h1>{{ .Title }}</h1><p class="discipline-hero-line">{{ $discipline.line }}</p></div>
-    <p>{{ $discipline.context }}</p>
+{{ $anvil := where (site.GetPage "/roadmap").Pages ".Params.discipline_slug" $slug }}
+{{ $published := slice }}
+{{ $studioWorks := slice }}
+{{ range $works }}
+  {{ $state := partial "lifecycle-state.html" . }}
+  {{ if eq $state.phase_slug "production" }}{{ $published = append $published . }}{{ else if eq $state.phase_slug "development" }}{{ $studioWorks = append $studioWorks . }}{{ end }}
+{{ end }}
+{{ range $downloads }}
+  {{ $state := partial "lifecycle-state.html" . }}
+  {{ if eq $state.phase_slug "production" }}{{ $published = append $published . }}{{ else if eq $state.phase_slug "development" }}{{ $studioWorks = append $studioWorks . }}{{ end }}
+{{ end }}
+<header class="discipline-hero discipline-hero-{{ $slug }} profession-hero">
+  <div class="wrap profession-hero-grid">
+    <div>
+      <p class="eyebrow">Forge &amp; Verse / {{ $discipline.plain_name }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="discipline-hero-line">{{ $discipline.line }}</p>
+      <p class="profession-hero-description">{{ $discipline.context }}</p>
+      <nav class="profession-jump" aria-label="Explore this profession">
+        <a href="#available">Released &amp; available</a>
+        <a href="#development">In development</a>
+        {{ if gt (len $journal) 0 }}<a href="#writing">Writing</a>{{ end }}
+      </nav>
+    </div>
+    {{ with $discipline.hero_image }}
+    <figure class="profession-hero-figure">
+      <img src="{{ . }}" alt="{{ $discipline.hero_image_alt }}" loading="eager">
+      <figcaption>{{ $discipline.hero_caption }}</figcaption>
+    </figure>
+    {{ end }}
   </div>
 </header>
-<section class="section discipline-story"><div class="wrap discipline-story-grid"><div><p class="eyebrow">Inside the room</p><h2>{{ $discipline.description }}</h2></div><article class="prose-inline">{{ .Content }}</article></div></section>
-<section class="section discipline-path-section">
-  <div class="wrap">
-    <div class="section-heading split-heading"><div><p class="eyebrow">In this room</p><h2>Useful tools, familiar objects, and work worth mounting.</h2></div><p>The form changes with the need, but the details stay rooted in the profession.</p></div>
-    <div class="discipline-paths discipline-paths-single">{{ range $discipline.paths }}<article class="discipline-path-card" id="{{ .slug }}"><p class="discipline-path-label">{{ .label }}</p><h3>{{ .title }}</h3><p>{{ .description }}</p></article>{{ end }}</div>
+
+<section class="section discipline-story profession-identity" id="identity">
+  <div class="wrap discipline-story-grid">
+    <div><p class="eyebrow">Made for this profession</p><h2>{{ $discipline.description }}</h2></div>
+    <article class="prose-inline">{{ .Content }}</article>
+  </div>
+  <div class="wrap profession-specialties" aria-label="Professional themes">
+    {{ range $discipline.themes }}<p>{{ . }}</p>{{ end }}
   </div>
 </section>
-{{ if or (gt (len $works) 0) (gt (len $downloads) 0) (gt (len $journal) 0) }}
-<section class="section discipline-shelf"><div class="wrap"><div class="section-heading split-heading"><div><p class="eyebrow">From {{ $discipline.name }}</p><h2>Current work and writing</h2></div></div><div class="discipline-shelf-grid">
-{{ range $works.ByWeight }}<a class="discipline-shelf-card discipline-shelf-card-work" href="{{ .RelPermalink }}">{{ with .Params.image }}<div class="discipline-shelf-image"><img src="{{ . }}" alt="" loading="lazy"></div>{{ end }}<div><span>Studio work · {{ partial "status-label.html" .Params.status }}</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>View the work <b aria-hidden="true">→</b></strong></div></a>{{ end }}
-{{ range $downloads.ByWeight }}<a class="discipline-shelf-card" href="{{ .RelPermalink }}"><div><span>Free work</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>View the release <b aria-hidden="true">→</b></strong></div></a>{{ end }}
-{{ range $journal.ByDate.Reverse }}<a class="discipline-shelf-card" href="{{ .RelPermalink }}"><div><span>Journal · {{ .Date.Format "January 2006" }}</span><h3>{{ .Title }}</h3><p>{{ .Params.summary }}</p><strong>Read the piece <b aria-hidden="true">→</b></strong></div></a>{{ end }}
-</div></div></section>{{ end }}
-{{ if gt (len $anvil) 0 }}
-<section class="section discipline-anvil"><div class="wrap"><div class="section-heading split-heading split-heading-light"><div><p class="eyebrow">On the anvil</p><h2>Taking shape in this room</h2></div><div><p>Work still being structured, written, composed, or tested.</p><a class="text-link text-link-light" href="/roadmap/">View all studies <span aria-hidden="true">→</span></a></div></div><div class="study-grid study-grid-discipline">{{ range $anvil.ByWeight }}{{ partial "study-card.html" . }}{{ end }}</div></div></section>
+
+<section class="profession-lifecycle-guide" aria-label="How work moves from development to production">
+  <div class="wrap profession-lifecycle-grid">
+    <div><strong>Development</strong><p>Concepts, active design, printable field proofs, and physical samples under review. Not finished products.</p></div>
+    <div><strong>Production</strong><p>Approved production specifications or completed releases. Only an item marked Available has an active physical ordering path.</p></div>
+    <div><strong>Archive</strong><p>Retired work kept visible for reference, without a current ordering offer.</p></div>
+  </div>
+</section>
+
+<section class="section profession-available" id="available">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Production / Released work</p><h2>Ready to use or order.</h2></div>
+      <p>Only completed open releases or approved physical editions appear here. An edition approved for production still needs an active order link before it is available.</p>
+    </div>
+    {{ if gt (len $published) 0 }}
+    <div class="profession-piece-grid">{{ range $published }}{{ partial "profession-item-card.html" . }}{{ end }}</div>
+    {{ else }}
+    <p class="profession-empty">Nothing in this professional collection is available to order or download yet. You can follow the projects below as they develop.</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section profession-development" id="development">
+  <div class="wrap">
+    <div class="section-heading split-heading split-heading-light">
+      <div><p class="eyebrow">Development / Inside the studio</p><h2>Work taking shape for {{ $discipline.plain_name | lower }}.</h2></div>
+      <p>These are studio studies and objects in progress. Each item's status distinguishes an idea, a proof file, and a finished release.</p>
+    </div>
+    {{ range $discipline.paths }}
+      {{ $path := .slug }}
+      {{ $pathWorks := where $studioWorks ".Params.release_path" $path }}
+      {{ $pathStudies := where $anvil ".Params.release_path" $path }}
+      {{ $uniqueStudies := slice }}
+      {{ range $pathStudies }}
+        {{ if not .Params.related_work }}{{ $uniqueStudies = append $uniqueStudies . }}{{ end }}
+      {{ end }}
+      {{ if or (gt (len $pathWorks) 0) (gt (len $uniqueStudies) 0) }}
+        <div class="profession-development-group" id="{{ $path }}">
+          <header><p class="eyebrow">{{ .label }}</p><h3>{{ .title }}</h3><p>{{ .description }}</p></header>
+          <div class="profession-piece-grid">
+            {{ range $pathWorks }}{{ partial "profession-item-card.html" . }}{{ end }}
+            {{ range $uniqueStudies }}{{ partial "profession-item-card.html" . }}{{ end }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+    {{ if and (eq (len $studioWorks) 0) (eq (len $anvil) 0) }}<p class="profession-empty">There are no active studies in this room yet. New work is added only when a specific professional need justifies it.</p>{{ end }}
+  </div>
+</section>
+{{ if gt (len $journal) 0 }}
+<section class="section profession-writing" id="writing">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">From inside the profession</p><h2>Writing and observations.</h2></div><p>Essays and practice notes give the work its voice without turning every idea into a product.</p>
+    </div>
+    <div class="journal-list">{{ range $journal.ByDate.Reverse }}{{ partial "journal-row.html" . }}{{ end }}</div>
+  </div>
+</section>
 {{ end }}
-{{ end }}
+<section class="profession-neighbors">
+  <div class="wrap">
+    <p class="eyebrow">Other professional rooms</p>
+    <div class="profession-neighbor-links">
+      {{ range hugo.Data.disciplines }}{{ if ne .slug $slug }}<a href="{{ .page }}">{{ .plain_name }} <span aria-hidden="true">→</span></a>{{ end }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }
