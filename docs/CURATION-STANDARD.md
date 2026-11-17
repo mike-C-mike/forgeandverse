@@ -8,6 +8,14 @@ One strong piece is more valuable than a shelf of acceptable ones.
 
 A work earns a public page only when the studio believes in the idea and the form carrying it. A discipline may remain quiet for months without being treated as incomplete.
 
+## Profession before product
+
+Each work must belong to an identifiable professional lane before selecting a product format. Design the experience from that role's actual decisions, environment, artifacts, material culture, humor, and emotional stakes. A concept that can move unchanged from Digital Forensics to Property & Evidence, Law Enforcement, or Cybersecurity is not yet distinctive enough to sell as profession-specific work.
+
+Avoid identical wall-art trios, matching generic desktop products, and recolored slogans across professional lanes. A profession may warrant many practical tools and few editions, or the reverse. New professions deserve separate identities when the work supports them rather than being filed under a convenient public-safety umbrella.
+
+See [Professional Lane Standard](PROFESSIONAL-LANE-STANDARD.md).
+
 ## Need before format
 
 Every release should help someone do the work, inhabit the work, or remember why the work matters.
