@@ -59,7 +59,7 @@
       <article class="collection-work-card collection-state-{{ $item.state }}">
         <div class="collection-work-top">
           <span>0{{ add $slot 1 }} · {{ $item.role }}</span>
-          <span class="collection-state">{{ $item.state_label }}</span>
+          <span class="collection-state">{{ partial "lifecycle-label.html" (partial "lifecycle-record.html" $item.state) }}</span>
         </div>
         <div class="collection-work-copy">
           <p class="collection-format">{{ $item.format }}</p>
