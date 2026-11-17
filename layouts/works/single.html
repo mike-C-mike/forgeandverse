@@ -23,8 +23,7 @@
     </div>
     <div class="work-detail-facts" aria-label="Work details">
       <dl>
-        <div><dt>Studio state</dt><dd>{{ partial "status-label.html" .Params.status }}</dd></div>
-        {{ if and $edition $edition.enabled }}<div><dt>Edition state</dt><dd>{{ partial "edition-state.html" $edition.state }}</dd></div>{{ end }}
+        <div><dt>Lifecycle</dt><dd>{{ partial "lifecycle-label.html" (partial "lifecycle-state.html" .) }}</dd></div>
         <div><dt>Form</dt><dd>{{ .Params.format_label | default .Params.format }}</dd></div>
         {{ with .Params.material_intent }}<div><dt>Material direction</dt><dd>{{ . }} <a href="/materials/">About physical editions</a></dd></div>{{ end }}
         {{ with .Params.partner_name }}<div><dt>Produced by</dt><dd>{{ . }}</dd></div>{{ end }}
