@@ -58,3 +58,7 @@
 </dialog>
 {{ $js := resources.Get "js/site.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ if eq .Section "materials" }}
+  {{ $materialJs := resources.Get "js/materials-interactions.js" | minify | fingerprint }}
+  <script src="{{ $materialJs.RelPermalink }}" integrity="{{ $materialJs.Data.Integrity }}" defer></script>
+{{ end }}

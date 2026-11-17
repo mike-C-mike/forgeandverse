@@ -31,5 +31,9 @@
   <link rel="stylesheet" href="{{ $editionCss.RelPermalink }}" integrity="{{ $editionCss.Data.Integrity }}">
   {{ $collectionCss := resources.Get "css/collection.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $collectionCss.RelPermalink }}" integrity="{{ $collectionCss.Data.Integrity }}">
+  {{ if eq .Section "materials" }}
+    {{ $materialCss := resources.Get "css/materials-interactions.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $materialCss.RelPermalink }}" integrity="{{ $materialCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>
