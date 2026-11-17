@@ -61,6 +61,18 @@
           <span>0{{ add $slot 1 }} · {{ $item.role }}</span>
           <span class="collection-state">{{ partial "lifecycle-label.html" (partial "lifecycle-record.html" $item.state) }}</span>
         </div>
+        {{ with $item.url }}
+          {{ with site.GetPage . }}
+            {{ $preview := .Params.card_image | default .Params.preview_image | default .Params.hero_image | default .Params.image }}
+            {{ $alt := .Params.card_image_alt | default .Params.preview_image_alt | default .Params.hero_image_alt | default .Params.image_alt | default $item.title }}
+            {{ with $preview }}
+              <figure class="collection-work-preview">
+                <img src="{{ . }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+                <figcaption>{{ if eq $item.state "released" }}Preview of released file{{ else }}Studio design image · not a finished product{{ end }}</figcaption>
+              </figure>
+            {{ end }}
+          {{ end }}
+        {{ end }}
         <div class="collection-work-copy">
           <p class="collection-format">{{ $item.format }}</p>
           <h3>{{ $item.title }}</h3>

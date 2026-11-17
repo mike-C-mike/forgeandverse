@@ -2820,3 +2820,9 @@ body.lightbox-open { overflow: hidden; }
 .discipline-directory-card h2 { margin-top:1.15rem; }
 @media (max-width:900px) { .hero-grid { grid-template-columns:1fr; } .hero-copy { padding-bottom:0; } .hero-cinematic { max-width:640px; margin:0 auto 2.2rem; } }
 @media (max-width:600px) { .hero-cinematic { margin-bottom:1.5rem; } .discipline-card-image { height:190px; } }
+
+/* Picture-first explanation of studio formats; images are real releases or named design studies. */
+.studio-format-image { margin:0 0 1.1rem; }
+.studio-format-image img { width:100%; height:175px; object-fit:contain; background:#dfd8cb; border:1px solid var(--line); }
+.studio-format-image figcaption { margin-top:.45rem; font-size:.67rem; color:#666258; letter-spacing:.04em; }
+@media (max-width:800px) { .studio-format-image img { height:205px; } }
