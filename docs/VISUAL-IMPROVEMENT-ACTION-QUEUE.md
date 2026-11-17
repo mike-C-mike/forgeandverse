@@ -33,6 +33,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Guardrail:** Concept image is illustrative, **not** a measured legibility test or an approved production size. Before implementation, replace the illustrative reconstruction with the exact production-study artwork and remove any invented supporting copy; build labels in accessible HTML instead of embedding all copy in raster art.
   - **Status:** DESIGN REVIEW (polished website-layout concept, Option B selected). **No publication approved.**
   - **Current direction:** Tabs `Close / Across the room / In passing`, actual artwork to replace illustrative art, explanatory text beside the artwork, and no unverified fixed distance values. Use mobile-first cards and preserve source wording. Mockup is design-only, not a final site rendering.
+  - **Scope decision (2026-11-17):** The Materials page is **educational only**, not a product configurator, shopping assistant, or recommendation engine. Both reading-distance and future Finish & Lighting controls are illustrative demonstrations of design tradeoffs. No implied product availability, measured performance, certified longevity, or promise about any particular vendor finish. Real photographed samples and manufacturer-specific observations can be added *later*, only after actually tested examples exist and receive separate review. This scope is agreed; specific designs and publication are **not yet approved**.
   - **Companion idea for later review:** An adjacent **Finish & Lighting** interactive module, using the same artwork and fixed viewing angle, with a finish selector (Matte / Satin / Gloss) and room-light selector (Soft indirect daylight / Window opposite the art / Overhead spots). Visually model reflection intensity and color/contrast tradeoffs, not physical accuracy. Keep direct-sun **exposure longevity** distinct from reflected glare. Actual results require manufacturer-specific material samples; do not promise that “matte” prevents all glare, UV fading, or direct-sun damage. Keep as a follow-on review after item 01 is approved.
 
 - [ ] **02 · P1 · Digital Forensics Intake Kit: show the three working formats**
@@ -140,7 +141,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 
 | Item | Current design version | Decision | Requested changes | Publication confirmed |
 | --- | --- | --- | --- | --- |
-| 01 | v3 polished Materials UI concept (Option B) | Awaiting user approval or tweaks | Replace illustrative proof, omit untested numerical distance; later review finish + lighting companion | No |
+| 01 | v3 polished Materials UI concept (Option B) | Educational-only scope agreed; specific layout still in review | Replace illustrative proof, omit untested numbers, keep both interactions explanatory; real samples only after future testing | No |
 
 ## Non-negotiable review checks for every item
 
