@@ -22,16 +22,16 @@ disableKinds = ["taxonomy", "term"]
 
 [menu]
   [[menu.main]]
+    name = "Professions"
+    url = "/disciplines/"
+    weight = 10
+  [[menu.main]]
     name = "Work"
     url = "/works/"
-    weight = 10
+    weight = 20
   [[menu.main]]
     name = "Journal"
     url = "/journal/"
-    weight = 20
-  [[menu.main]]
-    name = "Disciplines"
-    url = "/disciplines/"
     weight = 30
   [[menu.main]]
     name = "On the Anvil"
