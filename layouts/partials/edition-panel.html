@@ -12,7 +12,7 @@
         <h2>{{ $edition.headline | default "The work as an object." }}</h2>
       </div>
       <div class="edition-system-state">
-        {{ partial "edition-state.html" $edition.state }}
+        {{ partial "lifecycle-label.html" (partial "lifecycle-state.html" .) }}
         {{ with $stateShort }}<p>{{ . }}</p>{{ end }}
       </div>
     </div>
