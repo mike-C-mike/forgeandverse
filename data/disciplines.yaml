@@ -1,7 +1,7 @@
 - slug: examiner-bench
-  hero_image: /images/product-proofs/examiner-a-hash-is-a-promise-proof-8x12.webp
-  hero_image_alt: A Hash Is a Promise digital-forensics print study with verification-inspired typography
-  hero_caption: Current Examiner's Bench print study. Not yet a physical product.
+  hero_image: /images/professions/digital-forensics.avif
+  hero_image_alt: A prepared digital evidence examination bench with a mobile device, connected storage, and careful documentation
+  hero_caption: Digital evidence examination at the bench
   page: /disciplines/examiner-bench/
   name: The Examiner's Bench
   plain_name: Digital Forensics
@@ -28,9 +28,9 @@
     title: Work worth mounting
     description: Substantial wall pieces about precision, consequence, persistence, and the quiet weight of digital evidence.
 - slug: evidence-room
-  hero_image: /images/studies/preserved-until-it-matters/direction-study.webp
-  hero_image_alt: Property and evidence studio direction with anonymous stored evidence and shelf geometry
-  hero_caption: Current Evidence Room direction study. Not yet a physical product.
+  hero_image: /images/professions/property-and-evidence.avif
+  hero_image_alt: Sealed, labeled evidence packages and secure archival storage arranged for long-term custody
+  hero_caption: Property and evidence stewardship
   page: /disciplines/evidence-room/
   name: The Evidence Room
   plain_name: Property & Evidence
@@ -57,9 +57,9 @@
     title: The long memory of evidence
     description: Art about patience, preservation, and the ordinary item that may become important years after it reaches the shelf.
 - slug: watch
-  hero_image: /images/studies/believe-in-the-badge/composition-study.webp
-  hero_image_alt: Photographic Believe in the Badge composition with officers and reflective writing
-  hero_caption: Original Watch photographic art study. Not a print-ready master.
+  hero_image: /images/professions/law-enforcement.avif
+  hero_image_alt: A uniformed police officer beside a patrol car at dusk, looking toward the horizon
+  hero_caption: Law enforcement, service and judgment
   page: /disciplines/watch/
   name: The Watch
   plain_name: Law Enforcement
@@ -86,9 +86,9 @@
     title: Judgment and service, made visible
     description: Art that recognizes the humanity, discretion, consequence, and continuity of law-enforcement work without defaulting to heroic iconography.
 - slug: signal
-  hero_image: /images/product-proofs/signal-the-quiet-day-proof-12x8.webp
-  hero_image_alt: The Quiet Day cybersecurity wall-art proof with restrained network geometry
-  hero_caption: Current Signal print study. Not yet a physical product.
+  hero_image: /images/professions/cybersecurity.avif
+  hero_image_alt: A quiet cybersecurity operations workstation with monitors and defensive infrastructure
+  hero_caption: Defensive security operations
   page: /disciplines/signal/
   name: The Signal
   plain_name: Cybersecurity

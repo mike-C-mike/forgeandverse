@@ -15,11 +15,11 @@
       <h1>Forged in fire.<br>Fluent in consequence.</h1>
       <p class="lede">Art, writing, and useful objects for the people who examine, protect, preserve, and defend.</p>
       <div class="actions">
-        <a class="button button-light" href="/works/">Explore the work</a>
+        <a class="button button-light" href="/disciplines/">Explore the professions</a>
         <a class="button button-line" href="/roadmap/">On the anvil</a>
       </div>
     </div>
-    <div class="hero-mark" aria-hidden="true"><span class="hero-orbit"></span><img src="/images/forge-verse-mark-light.png" alt=""></div>
+    <figure class="hero-cinematic"><img src="/images/brand/forge-quill-anvil-hero.avif" alt="A luminous white quill rising from a black iron anvil, illuminated in a dark forge" width="640" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </section>
 
@@ -28,6 +28,20 @@
     <p class="eyebrow">Made for the way people work</p>
     <p class="studio-intro-lede">Not every useful thing belongs in a browser.</p>
     <div class="studio-intro-copy"><p>A fillable form can clarify a handoff. A paper notebook can slow a difficult thought down long enough to see it. A wall edition can keep meaning present after the result disappears into a case file.</p><p>Different moments ask for different tools.</p></div>
+  </div>
+</section>
+
+<section class="section disciplines-band">
+  <div class="wrap">
+    <div class="section-heading split-heading split-heading-light">
+      <div><p class="eyebrow">Professions</p><h2>Four professions. Four places to belong.</h2></div>
+      <p>Digital forensics, property and evidence, law enforcement, and cybersecurity. Each profession has its own home, vocabulary, and creative direction; every product uses clear development and production states.</p>
+    </div>
+    <div class="discipline-cards">
+      {{ range hugo.Data.disciplines }}
+      <a class="discipline-card{{ if eq .priority 1 }} discipline-card-primary{{ end }}" href="{{ .page }}"><img class="discipline-card-image" src="{{ .hero_image }}" alt="{{ .hero_image_alt }}" width="600" height="337" loading="lazy" decoding="async"><span class="discipline-card-kicker"><span class="discipline-card-number">0{{ .priority }}</span><span class="discipline-card-plain">{{ .plain_name }}</span></span><h3>{{ .name }}</h3><p>{{ .description }}</p><span class="discipline-card-action">Enter this profession <b aria-hidden="true">→</b></span></a>
+      {{ end }}
+    </div>
   </div>
 </section>
 
@@ -115,19 +129,7 @@
   </div>
 </section>
 
-<section class="section disciplines-band">
-  <div class="wrap">
-    <div class="section-heading split-heading split-heading-light">
-      <div><p class="eyebrow">Professions</p><h2>Four professions. Four places to belong.</h2></div>
-      <p>Digital forensics, property and evidence, law enforcement, and cybersecurity. Each profession has its own home, vocabulary, and creative direction; every product uses clear development and production states.</p>
-    </div>
-    <div class="discipline-cards">
-      {{ range hugo.Data.disciplines }}
-      <a class="discipline-card{{ if eq .priority 1 }} discipline-card-primary{{ end }}" href="{{ .page }}"><span class="discipline-card-number">0{{ .priority }}</span><span class="discipline-card-plain">{{ .plain_name }}</span><h3>{{ .name }}</h3><p>{{ .description }}</p><span class="discipline-card-action">Enter <b aria-hidden="true">→</b></span></a>
-      {{ end }}
-    </div>
-  </div>
-</section>
+
 
 <section class="section journal-preview">
   <div class="wrap">
