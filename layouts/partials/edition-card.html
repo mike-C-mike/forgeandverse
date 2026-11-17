@@ -6,7 +6,7 @@
     </div>
     <div class="edition-card-body">
       <div class="edition-card-meta">
-        {{ partial "edition-state.html" $edition.state }}
+        {{ partial "lifecycle-label.html" (partial "lifecycle-state.html" .) }}
         <span>{{ .Params.format_label | default .Params.format }}</span>
       </div>
       <h3>{{ .Title }}</h3>
