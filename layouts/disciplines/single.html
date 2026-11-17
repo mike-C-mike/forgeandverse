@@ -9,11 +9,11 @@
 {{ $studioWorks := slice }}
 {{ range $works }}
   {{ $state := partial "lifecycle-state.html" . }}
-  {{ if eq $state.phase_slug "production" }}{{ $published = append $published . }}{{ else if eq $state.phase_slug "development" }}{{ $studioWorks = append $studioWorks . }}{{ end }}
+  {{ if eq $state.phase_slug "production" }}{{ $published = append . $published }}{{ else if eq $state.phase_slug "development" }}{{ $studioWorks = append . $studioWorks }}{{ end }}
 {{ end }}
 {{ range $downloads }}
   {{ $state := partial "lifecycle-state.html" . }}
-  {{ if eq $state.phase_slug "production" }}{{ $published = append $published . }}{{ else if eq $state.phase_slug "development" }}{{ $studioWorks = append $studioWorks . }}{{ end }}
+  {{ if eq $state.phase_slug "production" }}{{ $published = append . $published }}{{ else if eq $state.phase_slug "development" }}{{ $studioWorks = append . $studioWorks }}{{ end }}
 {{ end }}
 <header class="discipline-hero discipline-hero-{{ $slug }} profession-hero">
   <div class="wrap profession-hero-grid">
@@ -81,7 +81,7 @@
       {{ $pathStudies := where $anvil ".Params.release_path" $path }}
       {{ $uniqueStudies := slice }}
       {{ range $pathStudies }}
-        {{ if not .Params.related_work }}{{ $uniqueStudies = append $uniqueStudies . }}{{ end }}
+        {{ if not .Params.related_work }}{{ $uniqueStudies = append . $uniqueStudies }}{{ end }}
       {{ end }}
       {{ if or (gt (len $pathWorks) 0) (gt (len $uniqueStudies) 0) }}
         <div class="profession-development-group" id="{{ $path }}">
