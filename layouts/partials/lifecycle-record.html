@@ -1,0 +1,11 @@
+{{- $slug := . | default "in-development" -}}
+{{- if eq $slug "queued" -}}{{- $slug = "planned" -}}{{- end -}}
+{{- if eq $slug "in-studio" -}}{{- $slug = "in-development" -}}{{- end -}}
+{{- if eq $slug "edition-approved" -}}{{- $slug = "production-approved" -}}{{- end -}}
+{{- if eq $slug "resting" -}}{{- $slug = "archived" -}}{{- end -}}
+{{- if eq $slug "forging" -}}{{- $slug = "in-development" -}}{{- end -}}
+{{- if eq $slug "preview" -}}{{- $slug = "in-development" -}}{{- end -}}
+{{- if eq $slug "preparing" -}}{{- $slug = "in-development" -}}{{- end -}}
+{{- $match := where (index hugo.Data "lifecycle-states") "slug" $slug -}}
+{{- if eq (len $match) 0 -}}{{- $match = where (index hugo.Data "lifecycle-states") "slug" "in-development" -}}{{- end -}}
+{{- return (index $match 0) -}}
