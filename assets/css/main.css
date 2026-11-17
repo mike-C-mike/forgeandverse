@@ -2727,7 +2727,7 @@ body.lightbox-open { overflow: hidden; }
 .profession-hero .eyebrow { color:var(--brass-light); }
 .profession-hero-description { max-width:660px; margin:1.6rem 0 0; color:rgba(241,237,227,.79); font-size:1.08rem; line-height:1.75; }
 .profession-hero-figure { margin:0; min-width:0; }
-.profession-hero-figure img { width:100%; height:clamp(260px,33vw,470px); object-fit:cover; background:#101212; border:1px solid rgba(241,237,227,.13); }
+.profession-hero-figure img { width:100%; height:clamp(260px,33vw,470px); object-fit:contain; background:#101212; border:1px solid rgba(241,237,227,.13); }
 .profession-hero-figure figcaption { margin-top:.7rem; color:rgba(241,237,227,.58); font-size:.73rem; line-height:1.5; }
 .profession-jump { display:flex; gap:1rem 1.5rem; flex-wrap:wrap; margin-top:2rem; }
 .profession-jump a { color:var(--paper); text-decoration:none; font-size:.82rem; border-bottom:1px solid rgba(241,237,227,.42); padding-bottom:.3rem; }
