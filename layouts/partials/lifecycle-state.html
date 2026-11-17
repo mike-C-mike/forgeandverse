@@ -1,0 +1,18 @@
+{{- $key := "in-development" -}}
+{{- if eq .Section "roadmap" -}}
+  {{- if .Params.proof_available -}}
+    {{- $key = "field-proof" -}}
+  {{- else if .Params.proof_order_ready -}}
+    {{- $key = "proof-ready" -}}
+  {{- else if le (int (.Params.stage_step | default 1)) 1 -}}
+    {{- $key = "concept" -}}
+  {{- end -}}
+{{- else if eq .Section "downloads" -}}
+  {{- if eq .Params.status "released" -}}{{- $key = "released" -}}{{- end -}}
+{{- else if eq .Section "works" -}}
+  {{- $key = .Params.status | default "in-development" -}}
+  {{- with .Params.edition -}}
+    {{- if .enabled -}}{{- $key = .state | default "in-studio" -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (partial "lifecycle-record.html" $key) -}}
