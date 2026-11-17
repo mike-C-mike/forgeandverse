@@ -2,7 +2,7 @@
 {{ $heroImage := .Params.hero_image | default .Params.card_image }}
 <header class="study-detail-hero">
   <div class="wrap study-detail-hero-grid">
-    <div class="study-detail-copy"><p class="eyebrow"><a href="/roadmap/">On the Anvil</a> · {{ partial "discipline-link.html" .Params.discipline_slug }}</p><p class="study-detail-stage">{{ .Params.stage }}</p><h1>{{ .Title }}</h1><p class="study-detail-summary">{{ .Params.summary }}</p></div>
+    <div class="study-detail-copy"><p class="eyebrow"><a href="/roadmap/">On the Anvil</a> · {{ partial "discipline-link.html" .Params.discipline_slug }}</p><p class="study-detail-stage">{{ partial "lifecycle-label.html" (partial "lifecycle-state.html" .) }}</p><h1>{{ .Title }}</h1><p class="study-detail-summary">{{ .Params.summary }}</p></div>
     <div class="study-detail-visual{{ with $heroImage }} study-detail-visual-proof{{ end }}">
       {{ with $heroImage }}<img src="{{ . }}" alt="{{ $.Params.hero_image_alt | default $.Params.card_image_alt | default $.Title }}">{{ else }}{{ partial "concept-visual.html" $.Params }}{{ end }}
     </div>
