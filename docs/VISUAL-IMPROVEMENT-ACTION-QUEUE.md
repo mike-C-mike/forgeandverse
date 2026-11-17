@@ -31,7 +31,9 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review v2:** Replace the generic three-room lifestyle montage with a purposeful typographic reading-distance comparison using the *real typography-led Believe in the Badge development study*. Explain close = full text and nuances; across the room = main line/hierarchy; passing = silhouette/contrast. End with the actual design decision: change typographic hierarchy to match where/how a piece will be seen, not simply enlarge the file.
   - **Review question:** Does this teach a visitor why different viewing situations change the design, instead of just confirming that larger rooms have larger walls?
   - **Guardrail:** Concept image is illustrative, **not** a measured legibility test or an approved production size. Before implementation, replace the illustrative reconstruction with the exact production-study artwork and remove any invented supporting copy; build labels in accessible HTML instead of embedding all copy in raster art.
-  - **Status:** DESIGN REVIEW (second concept pass). **No publication approved.**
+  - **Status:** DESIGN REVIEW (polished website-layout concept, Option B selected). **No publication approved.**
+  - **Current direction:** Tabs `Close / Across the room / In passing`, actual artwork to replace illustrative art, explanatory text beside the artwork, and no unverified fixed distance values. Use mobile-first cards and preserve source wording. Mockup is design-only, not a final site rendering.
+  - **Companion idea for later review:** An adjacent **Finish & Lighting** interactive module, using the same artwork and fixed viewing angle, with a finish selector (Matte / Satin / Gloss) and room-light selector (Soft indirect daylight / Window opposite the art / Overhead spots). Visually model reflection intensity and color/contrast tradeoffs, not physical accuracy. Keep direct-sun **exposure longevity** distinct from reflected glare. Actual results require manufacturer-specific material samples; do not promise that “matte” prevents all glare, UV fading, or direct-sun damage. Keep as a follow-on review after item 01 is approved.
 
 - [ ] **02 · P1 · Digital Forensics Intake Kit: show the three working formats**
   - **Where:** `/downloads/digital-forensics-intake-request/`, beside print/fillable/editable choices.
@@ -138,7 +140,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 
 | Item | Current design version | Decision | Requested changes | Publication confirmed |
 | --- | --- | --- | --- | --- |
-| 01 | v2 concept / visual hierarchy | Awaiting user approval or tweaks | Use exact proof art and verified wording at implementation | No |
+| 01 | v3 polished Materials UI concept (Option B) | Awaiting user approval or tweaks | Replace illustrative proof, omit untested numerical distance; later review finish + lighting companion | No |
 
 ## Non-negotiable review checks for every item
 
