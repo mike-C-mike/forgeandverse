@@ -6,7 +6,7 @@ Status: 2026-11-17 · **Editorial direction, not a release or production approva
 
 ## Decision
 
-Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, four now have published screen-only editorial compositions (E2, E3, R2 and R3); none of those eight has a print-ready manufacturing file or physical proof.
+Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, six now have published screen-only editorial compositions (E2, E3, R2, R3, W2 and W3); none of those eight has a print-ready manufacturing file or physical proof.
 
 **Do not make every profession the same trilogy.** The earlier *principle / practice / people* structure was a convenient cross-category planning device, but it diluted the actual differences in the work. It is retired as a compulsory format. Each lane should develop concepts from its own vocational reality, vocabulary, emotional stakes, physical environment, preferred aesthetics, and insider details.
 
@@ -97,7 +97,7 @@ The Watch is a lane for law-enforcement practitioners rather than a catchall for
 - **Visual treatment:** A quiet, realistic scene at a doorway or curbside conversation viewed from respectful distance; atmospheric light, meaningful body language, no hero poses or exaggerated confrontation. Integrate typography like a considered editorial photograph rather than another dark abstract diagram.
 - **Suggested geometry:** **12 x 8 landscape** with a properly sourced photographic or original art master; paper vs. metal must be justified by physical proof.
 - **First test:** Would patrol personnel recognize the lived difficulty of judgment without interpreting the work as simplistic instructions or a political statement?
-- **Current state:** Concept only. No print-ready artwork.
+- **Current state:** Approved screen-only editorial composition published at /roadmap/the-decision-to-listen-edition/; no vector print master, manufactured proof or approved edition.
 
 ### W3. The Next Call · NEW LAW-ENFORCEMENT CONCEPT
 
@@ -106,7 +106,7 @@ The Watch is a lane for law-enforcement practitioners rather than a catchall for
 - **Visual treatment:** A calm, early-shift or late-shift patrol environment after the scene is over: empty passenger seat, muted daylight through a cruiser window, a quiet transitional moment. Avoid flags, dramatic lights, generic thin-line imagery, or slogans about toughness.
 - **Suggested geometry:** **8 x 12 portrait** for a distinct silhouette alongside the wide Badge piece.
 - **First test:** Is this a credible, humane recognition of emotional reset and public-facing duty without becoming a motivational poster?
-- **Current state:** Concept only. No print-ready artwork.
+- **Current state:** Approved screen-only editorial composition published at /roadmap/the-next-call-edition/; no vector print master, manufactured proof or approved edition.
 
 **Dispatch belongs in its own exploration:** “The Voice That Answered” is *removed from The Watch's three law-enforcement candidates*, not abandoned. Its intended audience is call-takers and dispatchers; the [Professional Lane Standard](PROFESSIONAL-LANE-STANDARD.md) retains it as a potential Dispatch & Emergency Communications lane rather than counting it as a police print. Other support professions should receive the same consideration when their work has sufficient depth.
 
