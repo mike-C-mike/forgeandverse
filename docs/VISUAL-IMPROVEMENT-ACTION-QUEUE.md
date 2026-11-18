@@ -108,7 +108,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** A concise visual strip for useful tools, tactile objects, wall editions, and writing, using approved authentic examples.
   - **Review question:** Are the four paths understandable before the reader reaches the product cards?
   - **Guardrail:** Avoid duplicating every card image or making the index crowded on mobile.
-  - **Status:** DESIGN REVIEW — existing Work Index has a four-tile text-only purpose navigation and four complete shelves below. First proposal replaces (not duplicates) the nav with four responsive visual doorways linked to those same sections: a genuine Digital Forensics Intake Kit release preview; an Examination Notebook design-proof page/spread (not a photographed manufactured product); a clearly labeled Believe in the Badge wall mockup; and an editorial typographic treatment using the published Examiner Who Thinks With Ink essay. Preserve explicit release vs design-study labels and distinct profession collections; these are formats, not interchangeable professional lanes. No Work Index publication before explicit concept approval.
+  - **Status:** DESIGN REVIEW — refined Item 11 implemented on **staging branch only** (not merged or released): four illustrated, accessible navigation cards replace the original text-only strip. Source-authentic examples: released Intake Kit file, Notebook design proof, clearly labeled wall mockup, and published essay title as a typographic editorial panel. Links retain the existing four anchors; sections and professional identities remain untouched. Responsive 4-column desktop / 2×2 phone, contrast/focus/alt/status labels provided. Draft PR and build validation requested before any production merge.
 
 - [ ] **12 · P2 · Editions: distinguish mockup, print file, physical proof, and approved edition**
   - **Where:** `/editions/`.
@@ -151,7 +151,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **Approved and pushed** | Production build and rendered-site validation passed; verify live Cloudflare and phone layout | GitHub passed; live review pending |
 | 09 | v1 · From an Idea to an Object — approved five-stage process artwork | **Approved and pushed** | GitHub production build and render validation passed; verify Cloudflare and phone layout | GitHub passed; live review pending |
 | 10 | v1 · Same File? Prove It. educational infographic | **Approved and pushed** | All GitHub build and site validation passed; verify live Cloudflare and mobile layout | GitHub passed; live review pending |
-| 11 | v1 proposal · Four visual doorways on Work Index using authentic source previews | **Design review** | Get approval; then replace text-only navigation, preserve destination shelves and accurate status labels | No |
+| 11 | v2 staged · Responsive four-format image navigation with verified source examples | **Staging review; not approved for live deployment** | Review desktop/mobile, correct representation of design proofs and mockups, and build checks before merge | No |
 
 ## Non-negotiable review checks for every item
 
