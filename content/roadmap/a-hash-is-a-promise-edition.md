@@ -21,8 +21,8 @@ details:
 - No vendor or public purchase link until a physical sample is approved
 moment: When an examination space needs a reminder that integrity is something another person should be able to check.
 stage_step: 4
-card_image: /images/product-proofs/examiner-a-hash-is-a-promise-proof-8x12.webp
-card_image_alt: A dark portrait wall proof reading A Hash Is a Promise with restrained forensic hash geometry.
+card_image: /images/studies/a-hash-is-a-promise/editorial-study.webp
+card_image_alt: "Illustrated Examiner's Bench editorial development study for A Hash Is a Promise, featuring a forensic note book, illustrated check documents, and the original line about integrity and method; not a manufactured edition."
 hero_image: /images/product-proofs/examiner-a-hash-is-a-promise-proof-8x12.webp
 hero_image_alt: The production-ready 8 by 12 material proof for A Hash Is a Promise.
 proof_order_ready: true
@@ -38,6 +38,23 @@ proof_order:
   - Whether the oxblood vertical structure feels architectural rather than ornamental
   - Satin versus mid-gloss or archival matte surface
 related_journal: /journal/a-hash-is-a-promise/
+open_questions:
+- Does the original vector-led 8 by 12 material proof keep its typography and secondary line legible at realistic office viewing distances?
+- Which low-glare material best preserves the deep blacks, brass warmth, and restrained oxblood structure?
+- Does the finished physical surface support the meaning without glare, excessive reflection, or loss of line weight?
+prototype_title: "Editorial study and actual print-test file"
+prototype_intro: >-
+  The illustrated editorial study makes the theme of reproducible forensic work
+  readable at thumbnail scale; it is not the production specification or a
+  photographed physical sample. The original vector-led 8 x 12 test artwork
+  remains the actual file prepared for the first material proof.
+prototype_images:
+- image: /images/studies/a-hash-is-a-promise/editorial-study.webp
+  alt: "Editorial development-study illustration for A Hash Is a Promise with an Examiner's Notes book, two illustrative check-mark sheets and an evidence bag under a desk lamp."
+  caption: "Editorial concept for browsing the study, not a production-ready wall file, physical proof, or depiction of a genuine case."
+- image: /images/product-proofs/examiner-a-hash-is-a-promise-proof-8x12.webp
+  alt: "Original typography-led 8 by 12 digital print-test artwork for A Hash Is a Promise with restrained forensic hash geometry."
+  caption: "The unchanged, authoritative vector-based 8 x 12 material-test proof. Its printing, finish, glare, and final scale have not yet been physically evaluated."
 ---
 
 ## The phrase already earned its place
