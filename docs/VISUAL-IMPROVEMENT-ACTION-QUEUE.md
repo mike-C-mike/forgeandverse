@@ -71,7 +71,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Properly staged packaging, controlled storage, transfer, inventory, or disposition using anonymous fictional labels.
   - **Review question:** Does the visual recognize evidence custodianship rather than generic police branding?
   - **Guardrail:** No actual cases, identifying labels, misleading packaging, or stock “crime scene” props.
-  - **Status:** DEPLOYED / VERIFY — user approved the generated “The Chain That Holds” artwork and explicitly requested publication. Added optimized desktop and cropped mobile WebP images to the Evidence Room practice section below its introduction, with a visible illustrative-scene disclaimer. Shared profession template now has a per-discipline accessible full-image label and accurate image dimensions. GitHub build and live mobile review pending.
+  - **Status:** DEPLOYED / VERIFY — user approved “The Chain That Holds” artwork and requested publication. Optimized desktop/mobile imagery was added in the Evidence Room practice section. Shared profession template now uses per-discipline image labeling and dimensions. GitHub Actions run 44228313051 passed production Hugo build and rendered-site validation. Cloudflare live delivery and user phone review remain unverified; proceed to Item 07 concept work meanwhile.
 
 - [ ] **07 · P2 · The Watch: operational work behind the officer**
   - **Where:** `/disciplines/watch/`.
@@ -146,7 +146,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 03 | v1.1 · Approved infographic + full-image mobile preview | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **Accepted by user; complete** | None | **Yes (user reviewed)** |
 | 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 06 | v1 · The Chain That Holds — evidence custody and storage image | **User approved and directed publishing** | Build and device review needed | GitHub pending; live review pending |
+| 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
 | 07 | v1 proposal · Between the Calls — meaningful patrol documentation | **Design review** | Approve concept artwork before any site changes | No |
 
 ## Non-negotiable review checks for every item
