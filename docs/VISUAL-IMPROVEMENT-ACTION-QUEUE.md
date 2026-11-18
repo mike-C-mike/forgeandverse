@@ -48,7 +48,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** A two-lane diagram showing Studio responsibilities versus outside production partner responsibilities across Design → Proof → Approve → Fulfillment, with a visible checkout handoff.
   - **Review question:** Is it instantly clear who owns product design versus payment, manufacturing, shipping, and returns?
   - **Guardrail:** No false manufacturing partner, availability, approved stamp, or physical proof imagery.
-  - **Status:** DEPLOYED / VERIFY — user approved and requested direct implementation. The four-step timeline and duplicative responsibility/checkout sections were replaced with the approved infographic, a mobile scroll/expand treatment and an accessible text alternative. Existing proof criteria and transaction-support details remain with tightened copy. GitHub Actions run 44217216353 passed source checks, production Hugo build and rendered-site validation. Cloudflare live delivery and user phone review remain unconfirmed.
+  - **Status:** DEPLOYED / VERIFY — approved infographic and simplified ordering copy published; initial GitHub checks passed. User's mobile screenshot revealed an oversized 960px horizontal-scroll graphic. Adjusted the phone layout to display the **entire infographic at container width**, with image-lightbox access, a separate original-resolution zoom link and the accessible four-step walkthrough. Latest build and user phone acceptance are pending.
 
 - [ ] **04 · P1 · Professional landing pages: lifecycle without a wall of copy**
   - **Where:** Shared template for all four `/disciplines/` pages.
@@ -143,7 +143,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | --- | --- | --- | --- | --- |
 | 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 03 | v1 · Approved studio-to-fulfillment infographic + streamlined ordering page | **User approved and directed publishing** | GitHub production build and rendered-site validation passed; verify Cloudflare and phone presentation | GitHub verified; live delivery pending |
+| 03 | v1.1 · Approved infographic + responsive full-image mobile preview | **User asked for a smaller phone image; responsive correction implemented** | Validate GitHub build and confirm entire image fits on device; tap to zoom and plain-text fallback | Live phone review pending |
 
 ## Non-negotiable review checks for every item
 

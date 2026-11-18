@@ -1,5 +1,5 @@
 /* Approved Forge & Verse studio-to-fulfillment illustration.
-   A full-width presentation on desktop; horizontally inspectable graphic on phones. */
+   Full artwork visible at every breakpoint; phone users may enlarge to inspect the details. */
 .ordering-visual-process {
   background: #ece5d7;
   color: #292720;
@@ -76,16 +76,30 @@
 .ordering-visual-transcript ol {max-width:940px; padding-left:1.5rem; margin:1rem 0 0; }
 .ordering-visual-transcript li {padding-left:.25rem; margin-bottom:.9rem; line-height:1.65;}
 .ordering-visual-transcript li strong {color:#33291f;}
+.ordering-original-image-link {display:none;}
 @media(max-width:850px) {
   .ordering-visual-heading {grid-template-columns:1fr; gap:.85rem;}
   .ordering-visual-heading h2 {font-size:clamp(2.3rem,7vw,3.5rem);}
-  .ordering-visual-scroll > a {width:1000px; min-width:1000px;}
+  /* Show the complete approved infographic rather than a 1000px-wide slice. */
+  .ordering-visual-scroll {overflow:hidden;}
+  .ordering-visual-scroll > a {width:100%; min-width:0;}
+  .ordering-visual-scroll img {width:100%; height:auto; max-width:100%;}
+  .ordering-visual-expand {display:none;}
   .ordering-visual-mobile-tip {display:inline; font-weight:700;}
-  .ordering-visual-expand {right:1rem; bottom:.8rem; font-size:.82rem;}
+  .ordering-original-image-link {
+    display:inline-block;
+    margin-top:.75rem;
+    padding:.5rem 0;
+    color:#614425;
+    font-size:.9rem;
+    font-weight:800;
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .ordering-original-image-link:focus-visible {outline:3px solid #a1753f;outline-offset:3px;}
 }
 @media(max-width:450px){
   .ordering-visual-process {padding-top:2.2rem;}
-  .ordering-visual-scroll > a {width:960px; min-width:960px;}
   .ordering-visual-heading h2 {font-size:2.4rem;}
   .ordering-visual-figure figcaption {font-size:.82rem;}
 }
