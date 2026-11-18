@@ -46,7 +46,7 @@ Professional contrast matters:
 - **Visual treatment:** Three misaligned but disciplined time axes and generous gaps; sober graphite, warm paper, subtle rust-red registration marks. The absence between marks is as important as the marks themselves; never show actual case data.
 - **Suggested geometry:** **12 x 8 landscape**.
 - **First test:** Can the idea remain accurate to actual digital-forensic time analysis without looking like a SIEM dashboard or a timeline tutorial?
-- **Current state:** Concept only. No print-ready artwork.
+- **Current state:** Approved editorial composition published at `/roadmap/between-the-timestamps-edition/`. No vector print master, physical proof, or approved manufacturing format.
 
 ## The Evidence Room · Property & Evidence
 
