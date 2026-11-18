@@ -36,19 +36,19 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Scope decision (2026-11-17):** The Materials page is **educational only**, not a product configurator, shopping assistant, or recommendation engine. Both reading-distance and future Finish & Lighting controls are illustrative demonstrations of design tradeoffs. No implied product availability, measured performance, certified longevity, or promise about any particular vendor finish. Real photographed samples and manufacturer-specific observations can be added *later*, only after actually tested examples exist and receive separate review. This scope is agreed; specific designs and publication are **not yet approved**.
   - **Companion idea for later review:** An adjacent **Finish & Lighting** interactive module, using the same artwork and fixed viewing angle, with a finish selector (Matte / Satin / Gloss) and room-light selector (Soft indirect daylight / Window opposite the art / Overhead spots). Visually model reflection intensity and color/contrast tradeoffs, not physical accuracy. Keep direct-sun **exposure longevity** distinct from reflected glare. Actual results require manufacturer-specific material samples; do not promise that “matte” prevents all glare, UV fading, or direct-sun damage. Keep as a follow-on review after item 01 is approved.
 
-- [ ] **02 · P1 · Digital Forensics Intake Kit: show the three working formats**
+- [x] **02 · P1 · Digital Forensics Intake Kit: show the three working formats**
   - **Where:** `/downloads/digital-forensics-intake-request/`, beside print/fillable/editable choices.
   - **Design review:** Three faithful crops of the *actual* printable, fillable, and editable release files, with a visible distinction in how each is used.
   - **Review question:** Can the requester choose a format by looking rather than reading instructions?
   - **Guardrail:** Verify each source file before depicting its behavior. No fabricated UI or untested software compatibility.
-  - **Status:** DEPLOYED / VERIFY — user approved the shared actual Page 1 preview and three-workflow layout and authorized publication. The original intake form preview and v1.2 download URLs are reused; cards show Print PDF, Fillable PDF (105 fields), and Editable DOCX, with local-only and PDF viewer compatibility notes. GitHub production build and rendered-site validation passed (run 44211017400). Live Cloudflare deployment and phone review still require user confirmation.
+  - **Status:** DONE — user reviewed the published live Intake Kit visual format comparison and confirmed it is fine (November 17, 2026). Actual Page 1 form and Print / Fillable / Editable choices accepted.
 
 - [ ] **03 · P1 · Ordering: visualize who does what**
   - **Where:** `/ordering-and-fulfillment/`.
   - **Design review:** A two-lane diagram showing Studio responsibilities versus outside production partner responsibilities across Design → Proof → Approve → Fulfillment, with a visible checkout handoff.
   - **Review question:** Is it instantly clear who owns product design versus payment, manufacturing, shipping, and returns?
   - **Guardrail:** No false manufacturing partner, availability, approved stamp, or physical proof imagery.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — user asked to begin item 03. First visual concept: a two-lane handoff graphic, “Forge & Verse / Studio” above “Independent production partner,” progressing through Design → Physical proof → Studio review → Available / External checkout. Clear crossing/handoff at partner checkout *only after approval and availability*. The production specialist can manufacture a proof during development; this is not the customer's checkout. Proposal should REPLACE/compress the existing four-step row and overlapping role/check-out explanations, not add a repetitive new graphic. No approved manufacturer, real physical sample, price or live sale is implied. **Do not publish pending explicit approval.**
 
 - [ ] **04 · P1 · Professional landing pages: lifecycle without a wall of copy**
   - **Where:** Shared template for all four `/disciplines/` pages.
@@ -142,7 +142,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | Item | Current design version | Decision | Requested changes | Publication confirmed |
 | --- | --- | --- | --- | --- |
 | 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 02 | v1 implemented · Actual intake form and print/fillable/editable choices | **User approved and directed publishing** | GitHub production build/render validated; confirm Cloudflare and phone layout before closing | GitHub validated; live review pending |
+| 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
+| 03 | v1 · Two-lane responsibility and handoff graphic | **Design review** | Avoid duplication; distinguish studio proofing from customer checkout | No |
 
 ## Non-negotiable review checks for every item
 
