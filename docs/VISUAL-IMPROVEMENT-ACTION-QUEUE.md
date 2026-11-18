@@ -43,19 +43,19 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Guardrail:** Verify each source file before depicting its behavior. No fabricated UI or untested software compatibility.
   - **Status:** DONE — user reviewed the published live Intake Kit visual format comparison and confirmed it is fine (November 17, 2026). Actual Page 1 form and Print / Fillable / Editable choices accepted.
 
-- [ ] **03 · P1 · Ordering: visualize who does what**
+- [x] **03 · P1 · Ordering: visualize who does what**
   - **Where:** `/ordering-and-fulfillment/`.
   - **Design review:** A two-lane diagram showing Studio responsibilities versus outside production partner responsibilities across Design → Proof → Approve → Fulfillment, with a visible checkout handoff.
   - **Review question:** Is it instantly clear who owns product design versus payment, manufacturing, shipping, and returns?
   - **Guardrail:** No false manufacturing partner, availability, approved stamp, or physical proof imagery.
-  - **Status:** DEPLOYED / VERIFY — approved infographic and simplified ordering copy published; initial GitHub checks passed. User's mobile screenshot revealed an oversized 960px horizontal-scroll graphic. Adjusted the phone layout to display the **entire infographic at container width**, with image-lightbox access, a separate original-resolution zoom link and the accessible four-step walkthrough. Latest build and user phone acceptance are pending.
+  - **Status:** DONE — user reviewed the live mobile ordering page after its responsive fix and explicitly confirmed Item 03 complete (2026-11-17). Approved process infographic, mobile sizing, and streamlined copy accepted.
 
 - [ ] **04 · P1 · Professional landing pages: lifecycle without a wall of copy**
   - **Where:** Shared template for all four `/disciplines/` pages.
   - **Design review:** A concise, accessible visual pathway showing **Development → Production → Archive**, with precise status examples such as “Proof ready” and “Available.”
   - **Review question:** Is it obvious that a print-ready test file is *not* an orderable product?
   - **Guardrail:** Retain consistent public terminology across professions while allowing their other imagery to differ.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — review the current shared three-column lifecycle explanation and propose a responsive, easy-to-scan visual explainer for all four professional pages. Preserve the exact public status vocabulary: Development (e.g., Proof ready is *not* for sale), Production (Approved for production does *not* mean available; only Available is a purchasable physical item; Released means finished digital/open work), Archive (retired/no longer offered). Avoid implying every item must pass through Archive. This is a shared information pattern, not a shared creative identity. User approval required before changing site.
 
 ### Profession-specific imagery — give each lane its own space
 
@@ -143,7 +143,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | --- | --- | --- | --- | --- |
 | 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 03 | v1.1 · Approved infographic + responsive full-image mobile preview | **User asked for a smaller phone image; responsive correction implemented** | Validate GitHub build and confirm entire image fits on device; tap to zoom and plain-text fallback | Live phone review pending |
+| 03 | v1.1 · Approved infographic + full-image mobile preview | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
+| 04 | v1 · Responsive visual lifecycle with exact public status examples | **Design review** | Avoid conflating Approved for production with Available; keep profession identities distinct | No |
 
 ## Non-negotiable review checks for every item
 
