@@ -59,19 +59,19 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 
 ### Profession-specific imagery — give each lane its own space
 
-- [ ] **05 · P2 · Examiner's Bench: show authentic bench practice**
+- [x] **05 · P2 · Examiner's Bench: show authentic bench practice**
   - **Where:** `/disciplines/examiner-bench/`.
   - **Design review:** Realistic, technically credible bench or note-taking workflow; ideally use actual proof artifacts and verified equipment context.
   - **Review question:** Would a working examiner recognize the method rather than just an expensive-looking desk?
   - **Guardrail:** No incorrect extraction connections, fabricated examiner outputs, or fake evidence identifiers.
-  - **Status:** DEPLOYED / VERIFY — user approved “Method over spectacle” and requested publication. The image is in its own Examiner’s Bench practice section between introduction and shared lifecycle guide, with optimized desktop and mobile WebP assets. Caption distinguishes illustrative equipment, case data and screen contents from a validated forensic setup. GitHub Actions run 44226455105 passed production Hugo build and rendered-site validation. Live Cloudflare delivery and phone presentation await user review.
+  - **Status:** DONE — user confirmed Item 05 complete after reviewing the live Examiner's Bench page (November 17, 2026). Approved “Method over spectacle” imagery and responsive presentation accepted.
 
 - [ ] **06 · P2 · Evidence Room: demonstrate stewardship**
   - **Where:** `/disciplines/evidence-room/`.
   - **Design review:** Properly staged packaging, controlled storage, transfer, inventory, or disposition using anonymous fictional labels.
   - **Review question:** Does the visual recognize evidence custodianship rather than generic police branding?
   - **Guardrail:** No actual cases, identifying labels, misleading packaging, or stock “crime scene” props.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — first proposal: “The Chain That Holds,” a grounded documentary-style evidence-room scene emphasizing the custody handoff, sealed and accurately labeled non-biological packages, receipt/log reconciliation, and controlled storage in the background. Use a person/hand only if the handoff is correctly staged, anonymous fictional identifiers and generic software screens, with no real case data or false agency branding. Preserve the existing hero; place a profession-specific practice scene below the introduction and above the shared lifecycle guide. Concept artwork requires user review before publishing.
 
 - [ ] **07 · P2 · The Watch: operational work behind the officer**
   - **Where:** `/disciplines/watch/`.
@@ -145,7 +145,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 03 | v1.1 · Approved infographic + full-image mobile preview | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **Accepted by user; complete** | None | **Yes (user reviewed)** |
-| 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Approved and pushed** | GitHub build and rendered-site validation passed; check live desktop/mobile layout | GitHub passed; live review pending |
+| 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
+| 06 | v1 proposal · The Chain That Holds — grounded custody and storage scene | **Design review** | Generate/approve concept before any site changes | No |
 
 ## Non-negotiable review checks for every item
 
