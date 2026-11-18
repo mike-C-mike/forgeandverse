@@ -11,6 +11,11 @@
     <h1>{{ .Title }}</h1>
     <p>{{ .Params.summary }}</p>
     <div class="article-meta"><span>{{ .ReadingTime }} minute read</span>{{ with .Params.discipline }}<span>{{ partial "discipline-label.html" . }}</span>{{ end }}{{ with .Params.tags }}<span>{{ delimit . " · " }}</span>{{ end }}</div>
+    {{ with .Params.image }}
+    <figure class="journal-article-cover">
+      <img src="{{ . }}" alt="{{ $.Params.image_alt | default "" }}" width="1536" height="1024" fetchpriority="high" decoding="async">
+    </figure>
+    {{ end }}
   </div>
 </header>
 <section class="article-reading-shell wrap">

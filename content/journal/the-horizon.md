@@ -3,6 +3,8 @@ title: "The Horizon"
 date: 2026-09-10
 summary: "A personal attempt to stop drifting, start steering, and explore what it means to become the best version of myself without pretending there is a final destination."
 status: "published"
+image: /images/journal/the-horizon-cover.webp
+image_alt: Original editorial artwork of a winding mountain path at sunrise, with a compass, marked map, and a journal suggesting intentionally changing direction.
 journal_kind: "essay"
 journal_kind_label: "Essay"
 series: "the-horizon"

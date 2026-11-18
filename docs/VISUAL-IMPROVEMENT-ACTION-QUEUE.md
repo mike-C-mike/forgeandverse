@@ -123,7 +123,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Where:** Journal landing + `/journal/the-horizon/` and `/journal/everything-in-moderation/`.
   - **Design review:** One distinct editorial cover per major essay; optional conceptual figure only if it teaches something.
   - **Review question:** Does the image support the essay's idea without inventing autobiography or turning thoughtful writing into filler?
-  - **Status:** QUEUED.
+  - **Status:** DEPLOYED / VERIFY — both approved original covers added to the two essays and Journal landing page on November 18, 2026; verify production workflow, live Cloudflare delivery and phone presentation. Essay text is unchanged.
 
 - [ ] **14 · P3 · Studio: demonstrate tactile thinking**
   - **Where:** `/about/`, “Not every thought wants to begin at a keyboard.”
@@ -153,6 +153,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 10 | v1 · Same File? Prove It. educational infographic | **Approved and pushed** | All GitHub build and site validation passed; verify live Cloudflare and mobile layout | GitHub passed; live review pending |
 | 11 | v2 · Responsive four-format image navigation with verified source examples | **Published to main with user approval** | Main production build/render validation passed; verify Cloudflare and phone layout | GitHub verified; live review pending |
 | 12 | v1 · From Screen to Substance — evidence-type visual, real examples and truthful empty states | **Published to main with user approval** | Production build and rendered checks passed; verify Cloudflare/mobile; real photographs remain future milestone | GitHub verified; live review pending |
+| 13 | v1 · Original essay covers for The Horizon and Everything in Moderation | **Approved by user for publishing** | Preserve essays verbatim; validate responsive image handling, build and live/phone delivery | GitHub publication pending validation |
 
 ## Non-negotiable review checks for every item
 

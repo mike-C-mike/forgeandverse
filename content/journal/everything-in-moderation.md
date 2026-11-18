@@ -3,6 +3,8 @@ title: "Everything in Moderation"
 date: 2026-10-10
 summary: "The traits I most want to cultivate can become liabilities when pushed too far. Intentionality needs flexibility, discipline needs proportion, and even self-improvement needs limits."
 status: "published"
+image: /images/journal/everything-in-moderation-cover.webp
+image_alt: Editorial still life of a finely balanced brass gyroscope beside books, an open notebook with revised arrows, and warm lamplight.
 journal_kind: "essay"
 journal_kind_label: "Essay"
 series: "the-horizon"

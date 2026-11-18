@@ -63,6 +63,10 @@
     {{ $editionEvidenceCss := resources.Get "css/edition-evidence-guide.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $editionEvidenceCss.RelPermalink }}" integrity="{{ $editionEvidenceCss.Data.Integrity }}">
   {{ end }}
+  {{ if eq .Section "journal" }}
+    {{ $journalCoversCss := resources.Get "css/journal-covers.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $journalCoversCss.RelPermalink }}" integrity="{{ $journalCoversCss.Data.Integrity }}">
+  {{ end }}
   {{ $proofFramingCss := resources.Get "css/proof-card-framing.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $proofFramingCss.RelPermalink }}" integrity="{{ $proofFramingCss.Data.Integrity }}">
   {{ partial "structured-data.html" . }}

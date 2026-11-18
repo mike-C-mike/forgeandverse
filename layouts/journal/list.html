@@ -13,6 +13,30 @@
   </div>
 </section>
 {{ partial "series-breakout.html" . }}
+{{ $illustrated := where $pages "Params.image" "ne" nil }}
+{{ if gt (len $illustrated) 0 }}
+<section class="journal-featured" aria-labelledby="journal-featured-title">
+  <div class="wrap">
+    <div class="journal-featured-heading">
+      <p class="eyebrow">Illustrated reading</p>
+      <h2 id="journal-featured-title">Selected essays</h2>
+      <p>Original editorial artwork accompanying essays about direction, character, and the work of growing.</p>
+    </div>
+    <div class="journal-featured-grid">
+      {{ range first 2 $illustrated }}
+      <a class="journal-featured-card" href="{{ .RelPermalink }}">
+        <img src="{{ .Params.image }}" alt="{{ .Params.image_alt }}" width="1536" height="1024" loading="lazy" decoding="async">
+        <div class="journal-featured-copy">
+          <span>{{ if .Params.series }}{{ .Params.series_label }} · Essay {{ .Params.series_number }}{{ else }}{{ .Params.journal_kind_label | default "Essay" }}{{ end }}</span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 <section class="section journal-archive" data-filter-scope data-filter-query="journal">
   <div class="wrap">
     <div class="archive-toolbar" aria-label="Filter journal entries">
