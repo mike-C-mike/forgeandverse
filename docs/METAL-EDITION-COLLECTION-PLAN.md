@@ -6,7 +6,7 @@ Status: 2026-11-17 · **Editorial direction, not a release or production approva
 
 ## Decision
 
-Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. The other eight remain unproduced concepts.
+Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, one now has a published screen-only editorial composition (E2); none of those eight has a print-ready manufacturing file or physical proof.
 
 **Do not make every profession the same trilogy.** The earlier *principle / practice / people* structure was a convenient cross-category planning device, but it diluted the actual differences in the work. It is retired as a compulsory format. Each lane should develop concepts from its own vocational reality, vocabulary, emotional stakes, physical environment, preferred aesthetics, and insider details.
 
@@ -37,7 +37,7 @@ Professional contrast matters:
 - **Suggested geometry:** **12 x 8 landscape**; vector masters, potential archival-paper companion only if it offers a genuinely different reading experience.
 - **First test:** Is the thought practitioner-specific and compelling without the explanatory paragraph? Does the layout feel like a considered composition instead of a generic motivational poster?
 - **Editorial connection:** Existing Journal piece, “The Device Is Not the Question.”
-- **Current state:** Concept/structure only. No print-ready artwork.
+- **Current state:** Editorial composition study approved and published on the studio roadmap. This remains a screen-only development study, not a print-ready artwork, proof, or physical edition.
 
 ### E3. Between the Timestamps · NEW CONCEPT
 
