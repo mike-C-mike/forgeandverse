@@ -6,7 +6,7 @@ Status: 2026-11-17 · **Editorial direction, not a release or production approva
 
 ## Decision
 
-Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, seven now have published screen-only editorial compositions (E2, E3, R2, R3, W2, W3 and S2); none of those eight has a print-ready manufacturing file or physical proof.
+Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. All eight additional candidates now have published screen-only editorial composition studies (E2, E3, R2, R3, W2, W3, S2 and S3); none of those eight has a print-ready manufacturing file or physical proof.
 
 **Do not make every profession the same trilogy.** The earlier *principle / practice / people* structure was a convenient cross-category planning device, but it diluted the actual differences in the work. It is retired as a compulsory format. Each lane should develop concepts from its own vocational reality, vocabulary, emotional stakes, physical environment, preferred aesthetics, and insider details.
 
@@ -130,14 +130,15 @@ The Watch is a lane for law-enforcement practitioners rather than a catchall for
 - **First test:** Does the distinction land for an administrator, defender, or incident responder without an explanatory label?
 - **Current state:** Concept only. No print-ready artwork.
 
-### S3. The First Alert · NEW CONCEPT
+### S3. The First Alert · EDITORIAL COMPOSITION PUBLISHED
 
 - **Meaning:** Detection is only the beginning; human judgment makes the signal actionable under uncertainty.
 - **Working line:** “A signal is only the beginning of an answer.”
 - **Visual treatment:** One luminous-but-muted incident marker in a spacious matrix of deliberately quiet nodes; warm amber line crossing a slate field. No fake CVEs, simulated customer logs, or apocalyptic maps.
 - **Suggested geometry:** **8 x 12 portrait**; strong contrasting silhouette alongside the horizontal Quiet Day.
 - **First test:** Can the piece describe the first moment of uncertainty without promising heroic omniscience or turning into a checklist?
-- **Current state:** Concept only. No print-ready artwork.
+- **Current state:** Screen-only editorial composition published at /roadmap/the-first-alert-edition/. Landscape study; no vector print master, verified physical proof, or orderable product. The former 8 x 12 portrait suggestion remains an untested future option.
+- **Editorial treatment note:** Approved on-screen image features a dramatic fictional alert dashboard and checklist, rather than the earlier restrained node-matrix direction; it is clearly labeled development artwork, not incident evidence.
 
 ## Design differentiation gate
 
