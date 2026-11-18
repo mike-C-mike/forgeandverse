@@ -1,11 +1,63 @@
 {{ define "main" }}
 {{ $works := where site.RegularPages "Section" "works" }}
+{{ $studies := where (where site.RegularPages "Section" "roadmap") ".Params.release_path" "editions" }}
+{{ $materialProofs := where $studies ".Params.proof_order_ready" true }}
+{{ $concepts := where $studies ".Params.proof_order_ready" "ne" true }}
 <header class="edition-index-hero">
   <div class="wrap edition-index-hero-grid">
     <div><p class="eyebrow">Forge &amp; Verse editions</p><h1>The work leaves the screen only when the object adds something.</h1></div>
     <div><p>{{ .Description }}</p><div class="edition-index-hero-links"><a class="text-link text-link-light" href="/materials/">How material completes the work <span aria-hidden="true">→</span></a><a class="text-link text-link-light" href="/ordering-and-fulfillment/">How ordering &amp; fulfillment works <span aria-hidden="true">→</span></a></div></div>
   </div>
 </header>
+
+<nav class="edition-discovery-nav" aria-label="Browse the wall-edition collection">
+  <div class="wrap edition-discovery-links">
+    <a href="#edition-proof-files"><span>01 / Print-test designs</span><strong>{{ len $materialProofs }} designs</strong><small>Prepared files, physical review pending</small></a>
+    <a href="#edition-concepts"><span>02 / Editorial concepts</span><strong>{{ len $concepts }} studies</strong><small>Screen-only compositions, not for sale</small></a>
+    <a href="#edition-evidence-heading"><span>03 / How it develops</span><strong>Understand the stages</strong><small>From a digital study to a reviewed object</small></a>
+  </div>
+</nav>
+{{ if gt (len $materialProofs) 0 }}
+<section class="section study-index-section edition-proof-gallery" id="edition-proof-files" aria-labelledby="edition-proof-heading">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Material proofs · Four rooms</p><h2 id="edition-proof-heading">Design files ready for a physical test.</h2></div>
+      <p>One digital print-test design from each professional room is prepared for a small physical sample, not approved for sale. The newer screen-only compositions are collected separately below.</p>
+    </div>
+    <div class="study-grid">
+      {{ range $materialProofs.ByWeight }}
+        {{ partial "study-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ if gt (len $concepts) 0 }}
+<section class="section study-index-section edition-concepts-section" id="edition-concepts" aria-labelledby="edition-concepts-heading">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">Editorial composition studies</p><h2 id="edition-concepts-heading">More ideas taking shape.</h2></div>
+      <p>{{ len $concepts }} original screen-only compositions, grouped by profession. These are explorations of meaning and visual direction; none is a print-ready file, physical sample, or item for sale.</p>
+    </div>
+    {{ range hugo.Data.disciplines }}
+      {{ $room := . }}
+      {{ $roomConcepts := where $concepts ".Params.discipline_slug" $room.slug }}
+      {{ if gt (len $roomConcepts) 0 }}
+      <section class="edition-concept-room" aria-labelledby="edition-room-{{ $room.slug }}">
+        <div class="edition-concept-room-heading">
+          <div><p class="eyebrow">{{ $room.plain_name }}</p><h3 id="edition-room-{{ $room.slug }}">{{ $room.name }}</h3></div>
+          <a class="text-link" href="{{ $room.page }}">Explore this profession <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="study-grid edition-concept-grid">
+          {{ range $roomConcepts.ByWeight }}{{ partial "study-card.html" . }}{{ end }}
+        </div>
+      </section>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
 
 <section class="edition-evidence-guide" aria-labelledby="edition-evidence-heading">
   <div class="wrap">
@@ -83,24 +135,6 @@
     </div>
   </div>
 </section>
-
-{{ $studies := where (where site.RegularPages "Section" "roadmap") ".Params.release_path" "editions" }}
-{{ $materialProofs := where $studies ".Params.proof_order_ready" true }}
-{{ if gt (len $materialProofs) 0 }}
-<section class="section study-index-section">
-  <div class="wrap">
-    <div class="section-heading split-heading">
-      <div><p class="eyebrow">Material proofs · Four rooms</p><h2>The first metal directions are ready for a physical test.</h2></div>
-      <p>One small material-proof design from each professional room is prepared for a first order, not approved for sale. Two further original art directions per room remain in concept development, rather than appearing here as imaginary finished products.</p>
-    </div>
-    <div class="study-grid">
-      {{ range $materialProofs.ByWeight }}
-        {{ partial "study-card.html" . }}
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
 
 <section class="section edition-index-current">
   <div class="wrap">

@@ -67,6 +67,10 @@
     {{ $seriesCoverCss := resources.Get "css/series-cover.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $seriesCoverCss.RelPermalink }}" integrity="{{ $seriesCoverCss.Data.Integrity }}">
   {{ end }}
+  {{ if or .IsHome (eq .Section "editions") }}
+    {{ $discoveryCss := resources.Get "css/discovery-navigation.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $discoveryCss.RelPermalink }}" integrity="{{ $discoveryCss.Data.Integrity }}">
+  {{ end }}
   {{ if eq .Section "journal" }}
     {{ $journalCoversCss := resources.Get "css/journal-covers.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $journalCoversCss.RelPermalink }}" integrity="{{ $journalCoversCss.Data.Integrity }}">
