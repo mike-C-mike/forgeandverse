@@ -1,0 +1,203 @@
+/* Item 11 — Work Index visual doorways.
+   Four formats, each illustrated by source work or real published editorial text.
+   Not shared product-status labels or profession identities. */
+.work-doorways{
+  padding:clamp(2.6rem,5.3vw,5rem) 0;
+  color:#efe8db;
+  border-top:1px solid #896b43;
+  border-bottom:1px solid #ad956e;
+  background:radial-gradient(ellipse at 17% 0,rgba(168,118,67,.16),transparent 38%),linear-gradient(135deg,#171919 0%,#202120 59%,#151616 100%);
+}
+.work-doorways-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  align-items:end;
+  gap:clamp(1rem,3.6vw,3rem);
+  margin-bottom:clamp(1.5rem,3.2vw,2.4rem);
+}
+.work-doorways-intro .eyebrow{color:#d2ab76;}
+.work-doorways-intro h2{
+  margin:.55rem 0 0;
+  font-family:var(--serif,Georgia,serif);
+  font-weight:600;
+  font-size:clamp(2.4rem,5.3vw,4.75rem);
+  line-height:.98;
+  letter-spacing:-.026em;
+  color:#f6e9d3;
+}
+.work-doorways-intro > p{
+  margin:0;
+  max-width:54ch;
+  line-height:1.7;
+  font-size:clamp(.89rem,1.3vw,1rem);
+  color:#c7c0b5;
+}
+.work-doorways-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:stretch;
+  gap:clamp(.6rem,1.5vw,1rem);
+}
+.work-doorway{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  color:#2d2820;
+  background:#f0e7d7;
+  border:1px solid #a98b61;
+  text-decoration:none;
+  box-shadow:0 11px 25px rgba(0,0,0,.17);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.work-doorway:hover{
+  color:#2d2820;
+  transform:translateY(-3px);
+  border-color:#e1b87b;
+  box-shadow:0 18px 32px rgba(0,0,0,.27);
+}
+.work-doorway:focus-visible{outline:3px solid #f1cf91;outline-offset:4px;}
+.work-doorway-image{
+  position:relative;
+  height:clamp(145px,18vw,232px);
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  background:#d7cebc;
+  border-bottom:1px solid #ae946f;
+}
+.work-doorway-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:clamp(.6rem,1.4vw,1rem);
+}
+.work-doorway-objects .work-doorway-image{background:#c9c0af;}
+.work-doorway-editions .work-doorway-image{background:#2a2927;}
+.work-doorway-editions .work-doorway-image img{object-fit:cover;padding:0;}
+.work-doorway-status{
+  position:absolute;
+  right:.6rem;bottom:.6rem;left:.6rem;
+  z-index:1;
+  display:block;
+  width:max-content;
+  max-width:calc(100% - 1.2rem);
+  padding:.35rem .52rem;
+  color:#f9f0dd;
+  background:rgba(22,22,20,.94);
+  border:1px solid #c9a775;
+  font-size:clamp(.61rem,.85vw,.7rem);
+  font-weight:750;
+  line-height:1.3;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+.work-doorway-content{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  align-items:stretch;
+  gap:.5rem;
+  padding:clamp(.9rem,1.5vw,1.3rem);
+}
+.work-doorway-number{
+  color:#795630;
+  font-size:clamp(.63rem,.8vw,.74rem);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.work-doorway-number span{color:#ad9270;margin:0 .2rem;}
+.work-doorway-content strong{
+  font-family:var(--serif,Georgia,serif);
+  font-size:clamp(1.35rem,2.1vw,1.9rem);
+  font-weight:600;
+  line-height:1.08;
+}
+.work-doorway-content p{
+  margin:0 0 .4rem;
+  color:#555046;
+  line-height:1.55;
+  font-size:clamp(.79rem,1.1vw,.91rem);
+}
+.work-doorway-action{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.3rem;
+  margin-top:auto;
+  padding-top:.8rem;
+  color:#5d3e22;
+  border-top:1px solid #c9bca8;
+  font-size:clamp(.7rem,.94vw,.81rem);
+  font-weight:850;
+}
+.work-doorway-action b{font-size:1.15rem;line-height:1;}
+.work-doorway-editorial{
+  padding:0;
+  background:radial-gradient(ellipse at 87% 9%,rgba(193,147,84,.32),transparent 48%),linear-gradient(145deg,#2b2c2a,#161819);
+  color:#f4e7cc;
+}
+.work-doorway-editorial-art{
+  display:flex;
+  flex-direction:column;
+  gap:.9rem;
+  justify-content:center;
+  align-items:flex-start;
+  padding:clamp(1rem,2vw,1.5rem);
+  width:100%;height:100%;
+}
+.work-doorway-editorial-kicker,
+.work-doorway-editorial-byline{
+  font-size:clamp(.53rem,.75vw,.68rem);
+  color:#dbb987;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  line-height:1.35;
+}
+.work-doorway-editorial-title{
+  color:#f5e7d0;
+  font-family:var(--serif,Georgia,serif);
+  font-size:clamp(1.08rem,1.75vw,1.58rem);
+  line-height:1.12;
+  max-width:18ch;
+}
+.work-doorway-editorial-rule{height:1px;width:60%;background:#c89e62;}
+.work-doorways-footnote{
+  max-width:960px;
+  margin:1.2rem 0 0;
+  color:#c1b8aa;
+  font-size:.79rem;
+  line-height:1.65;
+}
+@media (max-width:1000px){
+  .work-doorways-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .work-doorway-image{height:clamp(145px,27vw,225px);}
+  .work-doorway-editorial-title{font-size:clamp(1.35rem,2.9vw,1.85rem);}
+}
+@media (max-width:650px){
+  .work-doorways{padding:2.25rem 0 2.7rem;}
+  .work-doorways-intro{grid-template-columns:1fr;gap:.65rem;}
+  .work-doorways-intro h2{font-size:clamp(2.35rem,9.3vw,3.15rem);}
+  .work-doorways-grid{gap:.7rem;}
+  .work-doorway-image{height:clamp(120px,33vw,170px);}
+  .work-doorway-image img{padding:.45rem;}
+  .work-doorway-content{gap:.37rem;padding:.82rem;}
+  .work-doorway-content strong{font-size:clamp(1.13rem,4.5vw,1.5rem);}
+  .work-doorway-content p{font-size:.78rem;line-height:1.45;}
+  .work-doorway-number{font-size:.6rem;}
+  .work-doorway-status{font-size:.57rem;left:.4rem;bottom:.4rem;right:.4rem;max-width:calc(100% - .8rem);padding:.27rem .35rem;letter-spacing:0;}
+  .work-doorway-editorial-art{gap:.55rem;padding:.8rem;}
+  .work-doorway-editorial-title{font-size:clamp(.98rem,3.8vw,1.35rem);}
+  .work-doorway-editorial-kicker,.work-doorway-editorial-byline{font-size:.55rem;letter-spacing:.06em;}
+}
+@media (max-width:350px){
+  .work-doorways-grid{grid-template-columns:1fr;}
+  .work-doorway-image{height:185px;}
+  .work-doorway-content strong{font-size:1.5rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .work-doorway{transition:none;}
+  .work-doorway:hover{transform:none;}
+}

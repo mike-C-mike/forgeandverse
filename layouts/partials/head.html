@@ -55,5 +55,9 @@
     {{ $hashGuideCss := resources.Get "css/release-verification-guide.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $hashGuideCss.RelPermalink }}" integrity="{{ $hashGuideCss.Data.Integrity }}">
   {{ end }}
+  {{ if and .IsSection (eq .Section "works") }}
+    {{ $worksCss := resources.Get "css/work-doorways.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $worksCss.RelPermalink }}" integrity="{{ $worksCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>
