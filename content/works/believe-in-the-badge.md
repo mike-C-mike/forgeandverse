@@ -14,9 +14,9 @@ format_label: Wall edition in physical proof
 status: forging
 featured: true
 cover_style: watch
-image: /images/studies/believe-in-the-badge/composition-study.webp
-image_alt: Original Believe in the Badge photographic composition study with officers and the writing arranged across the artwork
-image_caption: Original photographic design direction, preserved for comparison. This screen-resolution study is not a large-format production master; a separate typography-led 12 x 8 material proof is ready to test.
+image: /images/studies/believe-in-the-badge/editorial-study.webp
+image_alt: Believe in the Badge editorial development study with the original line about standing tall, leading with heart, and showing up, arranged over a field notebook and pen
+image_caption: Approved screen-only editorial illustration. Not a physical sample or print-ready master; the separate typography-led 12 x 8 material proof remains the file ready for the first physical test.
 rights: original
 related_study: /roadmap/believe-in-the-badge-edition/
 material_intent: Large-format metal or archival wall edition
@@ -25,6 +25,9 @@ gallery:
 - image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
   alt: The current 12 x 8 typography-led physical material proof, without the earlier photographic backdrop
   caption: Print-test direction. This vector-led alternate exists because the original photo is not yet high resolution enough for a large metal edition.
+- image: /images/studies/believe-in-the-badge/composition-study.webp
+  alt: Earlier Believe in the Badge photographic composition with uniformed officers and original writing.
+  caption: Historical photo-backed direction, kept for comparison. This screen-resolution design is not a production master.
 - image: /images/studies/believe-in-the-badge/wall-mockup.webp
   alt: Believe in the Badge composition shown as a floating metal wall edition in a dark professional room
   caption: Scale study for a floating metal edition. The goal is presence without turning the room into a recruitment display.

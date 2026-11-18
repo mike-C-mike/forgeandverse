@@ -24,10 +24,10 @@ details:
 - Physical reflection, edge, wall separation, and reading distance remain release gates
 moment: When a professional space needs something more enduring than a slogan pinned to a wall.
 stage_step: 4
-card_image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
-card_image_alt: A dark 12 by 8 typography-led Believe in the Badge material proof with restrained shield geometry.
-hero_image: /images/studies/believe-in-the-badge/composition-study.webp
-hero_image_alt: Original image-backed Believe in the Badge composition study, retained as an earlier artistic direction and not a print-ready photographic master.
+card_image: /images/studies/believe-in-the-badge/editorial-study.webp
+card_image_alt: Original editorial development-study illustration with the title Believe in the Badge, a field notebook, pen, and the line Stand tall. Lead with heart. Keep showing up. Not a manufactured edition.
+hero_image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
+hero_image_alt: Actual typography-led 12 by 8 vector material-test proof for Believe in the Badge. A digital proof file, not a manufactured or approved physical edition.
 proof_order_ready: true
 proof_order:
   version: "0.2"
@@ -42,8 +42,11 @@ proof_order:
   - Satin, mid-gloss, or archival matte surface choice
 prototype_title: The resolution blocker created a second design direction
 prototype_intro: >-
-  The earlier room studies proved that the writing could hold a professional wall, but the 1536 x 1024 photographic backdrop could not support a premium large-format print. Rather than upscale a weak source or stall the entire edition, the first physical proof now tests a second direction: the same emotional center carried through typography, proportion, and restrained abstract shield geometry.
+  The new notebook-and-pen editorial illustration is a screen-only development study for browsing the work, not an approved physical edition or print master. The earlier room studies proved that the writing could hold a professional wall, but the 1536 x 1024 photographic backdrop could not support a premium large-format print. Rather than upscale a weak source or stall the edition, the actual vector production proof tests the same emotional center through typography, proportion, and restrained abstract shield geometry.
 prototype_images:
+- image: /images/studies/believe-in-the-badge/editorial-study.webp
+  alt: Editorial development-study composition with Believe in the Badge lettering over a warm dark desk, field notebook, pen, and shield outline.
+  caption: Approved editorial concept for browsing the studio work. It is not the vector print-test file, a manufactured wall object, or evidence of an approved edition.
 - image: /images/product-proofs/watch-believe-in-the-badge-proof-12x8.webp
   alt: Typography-led 12 by 8 material proof with abstract shield geometry and brass-and-oxblood hierarchy.
   caption: Active print-test direction. This vector-led proof can test the physical surface without relying on the low-resolution photograph.
