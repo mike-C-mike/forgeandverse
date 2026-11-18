@@ -7,7 +7,7 @@ stage: Production proof ready
 discipline_slug: evidence-room
 release_path: editions
 release_path_label: Wall edition
-format: Mounted wall edition
+format: 12 x 8 material proof; larger mounted edition after approval
 audience: Property and evidence professionals whose best work may not reveal its value for years
 need: Give visual weight to the patience and discipline that preserve future answers
 visual: evidence-edition
@@ -22,10 +22,10 @@ details:
 - Language centered on preservation, possibility, and institutional memory
 moment: When the long consequence of careful custody deserves to be visible in the room where that work happens.
 stage_step: 4
-card_image: /images/product-proofs/evidence-preserved-until-it-matters-proof-12x8.webp
-card_image_alt: A dark 12 by 8 production proof using evidence shelf geometry and anonymous retained items.
+card_image: /images/studies/preserved-until-it-matters/editorial-study.webp
+card_image_alt: Illustrated Preserved Until It Matters development study with anonymous evidence shelves, retained packages, record book and original preservation line; not a manufactured edition.
 hero_image: /images/product-proofs/evidence-preserved-until-it-matters-proof-12x8.webp
-hero_image_alt: The production-ready material proof for Preserved Until It Matters with quiet evidence-shelf geometry.
+hero_image_alt: Original vector 12 by 8 digital material-test proof for Preserved Until It Matters, not a manufactured or approved wall edition.
 proof_order_ready: true
 proof_order:
   version: "0.1"
@@ -40,8 +40,14 @@ proof_order:
   - Satin, mid-gloss, or archival matte surface choice
 prototype_title: Custody becomes the subject
 prototype_intro: >-
-  The first composition taught the studio something useful: the teddy bear was memorable enough to become the story. That is exactly the wrong hierarchy for a piece meant to honor a system of careful custody across many kinds of cases. The v20 direction removes the mascot object and lets shelving, generic labels, seals, and elapsed time carry the consequence.
+  The new preservation-and-recordkeeping illustration is a screen-only editorial study for browsing The Evidence Room. It is not a photograph of real evidence, a print-ready production master, or an approved physical edition. The first composition taught the studio something useful: the teddy bear was memorable enough to become the story. That was the wrong hierarchy for a piece meant to honor a system of careful custody across many kinds of cases. The current direction removes the mascot object and lets shelving, generic labels, documentation, and time carry the consequence.
 prototype_images:
+- image: /images/studies/preserved-until-it-matters/editorial-study.webp
+  alt: Original editorial development illustration for Preserved Until It Matters showing evidence storage shelves, generic sealed packages and a record book, with its preservation message and a Development edition study label.
+  caption: Editorial concept for browsing the collection. Fictional staging and illustration only; not an actual evidence facility, a tested print, or the authoritative vector material-proof file.
+- image: /images/product-proofs/evidence-preserved-until-it-matters-proof-12x8.webp
+  alt: Original 12 by 8 typography-led vector material-test design with custody shelf geometry, not a photographed physical sample.
+  caption: The existing production-ready digital proof remains the authoritative print-test design. Physical surface, glare and mounting have not yet been evaluated.
 - image: /images/studies/preserved-until-it-matters/direction-study.webp
   alt: V20 Preserved Until It Matters direction study with generic evidence packages, shelf architecture, and one anonymous sealed item.
   caption: Current direction. The ordinary item is deliberately anonymous; continuity, not sentimentality, is the visual center.
