@@ -71,14 +71,14 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Properly staged packaging, controlled storage, transfer, inventory, or disposition using anonymous fictional labels.
   - **Review question:** Does the visual recognize evidence custodianship rather than generic police branding?
   - **Guardrail:** No actual cases, identifying labels, misleading packaging, or stock “crime scene” props.
-  - **Status:** DESIGN REVIEW — first proposal: “The Chain That Holds,” a grounded documentary-style evidence-room scene emphasizing the custody handoff, sealed and accurately labeled non-biological packages, receipt/log reconciliation, and controlled storage in the background. Use a person/hand only if the handoff is correctly staged, anonymous fictional identifiers and generic software screens, with no real case data or false agency branding. Preserve the existing hero; place a profession-specific practice scene below the introduction and above the shared lifecycle guide. Concept artwork requires user review before publishing.
+  - **Status:** DEPLOYED / VERIFY — user approved the generated “The Chain That Holds” artwork and explicitly requested publication. Added optimized desktop and cropped mobile WebP images to the Evidence Room practice section below its introduction, with a visible illustrative-scene disclaimer. Shared profession template now has a per-discipline accessible full-image label and accurate image dimensions. GitHub build and live mobile review pending.
 
 - [ ] **07 · P2 · The Watch: operational work behind the officer**
   - **Where:** `/disciplines/watch/`.
   - **Design review:** Field notebook/workflow imagery paired with a grounded human moment of judgment, handoff, or reflection.
   - **Review question:** Can officers see their specific work rather than another hero-pose recruitment image?
   - **Guardrail:** No false agency affiliation or dramatic tactical imagery.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — Item 07 opened at user request after approving Evidence Room art. Proposed concept: “Between the Calls,” a grounded law-enforcement shift moment showing a patrol officer completing contemporaneous field notes and reviewing a safe, fictional dispatch handoff, with vehicle and shift context but no staged tactical confrontation. Use a professional scene with an ordinary working atmosphere, not recruiting photography. Present image concept for explicit approval before publication.
 
 - [ ] **08 · P2 · The Signal: make resilience tangible**
   - **Where:** `/disciplines/signal/`.
@@ -146,7 +146,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 03 | v1.1 · Approved infographic + full-image mobile preview | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **Accepted by user; complete** | None | **Yes (user reviewed)** |
 | 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 06 | v1 proposal · The Chain That Holds — grounded custody and storage scene | **Design review** | Generate/approve concept before any site changes | No |
+| 06 | v1 · The Chain That Holds — evidence custody and storage image | **User approved and directed publishing** | Build and device review needed | GitHub pending; live review pending |
+| 07 | v1 proposal · Between the Calls — meaningful patrol documentation | **Design review** | Approve concept artwork before any site changes | No |
 
 ## Non-negotiable review checks for every item
 

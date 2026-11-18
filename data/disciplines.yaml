@@ -35,6 +35,15 @@
     title: Work worth mounting
     description: Substantial wall pieces about precision, consequence, persistence, and the quiet weight of digital evidence.
 - slug: evidence-room
+  practice_image: /images/professions/evidence-room-chain-that-holds.webp
+  practice_image_mobile: /images/professions/evidence-room-chain-that-holds-mobile.webp
+  practice_image_width: 1600
+  practice_image_height: 901
+  practice_image_alt: "Illustrative evidence intake station showing sealed, labeled packages, a chain-of-custody worksheet, scanner, inventory terminal, and organized secure storage in the background."
+  practice_eyebrow: "The practice behind the custody"
+  practice_title: "The Chain That Holds."
+  practice_description: "Custody is a continuous responsibility. Intake records, packaging, transfers, location checks, and release decisions all matter because the item must remain accountable long after it enters the room."
+  practice_caption: "Studio concept illustration. Cases, labels, seals, equipment, and inventory screens are fictional and not a model of any agency's approved evidence-handling procedure."
   hero_image: /images/professions/property-and-evidence.avif
   hero_image_alt: Sealed, labeled evidence packages and secure archival storage arranged for long-term custody
   hero_caption: Property and evidence stewardship
