@@ -94,14 +94,14 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Compact illustration of Question → Structure → Material → Sample → Ready, visually separate from public Development/Production lifecycle.
   - **Review question:** Is the difference between an idea, a file, and a physical sample obvious?
   - **Guardrail:** Avoid redundant or conflicting status systems.
-  - **Status:** DEPLOYED / VERIFY — user approved the “From an Idea to an Object” five-stage graphic and requested publication. Placed full infographic between collection callout and study listing, removed the redundant text-only five-stage key, and supplied separate readable mobile crops of each approved stage with accessible explanations. Explicit note distinguishes illustrative Status Pad concept and internal design progression from actual product approval / availability. GitHub build and live mobile verification pending.
+  - **Status:** DEPLOYED / VERIFY — user approved “From an Idea to an Object” and directed publication. Full infographic now appears between the collection callout and study list, redundant text strip removed, and five mobile-readable crops of the exact artwork added with separate accessible descriptions. Explicit caveat distinguishes the hypothetical Status Pad and internal design process from product approval/availability. GitHub Actions run 44236907955 passed source checks, production Hugo build and rendered-site validation. Cloudflare and user mobile review still pending.
 
 - [ ] **10 · P2 · Release Desk: explain SHA-256 verification**
   - **Where:** `/releases/`.
   - **Design review:** Annotated example of downloaded file → local digest calculation → comparison with the published digest.
   - **Review question:** Could a non-expert follow the process without believing a decorative example hash is a real file checksum?
   - **Guardrail:** Keep genuine hashes selectable and exact. Use unmistakably illustrative examples.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — Item 10 opened after approval of Item 09. Inspected the real Release Desk: it already displays real SHA-256 digests, OS-specific commands, and a functioning local browser verifier that compares against the selected published bundle. Proposed **instructional visual adjacent to the browser verifier**, explaining Download → Calculate locally → Compare with published digest, with unmistakably illustrative example strings rather than invented real checksums. A mismatch conveys non-identity, not proof of malware; a match shows byte-for-byte identity to the publisher's stated digest, not a blanket security guarantee. Avoid duplicating the live controls or mixing field proofs with finished releases. Await user visual concept approval before publishing.
 
 - [ ] **11 · P2 · Work index: illustrate the four formats**
   - **Where:** `/works/`.
@@ -149,7 +149,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
 | 07 | v2 · Male-officer Between the Calls practice scene | **Approved and pushed** | GitHub production build and render checks passed; user to verify mobile | GitHub verified; live review pending |
 | 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **Approved and pushed** | Production build and rendered-site validation passed; verify live Cloudflare and phone layout | GitHub passed; live review pending |
-| 09 | v1 · From an Idea to an Object — approved five-stage process artwork | **User approved and directed publishing** | Validate build, mobile stage crops and live site | Build pending; live review pending |
+| 09 | v1 · From an Idea to an Object — approved five-stage process artwork | **Approved and pushed** | GitHub production build and render validation passed; verify Cloudflare and phone layout | GitHub passed; live review pending |
+| 10 | v1 proposal · Download, calculate, compare SHA-256 explanatory visual | **Design review** | Show an honest digest comparison beside existing local verification UI; do not invent live checksum | No |
 
 ## Non-negotiable review checks for every item
 
