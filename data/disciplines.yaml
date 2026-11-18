@@ -1,4 +1,11 @@
 - slug: examiner-bench
+  practice_image: /images/professions/examiner-bench-method-over-spectacle.webp
+  practice_image_mobile: /images/professions/examiner-bench-method-over-spectacle-mobile.webp
+  practice_image_alt: "Illustrated forensic examination workstation with a smartphone, evidence packaging, an acquisition device, a laptop showing an evidence review screen, and handwritten examination notes."
+  practice_eyebrow: "The practice behind the work"
+  practice_title: "Method over spectacle."
+  practice_description: "Forensic examination is not about the number of screens. It is about what was preserved, how a working copy was verified, and what the examiner can document and explain."
+  practice_caption: "Studio concept artwork. Equipment connections, screen contents, and identifiers are illustrative, not a real case or validated examination procedure."
   hero_image: /images/professions/digital-forensics.avif
   hero_image_alt: A prepared digital evidence examination bench with a mobile device, connected storage, and careful documentation
   hero_caption: Digital evidence examination at the bench

@@ -1,0 +1,24 @@
+{{- $discipline := . -}}
+{{- with $discipline.practice_image -}}
+<section class="profession-practice-section" aria-labelledby="profession-practice-heading">
+  <div class="wrap">
+    <header class="profession-practice-heading">
+      <div>
+        <p class="eyebrow">{{ $discipline.practice_eyebrow }}</p>
+        <h2 id="profession-practice-heading">{{ $discipline.practice_title }}</h2>
+      </div>
+      <p>{{ $discipline.practice_description }}</p>
+    </header>
+    <figure class="profession-practice-figure">
+      <a class="profession-practice-image-link" href="{{ . }}" data-lightbox data-lightbox-caption="{{ $discipline.practice_caption }}" aria-label="Open full-size Examiner's Bench concept image">
+        <picture>
+          {{ with $discipline.practice_image_mobile }}<source media="(max-width: 640px)" srcset="{{ . }}">{{ end }}
+          <img src="{{ $discipline.practice_image }}" alt="{{ $discipline.practice_image_alt }}" width="1448" height="1086" loading="lazy" decoding="async">
+        </picture>
+        <span class="profession-practice-image-label">View full-size artwork <span aria-hidden="true">↗</span></span>
+      </a>
+      <figcaption>{{ $discipline.practice_caption }}</figcaption>
+    </figure>
+  </div>
+</section>
+{{- end -}}

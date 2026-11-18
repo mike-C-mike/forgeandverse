@@ -64,7 +64,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Realistic, technically credible bench or note-taking workflow; ideally use actual proof artifacts and verified equipment context.
   - **Review question:** Would a working examiner recognize the method rather than just an expensive-looking desk?
   - **Guardrail:** No incorrect extraction connections, fabricated examiner outputs, or fake evidence identifiers.
-  - **Status:** QUEUED.
+  - **Status:** DEPLOYED / VERIFY — user approved the “Method over spectacle” digital forensics bench concept and explicitly requested publication. Optimized full and mobile WebP versions are used in a profession-specific illustrated practice section between The Examiner’s Bench introduction and shared lifecycle guide. Caption identifies all equipment, labels, and screen data as illustrative rather than a validated examination procedure. Build and live-site review pending.
 
 - [ ] **06 · P2 · Evidence Room: demonstrate stewardship**
   - **Where:** `/disciplines/evidence-room/`.
@@ -145,6 +145,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 03 | v1.1 · Approved infographic + full-image mobile preview | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **Accepted by user; complete** | None | **Yes (user reviewed)** |
+| 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Approved and directed publishing** | Verify build, responsive rendering, and live mobile presentation | Pending |
 
 ## Non-negotiable review checks for every item
 
