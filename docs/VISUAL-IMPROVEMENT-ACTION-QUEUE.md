@@ -108,7 +108,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** A concise visual strip for useful tools, tactile objects, wall editions, and writing, using approved authentic examples.
   - **Review question:** Are the four paths understandable before the reader reaches the product cards?
   - **Guardrail:** Avoid duplicating every card image or making the index crowded on mobile.
-  - **Status:** DESIGN REVIEW — refined Item 11 implemented on **staging branch only** (not merged or released): four illustrated, accessible navigation cards replace the original text-only strip. Source-authentic examples: released Intake Kit file, Notebook design proof, clearly labeled wall mockup, and published essay title as a typographic editorial panel. Links retain the existing four anchors; sections and professional identities remain untouched. Responsive 4-column desktop / 2×2 phone, contrast/focus/alt/status labels provided. Draft PR and build validation requested before any production merge.
+  - **Status:** DEPLOYED / VERIFY — user explicitly authorized publication. PR #8 merged to main as commit 18d9df674cdbb5ecca0b443a110e2612ec75e9f3 after a successful staging build. Four responsive illustrated navigation cards replace the original text-only strip, using the genuine released Intake Kit preview, Examination Notebook design proof, labeled Believe in the Badge room mockup, and a typographic rendering of the published essay. Existing destinations and professional shelves are unchanged. Main-branch GitHub production build and rendered-site checks passed; live Cloudflare delivery and phone layout await final user review.
 
 - [ ] **12 · P2 · Editions: distinguish mockup, print file, physical proof, and approved edition**
   - **Where:** `/editions/`.
@@ -151,7 +151,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **Approved and pushed** | Production build and rendered-site validation passed; verify live Cloudflare and phone layout | GitHub passed; live review pending |
 | 09 | v1 · From an Idea to an Object — approved five-stage process artwork | **Approved and pushed** | GitHub production build and render validation passed; verify Cloudflare and phone layout | GitHub passed; live review pending |
 | 10 | v1 · Same File? Prove It. educational infographic | **Approved and pushed** | All GitHub build and site validation passed; verify live Cloudflare and mobile layout | GitHub passed; live review pending |
-| 11 | v2 staged · Responsive four-format image navigation with verified source examples | **Staging review; not approved for live deployment** | Review desktop/mobile, correct representation of design proofs and mockups, and build checks before merge | No |
+| 11 | v2 · Responsive four-format image navigation with verified source examples | **Published to main with user approval** | Main production build/render validation passed; verify Cloudflare and phone layout | GitHub verified; live review pending |
 
 ## Non-negotiable review checks for every item
 
