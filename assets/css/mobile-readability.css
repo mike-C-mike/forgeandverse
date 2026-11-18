@@ -1,0 +1,17 @@
+/* Mobile usability pass: preserve readable art and full-width study cards. */
+@media(max-width:680px) {
+  .study-grid, .study-grid-related, .study-grid-compact {
+    grid-template-columns:minmax(0,1fr);
+  }
+  .study-card, .study-card-link, .study-card-copy { min-width:0; }
+  .study-card-meta { flex-wrap:wrap; gap:.55rem .8rem; }
+  .study-card-meta > span:nth-child(2) { margin-left:0; }
+  .study-card h3 { overflow-wrap:anywhere; }
+}
+@media(max-width:480px) {
+  .work-doorways-grid { grid-template-columns:minmax(0,1fr); }
+  .work-doorway-image { height:195px; }
+  .work-doorway-content { padding:1.05rem; }
+  .work-doorway-content strong { font-size:1.5rem; }
+  .work-doorway-content p { font-size:.89rem; line-height:1.5; }
+}

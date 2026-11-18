@@ -40,3 +40,9 @@
   .edition-concept-room-heading { align-items:start; flex-direction:column; }
 }
 @media (prefers-reduced-motion:reduce) { .home-discovery-links a, .edition-discovery-links a { transition:none; } }
+
+/* On a long mobile art archive, jump directly to a profession without hunting. */
+.edition-room-jump { display:flex; gap:.55rem; padding:0 0 .4rem; overflow-x:auto; scrollbar-width:thin; -webkit-overflow-scrolling:touch; }
+.edition-room-jump a { flex:0 0 auto; display:inline-flex; align-items:center; min-height:44px; padding:.55rem .8rem; border:1px solid var(--line); color:var(--ink); font-size:.77rem; font-weight:750; text-decoration:none; background:var(--paper); }
+.edition-room-jump a:hover,.edition-room-jump a:focus-visible { border-color:var(--brass); }
+.edition-concept-room-heading h3 { scroll-margin-top:6.2rem; }

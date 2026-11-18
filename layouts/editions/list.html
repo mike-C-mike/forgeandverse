@@ -40,6 +40,12 @@
       <div><p class="eyebrow">Editorial composition studies</p><h2 id="edition-concepts-heading">More ideas taking shape.</h2></div>
       <p>{{ len $concepts }} original screen-only compositions, grouped by profession. These are explorations of meaning and visual direction; none is a print-ready file, physical sample, or item for sale.</p>
     </div>
+    <nav class="edition-room-jump" aria-label="Jump to editorial concepts by profession">
+      {{ range hugo.Data.disciplines }}
+        {{ $roomConcepts := where $concepts ".Params.discipline_slug" .slug }}
+        {{ if gt (len $roomConcepts) 0 }}<a href="#edition-room-{{ .slug }}">{{ .plain_name }}</a>{{ end }}
+      {{ end }}
+    </nav>
     {{ range hugo.Data.disciplines }}
       {{ $room := . }}
       {{ $roomConcepts := where $concepts ".Params.discipline_slug" $room.slug }}

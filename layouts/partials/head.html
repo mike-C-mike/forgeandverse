@@ -79,6 +79,8 @@
     {{ $tactileCss := resources.Get "css/tactile-thinking.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $tactileCss.RelPermalink }}" integrity="{{ $tactileCss.Data.Integrity }}">
   {{ end }}
+  {{ $mobileCss := resources.Get "css/mobile-readability.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $mobileCss.RelPermalink }}" integrity="{{ $mobileCss.Data.Integrity }}">
   {{ $proofFramingCss := resources.Get "css/proof-card-framing.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $proofFramingCss.RelPermalink }}" integrity="{{ $proofFramingCss.Data.Integrity }}">
   {{ partial "structured-data.html" . }}
