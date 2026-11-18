@@ -7,6 +7,8 @@ status: "ongoing"
 weight: 10
 eyebrow: "Long-Form Series"
 short_title: "The Horizon"
+image: "/images/series/the-horizon-series-cover.svg"
+image_alt: "The Horizon Essays series cover: large ivory title over a dark cartographic field, brass compass rose, winding route and glowing horizon."
 summary: "A personal exploration of how to live more deliberately, drawing from philosophy, psychology, leadership, experience, fiction, and whatever else proves useful."
 ---
 

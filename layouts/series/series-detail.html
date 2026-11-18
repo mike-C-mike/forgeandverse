@@ -11,6 +11,13 @@
     <p>{{ .Description }}</p>
   </div>
 </header>
+{{ with .Params.image }}
+<section class="series-identity-band" aria-label="Series cover artwork">
+  <div class="wrap">
+    <figure class="series-cover series-cover-detail"><img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default (printf "%s series cover" $.Title) }}" width="1280" height="853" decoding="async"></figure>
+  </div>
+</section>
+{{ end }}
 <section class="section series-detail-intro">
   <div class="wrap series-detail-intro-grid">
     <div class="series-detail-facts">

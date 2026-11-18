@@ -1,6 +1,9 @@
 <article class="series-card">
   {{ $seriesKey := .Params.series_key }}
   {{ $entries := where (where site.RegularPages "Section" "journal") "Params.series" $seriesKey }}
+  {{ with .Params.image }}
+  <figure class="series-cover series-cover-card"><img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default (printf "%s series cover" $.Title) }}" loading="lazy" decoding="async" width="1280" height="853"></figure>
+  {{ end }}
   <div>
     <p class="eyebrow">{{ .Params.eyebrow | default "Series" }}</p>
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

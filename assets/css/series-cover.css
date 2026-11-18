@@ -1,0 +1,9 @@
+/* Series identity: one restrained visual per collection, never per essay. */
+.series-cover { margin: 0; min-width: 0; }
+.series-cover img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #081620; }
+.series-cover-card { margin: 0 0 clamp(1.25rem, 2vw, 1.8rem); border: 1px solid rgba(157, 119, 67, .36); }
+.series-identity-band { padding: clamp(1.5rem, 3vw, 2.75rem) 0; background: var(--ivory); border-bottom: 1px solid var(--line); }
+.series-cover-detail { max-width: 960px; margin: 0 auto; }
+.series-cover-detail img { box-shadow: 0 18px 38px rgba(18, 22, 24, .12); }
+@media (max-width: 680px) { .series-cover-card { margin-bottom: 1rem; } .series-identity-band { padding: 1rem 0; } }
+@media print { .series-cover-detail img { box-shadow: none; } }

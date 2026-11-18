@@ -131,11 +131,11 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Review question:** Does the image explain what paper adds to the thinking process?
   - **Status:** DEPLOYED / VERIFY — user approved the original first-pass-to-working-map illustration. The Studio page now displays the full illustrative spread with an accessible caption, an open-full-size link and readable mobile detail views. This artwork uses invented notes, not a case record or photographed production object; GitHub and mobile verification follow publication.
 
-- [ ] **15 · P3 · Series: readable and restrained cover identity**
+- [x] **15 · P3 · Series: readable and restrained cover identity**
   - **Where:** `/series/`.
   - **Design review:** A simple recurring identity per essay series, with enough distinction for readers to recognize the series.
   - **Review question:** Is the series easier to find without turning the reading experience into a thumbnail wall?
-  - **Status:** QUEUED.
+  - **Status:** DEPLOYED / VERIFY — series-cover vector rendition committed to the Horizon series index and series detail; validate the GitHub build and confirm visual fidelity and mobile presentation on the live site.
 
 ## Approval log
 
@@ -154,6 +154,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 11 | v2 · Responsive four-format image navigation with verified source examples | **Published to main with user approval** | Main production build/render validation passed; verify Cloudflare and phone layout | GitHub verified; live review pending |
 | 12 | v1 · From Screen to Substance — evidence-type visual, real examples and truthful empty states | **Published to main with user approval** | Production build and rendered checks passed; verify Cloudflare/mobile; real photographs remain future milestone | GitHub verified; live review pending |
 | 13 | v1 · Original essay covers for The Horizon and Everything in Moderation | **Approved by user for publishing** | Preserve essays verbatim; validate responsive image handling, build and live/phone delivery | GitHub publication pending validation |
+| 15 | v1 · The Horizon Essays series identity (cartographic vector rendition of approved composition) | **Published to main; visual confirmation pending** | Keep the series identity separate from individual essay covers; verify mobile presentation and design fidelity | GitHub publication in progress; build/live review pending |
 
 ## Non-negotiable review checks for every item
 
