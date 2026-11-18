@@ -37,6 +37,10 @@ proof_order:
   - Black and brass behavior under ordinary office lighting
   - Whether the network geometry stays subtle at physical size
   - Satin, mid-gloss, or archival matte surface choice
+open_questions:
+- Does the central line, "Nothing happened today. That was the work.", remain legible at realistic office viewing distance?
+- Does the sparse network geometry stay deliberate instead of looking empty when physically printed?
+- Which low-glare metal or archival-paper surface holds black and brass contrast best under ordinary office lighting?
 prototype_title: "The idea and the proof file"
 prototype_intro: >-
   The editorial image below helps the central line read clearly at thumbnail scale.
