@@ -6,7 +6,7 @@ Status: 2026-11-17 · **Editorial direction, not a release or production approva
 
 ## Decision
 
-Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, one now has a published screen-only editorial composition (E2); none of those eight has a print-ready manufacturing file or physical proof.
+Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, four now have published screen-only editorial compositions (E2, E3, R2 and R3); none of those eight has a print-ready manufacturing file or physical proof.
 
 **Do not make every profession the same trilogy.** The earlier *principle / practice / people* structure was a convenient cross-category planning device, but it diluted the actual differences in the work. It is retired as a compulsory format. Each lane should develop concepts from its own vocational reality, vocabulary, emotional stakes, physical environment, preferred aesthetics, and insider details.
 
@@ -63,10 +63,10 @@ Professional contrast matters:
 
 - **Meaning:** Chain of custody is made in ordinary handoffs, documented by people, not in one dramatic moment.
 - **Working line:** “Continuity is made one handoff at a time.”
-- **Visual treatment:** Fine-line column changes and staggered signature blocks reduced to *unreadable abstract marks*. A path continues across distinct panels. Ink-black, parchment, aged bronze. No real names, timestamps, or simulated legal form.
+- **Visual treatment:** An approved cinematic editorial scene with fictional evidence packaging and a custody-themed clipboard. Its dates and signature-like marks are *illustrative only*, not real case data, a legitimate custody record, or an approved form. Future print artwork should reduce legal-form ambiguity.
 - **Suggested geometry:** **8 x 12 portrait**, visually distinct from the existing shelf landscape.
 - **First test:** Does the imagery honor accountable practice without misrepresenting what constitutes a legally sufficient custody record?
-- **Current state:** Concept only. No print-ready artwork.
+- **Current state:** Approved editorial composition published at `/roadmap/every-transfer-leaves-a-record-edition/`. No print-ready vector master, physical proof or approved product.
 
 ### R3. The Final Signature · NEW CONCEPT
 
@@ -75,7 +75,7 @@ Professional contrast matters:
 - **Visual treatment:** One clean, intentionally vacated shelf space against a sequence of closed filing forms; brighter stone and graphite with a single bronze completion line. Silence and completion rather than loss.
 - **Suggested geometry:** **12 x 8 landscape**.
 - **First test:** Does an evidence professional recognize disposition and release work, rather than read the empty slot as missing evidence?
-- **Current state:** Concept only. No print-ready artwork.
+- **Current state:** Approved editorial composition published at `/roadmap/the-final-signature-edition/`. The shelf and paperwork are fictional; no vector print master, physical proof or approved product.
 
 ## The Watch · Law Enforcement
 
