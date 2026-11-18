@@ -78,7 +78,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Field notebook/workflow imagery paired with a grounded human moment of judgment, handoff, or reflection.
   - **Review question:** Can officers see their specific work rather than another hero-pose recruitment image?
   - **Guardrail:** No false agency affiliation or dramatic tactical imagery.
-  - **Status:** DEPLOYED / VERIFY — user approved the second, male-officer “Between the Calls” scene and explicitly requested publication. The Watch receives an optimized desktop and mobile WebP in its profession-specific practice section, under the existing hero and above the shared lifecycle guide. Caption makes clear that insignia, uniform, and location are fictional. GitHub build and live mobile review pending. The earlier woman-officer concept remains a possible separate wall edition, not the landing-page image.
+  - **Status:** DEPLOYED / VERIFY — user approved the second, male-officer “Between the Calls” scene and requested publication. An optimized desktop/mobile WebP is now used in the Watch practice section, preserving the hero and shared lifecycle guide. The caption clarifies the fictional uniform, patch, location and scenario. GitHub Actions run 44229847206 passed the production Hugo build and rendered-site validator. Cloudflare live delivery and phone review remain pending. The woman-officer study is reserved for a possible later wall edition.
 
 - [ ] **08 · P2 · The Signal: make resilience tangible**
   - **Where:** `/disciplines/signal/`.
@@ -147,7 +147,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **Accepted by user; complete** | None | **Yes (user reviewed)** |
 | 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
-| 07 | v2 · Male-officer Between the Calls practice scene | **Approved and directed publishing** | Build check and live mobile review pending | No, awaiting validation |
+| 07 | v2 · Male-officer Between the Calls practice scene | **Approved and pushed** | GitHub production build and render checks passed; user to verify mobile | GitHub verified; live review pending |
 | 08 | v1 proposal · The Quiet Recovery — cybersecurity continuity and restoration | **Design review** | Review concept before generating or publishing | No |
 
 ## Non-negotiable review checks for every item
