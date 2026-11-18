@@ -85,7 +85,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Real incident status-pad proof alongside a clearly fictional containment/restore checkpoint scenario.
   - **Review question:** Does the image show a defender's operating problem rather than just glowing monitors?
   - **Guardrail:** No purported real breaches, logs, infrastructure, or proprietary dashboards.
-  - **Status:** DEPLOYED / VERIFY — user approved the generated “The Quiet Recovery” scene and explicitly requested publication. Added optimized desktop and mobile WebP imagery to The Signal practice section beneath its profession introduction and above the lifecycle guide, with clear illustrative-content disclaimer (fictional dashboard, statuses, case details and paper pad—not actual incident or validated procedure). Build and live review pending.
+  - **Status:** DEPLOYED / VERIFY — user approved “The Quiet Recovery” and directed publication. Optimized desktop and mobile WebP images are in The Signal practice section, with a clear fictional-incident disclaimer. GitHub Actions run 44233690115 passed the production Hugo build and rendered-site validation. Cloudflare deployment and live phone appearance await user verification.
 
 ### Shared explanations and trust-building
 
@@ -148,7 +148,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
 | 07 | v2 · Male-officer Between the Calls practice scene | **Approved and pushed** | GitHub production build and render checks passed; user to verify mobile | GitHub verified; live review pending |
-| 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **User approved and directed publishing** | Validate build, Cloudflare delivery and phone rendering | Pending build and live review |
+| 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **Approved and pushed** | Production build and rendered-site validation passed; verify live Cloudflare and phone layout | GitHub passed; live review pending |
 | 09 | v1 proposal · On the Anvil: one artifact across five design steps | **Design review** | Visual concept approval before publication | No |
 
 ## Non-negotiable review checks for every item
