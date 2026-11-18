@@ -86,8 +86,13 @@ def main() -> int:
                                 )
                             results.append({"width": width, "path": route, **info})
                             if width == 412 and route == "/editions/":
-                                page.locator("#edition-concepts").scroll_into_view_if_needed()
-                                page.screenshot(path=str(OUT / "editions-concepts-412.png"))
+                                feature = page.locator("#edition-concepts .study-card").first
+                                feature.scroll_into_view_if_needed()
+                                page.wait_for_function(
+                                    "() => { const img = document.querySelector('#edition-concepts .study-card img'); return img && img.complete && img.naturalWidth > 0; }",
+                                    timeout=8000,
+                                )
+                                feature.screenshot(path=str(OUT / "editions-concepts-412.png"))
                             if width == 412 and route == "/":
                                 page.screenshot(path=str(OUT / "homepage-412.png"))
                         except Exception as exc:
@@ -126,7 +131,7 @@ def main() -> int:
                         problems.append(f"Concept artwork uses {metrics['objectFit']}, not contain.")
                     if metrics["imageNaturalWidth"] == 0:
                         problems.append(f"Concept image failed to load: {metrics['source']}.")
-                    page.screenshot(path=str(OUT / "editions-card-360.png"))
+                    first.screenshot(path=str(OUT / "editions-card-360.png"))
                 jump = page.locator(".edition-room-jump a")
                 if jump.count() != 4:
                     problems.append(f"Expected 4 profession jump links; found {jump.count()}.")
