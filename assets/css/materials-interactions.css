@@ -69,47 +69,50 @@
   .materials-distance-art,.materials-finish-reflection,.materials-finish-surface img { transition:none; }
 }
 
-/* Use the actual first three-room illustration; each state has a scene crop,
-   rather than shrinking a typography-only prototype until it looks empty. */
-.materials-distance-demo .materials-distance-stage {
-  aspect-ratio: 1 / 1;
-  min-height: 0;
-  background: radial-gradient(circle at 45% 40%,#37302a,#111313 72%);
+
+/* Action 01: the user's selected original infographic and the same Badge art in both demos. */
+.materials-learning-poster { margin:0 0 2.1rem; border:1px solid #b5a68f; background:#e9dfcf; }
+.materials-learning-poster a { display:block; overflow:hidden; text-decoration:none; }
+.materials-learning-poster img { display:block; width:100%; height:auto; }
+.materials-learning-poster figcaption { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:.35rem 1.5rem; padding:.7rem 1rem .9rem; font-size:.77rem; color:#625d54; }
+.materials-learning-poster figcaption strong { color:#3b3226; }
+.materials-learning-poster figcaption span { max-width:690px; }
+.materials-demo-instruction { margin:0 0 .7rem; font-size:.8rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:#79512b; }
+.materials-distance-demo .materials-distance-stage,.materials-finish-demo .materials-finish-stage {
+  aspect-ratio:1/1;
+  min-height:0;
+  background:radial-gradient(ellipse at center,#45413b,#16191a 75%);
 }
 .materials-distance-demo .materials-distance-art,
 [data-material-distance-demo][data-distance="across"] .materials-distance-art,
 [data-material-distance-demo][data-distance="passing"] .materials-distance-art {
-  width: min(76%,390px);
-  max-width: 100%;
-  box-shadow: 0 18px 35px rgba(0,0,0,.52);
-  transition: none;
+  max-width:100%;
+  box-shadow:0 18px 35px rgba(0,0,0,.52);
+  transition:width .38s ease, filter .38s ease;
 }
-.materials-distance-demo .materials-distance-art img {
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio:467 / 589;
-  object-fit:cover;
-}
-.materials-original-link {
-  display:inline-flex;
-  align-items:center;
-  gap:.4rem;
-  padding:.35rem 0;
-  margin-top:.5rem;
-  font-size:.79rem;
-  font-weight:700;
-  text-decoration:underline;
-  text-underline-offset:3px;
-  color:#6a432b;
-}
-.materials-original-link:hover { color:#311d13; }
+.materials-distance-demo .materials-distance-art { width:min(75%,400px); filter:blur(0px); }
+[data-material-distance-demo][data-distance="across"] .materials-distance-art { width:min(58%,310px); filter:blur(.55px); }
+[data-material-distance-demo][data-distance="passing"] .materials-distance-art { width:min(38%,210px); filter:blur(1.15px); }
+.materials-distance-demo .materials-distance-art img { display:block; width:100%; height:auto; aspect-ratio:409 / 527; object-fit:contain; }
+.materials-finish-demo .materials-finish-surface { width:min(66%,355px); max-width:100%; }
+.materials-finish-demo .materials-finish-surface img { display:block; width:100%; height:auto; object-fit:contain; }
+.materials-construction-section { background:#f4eee2; }
+.materials-construction-section .material-card { padding:clamp(1.5rem,3vw,2.5rem); }
+.materials-construction-section .material-card h2 { max-width:none; font-size:clamp(1.75rem,3vw,2.9rem); }
+.materials-construction-section .material-card ul { margin-bottom:0; }
 @media (max-width:950px) {
-  .materials-distance-demo .materials-distance-stage { aspect-ratio: 1/1; }
+  .materials-distance-demo .materials-distance-stage,.materials-finish-demo .materials-finish-stage { aspect-ratio:1/1; }
 }
 @media (max-width:680px) {
-  .materials-distance-demo .materials-distance-stage { aspect-ratio: 1/1; min-height:240px; }
-  .materials-distance-demo .materials-distance-art,
-  [data-material-distance-demo][data-distance="across"] .materials-distance-art,
-  [data-material-distance-demo][data-distance="passing"] .materials-distance-art { width:77%; }
+  .materials-learning-poster { margin-bottom:1.5rem; }
+  .materials-learning-poster figcaption { padding:.65rem .75rem .8rem; }
+  .materials-learning-poster figcaption span { font-size:.71rem; }
+  .materials-distance-demo .materials-distance-stage,.materials-finish-demo .materials-finish-stage { aspect-ratio:1/1; min-height:255px; }
+  .materials-distance-demo .materials-distance-art { width:73%; }
+  [data-material-distance-demo][data-distance="across"] .materials-distance-art { width:57%; }
+  [data-material-distance-demo][data-distance="passing"] .materials-distance-art { width:39%; }
+  .materials-finish-demo .materials-finish-surface { width:64%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .materials-distance-demo .materials-distance-art { transition:none; }
 }

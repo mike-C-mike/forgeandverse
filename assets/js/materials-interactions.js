@@ -5,31 +5,25 @@
     const controls = distance.querySelector('[data-material-distance-controls]');
     const data = {
       close: {
-        kicker:'Close · Personal office',
-        heading:'A piece you can stop and read.',
-        copy:'At a desk or in a personal office, viewers have time to notice smaller details. A quieter composition can reward a deliberate, closer look.',
-        principle:'Keep supporting details intentional and readable from the place someone actually sits.',
-        scene:'Personal office · Close',
-        src:'/images/materials/scale-close.avif',
-        alt:'Personal office from the original three-room visual concept, with a modest white-quill-and-anvil framed image behind a desk.'
+        kicker:'Close · Full view and detail',
+        heading:'Full text matters.',
+        copy:'At close range, supporting lines can contribute meaning alongside the headline.',
+        principle:'Allow smaller details to reward someone who stops to read.',
+        scene:'Same composition · Close'
       },
       across: {
-        kicker:'Med · Lab or briefing room',
-        heading:'The main idea has to carry.',
-        copy:'From across a shared room, people may notice the focal point, overall contrast, and larger forms before they make out smaller details.',
-        principle:'Prioritize clear hierarchy so the artwork still communicates beyond the nearest seat.',
-        scene:'Lab / briefing room · Med',
-        src:'/images/materials/scale-med.avif',
-        alt:'Briefing room from the original three-room visual concept, with a framed white-quill-and-anvil image beyond a meeting table.'
+        kicker:'Med · Across the room',
+        heading:'Hierarchy matters.',
+        copy:'As apparent distance grows, the headline and stronger contrast carry more of the message while fine lettering becomes harder to distinguish.',
+        principle:'Let the main message remain recognizable before the fine print can be read.',
+        scene:'Same composition · Med'
       },
       passing: {
-        kicker:'Far · Shared corridor',
-        heading:'Recognition comes before reading.',
-        copy:'In a corridor, a passing viewer may only get a moment to look. Strong visual identity and contrast have to do more of the work.',
-        principle:'Make the main shape and focal point recognizable without relying on fine print.',
-        scene:'Shared corridor · Far',
-        src:'/images/materials/scale-far.avif',
-        alt:'Corridor from the original three-room visual concept, with a large framed white-quill-and-anvil image and a person walking past.'
+        kicker:'Far · In passing',
+        heading:'Silhouette matters.',
+        copy:'At a quick glance, overall shape, contrast, and focal point work before the smaller details.',
+        principle:'Make the composition recognizable even when the finer text is missed.',
+        scene:'Same composition · Far'
       }
     };
     const buttons = [...distance.querySelectorAll('[data-distance-choice]')];
@@ -38,7 +32,6 @@
     const description = distance.querySelector('[data-distance-description]');
     const principle = distance.querySelector('[data-distance-principle]');
     const scene = distance.querySelector('[data-distance-scene]');
-    const picture = distance.querySelector('[data-distance-image]');
     const apply = (key) => {
       if (!Object.prototype.hasOwnProperty.call(data,key)) return;
       const item=data[key];
@@ -49,10 +42,6 @@
       if(description) description.textContent=item.copy;
       if(principle) principle.textContent=item.principle;
       if(scene) scene.textContent=item.scene;
-      if(picture) {
-        picture.src=item.src;
-        picture.alt=item.alt;
-      }
     };
     buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.distanceChoice)));
     if(controls) controls.hidden=false;

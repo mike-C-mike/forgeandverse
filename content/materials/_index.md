@@ -2,6 +2,6 @@
 title: "Material Matters"
 description: "A wall edition is not finished when the image file is finished. Scale, surface, edge, light, and mounting complete the work."
 ---
-Forge & Verse treats the physical form as part of the composition.
+Forge & Verse explores how physical presentation influences a piece of work: how it is mounted, how far away it is seen, and what light does to its surface.
 
-A piece that asks for luminous color, deep blacks, and a clean floating presence may belong on metal. A quieter work may need archival paper, visible fiber, and a substantial frame. The choice follows the image and the room rather than a default production catalog.
+The illustrations below explain design questions, not tested manufacturer specifications. Real samples and room-specific observations will follow when physical proofs exist.
