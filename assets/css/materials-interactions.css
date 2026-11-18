@@ -68,3 +68,48 @@
 @media (prefers-reduced-motion: reduce) {
   .materials-distance-art,.materials-finish-reflection,.materials-finish-surface img { transition:none; }
 }
+
+/* Use the actual first three-room illustration; each state has a scene crop,
+   rather than shrinking a typography-only prototype until it looks empty. */
+.materials-distance-demo .materials-distance-stage {
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  background: radial-gradient(circle at 45% 40%,#37302a,#111313 72%);
+}
+.materials-distance-demo .materials-distance-art,
+[data-material-distance-demo][data-distance="across"] .materials-distance-art,
+[data-material-distance-demo][data-distance="passing"] .materials-distance-art {
+  width: min(76%,390px);
+  max-width: 100%;
+  box-shadow: 0 18px 35px rgba(0,0,0,.52);
+  transition: none;
+}
+.materials-distance-demo .materials-distance-art img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:467 / 589;
+  object-fit:cover;
+}
+.materials-original-link {
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:.35rem 0;
+  margin-top:.5rem;
+  font-size:.79rem;
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  color:#6a432b;
+}
+.materials-original-link:hover { color:#311d13; }
+@media (max-width:950px) {
+  .materials-distance-demo .materials-distance-stage { aspect-ratio: 1/1; }
+}
+@media (max-width:680px) {
+  .materials-distance-demo .materials-distance-stage { aspect-ratio: 1/1; min-height:240px; }
+  .materials-distance-demo .materials-distance-art,
+  [data-material-distance-demo][data-distance="across"] .materials-distance-art,
+  [data-material-distance-demo][data-distance="passing"] .materials-distance-art { width:77%; }
+}
