@@ -1,0 +1,88 @@
+/* 2026-11-17 — shared proof/document preview framing.
+   Complete artwork and forms must remain visible in card containers.
+   Do not apply to photographic profession heroes, editorial covers,
+   lifestyle mockups, or finished-product gallery photography. */
+
+/* All study-card file proofs (portrait pads, notebooks, and landscape
+   material-test artwork) sit inside a fixed mat, never a cover crop. */
+.study-card-proof .study-card-link {
+  grid-template-rows: 280px auto;
+}
+.study-card-proof .study-card-visual {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  background: linear-gradient(145deg, #e5ded2, #cfc5b5);
+}
+.study-card-proof .study-card-proof-image {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  padding: clamp(.75rem, 1.9vw, 1.25rem);
+  object-fit: contain;
+  object-position: center;
+  transition: none;
+}
+.study-card-proof .study-card-link:hover .study-card-proof-image {
+  transform: none;
+}
+
+/* Existing compact and related lists keep their intended density. */
+.study-grid-related .study-card-proof .study-card-link {
+  grid-template-rows: 235px auto;
+}
+.study-grid-compact .study-card-proof .study-card-link {
+  grid-template-rows: 200px auto;
+}
+
+/* Real study previews and released document previews on professional pages.
+   Work/edition hero photographs deliberately retain their cover treatment. */
+.profession-piece-image--proof {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #e4dccc, #cfc5b4);
+}
+.profession-piece-image--proof img {
+  box-sizing: border-box;
+  object-fit: contain;
+  object-position: center;
+  padding: .7rem;
+}
+.profession-piece-link:hover .profession-piece-image--proof img {
+  transform: none;
+}
+
+/* Release-index forms are readable documents, not backdrop photography. */
+.release-card-image {
+  background: #d9d0c2;
+}
+.release-card-image img {
+  box-sizing: border-box;
+  object-fit: contain;
+  object-position: center;
+  padding: .85rem;
+}
+.release-card-link:hover .release-card-image img {
+  transform: none;
+}
+
+@media (max-width: 700px) {
+  .study-card-proof .study-card-link {
+    grid-template-rows: 260px auto;
+  }
+  .study-grid-related .study-card-proof .study-card-link {
+    grid-template-rows: 235px auto;
+  }
+  .study-grid-compact .study-card-proof .study-card-link {
+    grid-template-rows: 200px auto;
+  }
+  .study-card-proof .study-card-proof-image {
+    padding: .65rem;
+  }
+  .profession-piece-image--proof img {
+    padding: .6rem;
+  }
+}
