@@ -11,6 +11,10 @@ format: Printable intake reference
 audience: Property and evidence personnel receiving items from officers, investigators, technicians, or other custodians
 need: Catch missing identifiers, unclear packaging condition, special handling needs, or unresolved discrepancies while the submitting person is still available
 visual: evidence-card
+card_image: /images/studies/evidence-intake-check-card/structure-study.webp
+card_image_alt: "Forge & Verse conceptual Evidence Intake Check Card surrounded by illustrated packaging sketches, showing seven intake questions and a clearly labeled unreleased structure study."
+hero_image: /images/studies/evidence-intake-check-card/structure-study.webp
+hero_image_alt: "Illustrative design-study layout for seven evidence intake review questions, explicitly marked not released and not an official evidence record."
 design_test: The card prompts a useful intake conversation without pretending to replace agency policy, the evidence system, or the official chain of custody.
 material_direction: Free printable reference first; likely half-letter or 5 x 7 format after desk testing
 details:
