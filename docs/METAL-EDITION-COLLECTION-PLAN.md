@@ -6,7 +6,7 @@ Status: 2026-11-17 · **Editorial direction, not a release or production approva
 
 ## Decision
 
-Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, six now have published screen-only editorial compositions (E2, E3, R2, R3, W2 and W3); none of those eight has a print-ready manufacturing file or physical proof.
+Explore **up to three separate metal art directions** in each of the four current professions. This is a *concept-review target*, not a requirement to create a symmetrical 12-product catalog. Four existing candidates already have small-format vector material proofs. Of the eight additional candidates, seven now have published screen-only editorial compositions (E2, E3, R2, R3, W2, W3 and S2); none of those eight has a print-ready manufacturing file or physical proof.
 
 **Do not make every profession the same trilogy.** The earlier *principle / practice / people* structure was a convenient cross-category planning device, but it diluted the actual differences in the work. It is retired as a compulsory format. Each lane should develop concepts from its own vocational reality, vocabulary, emotional stakes, physical environment, preferred aesthetics, and insider details.
 
