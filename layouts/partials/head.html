@@ -51,5 +51,9 @@
     {{ $anvilCss := resources.Get "css/anvil-process.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $anvilCss.RelPermalink }}" integrity="{{ $anvilCss.Data.Integrity }}">
   {{ end }}
+  {{ if and .IsSection (eq .Section "releases") }}
+    {{ $hashGuideCss := resources.Get "css/release-verification-guide.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $hashGuideCss.RelPermalink }}" integrity="{{ $hashGuideCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>

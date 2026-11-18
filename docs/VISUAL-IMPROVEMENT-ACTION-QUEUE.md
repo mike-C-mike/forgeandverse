@@ -101,7 +101,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Annotated example of downloaded file → local digest calculation → comparison with the published digest.
   - **Review question:** Could a non-expert follow the process without believing a decorative example hash is a real file checksum?
   - **Guardrail:** Keep genuine hashes selectable and exact. Use unmistakably illustrative examples.
-  - **Status:** DESIGN REVIEW — Item 10 opened after approval of Item 09. Inspected the real Release Desk: it already displays real SHA-256 digests, OS-specific commands, and a functioning local browser verifier that compares against the selected published bundle. Proposed **instructional visual adjacent to the browser verifier**, explaining Download → Calculate locally → Compare with published digest, with unmistakably illustrative example strings rather than invented real checksums. A mismatch conveys non-identity, not proof of malware; a match shows byte-for-byte identity to the publisher's stated digest, not a blanket security guarantee. Avoid duplicating the live controls or mixing field proofs with finished releases. Await user visual concept approval before publishing.
+  - **Status:** DEPLOYED / VERIFY — user approved the generated “Same File? Prove It.” infographic and explicitly requested publication. The complete optimized image is inserted between the existing verification command reference and the functioning local browser checker; six cropped, readable mobile cards show the same approved content. The genuine published digests, browser verifier, downloadable files, and OS command text were not modified. Accessibility captions and a prominent note explain that the graphic's abbreviated example hashes are illustrative and that checksum agreement does not prove safety. GitHub validation and live mobile review pending.
 
 - [ ] **11 · P2 · Work index: illustrate the four formats**
   - **Where:** `/works/`.
@@ -150,7 +150,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 07 | v2 · Male-officer Between the Calls practice scene | **Approved and pushed** | GitHub production build and render checks passed; user to verify mobile | GitHub verified; live review pending |
 | 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **Approved and pushed** | Production build and rendered-site validation passed; verify live Cloudflare and phone layout | GitHub passed; live review pending |
 | 09 | v1 · From an Idea to an Object — approved five-stage process artwork | **Approved and pushed** | GitHub production build and render validation passed; verify Cloudflare and phone layout | GitHub passed; live review pending |
-| 10 | v1 proposal · Download, calculate, compare SHA-256 explanatory visual | **Design review** | Show an honest digest comparison beside existing local verification UI; do not invent live checksum | No |
+| 10 | v1 · Same File? Prove It. educational infographic | **User approved and directed publishing** | Validate build, mobile cards, and live Cloudflare placement; actual digests and verifier unchanged | GitHub pending; live review pending |
 
 ## Non-negotiable review checks for every item
 

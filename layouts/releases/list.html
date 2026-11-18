@@ -108,6 +108,56 @@
         <div><span>Linux</span><code>sha256sum filename.zip</code></div>
       </div>
     </div>
+
+    <div class="release-verification-visual" aria-labelledby="release-verification-visual-title">
+      <header class="release-verification-visual-intro">
+        <p class="eyebrow">Illustrated verification guide</p>
+        <h3 id="release-verification-visual-title">Same file? Prove it.</h3>
+        <p>See how a downloaded file, a locally calculated SHA-256 digest, and the publisher's listed value fit together. Then use the actual verifier directly below.</p>
+      </header>
+
+      <figure class="release-verification-desktop">
+        <a href="/images/releases/same-file-prove-it.webp" data-lightbox data-lightbox-caption="Illustrative SHA-256 verification infographic: download, calculate locally, compare with a published hash. Abbreviated example hashes are not real published checksums.">
+          <img src="/images/releases/same-file-prove-it.webp" width="1491" height="1055" loading="lazy" decoding="async" alt="Same File? Prove It. A Forge and Verse infographic explaining three stages: download a release, calculate its SHA-256 locally, and compare the result to its published checksum. It also explains match versus mismatch, shows operating-system commands, and cautions that matching does not establish safety.">
+          <span class="release-verification-expand">View complete infographic <span aria-hidden="true">↗</span></span>
+        </a>
+        <figcaption>Example filename and shortened digest values are illustrative only, not a real release or complete SHA-256 checksum.</figcaption>
+      </figure>
+
+      <div class="release-verification-mobile" aria-label="Mobile reading version of the SHA-256 verification infographic">
+        <ol class="release-verification-mobile-steps">
+          <li>
+            <img src="/images/releases/sha256-guide-01-download.webp" width="462" height="461" loading="lazy" decoding="async" alt="Step 1, Download the file: an illustrated Forge and Verse release package and a download symbol.">
+            <p>Get the file from its official Release Desk entry.</p>
+          </li>
+          <li>
+            <img src="/images/releases/sha256-guide-02-calculate.webp" width="498" height="461" loading="lazy" decoding="async" alt="Step 2, Calculate SHA-256 locally: an illustrative digest calculation taking place on a laptop without uploading the file.">
+            <p>Calculate SHA-256 on your own device, using the browser checker or an operating-system command.</p>
+          </li>
+          <li>
+            <img src="/images/releases/sha256-guide-03-compare.webp" width="514" height="461" loading="lazy" decoding="async" alt="Step 3, Compare the digest: an illustrative abbreviated calculated hash matches an illustrative abbreviated published hash.">
+            <p>Compare the complete calculated value with the complete, published value.</p>
+          </li>
+        </ol>
+        <div class="release-verification-mobile-details">
+          <figure>
+            <img src="/images/releases/sha256-guide-04-results.webp" width="465" height="310" loading="lazy" decoding="async" alt="Match indicates agreement with the published digest; mismatch indicates that the file does not match that digest.">
+            <figcaption>Matching and mismatching values mean different things.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/releases/sha256-guide-05-commands.webp" width="570" height="310" loading="lazy" decoding="async" alt="Illustrated examples of SHA-256 commands for PowerShell, Windows certutil, macOS, and Linux.">
+            <figcaption>The selectable, copyable command examples remain above.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/releases/sha256-guide-06-caution.webp" width="450" height="310" loading="lazy" decoding="async" alt="Caution: checksums identify files, but a matching checksum is not evidence that a file is safe. Review the source and follow your policy.">
+            <figcaption>Digest verification is not a malware or safety assessment.</figcaption>
+          </figure>
+        </div>
+        <a class="release-verification-original" href="/images/releases/same-file-prove-it.webp" target="_blank" rel="noopener">Open the complete infographic for zooming <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="release-verification-integrity-note"><strong>Examples are not verification data.</strong> The shortened digests shown in the artwork are fictional illustrations, never values to copy into your own checks. Use the complete SHA-256 digest displayed on the real release page or in its checksum manifest. A match establishes agreement with that stated value; it does not establish that the publisher or the file is safe.</p>
+    </div>
+
     <div class="local-hash-verifier" data-hash-verifier>
       <div class="local-hash-verifier-intro">
         <p class="eyebrow">Local browser check</p>
