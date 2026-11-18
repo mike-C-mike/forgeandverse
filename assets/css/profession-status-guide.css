@@ -241,3 +241,14 @@
     aspect-ratio:960 / 700;
   }
 }
+
+/* The Signal practice scene: preserve key recovery screens and status-pad details on phones. */
+.profession-practice-signal .profession-practice-image-link img {
+  aspect-ratio: 1600 / 900;
+  object-fit: contain;
+}
+@media (max-width: 640px) {
+  .profession-practice-signal .profession-practice-image-link img {
+    aspect-ratio: 960 / 643;
+  }
+}

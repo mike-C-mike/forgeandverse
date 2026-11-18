@@ -109,6 +109,15 @@
     title: Judgment and service, made visible
     description: Art that recognizes the humanity, discretion, consequence, and continuity of law-enforcement work without defaulting to heroic iconography.
 - slug: signal
+  practice_image: /images/professions/signal-the-quiet-recovery.webp
+  practice_image_mobile: /images/professions/signal-the-quiet-recovery-mobile.webp
+  practice_image_width: 1600
+  practice_image_height: 900
+  practice_image_alt: "Illustrated security incident responder reviewing fictional incident-response and service-recovery screens beside an Incident Status Pad showing restoration checkpoints."
+  practice_eyebrow: "The work behind resilience"
+  practice_title: "The Quiet Recovery."
+  practice_description: "Containing an incident is only one part of the job. Rebuilding services, validating what changed, and documenting the next safe decision are what turn a disruption into a trustworthy recovery."
+  practice_caption: "Studio concept artwork. The dashboard, incident details, service statuses, and depicted Incident Status Pad are illustrative; they do not represent a real incident, a tested response procedure, or a completed product."
   hero_image: /images/professions/cybersecurity.avif
   hero_image_alt: A quiet cybersecurity operations workstation with monitors and defensive infrastructure
   hero_caption: Defensive security operations

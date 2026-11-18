@@ -85,7 +85,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Real incident status-pad proof alongside a clearly fictional containment/restore checkpoint scenario.
   - **Review question:** Does the image show a defender's operating problem rather than just glowing monitors?
   - **Guardrail:** No purported real breaches, logs, infrastructure, or proprietary dashboards.
-  - **Status:** DESIGN REVIEW — propose a profession-specific cybersecurity continuity image: “The Quiet Recovery,” a restrained blue-team operations scene focused on incident triage, verified containment, restoration checkpoints, and a handwritten recovery/communications status sheet. Show defensible human decisions and clear staging rather than sci-fi hacking, fake alerts, or misleading live incident claims. User approval required before generation/publication.
+  - **Status:** DEPLOYED / VERIFY — user approved the generated “The Quiet Recovery” scene and explicitly requested publication. Added optimized desktop and mobile WebP imagery to The Signal practice section beneath its profession introduction and above the lifecycle guide, with clear illustrative-content disclaimer (fictional dashboard, statuses, case details and paper pad—not actual incident or validated procedure). Build and live review pending.
 
 ### Shared explanations and trust-building
 
@@ -94,7 +94,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Compact illustration of Question → Structure → Material → Sample → Ready, visually separate from public Development/Production lifecycle.
   - **Review question:** Is the difference between an idea, a file, and a physical sample obvious?
   - **Guardrail:** Avoid redundant or conflicting status systems.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — user requested moving on after publishing Item 08. Existing On the Anvil page already includes a compact text-only Question → Structure → Material → Sample → Ready key; propose replacing that with a visual **five-stage artifact evolution** using one example carried through, from a professional need to a draft file, a manufacturing-ready file, an evaluated physical sample, then readiness to seek approval. Keep it distinct from public Development / Production / Archive status and make clear that “Ready” does not by itself mean “Available.” No site changes to Item 09 without approval.
 
 - [ ] **10 · P2 · Release Desk: explain SHA-256 verification**
   - **Where:** `/releases/`.
@@ -148,7 +148,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
 | 07 | v2 · Male-officer Between the Calls practice scene | **Approved and pushed** | GitHub production build and render checks passed; user to verify mobile | GitHub verified; live review pending |
-| 08 | v1 proposal · The Quiet Recovery — cybersecurity continuity and restoration | **Design review** | Review concept before generating or publishing | No |
+| 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **User approved and directed publishing** | Validate build, Cloudflare delivery and phone rendering | Pending build and live review |
+| 09 | v1 proposal · On the Anvil: one artifact across five design steps | **Design review** | Visual concept approval before publication | No |
 
 ## Non-negotiable review checks for every item
 
