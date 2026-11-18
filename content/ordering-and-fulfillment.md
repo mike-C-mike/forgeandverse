@@ -6,7 +6,7 @@ layout: "ordering"
 
 ## Before you order
 
-Every available physical-work page identifies the production partner, the approved configuration, and the current edition state before the order link. If a work is still being tested, Forge & Verse does not show a purchase link.
+Only physical editions explicitly marked **Available** show a purchase link. Their pages identify the approved configuration and the specialist responsible for checkout and fulfillment. A studio-ordered physical proof is part of development, not a customer purchase.
 
 ## If there is a problem with the order
 
@@ -16,6 +16,4 @@ If the physical object appears materially different from the Forge & Verse desig
 
 ## Why there is no Forge & Verse warehouse
 
-Carrying inventory would not make the object better. It would move studio time away from design, testing, writing, and quality review and into storage, packing, shipping, and returns.
-
-The studio instead keeps responsibility for the decisions that shape the work and uses vetted production specialists for the logistics they are built to handle.
+Forge & Verse focuses on designing, testing, and reviewing its work rather than stocking and shipping merchandise. When a physical edition is offered, the named specialist handles the transaction and fulfillment.

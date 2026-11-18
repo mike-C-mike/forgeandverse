@@ -48,7 +48,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** A two-lane diagram showing Studio responsibilities versus outside production partner responsibilities across Design → Proof → Approve → Fulfillment, with a visible checkout handoff.
   - **Review question:** Is it instantly clear who owns product design versus payment, manufacturing, shipping, and returns?
   - **Guardrail:** No false manufacturing partner, availability, approved stamp, or physical proof imagery.
-  - **Status:** DESIGN REVIEW — user asked to begin item 03. First visual concept: a two-lane handoff graphic, “Forge & Verse / Studio” above “Independent production partner,” progressing through Design → Physical proof → Studio review → Available / External checkout. Clear crossing/handoff at partner checkout *only after approval and availability*. The production specialist can manufacture a proof during development; this is not the customer's checkout. Proposal should REPLACE/compress the existing four-step row and overlapping role/check-out explanations, not add a repetitive new graphic. No approved manufacturer, real physical sample, price or live sale is implied. **Do not publish pending explicit approval.**
+  - **Status:** DEPLOYED / VERIFY — user explicitly approved the infographic and requested direct implementation. The original four-step timeline and duplicative responsibility/checkout sections were replaced with the approved graphic. A small-screen scroll-and-expand treatment and an accessible plain-text explanation preserve clarity. Existing proof-acceptance and order-support details remain, with tightened copy. GitHub build and live delivery verification pending.
 
 - [ ] **04 · P1 · Professional landing pages: lifecycle without a wall of copy**
   - **Where:** Shared template for all four `/disciplines/` pages.
@@ -143,7 +143,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | --- | --- | --- | --- | --- |
 | 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 03 | v1 · Two-lane responsibility and handoff graphic | **Design review** | Avoid duplication; distinguish studio proofing from customer checkout | No |
+| 03 | v1 · Approved studio-to-fulfillment infographic + streamlined ordering page | **User approved and directed publishing** | Verify production build, mobile scroll/zoom and live Cloudflare deployment | Pending latest build and live review |
 
 ## Non-negotiable review checks for every item
 

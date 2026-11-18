@@ -39,5 +39,9 @@
     {{ $intakeCss := resources.Get "css/intake-format-guide.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $intakeCss.RelPermalink }}" integrity="{{ $intakeCss.Data.Integrity }}">
   {{ end }}
+  {{ if eq .Layout "ordering" }}
+    {{ $orderingCss := resources.Get "css/ordering-infographic.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $orderingCss.RelPermalink }}" integrity="{{ $orderingCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>
