@@ -73,6 +73,13 @@
     title: The long memory of evidence
     description: Art about patience, preservation, and the ordinary item that may become important years after it reaches the shelf.
 - slug: watch
+  practice_image: /images/professions/watch-between-the-calls.webp
+  practice_image_mobile: /images/professions/watch-between-the-calls-mobile.webp
+  practice_image_alt: "Studio illustration of a male patrol officer beside an SUV at dusk, writing in a small field notebook after a call."
+  practice_eyebrow: "The work between calls"
+  practice_title: "Between the Calls."
+  practice_description: "The call may be over, but the notes, decisions, and follow-up remain. The quiet parts of a shift carry their own responsibility."
+  practice_caption: "Studio concept artwork. The uniform, insignia, vehicle, and setting are illustrative; no real agency, officer, or incident is depicted."
   hero_image: /images/professions/law-enforcement.avif
   hero_image_alt: A uniformed police officer beside a patrol car at dusk, looking toward the horizon
   hero_caption: Law enforcement, service and judgment

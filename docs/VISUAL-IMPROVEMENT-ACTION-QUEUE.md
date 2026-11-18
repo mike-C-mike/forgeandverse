@@ -78,14 +78,14 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Field notebook/workflow imagery paired with a grounded human moment of judgment, handoff, or reflection.
   - **Review question:** Can officers see their specific work rather than another hero-pose recruitment image?
   - **Guardrail:** No false agency affiliation or dramatic tactical imagery.
-  - **Status:** DESIGN REVIEW — Item 07 opened at user request after approving Evidence Room art. Proposed concept: “Between the Calls,” a grounded law-enforcement shift moment showing a patrol officer completing contemporaneous field notes and reviewing a safe, fictional dispatch handoff, with vehicle and shift context but no staged tactical confrontation. Use a professional scene with an ordinary working atmosphere, not recruiting photography. Present image concept for explicit approval before publication.
+  - **Status:** DEPLOYED / VERIFY — user approved the second, male-officer “Between the Calls” scene and explicitly requested publication. The Watch receives an optimized desktop and mobile WebP in its profession-specific practice section, under the existing hero and above the shared lifecycle guide. Caption makes clear that insignia, uniform, and location are fictional. GitHub build and live mobile review pending. The earlier woman-officer concept remains a possible separate wall edition, not the landing-page image.
 
 - [ ] **08 · P2 · The Signal: make resilience tangible**
   - **Where:** `/disciplines/signal/`.
   - **Design review:** Real incident status-pad proof alongside a clearly fictional containment/restore checkpoint scenario.
   - **Review question:** Does the image show a defender's operating problem rather than just glowing monitors?
   - **Guardrail:** No purported real breaches, logs, infrastructure, or proprietary dashboards.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW — propose a profession-specific cybersecurity continuity image: “The Quiet Recovery,” a restrained blue-team operations scene focused on incident triage, verified containment, restoration checkpoints, and a handwritten recovery/communications status sheet. Show defensible human decisions and clear staging rather than sci-fi hacking, fake alerts, or misleading live incident claims. User approval required before generation/publication.
 
 ### Shared explanations and trust-building
 
@@ -147,7 +147,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **Accepted by user; complete** | None | **Yes (user reviewed)** |
 | 05 | v1 · Method over spectacle — Examiner's Bench practice artwork | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
-| 07 | v1 proposal · Between the Calls — meaningful patrol documentation | **Design review** | Approve concept artwork before any site changes | No |
+| 07 | v2 · Male-officer Between the Calls practice scene | **Approved and directed publishing** | Build check and live mobile review pending | No, awaiting validation |
+| 08 | v1 proposal · The Quiet Recovery — cybersecurity continuity and restoration | **Design review** | Review concept before generating or publishing | No |
 
 ## Non-negotiable review checks for every item
 
