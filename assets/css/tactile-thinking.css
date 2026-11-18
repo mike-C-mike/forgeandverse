@@ -1,0 +1,21 @@
+/* Item 14: Notebook illustration demonstrates the difference between exploring and organizing thought. */
+.tactile-thinking-example { margin: clamp(2rem,5vw,4rem) 0 0; }
+.tactile-thinking-example > a { display:block; border:1px solid rgba(241,237,227,.22); overflow:hidden; background:#17191a; }
+.tactile-thinking-example img { width:100%; height:auto; display:block; }
+.tactile-thinking-example > a:focus-visible, .tactile-thinking-example figcaption a:focus-visible { outline:3px solid #e9b478; outline-offset:3px; }
+.tactile-thinking-example figcaption { max-width:1000px; margin:1rem 0 0; font-size:.93rem; line-height:1.65; color:rgba(241,237,227,.78); }
+.tactile-thinking-example figcaption strong { color:var(--paper); }
+.tactile-thinking-example figcaption a { color:#f3d6ae; text-underline-offset:.17em; }
+.tactile-detail-grid { display:none; }
+@media (max-width:700px) {
+  .tactile-thinking-example { margin-top:2rem; }
+  .tactile-thinking-example figcaption { font-size:.87rem; }
+  .tactile-detail-grid { display:grid; gap:1.5rem; margin-top:1.7rem; }
+  .tactile-detail-grid figure { margin:0; }
+  .tactile-detail { width:100%; aspect-ratio: .86; border:1px solid rgba(241,237,227,.22); background-repeat:no-repeat; background-image:url('/images/studio/tactile-thinking-first-pass-working-map.webp'); background-size:200% auto; }
+  .tactile-detail-first { background-position:left center; }
+  .tactile-detail-map { background-position:right center; }
+  .tactile-detail-grid figcaption { margin:.5rem 0 0; color:rgba(241,237,227,.78); font-size:.87rem; line-height:1.45; }
+  .tactile-detail-grid figcaption strong { color:var(--paper); }
+}
+@media print { .tactile-detail-grid {display:none!important;} }

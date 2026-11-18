@@ -125,11 +125,11 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Review question:** Does the image support the essay's idea without inventing autobiography or turning thoughtful writing into filler?
   - **Status:** DEPLOYED / VERIFY — both approved original covers added to the two essays and Journal landing page on November 18, 2026; verify production workflow, live Cloudflare delivery and phone presentation. Essay text is unchanged.
 
-- [ ] **14 · P3 · Studio: demonstrate tactile thinking**
+- [x] **14 · P3 · Studio: demonstrate tactile thinking**
   - **Where:** `/about/`, “Not every thought wants to begin at a keyboard.”
   - **Design review:** Real notebook spread or a before/after annotated writing example using fictitious information.
   - **Review question:** Does the image explain what paper adds to the thinking process?
-  - **Status:** QUEUED.
+  - **Status:** DEPLOYED / VERIFY — user approved the original first-pass-to-working-map illustration. The Studio page now displays the full illustrative spread with an accessible caption, an open-full-size link and readable mobile detail views. This artwork uses invented notes, not a case record or photographed production object; GitHub and mobile verification follow publication.
 
 - [ ] **15 · P3 · Series: readable and restrained cover identity**
   - **Where:** `/series/`.
