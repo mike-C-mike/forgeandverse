@@ -59,5 +59,9 @@
     {{ $worksCss := resources.Get "css/work-doorways.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $worksCss.RelPermalink }}" integrity="{{ $worksCss.Data.Integrity }}">
   {{ end }}
+  {{ if and .IsSection (eq .Section "editions") }}
+    {{ $editionEvidenceCss := resources.Get "css/edition-evidence-guide.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $editionEvidenceCss.RelPermalink }}" integrity="{{ $editionEvidenceCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>
