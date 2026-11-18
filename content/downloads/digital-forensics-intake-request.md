@@ -155,20 +155,23 @@ release_manifest_url: /downloads/forge-and-verse-digital-forensics-intake-kit-v1
 form_field_count: 105
 local_only: true
 use_modes:
-- label: Fill on screen
-  title: Local fillable PDF
-  description: Type into 105 fields, save the file locally, and print or route it through an approved agency process. The PDF contains no JavaScript, telemetry, or automatic submission.
-  url: /downloads/intake-kit/digital-forensics-intake-request-fillable.pdf
-  meta: PDF · 132 KB · 105 fields
-  cta: Download fillable PDF
 - label: Write by hand
   title: Print-ready PDF
+  visual_copy: Print the two-page request, complete it on paper, and route it through your agency's approved process.
   description: Use the same two-page structure in a paper-first intake, signature, or in-person handoff process without forcing the requester into another screen.
   url: /downloads/intake-kit/digital-forensics-intake-request.pdf
   meta: PDF · 90 KB · 2 pages
   cta: Download print PDF
+- label: Fill on screen
+  title: Local fillable PDF
+  visual_copy: Type into 105 fields and save the PDF locally, without sending the data to Forge & Verse.
+  description: Type into 105 fields, save the file locally, and print or route it through an approved agency process. The PDF contains no JavaScript, telemetry, or automatic submission.
+  url: /downloads/intake-kit/digital-forensics-intake-request-fillable.pdf
+  meta: PDF · 132 KB · 105 fields
+  cta: Download fillable PDF
 - label: Make it local
   title: Editable agency source
+  visual_copy: Customize agency branding, routing instructions, terminology, and approval fields before deployment.
   description: Change branding, routing, approval fields, terminology, services, and local instructions before the form becomes an official part of an agency workflow.
   url: /downloads/intake-kit/digital-forensics-intake-request.docx
   meta: DOCX · 41 KB

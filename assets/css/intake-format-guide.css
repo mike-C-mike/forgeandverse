@@ -1,0 +1,143 @@
+
+/* Intake Kit v1.2 format guide: authentic form preview and actionable download choices */
+.intake-format-section {
+  padding: clamp(3rem,7vw,6rem) 0;
+  color: #272520;
+  background: #e9e2d4;
+}
+.intake-format-header { padding: 0 0 clamp(1.35rem,3vw,2.2rem); border-bottom: 1px solid #b8ab95; }
+.intake-format-header .eyebrow { color:#795b34; }
+.intake-format-header h2 {
+  margin: .55rem 0 .8rem;
+  max-width: 18ch;
+  font-family: var(--serif);
+  font-size: clamp(2.65rem,6.4vw,5.5rem);
+  line-height: .96;
+  font-weight: 600;
+  letter-spacing:-.032em;
+}
+.intake-format-header > p:last-child { max-width: 57ch; color:#5d584f; font-size:1rem; line-height:1.6; }
+.intake-format-layout {
+  display:grid;
+  grid-template-columns:minmax(0, 0.87fr) minmax(0,1.13fr);
+  align-items:stretch;
+  gap:0;
+  border:1px solid #b9ad99;
+  border-top:0;
+}
+.intake-format-preview {
+  min-width:0;
+  margin:0;
+  padding:clamp(1.15rem,3vw,2.25rem);
+  background:#d4c9b8;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.intake-format-preview a {
+  display:block;
+  position:relative;
+  width:min(100%,400px);
+  padding:.5rem;
+  background:#eee8dd;
+  box-shadow:0 12px 29px rgba(43,36,27,.25);
+  text-decoration:none;
+}
+.intake-format-preview a:focus-visible,
+.intake-format-download a:focus-visible {outline:3px solid #7f5628; outline-offset:3px;}
+.intake-format-preview img { display:block; width:100%; height:auto; }
+.intake-format-preview figcaption {
+  display:grid;
+  gap:.4rem;
+  width:min(100%,400px);
+  margin-top:1.15rem;
+  color:#5c574f;
+  font-size:.78rem;
+  line-height:1.45;
+}
+.intake-format-preview figcaption strong { color:#282520; }
+.intake-format-options {
+  display:grid;
+  gap:clamp(.6rem,1.5vw,1rem);
+  padding:clamp(.75rem,2vw,1.5rem);
+  background:#f4eee4;
+}
+.intake-format-option {
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(.7rem,1.5vw,1.2rem);
+  align-items:start;
+  padding:clamp(.85rem,1.7vw,1.4rem);
+  border:1px solid #c9bcaa;
+  background:#fffaf2;
+}
+.intake-format-number {
+  width:2.4rem;
+  height:2.4rem;
+  display:grid;
+  place-items:center;
+  background:#282725;
+  color:#e0c492;
+  font-family:var(--sans);
+  font-size:.85rem;
+  font-weight:750;
+}
+.intake-format-option-content{display:flex; flex-direction:column; height:100%;}
+.intake-format-type {
+  margin:0;
+  color:#795734;
+  font-size:.7rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+.intake-format-option h3 {
+  margin:.3rem 0 .5rem;
+  font-family:var(--serif);
+  font-size:clamp(1.45rem,2.5vw,2rem);
+  font-weight:600;
+  line-height:1.1;
+}
+.intake-format-option-content > p:not(.intake-format-type) {
+  margin:0 0 1rem;
+  color:#59564e;
+  font-size:.92rem;
+  line-height:1.5;
+}
+.intake-format-download {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:.65rem 1rem;
+  flex-wrap:wrap;
+  margin-top:auto;
+  border-top:1px solid #cec2b1;
+  padding-top:.85rem;
+}
+.intake-format-download small {color:#6c655d; font-size:.73rem;}
+.intake-format-download a {color:#382915; font-weight:800; font-size:.82rem; text-decoration:none; border-bottom:1px solid #ab8754; padding-bottom:.2rem;}
+.intake-format-download a:hover {border-color:#382915;}
+.intake-format-notes {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(1rem,3vw,2.75rem);
+  border-top:1px solid #b8ab95;
+  padding:1.3rem 0 .3rem;
+}
+.intake-format-notes p {margin:0; color:#5e574c; font-size:.86rem; line-height:1.65;}
+.intake-format-notes strong {color:#2e2a24;}
+@media(max-width:950px) {
+  .intake-format-layout {grid-template-columns:1fr;}
+  .intake-format-preview {padding:1.25rem;}
+  .intake-format-preview a {max-width:260px;}
+  .intake-format-preview figcaption {max-width:260px; }
+}
+@media(max-width:620px) {
+  .intake-format-header h2 {font-size:clamp(2.4rem,12vw,3.35rem);}
+  .intake-format-options {padding:.7rem;}
+  .intake-format-option {padding:.85rem;gap:.75rem;}
+  .intake-format-number{width:2rem;height:2rem;}
+  .intake-format-download{display:grid;}
+  .intake-format-notes{grid-template-columns:1fr;}
+}

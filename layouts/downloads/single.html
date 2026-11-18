@@ -19,6 +19,47 @@
 {{ partial "person-need-strip.html" . }}
 
 {{ with .Params.use_modes }}
+{{ if eq $.Params.format "operational-release-kit" }}
+<section class="release-choice-section intake-format-section" id="choose-format" aria-labelledby="intake-format-title">
+  <div class="wrap">
+    <header class="intake-format-header">
+      <p class="eyebrow">Forge &amp; Verse / The Examiner's Bench · Choose the working style</p>
+      <h2 id="intake-format-title">One form. Three ways to work.</h2>
+      <p>Choose the format that fits your agency's intake process. All three versions follow the same two-page request structure.</p>
+    </header>
+    <div class="intake-format-layout">
+      {{ with $.Params.preview_pages }}
+      {{ with index . 0 }}
+      <figure class="intake-format-preview">
+        <a href="{{ .image }}" data-lightbox data-lightbox-caption="{{ .caption }}" aria-label="Open actual page one of the digital forensics intake request">
+          <img src="{{ .image }}" alt="{{ .alt }}" width="1056" height="1408" loading="lazy" decoding="async">
+          <span class="image-expand-label">View full-size form</span>
+        </a>
+        <figcaption><strong>Actual intake form · Page 1 of 2</strong><span>One structure, offered in three working formats. View both pages farther below.</span></figcaption>
+      </figure>
+      {{ end }}
+      {{ end }}
+      <div class="intake-format-options">
+        {{ range $index, $mode := . }}
+        <article class="intake-format-option">
+          <span class="intake-format-number" aria-hidden="true">0{{ add $index 1 }}</span>
+          <div class="intake-format-option-content">
+            <p class="intake-format-type">{{ .label }}</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .visual_copy | default .description }}</p>
+            <div class="intake-format-download"><small>{{ .meta }}</small><a href="{{ .url }}" download>{{ .cta }} <b aria-hidden="true">→</b></a></div>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+    <div class="intake-format-notes">
+      {{ if $.Params.local_only }}<p><strong>Local by design.</strong> The fillable PDF saves entered values in the file; it contains no form submission action, telemetry, or connection to Forge &amp; Verse.</p>{{ end }}
+      <p><strong>Before operational use:</strong> Test fillable PDF save, print, and signature behavior in your agency-approved viewer. Adapt the DOCX to local law, policy, and workflow.</p>
+    </div>
+  </div>
+</section>
+{{ else }}
 <section class="release-choice-section">
   <div class="wrap">
     <div class="section-heading split-heading split-heading-light">
@@ -38,6 +79,7 @@
     {{ if $.Params.local_only }}<p class="release-local-note"><strong>Local by design.</strong> The fillable PDF saves entered values inside the file. It contains no form submission action, telemetry, or connection back to Forge & Verse.</p>{{ end }}
   </div>
 </section>
+{{ end }}
 {{ end }}
 
 {{ with .Params.package_files }}
