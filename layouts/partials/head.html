@@ -47,5 +47,9 @@
     {{ $professionCss := resources.Get "css/profession-status-guide.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $professionCss.RelPermalink }}" integrity="{{ $professionCss.Data.Integrity }}">
   {{ end }}
+  {{ if and .IsSection (eq .Section "roadmap") }}
+    {{ $anvilCss := resources.Get "css/anvil-process.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $anvilCss.RelPermalink }}" integrity="{{ $anvilCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>

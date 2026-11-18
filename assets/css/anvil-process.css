@@ -1,0 +1,75 @@
+/* On the Anvil: approved five-stage illustration with readable mobile crops. */
+.anvil-design-process {
+  background: #e8dfd0;
+  color: #25231f;
+  padding: clamp(2.8rem,6vw,5rem) 0;
+  border-top:1px solid #b7a489;
+  border-bottom:1px solid #b7a489;
+}
+.anvil-process-heading {
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  align-items:end;
+  gap:clamp(1rem,4vw,3.5rem);
+  margin-bottom:1.7rem;
+}
+.anvil-process-heading .eyebrow {color:#79572e;}
+.anvil-process-heading h2 {
+  margin:.5rem 0 0;
+  font-family:var(--serif);
+  font-size:clamp(2.45rem,5vw,4.7rem);
+  font-weight:600;
+  line-height:.99;
+  letter-spacing:-.025em;
+}
+.anvil-process-heading > p {margin:0;max-width:55ch;color:#5a544b;line-height:1.65;}
+.anvil-process-desktop {margin:0;background:#171616;border:1px solid #ad8d60;}
+.anvil-process-desktop a {position:relative;display:block;text-decoration:none;}
+.anvil-process-desktop a:focus-visible,.anvil-process-full-link:focus-visible {outline:3px solid #bc8c4d;outline-offset:3px;}
+.anvil-process-desktop img {display:block;width:100%;height:auto;}
+.anvil-process-expand {
+  position:absolute;
+  right:1rem;
+  bottom:1rem;
+  font-size:.75rem;
+  font-weight:750;
+  line-height:1.3;
+  padding:.6rem .85rem;
+  color:#f9eedc;
+  background:rgba(14,15,15,.92);
+  border:1px solid #b49a76;
+}
+.anvil-process-desktop figcaption {color:#ded2bd;font-size:.8rem;line-height:1.6;padding:.85rem 1rem;}
+.anvil-process-mobile {display:none;}
+.anvil-process-disclaimer {
+  max-width:1050px;
+  margin:1.3rem 0 0;
+  padding:1rem 1.2rem;
+  border-left:3px solid #906937;
+  background:#f6eee0;
+  color:#50483e;
+  font-size:.85rem;
+  line-height:1.7;
+}
+.anvil-process-disclaimer strong {color:#302820;}
+.anvil-process-disclaimer a {color:#674522;text-underline-offset:3px;}
+.anvil-design-process + .study-index-section .study-index-intro-progress {display:block;max-width:850px;}
+@media(max-width:850px) {
+  .anvil-process-heading {grid-template-columns:1fr;gap:.85rem;}
+  .anvil-process-desktop {display:none;}
+  .anvil-process-mobile {display:block;}
+  .anvil-stage-list {list-style:none;counter-reset:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
+  .anvil-stage-card {min-width:0;background:#f5ecd9;border:1px solid #ae8a57;padding:1rem;display:flex;flex-direction:column;gap:.75rem;align-items:center;}
+  .anvil-stage-card img {display:block;width:min(100%,307px);height:auto;object-fit:contain;box-shadow:0 6px 16px rgba(45,31,14,.13);}
+  .anvil-stage-card div {width:100%;}
+  .anvil-stage-card strong {display:block;font-family:var(--serif);font-size:1.35rem;}
+  .anvil-stage-card p {margin:.2rem 0 0;color:#595246;font-size:.89rem;line-height:1.6;}
+  .anvil-process-full-link {display:inline-block;margin:1.3rem 0 .3rem;color:#6d4826;font-weight:800;font-size:.86rem;text-underline-offset:3px;}
+}
+@media(max-width:570px) {
+  .anvil-process-heading h2 {font-size:clamp(2.4rem,10.5vw,3.4rem);}
+  .anvil-stage-list {grid-template-columns:1fr;gap:.9rem;}
+  .anvil-stage-card {padding:1rem 1.1rem;gap:.6rem;}
+  .anvil-stage-card img {width:min(100%,320px);}
+  .anvil-stage-card strong {font-size:1.5rem;}
+}

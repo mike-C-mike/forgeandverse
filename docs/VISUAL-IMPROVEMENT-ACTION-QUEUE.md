@@ -94,7 +94,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Compact illustration of Question → Structure → Material → Sample → Ready, visually separate from public Development/Production lifecycle.
   - **Review question:** Is the difference between an idea, a file, and a physical sample obvious?
   - **Guardrail:** Avoid redundant or conflicting status systems.
-  - **Status:** DESIGN REVIEW — user requested moving on after publishing Item 08. Existing On the Anvil page already includes a compact text-only Question → Structure → Material → Sample → Ready key; propose replacing that with a visual **five-stage artifact evolution** using one example carried through, from a professional need to a draft file, a manufacturing-ready file, an evaluated physical sample, then readiness to seek approval. Keep it distinct from public Development / Production / Archive status and make clear that “Ready” does not by itself mean “Available.” No site changes to Item 09 without approval.
+  - **Status:** DEPLOYED / VERIFY — user approved the “From an Idea to an Object” five-stage graphic and requested publication. Placed full infographic between collection callout and study listing, removed the redundant text-only five-stage key, and supplied separate readable mobile crops of each approved stage with accessible explanations. Explicit note distinguishes illustrative Status Pad concept and internal design progression from actual product approval / availability. GitHub build and live mobile verification pending.
 
 - [ ] **10 · P2 · Release Desk: explain SHA-256 verification**
   - **Where:** `/releases/`.
@@ -149,7 +149,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 06 | v1 · The Chain That Holds — evidence custody and storage image | **Approved and pushed** | GitHub build and rendered-site checks passed; verify Cloudflare and mobile presentation | GitHub verified; live review pending |
 | 07 | v2 · Male-officer Between the Calls practice scene | **Approved and pushed** | GitHub production build and render checks passed; user to verify mobile | GitHub verified; live review pending |
 | 08 | v1 · The Quiet Recovery — security incident restoration practice scene | **Approved and pushed** | Production build and rendered-site validation passed; verify live Cloudflare and phone layout | GitHub passed; live review pending |
-| 09 | v1 proposal · On the Anvil: one artifact across five design steps | **Design review** | Visual concept approval before publication | No |
+| 09 | v1 · From an Idea to an Object — approved five-stage process artwork | **User approved and directed publishing** | Validate build, mobile stage crops and live site | Build pending; live review pending |
 
 ## Non-negotiable review checks for every item
 
