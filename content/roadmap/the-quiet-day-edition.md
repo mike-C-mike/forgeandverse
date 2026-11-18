@@ -21,8 +21,8 @@ details:
 - No public purchase link before physical approval
 moment: When the quiet day deserves to be recognized as the result of preparation rather than luck.
 stage_step: 4
-card_image: /images/product-proofs/signal-the-quiet-day-proof-12x8.webp
-card_image_alt: A dark landscape wall proof titled The Quiet Day with sparse network geometry.
+card_image: /images/studies/the-quiet-day/editorial-study.webp
+card_image_alt: "Conceptual Forge & Verse editorial illustration for The Quiet Day, with the original line Nothing happened today. That was the work, quiet network geometry, and a clearly marked Development edition study label. Not an approved or manufactured edition."
 hero_image: /images/product-proofs/signal-the-quiet-day-proof-12x8.webp
 hero_image_alt: The production-ready material proof for The Quiet Day.
 proof_order_ready: true
@@ -37,6 +37,18 @@ proof_order:
   - Black and brass behavior under ordinary office lighting
   - Whether the network geometry stays subtle at physical size
   - Satin, mid-gloss, or archival matte surface choice
+prototype_title: "The idea and the proof file"
+prototype_intro: >-
+  The editorial image below helps the central line read clearly at thumbnail scale.
+  It is a conceptual study, not the 12 x 8 production file. The separate vector-based
+  material-test proof remains the actual specification prepared for a first physical order.
+prototype_images:
+- image: /images/studies/the-quiet-day/editorial-study.webp
+  alt: "The Quiet Day editorial concept with warm brass typography, restrained fictional network geometry, and a Development edition study label."
+  caption: "Editorial study for browsing the collection. Illustrative only: this is not a manufactured wall edition, a tested print, or the authoritative production file."
+- image: /images/product-proofs/signal-the-quiet-day-proof-12x8.webp
+  alt: "Original vector-led 12 by 8 digital material-test artwork for The Quiet Day with sparse network geometry."
+  caption: "Actual print-test design file preview, unchanged. Physical material, glare, scale, and mounting remain untested."
 ---
 
 ## Defensive work has an awkward victory condition
