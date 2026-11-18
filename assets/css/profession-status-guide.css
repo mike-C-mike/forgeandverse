@@ -1,0 +1,143 @@
+/* Profession lifecycle explainer; visual identity shared, profession content remains distinct. */
+.profession-status-guide {
+  --status-ink: #17191a;
+  --status-paper: #eee4d2;
+  --status-brass: #bb9160;
+  background:
+    radial-gradient(ellipse at 18% 5%,rgba(179,121,62,.18),transparent 38%),
+    linear-gradient(145deg,#161819 0%,#1e2020 55%,#131515 100%);
+  color:#f3ecdf;
+  padding:clamp(2.9rem,6vw,5.7rem) 0 clamp(3rem,6vw,5rem);
+  border-top:1px solid #ab824b;
+  border-bottom:1px solid #ab824b;
+}
+.discipline-hero-examiner-bench ~ .profession-status-guide { --status-brass:#b89a76; }
+.profession-status-intro { text-align:center; max-width:900px; margin:0 auto clamp(1.4rem,3vw,2.5rem); }
+.profession-status-intro .eyebrow { color:#c6a77a; }
+.profession-status-intro h2 {
+  margin:.45rem 0 .75rem;
+  font-family:var(--serif);
+  font-size:clamp(2.45rem,5.8vw,5rem);
+  line-height:1.03;
+  font-weight:600;
+  letter-spacing:-.025em;
+  color:#f6edde;
+}
+.profession-status-intro h2 em {font-weight:normal;color:#d2aa6f;}
+.profession-status-intro > p:last-child {max-width:690px; margin:0 auto; font-size:clamp(.9rem,1.6vw,1.04rem);color:#d6d0c4;line-height:1.65;}
+.profession-status-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.6rem,1.7vw,1.15rem);}
+.profession-status-card {
+  min-width:0;
+  color:#231f1a;
+  background:linear-gradient(170deg,#fbf3e3 0%,#eee2cd 100%);
+  border:1px solid #ad8852;
+  box-shadow:0 14px 32px rgba(0,0,0,.23);
+  display:flex;flex-direction:column;
+}
+.profession-status-card-header {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.55rem .7rem;
+  padding:.8rem clamp(.7rem,1.5vw,1rem);
+  min-height:70px;
+  background:linear-gradient(100deg,#1a1b1c,#2b2924);
+  border-bottom:3px solid #b58c50;
+  color:#f7efdf;
+}
+.profession-status-index {
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  width:2.3rem;height:2.3rem;
+  border:2px solid #cba369;
+  border-radius:50%;
+  font-family:var(--serif);
+  font-size:1.15rem;
+  color:#f4dda9;
+}
+.profession-status-card-header h3 {
+  font-family:var(--serif);
+  font-weight:600;
+  text-transform:uppercase;
+  font-size:clamp(1rem,1.5vw,1.35rem);
+  letter-spacing:.06em;
+  margin:0;
+  line-height:1.12;
+}
+.profession-status-warning,.profession-status-optional {
+  margin-left:auto;
+  padding:.25rem .38rem;
+  border:1px solid #b78669;
+  color:#ffe1d6;
+  background:#5c3326;
+  font-size:.58rem;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  font-weight:750;
+  white-space:nowrap;
+}
+.profession-status-optional {background:transparent;color:#dfcfac;border-color:#846e4d;}
+.profession-status-card-body {
+  padding:clamp(.9rem,2vw,1.35rem);
+  display:flex;flex-direction:column;flex:1;
+}
+.profession-status-art {
+  display:grid;place-items:center;
+  min-height:112px;
+  border-bottom:1px solid #cbbb9f;
+  padding:0 0 .5rem;
+  margin-bottom:.75rem;
+}
+.profession-status-art svg {display:block;width:min(100%,190px);height:112px;}
+.profession-status-tags {
+  margin:.1rem 0 .9rem;
+  padding-left:1.2rem;
+  line-height:1.6;
+  font-size:clamp(.8rem,1.15vw,.91rem);
+}
+.profession-status-tags li {padding-left:.15rem;margin-bottom:.22rem;}
+.profession-status-tags li::marker{color:#986b37;}
+.profession-status-alert{
+  margin:auto 0 0;
+  padding:.8rem .85rem;
+  border:1px solid #c5a979;
+  background:rgba(202,163,99,.17);
+  border-radius:2px;
+  font-size:clamp(.76rem,1.05vw,.88rem);
+  line-height:1.55;
+}
+.profession-status-alert strong {color:#422f19;}
+.profession-status-takeaway {
+  display:block;
+  margin:1.25rem 0 .4rem;
+  padding:1rem clamp(1rem,3vw,1.9rem);
+  border:1px solid #b58c50;
+  color:#f0e8d7;
+  background:rgba(13,15,15,.56);
+  font-size:clamp(.87rem,1.4vw,1.02rem);
+  line-height:1.65;
+}
+.profession-status-takeaway strong {color:#dfbd89;}
+.profession-status-footnote {margin:.8rem 0 0;text-align:center;font-size:.8rem;color:#cfc7b8;line-height:1.7;}
+.profession-status-footnote a {color:#e4c18e;text-underline-offset:3px;text-decoration-thickness:1px;}
+.profession-status-footnote a:hover {color:#fff0d4;}
+@media(max-width:940px) {
+  .profession-status-cards {grid-template-columns:1fr;max-width:690px;margin:auto;gap:.9rem;}
+  .profession-status-card-header{min-height:62px;}
+  .profession-status-card-body{display:grid;grid-template-columns:minmax(120px,.7fr) minmax(0,1.3fr);column-gap:1rem;row-gap:.5rem;align-items:start;}
+  .profession-status-art{grid-row:1 / 3;border-bottom:0;border-right:1px solid #cbbb9f;margin:0;padding-right:1rem;min-height:155px;}
+  .profession-status-tags{margin:0;}
+  .profession-status-alert{margin:0;align-self:end;}
+}
+@media(max-width:520px) {
+  .profession-status-intro{text-align:left;}
+  .profession-status-intro h2{font-size:clamp(2.45rem,11vw,3.4rem);}
+  .profession-status-intro > p:last-child{margin-left:0;}
+  .profession-status-card-body{display:block;padding:1.1rem;}
+  .profession-status-art{border-right:0;border-bottom:1px solid #cbbb9f;padding:0 0 .4rem;min-height:100px;margin-bottom:.7rem;}
+  .profession-status-art svg{height:100px;}
+  .profession-status-tags{font-size:.9rem;margin-bottom:1rem;}
+  .profession-status-alert{font-size:.86rem;}
+  .profession-status-takeaway{text-align:left;}
+}

@@ -43,5 +43,9 @@
     {{ $orderingCss := resources.Get "css/ordering-infographic.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $orderingCss.RelPermalink }}" integrity="{{ $orderingCss.Data.Integrity }}">
   {{ end }}
+  {{ if eq .Section "disciplines" }}
+    {{ $professionCss := resources.Get "css/profession-status-guide.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $professionCss.RelPermalink }}" integrity="{{ $professionCss.Data.Integrity }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
 </head>

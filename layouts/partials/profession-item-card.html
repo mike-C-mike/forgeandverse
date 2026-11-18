@@ -9,7 +9,7 @@
       <p class="profession-piece-meta">{{ partial "lifecycle-label.html" $state }}<span class="profession-piece-type">{{ if eq .Section "roadmap" }}Studio study{{ else if eq .Section "downloads" }}Open release{{ else }}{{ .Params.format_label | default "Studio work" }}{{ end }}</span></p>
       <h3>{{ .Title }}</h3>
       <p>{{ .Params.summary }}</p>
-      <span class="profession-piece-action">{{ if eq $state.phase_slug "production" }}View the release{{ else }}View development{{ end }} <b aria-hidden="true">→</b></span>
+      <span class="profession-piece-action">{{ if eq $state.slug "available" }}View available edition{{ else if eq $state.slug "released" }}View released resource{{ else if eq $state.slug "production-approved" }}View approved specification{{ else }}View development{{ end }} <b aria-hidden="true">→</b></span>
     </div>
   </a>
 </article>

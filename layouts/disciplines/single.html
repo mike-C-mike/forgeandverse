@@ -47,24 +47,18 @@
   </div>
 </section>
 
-<section class="profession-lifecycle-guide" aria-label="How work moves from development to production">
-  <div class="wrap profession-lifecycle-grid">
-    <div><strong>Development</strong><p>Concepts, active design, printable field proofs, and physical samples under review. Not finished products.</p></div>
-    <div><strong>Production</strong><p>Approved production specifications or completed releases. Only an item marked Available has an active physical ordering path.</p></div>
-    <div><strong>Archive</strong><p>Retired work kept visible for reference, without a current ordering offer.</p></div>
-  </div>
-</section>
+{{ partial "profession-lifecycle-guide.html" . }}
 
 <section class="section profession-available" id="available">
   <div class="wrap">
     <div class="section-heading split-heading">
-      <div><p class="eyebrow">Production / Released work</p><h2>Ready to use or order.</h2></div>
-      <p>Only completed open releases or approved physical editions appear here. An edition approved for production still needs an active order link before it is available.</p>
+      <div><p class="eyebrow">Production / Approved &amp; released work</p><h2>Approved work, clearly labeled.</h2></div>
+      <p>Each item shows its precise status. <strong>Available</strong> means a physical edition has a checkout path; <strong>Released</strong> means a completed digital resource. <strong>Approved for production</strong> is not yet an offer to order.</p>
     </div>
     {{ if gt (len $published) 0 }}
     <div class="profession-piece-grid">{{ range $published }}{{ partial "profession-item-card.html" . }}{{ end }}</div>
     {{ else }}
-    <p class="profession-empty">Nothing in this professional collection is available to order or download yet. You can follow the projects below as they develop.</p>
+    <p class="profession-empty">No approved editions or completed releases are listed for this profession yet. Explore the development work below.</p>
     {{ end }}
   </div>
 </section>
@@ -73,7 +67,7 @@
   <div class="wrap">
     <div class="section-heading split-heading split-heading-light">
       <div><p class="eyebrow">Development / Inside the studio</p><h2>Work taking shape for {{ $discipline.plain_name | lower }}.</h2></div>
-      <p>These are studio studies and objects in progress. Each item's status distinguishes an idea, a proof file, and a finished release.</p>
+      <p>These are concepts, design studies, and proofs in progress. A test-ready file is not a finished edition or a public purchase link.</p>
     </div>
     {{ range $discipline.paths }}
       {{ $path := .slug }}

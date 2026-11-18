@@ -55,7 +55,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** A concise, accessible visual pathway showing **Development → Production → Archive**, with precise status examples such as “Proof ready” and “Available.”
   - **Review question:** Is it obvious that a print-ready test file is *not* an orderable product?
   - **Guardrail:** Retain consistent public terminology across professions while allowing their other imagery to differ.
-  - **Status:** DESIGN REVIEW — review the current shared three-column lifecycle explanation and propose a responsive, easy-to-scan visual explainer for all four professional pages. Preserve the exact public status vocabulary: Development (e.g., Proof ready is *not* for sale), Production (Approved for production does *not* mean available; only Available is a purchasable physical item; Released means finished digital/open work), Archive (retired/no longer offered). Avoid implying every item must pass through Archive. This is a shared information pattern, not a shared creative identity. User approval required before changing site.
+  - **Status:** DEPLOYED / VERIFY — user approved the responsive visual lifecycle concept and requested implementation. Replaced shared three-column prose with illustrated, HTML-first Development / Production / Archive cards, preserving the real status vocabulary and clarifying Proof ready versus Available and Released; Archive is explicitly optional. Corrected the production-shelf heading and approved-edition card actions. Changes committed; GitHub validation and live mobile review pending.
 
 ### Profession-specific imagery — give each lane its own space
 
@@ -144,7 +144,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 02 | v1 · Actual intake form and print/fillable/editable choices | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
 | 03 | v1.1 · Approved infographic + full-image mobile preview | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 04 | v1 · Responsive visual lifecycle with exact public status examples | **Design review** | Avoid conflating Approved for production with Available; keep profession identities distinct | No |
+| 04 | v1 · Illustrated HTML lifecycle guide across four professional pages | **User approved and directed publishing** | Verify production build, mobile layout, and Cloudflare deployment | Pending validation and live review |
 
 ## Non-negotiable review checks for every item
 
