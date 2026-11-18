@@ -106,6 +106,10 @@ def main() -> int:
                 if count:
                     first = gallery.first
                     first.scroll_into_view_if_needed()
+                    page.wait_for_function(
+                        "() => { const img = document.querySelector('#edition-concepts .study-card img'); return img && img.complete && img.naturalWidth > 0; }",
+                        timeout=8000,
+                    )
                     metrics = first.evaluate("""card => {
                         const img = card.querySelector('img');
                         const r = card.getBoundingClientRect();
