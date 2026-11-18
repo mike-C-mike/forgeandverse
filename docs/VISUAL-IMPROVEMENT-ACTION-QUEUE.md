@@ -41,7 +41,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Three faithful crops of the *actual* printable, fillable, and editable release files, with a visible distinction in how each is used.
   - **Review question:** Can the requester choose a format by looking rather than reading instructions?
   - **Guardrail:** Verify each source file before depicting its behavior. No fabricated UI or untested software compatibility.
-  - **Status:** DEPLOYED / VERIFY — user approved the shared actual Page 1 preview and three-workflow layout, and authorized implementation. The original intake form preview and v1.2 download URLs are reused; cards show Print PDF, Fillable PDF (105 fields), and Editable DOCX, with local-only and PDF viewer compatibility notes. Build, mobile and live-site verification pending.
+  - **Status:** DEPLOYED / VERIFY — user approved the shared actual Page 1 preview and three-workflow layout and authorized publication. The original intake form preview and v1.2 download URLs are reused; cards show Print PDF, Fillable PDF (105 fields), and Editable DOCX, with local-only and PDF viewer compatibility notes. GitHub production build and rendered-site validation passed (run 44211017400). Live Cloudflare deployment and phone review still require user confirmation.
 
 - [ ] **03 · P1 · Ordering: visualize who does what**
   - **Where:** `/ordering-and-fulfillment/`.
@@ -142,7 +142,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 | Item | Current design version | Decision | Requested changes | Publication confirmed |
 | --- | --- | --- | --- | --- |
 | 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
-| 02 | v1 implemented · Actual intake form and print/fillable/editable choices | **User approved and directed publishing** | Verify build, mobile layout, live site, and original links | Pending verification |
+| 02 | v1 implemented · Actual intake form and print/fillable/editable choices | **User approved and directed publishing** | GitHub production build/render validated; confirm Cloudflare and phone layout before closing | GitHub validated; live review pending |
 
 ## Non-negotiable review checks for every item
 
