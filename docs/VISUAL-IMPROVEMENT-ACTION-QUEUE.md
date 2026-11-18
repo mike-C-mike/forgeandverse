@@ -26,12 +26,12 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 
 ### Immediate — biggest information gain
 
-- [ ] **01 · P1 · Materials: demonstrate what survives at a distance**
+- [x] **01 · P1 · Materials: demonstrate what survives at a distance**
   - **Where:** `/materials/`, “Scale is part of the sentence.”
   - **Design review v2:** Replace the generic three-room lifestyle montage with a purposeful typographic reading-distance comparison using the *real typography-led Believe in the Badge development study*. Explain close = full text and nuances; across the room = main line/hierarchy; passing = silhouette/contrast. End with the actual design decision: change typographic hierarchy to match where/how a piece will be seen, not simply enlarge the file.
   - **Review question:** Does this teach a visitor why different viewing situations change the design, instead of just confirming that larger rooms have larger walls?
   - **Guardrail:** Concept image is illustrative, **not** a measured legibility test or an approved production size. Before implementation, replace the illustrative reconstruction with the exact production-study artwork and remove any invented supporting copy; build labels in accessible HTML instead of embedding all copy in raster art.
-  - **Status:** UPDATED IN REPOSITORY (2026-11-17): user clarified the correct reference is the original **What Survives at a Distance?** infographic, not the earlier three-room quill/anvil illustration. The full selected infographic leads the scale section, and its identical cropped Badge artwork powers both the Close / Med / Far scale and matte/satin/gloss lighting interactions. Earlier metal/paper copy has been consolidated into presentation vs construction to eliminate repeated explanations. GitHub validation / live delivery still to be confirmed.
+  - **Status:** DONE — user reviewed and confirmed the completed Materials interactions working correctly on the live site (November 17, 2026). Correct “What Survives at a Distance?” infographic, scale controls, matching finish-and-lighting art, and consolidated earlier explanations accepted.
   - **Current direction:** Tabs `Close / Across the room / In passing`, actual artwork to replace illustrative art, explanatory text beside the artwork, and no unverified fixed distance values. Use mobile-first cards and preserve source wording. Mockup is design-only, not a final site rendering.
   - **Scope decision (2026-11-17):** The Materials page is **educational only**, not a product configurator, shopping assistant, or recommendation engine. Both reading-distance and future Finish & Lighting controls are illustrative demonstrations of design tradeoffs. No implied product availability, measured performance, certified longevity, or promise about any particular vendor finish. Real photographed samples and manufacturer-specific observations can be added *later*, only after actually tested examples exist and receive separate review. This scope is agreed; specific designs and publication are **not yet approved**.
   - **Companion idea for later review:** An adjacent **Finish & Lighting** interactive module, using the same artwork and fixed viewing angle, with a finish selector (Matte / Satin / Gloss) and room-light selector (Soft indirect daylight / Window opposite the art / Overhead spots). Visually model reflection intensity and color/contrast tradeoffs, not physical accuracy. Keep direct-sun **exposure longevity** distinct from reflected glare. Actual results require manufacturer-specific material samples; do not promise that “matte” prevents all glare, UV fading, or direct-sun damage. Keep as a follow-on review after item 01 is approved.
@@ -41,7 +41,7 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
   - **Design review:** Three faithful crops of the *actual* printable, fillable, and editable release files, with a visible distinction in how each is used.
   - **Review question:** Can the requester choose a format by looking rather than reading instructions?
   - **Guardrail:** Verify each source file before depicting its behavior. No fabricated UI or untested software compatibility.
-  - **Status:** QUEUED.
+  - **Status:** DESIGN REVIEW (first visual direction). Existing v1.2 source and release-page templates inspected; no publication authorized. Proposal: a shared actual Page 1 preview appears in three side-by-side choices, each with a truthful interaction cue (handwriting/print, local PDF entry, editable agency template). On mobile, stack cards. Avoid inventing fields or promising cross-viewer compatibility; use exact release art and working download URLs.
 
 - [ ] **03 · P1 · Ordering: visualize who does what**
   - **Where:** `/ordering-and-fulfillment/`.
@@ -141,7 +141,8 @@ Priorities reflect user comprehension, not commercial urgency. Prefer real artif
 
 | Item | Current design version | Decision | Requested changes | Publication confirmed |
 | --- | --- | --- | --- | --- |
-| 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactives | Correct image selected; remove overlapping early copy | Validate desktop/mobile and user review; verify Cloudflare deployment | Pending build / live delivery |
+| 01 | v1.2 · Selected What Survives infographic + matching Badge artwork in both interactions | **Accepted by user on live site; complete** | None | **Yes (user verified)** |
+| 02 | v1 design direction · Same actual form, three working choices | Awaiting user's concept/layout approval | Preserve fidelity, use actual previews, emphasize interactions over invented layout differences | No |
 
 ## Non-negotiable review checks for every item
 
